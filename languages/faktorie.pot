@@ -1,0 +1,2733 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Tripfery\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-13 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: tripfery"
+
+#: inc/views/comments-callback.php:18
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: woocommerce/rating.php:37
+#, php-format
+msgid "%s"
+msgid_plural "%s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/general.php:473
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#. %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+#, php-format
+msgid "%s quantity"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:102
+#: inc/customizer/settings/footer.php:126
+#: inc/customizer/settings/footer.php:149
+msgid "1 Column"
+msgstr ""
+
+#: inc/customizer/settings/general.php:169
+msgid "1140px"
+msgstr ""
+
+#: inc/customizer/settings/general.php:168
+msgid "1200px"
+msgstr ""
+
+#: inc/customizer/settings/general.php:167
+msgid "1290px"
+msgstr ""
+
+#: inc/customizer/settings/general.php:166
+msgid "1320px"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:103
+#: inc/customizer/settings/footer.php:127
+#: inc/customizer/settings/footer.php:150
+msgid "2 Columns"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:104
+#: inc/customizer/settings/footer.php:128
+#: inc/customizer/settings/footer.php:151
+msgid "3 Columns"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:105
+#: inc/customizer/settings/footer.php:129
+#: inc/customizer/settings/footer.php:152
+msgid "4 Columns"
+msgstr ""
+
+#: inc/lc-helper.php:241 inc/lc-utility.php:45 inc/lc-utility.php:55
+msgid "Activate License"
+msgstr ""
+
+#: inc/lc-helper.php:200 inc/lc-utility.php:158
+msgid "Activated"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:73
+msgid "Active Breadcrumb Color"
+msgstr ""
+
+#: inc/customizer/controls/gallery-control.php:25
+#: inc/customizer/controls/repeater-control.php:27
+msgid "Add"
+msgstr ""
+
+#: template-parts/header/header-1.php:40
+msgid "Add a menu"
+msgstr ""
+
+#: woocommerce/custom/template-parts/wishlist-icon.php:14
+msgid "Add To Wishlist"
+msgstr ""
+
+#: template-parts/content-single-team.php:65
+#: inc/customizer/settings/header.php:321
+msgid "Address"
+msgstr ""
+
+#: inc/customizer/settings/general.php:305
+msgid "Address Label"
+msgstr ""
+
+#: inc/customizer/settings/general.php:320
+msgid "Address Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:43 inc/customizer/customizer.php:52
+#: inc/customizer/customizer.php:61 inc/customizer/customizer.php:70
+#: inc/customizer/customizer.php:79
+#: inc/customizer/typography/typography-customizer.php:39
+msgid "Adjust the overall layout for your site."
+msgstr ""
+
+#: woocommerce/custom/template-parts/wishlist-icon.php:15
+msgid "Aleady exists in Wishlist! Click here to view Wishlist"
+msgstr ""
+
+#: template-parts/header/product-search-form.php:11
+msgid "All Categories"
+msgstr ""
+
+#: inc/customizer/customizer.php:88
+msgid "All custom posts settings here."
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:284
+msgid "All Heading Typography (H1-H6)"
+msgstr ""
+
+#: template-parts/content-banner.php:19 template-parts/content-banner.php:29
+msgid "All Posts"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:256 inc/customizer/settings/error.php:159
+msgid "Animation Off"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:255 inc/customizer/settings/error.php:158
+msgid "Animation On"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:251 inc/customizer/settings/error.php:154
+msgid "Animation On/Off"
+msgstr ""
+
+#: inc/customizer/settings/service.php:41
+msgid "Archive Service Option"
+msgstr ""
+
+#. Name of the template
+msgid "Archive style 1"
+msgstr ""
+
+#. Name of the template
+msgid "Archive style 2"
+msgstr ""
+
+#. Name of the template
+msgid "Archive style 3"
+msgstr ""
+
+#: woocommerce/custom/functions.php:322
+msgid "Average"
+msgstr ""
+
+#: inc/customizer/settings/general.php:197
+msgid "Back to Top Arrow"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:192
+#: inc/customizer/settings/footer.php:258
+#: inc/customizer/settings/footer.php:325
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:208
+#: inc/customizer/settings/footer.php:275
+#: inc/customizer/settings/footer.php:342
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:168
+#: inc/customizer/settings/footer.php:235
+#: inc/customizer/settings/footer.php:302
+msgid "Background Type"
+msgstr ""
+
+#: inc/customizer/customizer.php:213
+#: inc/customizer/settings/blog-layout.php:110
+#: inc/customizer/settings/blog-single-layout.php:110
+#: inc/customizer/settings/error-layout.php:69
+#: inc/customizer/settings/page-layout.php:110
+#: inc/customizer/settings/locations-layout.php:110
+#: inc/customizer/settings/locations-single-layout.php:110
+#: inc/customizer/settings/search-layout.php:110
+#: inc/customizer/settings/service-layout.php:110
+#: inc/customizer/settings/service-single-layout.php:110
+#: inc/customizer/settings/team-layout.php:110
+#: inc/customizer/settings/team-single-layout.php:110
+#: inc/customizer/settings/woo-product-layout.php:68
+#: inc/customizer/settings/woo-shop-layout.php:98
+msgid "Banner"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:187
+#: inc/customizer/settings/blog-single-layout.php:187
+#: inc/customizer/settings/error-layout.php:146
+#: inc/customizer/settings/page-layout.php:187
+#: inc/customizer/settings/locations-layout.php:187
+#: inc/customizer/settings/locations-single-layout.php:187
+#: inc/customizer/settings/search-layout.php:187
+#: inc/customizer/settings/service-layout.php:187
+#: inc/customizer/settings/service-single-layout.php:187
+#: inc/customizer/settings/team-layout.php:187
+#: inc/customizer/settings/team-single-layout.php:187
+#: inc/customizer/settings/woo-product-layout.php:145
+#: inc/customizer/settings/woo-shop-layout.php:175
+msgid "Banner Background Color"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:159
+#: inc/customizer/settings/blog-single-layout.php:159
+#: inc/customizer/settings/error-layout.php:118
+#: inc/customizer/settings/page-layout.php:159
+#: inc/customizer/settings/locations-layout.php:159
+#: inc/customizer/settings/locations-single-layout.php:159
+#: inc/customizer/settings/search-layout.php:159
+#: inc/customizer/settings/service-layout.php:159
+#: inc/customizer/settings/service-single-layout.php:159
+#: inc/customizer/settings/team-layout.php:159
+#: inc/customizer/settings/team-single-layout.php:159
+#: inc/customizer/settings/woo-product-layout.php:117
+#: inc/customizer/settings/woo-shop-layout.php:147
+msgid "Banner Background Image"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:103
+msgid "Banner Background Overlay opacity"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:139
+#: inc/customizer/settings/blog-single-layout.php:139
+#: inc/customizer/settings/error-layout.php:98
+#: inc/customizer/settings/page-layout.php:139
+#: inc/customizer/settings/locations-layout.php:139
+#: inc/customizer/settings/locations-single-layout.php:139
+#: inc/customizer/settings/search-layout.php:139
+#: inc/customizer/settings/service-layout.php:139
+#: inc/customizer/settings/service-single-layout.php:139
+#: inc/customizer/settings/team-layout.php:139
+#: inc/customizer/settings/team-single-layout.php:139
+#: inc/customizer/settings/woo-product-layout.php:97
+#: inc/customizer/settings/woo-shop-layout.php:127
+msgid "Banner Background Type"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:124
+#: inc/customizer/settings/banner.php:139
+msgid "Banner Padding Top"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:155
+msgid "Banner Shape"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:168
+msgid "Banner Shape 1"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:193
+msgid "Banner Shape 2"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:221
+msgid "Banner Shape Color"
+msgstr ""
+
+#: inc/helper-functions.php:320 inc/customizer/settings/general.php:494
+msgid "Behance"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:145
+#: inc/customizer/settings/blog-single-layout.php:145
+#: inc/customizer/settings/error-layout.php:104
+#: inc/customizer/settings/footer.php:173
+#: inc/customizer/settings/footer.php:240
+#: inc/customizer/settings/footer.php:307
+#: inc/customizer/settings/page-layout.php:145
+#: inc/customizer/settings/locations-layout.php:145
+#: inc/customizer/settings/locations-single-layout.php:145
+#: inc/customizer/settings/search-layout.php:145
+#: inc/customizer/settings/service-layout.php:145
+#: inc/customizer/settings/service-single-layout.php:145
+#: inc/customizer/settings/team-layout.php:145
+#: inc/customizer/settings/team-single-layout.php:145
+#: inc/customizer/settings/woo-product-layout.php:103
+#: inc/customizer/settings/woo-shop-layout.php:133
+msgid "BG Color"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:144
+#: inc/customizer/settings/blog-single-layout.php:144
+#: inc/customizer/settings/error-layout.php:103
+#: inc/customizer/settings/footer.php:174
+#: inc/customizer/settings/footer.php:241
+#: inc/customizer/settings/footer.php:308
+#: inc/customizer/settings/page-layout.php:144
+#: inc/customizer/settings/locations-layout.php:144
+#: inc/customizer/settings/locations-single-layout.php:144
+#: inc/customizer/settings/search-layout.php:144
+#: inc/customizer/settings/service-layout.php:144
+#: inc/customizer/settings/service-single-layout.php:144
+#: inc/customizer/settings/team-layout.php:144
+#: inc/customizer/settings/team-single-layout.php:144
+#: inc/customizer/settings/woo-product-layout.php:102
+#: inc/customizer/settings/woo-shop-layout.php:132
+msgid "BG Image"
+msgstr ""
+
+#: inc/customizer/settings/general.php:148
+msgid "Blend Mode"
+msgstr ""
+
+#: inc/customizer/customizer.php:238
+msgid "Blog Archive Layout"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:109
+msgid "Blog Content Limit"
+msgstr ""
+
+#: template-parts/content-banner.php:37
+msgid "Blog Details"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:73
+msgid "Blog Pagination"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:44
+msgid "Blog Post layout variation you can selecr and use."
+msgstr ""
+
+#: inc/customizer/customizer.php:78 inc/customizer/customizer.php:347
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:43
+msgid "Blog/Archive Layout"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:55
+#: inc/customizer/typography/typography-customizer.php:98
+msgid "Body"
+msgstr ""
+
+#: inc/customizer/settings/color.php:89 inc/customizer/settings/error.php:37
+msgid "Body Background Color"
+msgstr ""
+
+#: inc/customizer/settings/color.php:73
+msgid "Body Color"
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:111
+msgid "Bottom"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:275 inc/customizer/settings/error.php:178
+msgid "bounce"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:288 inc/customizer/settings/error.php:191
+msgid "bounceIn"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:289 inc/customizer/settings/error.php:192
+msgid "bounceInDown"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:290 inc/customizer/settings/error.php:193
+msgid "bounceInLeft"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:291 inc/customizer/settings/error.php:194
+msgid "bounceInRight"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:292 inc/customizer/settings/error.php:195
+msgid "bounceInUp"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:124
+#: inc/customizer/settings/blog-single-layout.php:124
+#: inc/customizer/settings/error-layout.php:83
+#: inc/customizer/settings/page-layout.php:124
+#: inc/customizer/settings/locations-layout.php:124
+#: inc/customizer/settings/locations-single-layout.php:124
+#: inc/customizer/settings/search-layout.php:124
+#: inc/customizer/settings/service-layout.php:124
+#: inc/customizer/settings/service-single-layout.php:124
+#: inc/customizer/settings/team-layout.php:124
+#: inc/customizer/settings/team-single-layout.php:124
+#: inc/customizer/settings/woo-product-layout.php:82
+#: inc/customizer/settings/woo-shop-layout.php:112
+msgid "Breadcrumb"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:41
+msgid "Breadcrumb Link Color"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:57
+msgid "Breadcrumb Link Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:89
+msgid "Breadcrumb Seperator Color"
+msgstr ""
+
+#: inc/customizer/settings/header.php:408
+msgid "Button Link"
+msgstr ""
+
+#: inc/customizer/settings/error.php:106 inc/customizer/settings/header.php:392
+msgid "Button Text"
+msgstr ""
+
+#: inc/ajax-loadmore.php:97 template-parts/content-1.php:107
+#: template-parts/content-2.php:107 template-parts/content-3.php:124
+#: template-parts/content-search.php:22 template-parts/content-single-2.php:92
+#: template-parts/content-single.php:83 template-parts/content.php:75
+#: inc/modules/rt-post-related.php:184
+msgid "by "
+msgstr ""
+
+#: inc/customizer/settings/header.php:293
+msgid "Cart Icon"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:69
+msgid "Cart view"
+msgstr ""
+
+#: template-parts/content-single-locations.php:44
+msgid "Category"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:46
+msgid "Category: "
+msgid_plural "Categories: "
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/customizer/settings/banner.php:174
+#: inc/customizer/settings/banner.php:199
+#: inc/customizer/settings/blog-layout.php:165
+#: inc/customizer/settings/blog-layout.php:210
+#: inc/customizer/settings/blog-single-layout.php:165
+#: inc/customizer/settings/blog-single-layout.php:210
+#: inc/customizer/settings/error-layout.php:124
+#: inc/customizer/settings/error-layout.php:169
+#: inc/customizer/settings/error.php:57 inc/customizer/settings/footer.php:214
+#: inc/customizer/settings/footer.php:281
+#: inc/customizer/settings/footer.php:348
+#: inc/customizer/settings/footer.php:552
+#: inc/customizer/settings/general.php:57
+#: inc/customizer/settings/general.php:82
+#: inc/customizer/settings/general.php:232
+#: inc/customizer/settings/page-layout.php:165
+#: inc/customizer/settings/page-layout.php:210
+#: inc/customizer/settings/locations-layout.php:165
+#: inc/customizer/settings/locations-layout.php:210
+#: inc/customizer/settings/locations-single-layout.php:165
+#: inc/customizer/settings/locations-single-layout.php:210
+#: inc/customizer/settings/search-layout.php:165
+#: inc/customizer/settings/search-layout.php:210
+#: inc/customizer/settings/service-layout.php:165
+#: inc/customizer/settings/service-layout.php:210
+#: inc/customizer/settings/service-single-layout.php:165
+#: inc/customizer/settings/service-single-layout.php:210
+#: inc/customizer/settings/team-layout.php:165
+#: inc/customizer/settings/team-layout.php:210
+#: inc/customizer/settings/team-single-layout.php:165
+#: inc/customizer/settings/team-single-layout.php:210
+#: inc/customizer/settings/woo-product-layout.php:123
+#: inc/customizer/settings/woo-product-layout.php:168
+#: inc/customizer/settings/woo-shop-layout.php:153
+#: inc/customizer/settings/woo-shop-layout.php:198
+msgid "Change File"
+msgstr ""
+
+#: woocommerce/custom/functions.php:464
+msgid "Checkout"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:179
+#: inc/customizer/settings/banner.php:204
+#: inc/customizer/settings/blog-layout.php:170
+#: inc/customizer/settings/blog-layout.php:215
+#: inc/customizer/settings/blog-single-layout.php:170
+#: inc/customizer/settings/blog-single-layout.php:215
+#: inc/customizer/settings/error-layout.php:129
+#: inc/customizer/settings/error-layout.php:174
+#: inc/customizer/settings/error.php:62 inc/customizer/settings/footer.php:219
+#: inc/customizer/settings/footer.php:286
+#: inc/customizer/settings/footer.php:353
+#: inc/customizer/settings/footer.php:557
+#: inc/customizer/settings/general.php:62
+#: inc/customizer/settings/general.php:87
+#: inc/customizer/settings/general.php:237
+#: inc/customizer/settings/page-layout.php:170
+#: inc/customizer/settings/page-layout.php:215
+#: inc/customizer/settings/locations-layout.php:170
+#: inc/customizer/settings/locations-layout.php:215
+#: inc/customizer/settings/locations-single-layout.php:170
+#: inc/customizer/settings/locations-single-layout.php:215
+#: inc/customizer/settings/search-layout.php:170
+#: inc/customizer/settings/search-layout.php:215
+#: inc/customizer/settings/service-layout.php:170
+#: inc/customizer/settings/service-layout.php:215
+#: inc/customizer/settings/service-single-layout.php:170
+#: inc/customizer/settings/service-single-layout.php:215
+#: inc/customizer/settings/team-layout.php:170
+#: inc/customizer/settings/team-layout.php:215
+#: inc/customizer/settings/team-single-layout.php:170
+#: inc/customizer/settings/team-single-layout.php:215
+#: inc/customizer/settings/woo-product-layout.php:128
+#: inc/customizer/settings/woo-product-layout.php:173
+#: inc/customizer/settings/woo-shop-layout.php:158
+#: inc/customizer/settings/woo-shop-layout.php:203
+msgid "Choose File"
+msgstr ""
+
+#: template-parts/content-single-locations.php:55
+msgid "Client"
+msgstr ""
+
+#: inc/customizer/customizer.php:60
+msgid "Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:196
+msgid "Color Dark"
+msgstr ""
+
+#: inc/customizer/customizer.php:178
+msgid "Color Main"
+msgstr ""
+
+#: inc/customizer/customizer.php:187
+msgid "Color Menu"
+msgstr ""
+
+#: comments.php:14 comments.php:16 single.php:18 inc/ajax-loadmore.php:49
+#: template-parts/content-1.php:16 template-parts/content-2.php:16
+#: template-parts/content-3.php:23 template-parts/content-single-2.php:11
+#: template-parts/content-single.php:11 template-parts/content.php:16
+#: inc/modules/rt-post-related.php:151
+msgid "Comment"
+msgstr ""
+
+#: comments.php:67
+msgid "Comment *"
+msgstr ""
+
+#: comments.php:12 single.php:18 inc/ajax-loadmore.php:49
+#: template-parts/content-1.php:16 template-parts/content-2.php:16
+#: template-parts/content-3.php:23 template-parts/content-single-2.php:11
+#: template-parts/content-single.php:11 template-parts/content.php:16
+#: inc/modules/rt-post-related.php:151
+msgid "Comments"
+msgstr ""
+
+#: comments.php:48
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/customizer/settings/woo-product.php:67
+#: inc/customizer/settings/woo-shop.php:99
+msgid "Compare"
+msgstr ""
+
+#: inc/customizer/settings/team.php:203
+msgid "Contact Title"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:407
+msgid "Contact Us"
+msgstr ""
+
+#: inc/customizer/settings/general.php:162
+msgid "Container width( Bootstrap Grid )"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:95
+#: inc/customizer/settings/blog-single-layout.php:95
+#: inc/customizer/settings/error-layout.php:54
+#: inc/customizer/settings/page-layout.php:95
+#: inc/customizer/settings/locations-layout.php:95
+#: inc/customizer/settings/locations-single-layout.php:95
+#: inc/customizer/settings/search-layout.php:95
+#: inc/customizer/settings/service-layout.php:95
+#: inc/customizer/settings/service-single-layout.php:95
+#: inc/customizer/settings/team-layout.php:95
+#: inc/customizer/settings/team-single-layout.php:95
+#: inc/customizer/settings/woo-product-layout.php:53
+#: inc/customizer/settings/woo-shop-layout.php:83
+msgid "Content Padding Bottom"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:80
+#: inc/customizer/settings/blog-single-layout.php:80
+#: inc/customizer/settings/error-layout.php:39
+#: inc/customizer/settings/page-layout.php:80
+#: inc/customizer/settings/locations-layout.php:80
+#: inc/customizer/settings/locations-single-layout.php:80
+#: inc/customizer/settings/search-layout.php:80
+#: inc/customizer/settings/service-layout.php:80
+#: inc/customizer/settings/service-single-layout.php:80
+#: inc/customizer/settings/team-layout.php:80
+#: inc/customizer/settings/team-single-layout.php:80
+#: inc/customizer/settings/woo-product-layout.php:38
+#: inc/customizer/settings/woo-shop-layout.php:68
+msgid "Content Padding Top"
+msgstr ""
+
+#: inc/ajax-loadmore.php:116 template-parts/content-1.php:126
+#: template-parts/content-2.php:126 template-parts/content-3.php:143
+#: inc/modules/rt-post-related.php:200
+msgid "Continue Reading"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:485
+msgid "Copyright Background Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:467
+msgid "Copyright Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:451
+msgid "Copyright Link Color"
+msgstr ""
+
+#: inc/general.php:201
+msgid "Copyright Menu"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:516
+msgid "Copyright Menu Display"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:501
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:435
+msgid "Copyright Text Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:87
+msgid "Custom Posts"
+msgstr ""
+
+#: inc/general.php:39
+msgid "dark gray"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:175
+#: inc/customizer/settings/banner.php:200
+#: inc/customizer/settings/blog-layout.php:166
+#: inc/customizer/settings/blog-layout.php:211
+#: inc/customizer/settings/blog-single-layout.php:166
+#: inc/customizer/settings/blog-single-layout.php:211
+#: inc/customizer/settings/error-layout.php:125
+#: inc/customizer/settings/error-layout.php:170
+#: inc/customizer/settings/error.php:58 inc/customizer/settings/footer.php:215
+#: inc/customizer/settings/footer.php:282
+#: inc/customizer/settings/footer.php:349
+#: inc/customizer/settings/footer.php:553
+#: inc/customizer/settings/general.php:58
+#: inc/customizer/settings/general.php:83
+#: inc/customizer/settings/general.php:233
+#: inc/customizer/settings/page-layout.php:166
+#: inc/customizer/settings/page-layout.php:211
+#: inc/customizer/settings/locations-layout.php:166
+#: inc/customizer/settings/locations-layout.php:211
+#: inc/customizer/settings/locations-single-layout.php:166
+#: inc/customizer/settings/locations-single-layout.php:211
+#: inc/customizer/settings/search-layout.php:166
+#: inc/customizer/settings/search-layout.php:211
+#: inc/customizer/settings/service-layout.php:166
+#: inc/customizer/settings/service-layout.php:211
+#: inc/customizer/settings/service-single-layout.php:166
+#: inc/customizer/settings/service-single-layout.php:211
+#: inc/customizer/settings/team-layout.php:166
+#: inc/customizer/settings/team-layout.php:211
+#: inc/customizer/settings/team-single-layout.php:166
+#: inc/customizer/settings/team-single-layout.php:211
+#: inc/customizer/settings/woo-product-layout.php:124
+#: inc/customizer/settings/woo-product-layout.php:169
+#: inc/customizer/settings/woo-shop-layout.php:154
+#: inc/customizer/settings/woo-shop-layout.php:199
+msgid "Default"
+msgstr ""
+
+#: inc/customizer/settings/general.php:119
+msgid "Default logo size 110x35px ( Input logo size only number widthout px )"
+msgstr ""
+
+#: inc/customizer/settings/general.php:103
+msgid "Default logo size 162x52px ( Input logo size only number widthout px )"
+msgstr ""
+
+#: inc/customizer/settings/single.php:384
+msgid "Display post Order"
+msgstr ""
+
+#: inc/customizer/settings/general.php:183
+msgid "Display Preview Image on Blog"
+msgstr ""
+
+#: inc/lc-helper.php:202
+msgid "Domain Mismatch"
+msgstr ""
+
+#: inc/helper-functions.php:325 inc/customizer/settings/general.php:509
+msgid "Dribbble"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:53
+msgid "Effect only for Shop custom page template "
+msgstr ""
+
+#: comments.php:61 template-parts/content-single-team.php:63
+#: inc/customizer/settings/general.php:350
+#: inc/customizer/settings/header.php:349
+msgid "Email"
+msgstr ""
+
+#: woocommerce/custom/functions.php:311
+msgid "Email *"
+msgstr ""
+
+#: inc/customizer/settings/general.php:335
+msgid "Email Label"
+msgstr ""
+
+#: template-parts/content-single-locations.php:59
+msgid "Ends On"
+msgstr ""
+
+#: template-parts/header/header-4.php:47
+msgid "Enter a keyword to search products"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:270 inc/customizer/settings/error.php:173
+msgid "Entrance Animation"
+msgstr ""
+
+#: inc/customizer/settings/error.php:77
+msgid "Error Heading"
+msgstr ""
+
+#: inc/customizer/settings/error.php:123
+msgid "Error Heading Color"
+msgstr ""
+
+#: inc/customizer/settings/error.php:51
+msgid "Error Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:337
+msgid "Error Layout"
+msgstr ""
+
+#: inc/customizer/customizer.php:399
+msgid "Error Page"
+msgstr ""
+
+#: inc/customizer/settings/error.php:91
+msgid "Error Text"
+msgstr ""
+
+#: inc/customizer/settings/error.php:139
+msgid "Error Text Color"
+msgstr ""
+
+#: inc/helper-functions.php:305 inc/customizer/settings/general.php:449
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:283 inc/customizer/settings/error.php:186
+msgid "fadeIn"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:284 inc/customizer/settings/error.php:187
+msgid "fadeInDown"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:285 inc/customizer/settings/error.php:188
+msgid "fadeInLeft"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:286 inc/customizer/settings/error.php:189
+msgid "fadeInRight"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:287 inc/customizer/settings/error.php:190
+msgid "fadeInUp"
+msgstr ""
+
+#. Name of the theme
+msgid "Tripfery"
+msgstr ""
+
+#. Description of the theme
+msgid "Tripfery is an Factory &amp; Industry WordPress Theme."
+msgstr ""
+
+#: inc/customizer/settings/blog.php:276 inc/customizer/settings/error.php:179
+msgid "flash"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:116
+#: inc/customizer/typography/typography-customizer.php:176
+#: inc/customizer/typography/typography-customizer.php:332
+#: inc/customizer/typography/typography-customizer.php:397
+#: inc/customizer/typography/typography-customizer.php:462
+#: inc/customizer/typography/typography-customizer.php:527
+#: inc/customizer/typography/typography-customizer.php:592
+#: inc/customizer/typography/typography-customizer.php:657
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:117
+#: inc/customizer/typography/typography-customizer.php:177
+#: inc/customizer/typography/typography-customizer.php:244
+#: inc/customizer/typography/typography-customizer.php:333
+#: inc/customizer/typography/typography-customizer.php:398
+#: inc/customizer/typography/typography-customizer.php:463
+#: inc/customizer/typography/typography-customizer.php:528
+#: inc/customizer/typography/typography-customizer.php:593
+#: inc/customizer/typography/typography-customizer.php:658
+msgid "Font Size (px)"
+msgstr ""
+
+#: inc/customizer/customizer.php:170
+msgid "Footer"
+msgstr ""
+
+#: inc/general.php:123
+msgid "Footer (Style 1) 1"
+msgstr ""
+
+#: inc/general.php:124
+msgid "Footer (Style 1) 2"
+msgstr ""
+
+#: inc/general.php:125
+msgid "Footer (Style 1) 3"
+msgstr ""
+
+#: inc/general.php:126
+msgid "Footer (Style 1) 4"
+msgstr ""
+
+#: inc/general.php:130
+msgid "Footer (Style 2) 1"
+msgstr ""
+
+#: inc/general.php:131
+msgid "Footer (Style 2) 2"
+msgstr ""
+
+#: inc/general.php:132
+msgid "Footer (Style 2) 3"
+msgstr ""
+
+#: inc/general.php:133
+msgid "Footer (Style 2) 4"
+msgstr ""
+
+#: inc/general.php:137
+msgid "Footer (Style 3) 1"
+msgstr ""
+
+#: inc/general.php:138
+msgid "Footer (Style 3) 2"
+msgstr ""
+
+#: inc/general.php:139
+msgid "Footer (Style 3) 3"
+msgstr ""
+
+#: inc/general.php:140
+msgid "Footer (Style 3) 4"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:52
+msgid "Footer Copyright"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:68
+msgid "Footer Layout"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:403
+msgid "Footer Link Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:419
+msgid "Footer Link Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:546
+msgid "Footer Logo"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:530
+msgid "Footer Logo Display"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:387
+msgid "Footer Text Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:371
+msgid "Footer Title Color"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:39
+msgid "Footer Top"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:48
+#: inc/customizer/settings/blog-single-layout.php:48
+#: inc/customizer/settings/page-layout.php:48
+#: inc/customizer/settings/locations-layout.php:48
+#: inc/customizer/settings/locations-single-layout.php:48
+#: inc/customizer/settings/search-layout.php:48
+#: inc/customizer/settings/service-layout.php:48
+#: inc/customizer/settings/service-single-layout.php:48
+#: inc/customizer/settings/team-layout.php:48
+#: inc/customizer/settings/team-single-layout.php:48
+#: inc/customizer/settings/woo-shop-layout.php:48
+msgid "Full Width"
+msgstr ""
+
+#. Name of the template
+msgid "Fullwidth Template"
+msgstr ""
+
+#: inc/customizer/customizer.php:42
+msgid "General"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:96
+msgid "Get a Quote"
+msgstr ""
+
+#: inc/helper-functions.php:350
+msgid "Github"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:449
+msgid "Go Back To Home Page"
+msgstr ""
+
+#: woocommerce/custom/functions.php:321
+msgid "Good"
+msgstr ""
+
+#: inc/helper-functions.php:118
+msgctxt "Google font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/general.php:56
+msgid "Gradient Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:51
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/settings/header.php:214
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:315
+msgid "Header h1 "
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:380
+msgid "Header h2 "
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:445
+msgid "Header h3 "
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:510
+msgid "Header h4 "
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:575
+msgid "Header h5 "
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:640
+msgid "Header h6 "
+msgstr ""
+
+#: inc/customizer/settings/header.php:229
+msgid "Header Layout"
+msgstr ""
+
+#: inc/customizer/settings/header.php:425
+msgid "Header Login"
+msgstr ""
+
+#: inc/customizer/customizer.php:153
+msgid "Header Main"
+msgstr ""
+
+#: inc/customizer/customizer.php:161
+msgid "Header Mobile"
+msgstr ""
+
+#: inc/customizer/settings/header.php:472
+msgid "Header Offer"
+msgstr ""
+
+#: inc/customizer/settings/header.php:170
+msgid "Header On/Off"
+msgstr ""
+
+#: inc/general.php:100
+msgid "Header Right"
+msgstr ""
+
+#: inc/customizer/customizer.php:145
+msgid "Header Top"
+msgstr ""
+
+#: inc/customizer/settings/header.php:157
+msgid "Header Variation"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:73
+msgid "Heading"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:281 inc/customizer/settings/error.php:184
+msgid "headShake"
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:89
+msgid "Height of the Progress Bar"
+msgstr ""
+
+#: inc/modules/rt-breadcrumbs.php:21
+msgid "Home"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://radiustheme.com"
+msgstr ""
+
+#. URI of the theme
+msgid "http://radiustheme.com/demo/wordpress/themes/tripfery"
+msgstr ""
+
+#: inc/general.php:78
+msgid "Huge"
+msgstr ""
+
+#: inc/customizer/settings/general.php:143
+msgid "Image Blend"
+msgstr ""
+
+#: woocommerce/custom/functions.php:304
+msgid "In Stock"
+msgstr ""
+
+#: template-parts/content-single-team.php:56
+msgid "Information:"
+msgstr ""
+
+#: inc/helper-functions.php:345 inc/customizer/settings/general.php:554
+msgid "Instagram"
+msgstr ""
+
+#: template-parts/content-none.php:18
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/header/product-search-form.php:6
+msgid "Keyword here..."
+msgstr ""
+
+#: inc/general.php:73
+msgid "Large"
+msgstr ""
+
+#: inc/customizer/settings/single.php:389
+msgid "Last Modified Posts"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:49 inc/customizer/settings/footer.php:74
+#: inc/customizer/settings/header.php:61 inc/customizer/settings/header.php:235
+#: inc/customizer/settings/locations.php:60
+#: inc/customizer/settings/service.php:60 inc/customizer/settings/single.php:79
+#: inc/customizer/settings/team.php:59
+msgid "Layout 1"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:53 inc/customizer/settings/footer.php:78
+#: inc/customizer/settings/header.php:65 inc/customizer/settings/header.php:239
+#: inc/customizer/settings/locations.php:64
+#: inc/customizer/settings/service.php:64 inc/customizer/settings/single.php:83
+#: inc/customizer/settings/team.php:63
+msgid "Layout 2"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:57 inc/customizer/settings/footer.php:82
+#: inc/customizer/settings/header.php:69 inc/customizer/settings/header.php:243
+#: inc/customizer/settings/locations.php:68
+msgid "Layout 3"
+msgstr ""
+
+#: inc/customizer/settings/header.php:73 inc/customizer/settings/header.php:247
+msgid "Layout 4"
+msgstr ""
+
+#: inc/customizer/settings/header.php:251
+msgid "Layout 5"
+msgstr ""
+
+#: inc/customizer/settings/header.php:255
+msgid "Layout 6"
+msgstr ""
+
+#: inc/customizer/settings/header.php:259
+msgid "Layout 7"
+msgstr ""
+
+#: inc/customizer/settings/header.php:263
+msgid "Layout 8"
+msgstr ""
+
+#: inc/customizer/customizer.php:69
+msgid "Layout Settings"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:44
+#: inc/customizer/settings/blog-single-layout.php:44
+#: inc/customizer/settings/page-layout.php:44
+#: inc/customizer/settings/locations-layout.php:44
+#: inc/customizer/settings/locations-single-layout.php:44
+#: inc/customizer/settings/search-layout.php:44
+#: inc/customizer/settings/service-layout.php:44
+#: inc/customizer/settings/service-single-layout.php:44
+#: inc/customizer/settings/team-layout.php:44
+#: inc/customizer/settings/team-single-layout.php:44
+#: inc/customizer/settings/woo-shop-layout.php:44
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/lc-helper.php:125
+msgid "License Status"
+msgstr ""
+
+#: inc/general.php:44
+msgid "light gray"
+msgstr ""
+
+#: inc/customizer/settings/general.php:76
+msgid "Light Logo"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:135
+#: inc/customizer/typography/typography-customizer.php:195
+#: inc/customizer/typography/typography-customizer.php:350
+#: inc/customizer/typography/typography-customizer.php:415
+#: inc/customizer/typography/typography-customizer.php:480
+#: inc/customizer/typography/typography-customizer.php:545
+#: inc/customizer/typography/typography-customizer.php:610
+#: inc/customizer/typography/typography-customizer.php:675
+msgid "Line Height"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:136
+#: inc/customizer/typography/typography-customizer.php:196
+#: inc/customizer/typography/typography-customizer.php:263
+#: inc/customizer/typography/typography-customizer.php:351
+#: inc/customizer/typography/typography-customizer.php:416
+#: inc/customizer/typography/typography-customizer.php:481
+#: inc/customizer/typography/typography-customizer.php:546
+#: inc/customizer/typography/typography-customizer.php:611
+#: inc/customizer/typography/typography-customizer.php:676
+msgid "Line Height (px)"
+msgstr ""
+
+#: inc/helper-functions.php:315 inc/customizer/settings/general.php:479
+msgid "Linkedin"
+msgstr ""
+
+#: archive.php:86 index.php:80 page-template/template-archive-1.php:57
+#: inc/customizer/settings/blog.php:78
+msgid "Load More"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:93
+msgid "Load More Limit"
+msgstr ""
+
+#: woocommerce/custom/functions.php:443
+msgid "Loader.."
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:100
+msgid "Login"
+msgstr ""
+
+#: inc/customizer/settings/header.php:455
+msgid "Login Link"
+msgstr ""
+
+#: inc/customizer/settings/header.php:439
+msgid "Login Text"
+msgstr ""
+
+#: inc/customizer/settings/general.php:101
+msgid "Logo Width"
+msgstr ""
+
+#: inc/customizer/settings/general.php:51
+msgid "Main Logo"
+msgstr ""
+
+#: inc/customizer/settings/header.php:378
+msgid "Make a Button"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:64
+#: inc/customizer/typography/typography-customizer.php:158
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/settings/color.php:106
+msgid "Menu Color"
+msgstr ""
+
+#: inc/customizer/settings/color.php:122
+msgid "Menu Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/woo-product.php:37
+msgid "Meta"
+msgstr ""
+
+#: inc/customizer/settings/header.php:558
+msgid "Mobile Address"
+msgstr ""
+
+#: inc/customizer/settings/header.php:628
+msgid "Mobile Button"
+msgstr ""
+
+#: inc/customizer/settings/header.php:544
+msgid "Mobile Date"
+msgstr ""
+
+#: inc/customizer/settings/header.php:600
+msgid "Mobile Email"
+msgstr ""
+
+#: inc/customizer/settings/header.php:517
+msgid "Mobile Header Option"
+msgstr ""
+
+#: inc/customizer/settings/general.php:117
+msgid "Mobile Logo Width"
+msgstr ""
+
+#: inc/customizer/settings/header.php:572
+msgid "Mobile Opening"
+msgstr ""
+
+#: inc/customizer/settings/header.php:586
+msgid "Mobile Phone"
+msgstr ""
+
+#: inc/customizer/settings/header.php:642
+msgid "Mobile Search"
+msgstr ""
+
+#: inc/customizer/settings/header.php:614
+msgid "Mobile Social"
+msgstr ""
+
+#: inc/customizer/settings/header.php:530
+msgid "Mobile Topbar"
+msgstr ""
+
+#: inc/customizer/settings/single.php:271
+msgid "Modern"
+msgstr ""
+
+#: inc/customizer/settings/single.php:390
+msgid "Most Commented posts"
+msgstr ""
+
+#: inc/customizer/settings/single.php:391
+msgid "Most Viewed posts"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:37
+msgid "N/A"
+msgstr ""
+
+#: comments.php:58
+msgid "Name"
+msgstr ""
+
+#: woocommerce/custom/functions.php:310
+msgid "Name *"
+msgstr ""
+
+#: inc/general.php:440
+msgid "New"
+msgstr ""
+
+#: comments.php:40
+msgid "Newer Comments"
+msgstr ""
+
+#: template-parts/content-1.php:75 template-parts/content-2.php:75
+#: template-parts/content-3.php:92 template-parts/content-single-2.php:71
+#: template-parts/content-single.php:70
+#: inc/modules/rt-locations-related.php:143 inc/modules/rt-post-related.php:137
+#: inc/modules/rt-team-related.php:147
+#: woocommerce/single-product/related.php:49
+msgid "Next"
+msgstr ""
+
+#: inc/general.php:657
+msgid "Next Post"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:177
+#: inc/customizer/settings/banner.php:202
+#: inc/customizer/settings/blog-layout.php:168
+#: inc/customizer/settings/blog-layout.php:213
+#: inc/customizer/settings/blog-single-layout.php:168
+#: inc/customizer/settings/blog-single-layout.php:213
+#: inc/customizer/settings/error-layout.php:127
+#: inc/customizer/settings/error-layout.php:172
+#: inc/customizer/settings/error.php:60 inc/customizer/settings/footer.php:217
+#: inc/customizer/settings/footer.php:284
+#: inc/customizer/settings/footer.php:351
+#: inc/customizer/settings/footer.php:555
+#: inc/customizer/settings/general.php:60
+#: inc/customizer/settings/general.php:85
+#: inc/customizer/settings/general.php:235
+#: inc/customizer/settings/page-layout.php:168
+#: inc/customizer/settings/page-layout.php:213
+#: inc/customizer/settings/locations-layout.php:168
+#: inc/customizer/settings/locations-layout.php:213
+#: inc/customizer/settings/locations-single-layout.php:168
+#: inc/customizer/settings/locations-single-layout.php:213
+#: inc/customizer/settings/search-layout.php:168
+#: inc/customizer/settings/search-layout.php:213
+#: inc/customizer/settings/service-layout.php:168
+#: inc/customizer/settings/service-layout.php:213
+#: inc/customizer/settings/service-single-layout.php:168
+#: inc/customizer/settings/service-single-layout.php:213
+#: inc/customizer/settings/team-layout.php:168
+#: inc/customizer/settings/team-layout.php:213
+#: inc/customizer/settings/team-single-layout.php:168
+#: inc/customizer/settings/team-single-layout.php:213
+#: inc/customizer/settings/woo-product-layout.php:126
+#: inc/customizer/settings/woo-product-layout.php:171
+#: inc/customizer/settings/woo-shop-layout.php:156
+#: inc/customizer/settings/woo-shop-layout.php:201
+msgid "No file selected"
+msgstr ""
+
+#: inc/customizer/settings/single.php:272
+msgid "None"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:274 inc/customizer/settings/error.php:177
+msgid "none"
+msgstr ""
+
+#: inc/general.php:68
+msgid "Normal"
+msgstr ""
+
+#: inc/customizer/settings/general.php:147
+msgid "Normal Mode"
+msgstr ""
+
+#: inc/lc-helper.php:196
+msgid "Not Activated"
+msgstr ""
+
+#: woocommerce/custom/functions.php:323
+msgid "Not that bad"
+msgstr ""
+
+#: inc/lc-helper.php:133
+msgid "Note:"
+msgstr ""
+
+#: template-parts/content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:98 inc/customizer/settings/footer.php:122
+#: inc/customizer/settings/footer.php:145
+msgid "Number of Columns for Footer"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:52
+msgid "Number of items per page"
+msgstr ""
+
+#: inc/general.php:192
+msgid "Offcanvas Info"
+msgstr ""
+
+#: inc/customizer/settings/general.php:276
+msgid "Offcanvus Label"
+msgstr ""
+
+#: inc/customizer/settings/general.php:290
+msgid "Offcanvus Text"
+msgstr ""
+
+#: inc/customizer/settings/header.php:502
+msgid "Offer Link"
+msgstr ""
+
+#: inc/customizer/settings/header.php:486
+msgid "Offer Text"
+msgstr ""
+
+#: comments.php:39
+msgid "Older Comments"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:447
+msgid "Oops... Page Not Found!"
+msgstr ""
+
+#: inc/customizer/settings/header.php:363
+msgid "Opening"
+msgstr ""
+
+#: inc/customizer/settings/general.php:395
+msgid "Opening Label"
+msgstr ""
+
+#: inc/customizer/settings/general.php:410
+msgid "Opening Text"
+msgstr ""
+
+#: template-parts/content-banner.php:25
+msgid "Our Locationss"
+msgstr ""
+
+#: template-parts/content-banner.php:27
+msgid "Our Services"
+msgstr ""
+
+#: template-parts/content-banner.php:23
+msgid "Our Teams"
+msgstr ""
+
+#: woocommerce/custom/functions.php:304
+msgid "Out of Stock"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:231
+#: inc/customizer/settings/blog-single-layout.php:231
+#: inc/customizer/settings/error-layout.php:190
+#: inc/customizer/settings/page-layout.php:231
+#: inc/customizer/settings/locations-layout.php:231
+#: inc/customizer/settings/locations-single-layout.php:231
+#: inc/customizer/settings/search-layout.php:231
+#: inc/customizer/settings/service-layout.php:231
+#: inc/customizer/settings/service-single-layout.php:231
+#: inc/customizer/settings/team-layout.php:231
+#: inc/customizer/settings/team-single-layout.php:231
+#: inc/customizer/settings/woo-product-layout.php:189
+#: inc/customizer/settings/woo-shop-layout.php:219
+msgid "Page / Post Background Color"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:204
+#: inc/customizer/settings/blog-single-layout.php:204
+#: inc/customizer/settings/error-layout.php:163
+#: inc/customizer/settings/page-layout.php:204
+#: inc/customizer/settings/locations-layout.php:204
+#: inc/customizer/settings/locations-single-layout.php:204
+#: inc/customizer/settings/search-layout.php:204
+#: inc/customizer/settings/service-layout.php:204
+#: inc/customizer/settings/service-single-layout.php:204
+#: inc/customizer/settings/team-layout.php:204
+#: inc/customizer/settings/team-single-layout.php:204
+#: inc/customizer/settings/woo-product-layout.php:162
+#: inc/customizer/settings/woo-shop-layout.php:192
+msgid "Page / Post Background Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:230
+msgid "Pages Layout"
+msgstr ""
+
+#: template-parts/content-page.php:18 template-parts/content-single-2.php:113
+#: template-parts/content-single.php:104
+msgid "Pages:"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:77
+msgid "Pagination"
+msgstr ""
+
+#: woocommerce/custom/functions.php:320
+msgid "Perfect"
+msgstr ""
+
+#: template-parts/content-single-team.php:59
+#: inc/customizer/settings/header.php:335
+msgid "Phone"
+msgstr ""
+
+#: inc/customizer/settings/general.php:365
+msgid "Phone Label"
+msgstr ""
+
+#: inc/customizer/settings/general.php:380
+msgid "Phone No"
+msgstr ""
+
+#: inc/helper-functions.php:340 inc/customizer/settings/general.php:539
+msgid "Pinterest"
+msgstr ""
+
+#: inc/lc-utility.php:50
+msgid "Please activate your theme using Envato"
+msgstr ""
+
+#: inc/lc-utility.php:181
+msgid ""
+"Please activate your theme using Envato purchase code, to install demo data."
+msgstr ""
+
+#: inc/lc-utility.php:194 inc/lc-utility.php:211
+msgid ""
+"Please activate your theme using Envato purchase code, to use this plugin."
+msgstr ""
+
+#. Support Center
+#: inc/lc-helper.php:218
+#, php-format
+msgid ""
+"Please keep in mind, you can activate one license in one domain, if you face "
+"any problem in activation, please contact our <a href=\"%s\" "
+"target=\"_blank\">Support Center</a>"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:141
+msgid "Locations Archive Excerpt Limit"
+msgstr ""
+
+#: inc/customizer/customizer.php:292 inc/customizer/settings/locations.php:54
+msgid "Locations Archive Layout"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:41
+msgid "Locations Archive Option"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:84
+msgid "Locations Archive Post Limit"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:110
+msgid "Locations Category Slug"
+msgstr ""
+
+#: template-parts/content-banner.php:33
+msgid "Locations Details"
+msgstr ""
+
+#: inc/customizer/customizer.php:390
+msgid "Locations Setting"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:167
+msgid "Locations Single Category"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:181
+msgid "Locations Single Client"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:209
+msgid "Locations Single End Date"
+msgstr ""
+
+#: inc/customizer/customizer.php:301
+msgid "Locations Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:237
+msgid "Locations Single Rating"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:195
+msgid "Locations Single Start Date"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:223
+msgid "Locations Single WebLink"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:64
+msgid "Locations Slug"
+msgstr ""
+
+#. Name of the template
+msgid "Post Layout 1"
+msgstr ""
+
+#. Name of the template
+msgid "Post Layout 2"
+msgstr ""
+
+#: inc/customizer/settings/single.php:253
+msgid "Post Published"
+msgstr ""
+
+#: inc/customizer/settings/single.php:361
+msgid "Post Query"
+msgstr ""
+
+#: inc/customizer/settings/single.php:239
+msgid "Post Reading Length"
+msgstr ""
+
+#: inc/customizer/customizer.php:355
+msgid "Post Settings"
+msgstr ""
+
+#: inc/customizer/customizer.php:363
+msgid "Post Share"
+msgstr ""
+
+#: inc/customizer/customizer.php:247
+msgid "Post Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/single.php:74
+msgid "Post single layout variation you can selecr and use."
+msgstr ""
+
+#: inc/customizer/customizer.php:221
+msgid "Post Type Slug"
+msgstr ""
+
+#: inc/customizer/settings/single.php:366
+msgid "Posts by the same Author"
+msgstr ""
+
+#: inc/customizer/settings/single.php:364
+msgid "Posts in the same Categories"
+msgstr ""
+
+#: inc/customizer/settings/single.php:365
+msgid "Posts in the same Tags"
+msgstr ""
+
+#: inc/customizer/settings/general.php:211
+msgid "Preloader"
+msgstr ""
+
+#: inc/customizer/settings/general.php:251
+msgid "Preloader Background color"
+msgstr ""
+
+#: inc/customizer/settings/general.php:225
+msgid "Preloader Image"
+msgstr ""
+
+#: template-parts/content-1.php:74 template-parts/content-2.php:74
+#: template-parts/content-3.php:91 template-parts/content-single-2.php:70
+#: template-parts/content-single.php:69
+#: inc/modules/rt-locations-related.php:142 inc/modules/rt-post-related.php:136
+#: inc/modules/rt-team-related.php:146
+#: woocommerce/single-product/related.php:48
+msgid "Prev"
+msgstr ""
+
+#: inc/general.php:648
+msgid "Previous Post"
+msgstr ""
+
+#: inc/general.php:99
+msgid "Primary"
+msgstr ""
+
+#: inc/general.php:29 inc/customizer/settings/color.php:41
+msgid "Primary Color"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:50
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: inc/customizer/customizer.php:319
+msgid "Product Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:36
+msgid "Products Per Column"
+msgstr ""
+
+#: template-parts/content-single-team.php:84
+msgid "Professional Skills"
+msgstr ""
+
+#: inc/customizer/customizer.php:205
+msgid "Progress Bar"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:277 inc/customizer/settings/error.php:180
+msgid "pulse"
+msgstr ""
+
+#: inc/lc-helper.php:117
+msgid "Purchase Code"
+msgstr ""
+
+#: inc/lc-utility.php:52
+msgid "purchase code"
+msgstr ""
+
+#: inc/lc-utility.php:155
+msgid "Purchase code already activated for one domain!!!"
+msgstr ""
+
+#: inc/lc-utility.php:168
+msgid "Purchase code is required!!!"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:28
+#: woocommerce/global/quantity-input.php:33
+msgid "Quantity"
+msgstr ""
+
+#: inc/customizer/settings/single.php:359
+msgid "Query Type"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:84
+msgid "Quick view"
+msgstr ""
+
+#. Author of the theme
+msgid "RadiusTheme"
+msgstr ""
+
+#: inc/customizer/settings/single.php:388
+msgid "Random Posts"
+msgstr ""
+
+#: woocommerce/custom/functions.php:319
+msgid "Rate&hellip;"
+msgstr ""
+
+#: template-parts/content-single-locations.php:66
+#: inc/customizer/settings/woo-shop.php:144
+msgid "Rating"
+msgstr ""
+
+#: template-parts/content.php:94
+msgid "Read More "
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:40
+msgid "Reading Progress Bar"
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:57
+#: inc/customizer/settings/reading-progress-bar.php:73
+msgid "Reading Progress Bar Color"
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:106
+msgid "Reading Progress Bar Position"
+msgstr ""
+
+#: template-parts/content-none.php:13
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>"
+msgstr ""
+
+#: inc/customizer/settings/single.php:387
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:438
+msgid "Related Case"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:409
+msgid "Related Chef"
+msgstr ""
+
+#: inc/customizer/settings/single.php:283
+msgid "Related Post Settings"
+msgstr ""
+
+#: inc/customizer/settings/woo-product.php:82
+#: inc/customizer/settings/woo-product.php:96
+msgid "Related Product"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:339
+msgid "Related Products"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:265
+#: inc/customizer/settings/single.php:310 inc/customizer/settings/team.php:243
+msgid "Related Title"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:176
+#: inc/customizer/settings/banner.php:201
+#: inc/customizer/settings/blog-layout.php:167
+#: inc/customizer/settings/blog-layout.php:212
+#: inc/customizer/settings/blog-single-layout.php:167
+#: inc/customizer/settings/blog-single-layout.php:212
+#: inc/customizer/settings/error-layout.php:126
+#: inc/customizer/settings/error-layout.php:171
+#: inc/customizer/settings/error.php:59 inc/customizer/settings/footer.php:216
+#: inc/customizer/settings/footer.php:283
+#: inc/customizer/settings/footer.php:350
+#: inc/customizer/settings/footer.php:554
+#: inc/customizer/settings/general.php:59
+#: inc/customizer/settings/general.php:84
+#: inc/customizer/settings/general.php:234
+#: inc/customizer/settings/page-layout.php:167
+#: inc/customizer/settings/page-layout.php:212
+#: inc/customizer/settings/locations-layout.php:167
+#: inc/customizer/settings/locations-layout.php:212
+#: inc/customizer/settings/locations-single-layout.php:167
+#: inc/customizer/settings/locations-single-layout.php:212
+#: inc/customizer/settings/search-layout.php:167
+#: inc/customizer/settings/search-layout.php:212
+#: inc/customizer/settings/service-layout.php:167
+#: inc/customizer/settings/service-layout.php:212
+#: inc/customizer/settings/service-single-layout.php:167
+#: inc/customizer/settings/service-single-layout.php:212
+#: inc/customizer/settings/team-layout.php:167
+#: inc/customizer/settings/team-layout.php:212
+#: inc/customizer/settings/team-single-layout.php:167
+#: inc/customizer/settings/team-single-layout.php:212
+#: inc/customizer/settings/woo-product-layout.php:125
+#: inc/customizer/settings/woo-product-layout.php:170
+#: inc/customizer/settings/woo-shop-layout.php:155
+#: inc/customizer/settings/woo-shop-layout.php:200
+msgid "Remove"
+msgstr ""
+
+#: woocommerce/custom/functions.php:432
+msgid "Remove this item"
+msgstr ""
+
+#: comments.php:29
+msgid "Reply"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:52
+#: inc/customizer/settings/blog-single-layout.php:52
+#: inc/customizer/settings/page-layout.php:52
+#: inc/customizer/settings/locations-layout.php:52
+#: inc/customizer/settings/locations-single-layout.php:52
+#: inc/customizer/settings/search-layout.php:52
+#: inc/customizer/settings/service-layout.php:52
+#: inc/customizer/settings/service-single-layout.php:52
+#: inc/customizer/settings/team-layout.php:52
+#: inc/customizer/settings/team-single-layout.php:52
+#: inc/customizer/settings/woo-shop-layout.php:52
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/customizer/settings/general.php:584
+msgid "RSS"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:278 inc/customizer/settings/error.php:181
+msgid "rubberBand"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:129
+msgid "Sale Flash"
+msgstr ""
+
+#: inc/customizer/settings/single.php:41
+msgid "Scroll Post"
+msgstr ""
+
+#: inc/customizer/settings/single.php:55
+msgid "Scroll Post Limit"
+msgstr ""
+
+#: template-parts/header/icon-search.php:10
+msgid "Search"
+msgstr ""
+
+#: inc/customizer/settings/search-layout.php:247
+msgid "Search Excerpt Length"
+msgstr ""
+
+#: searchform.php:12
+msgid "Search here ..."
+msgstr ""
+
+#: inc/customizer/settings/header.php:279
+msgid "Search Icon"
+msgstr ""
+
+#: inc/customizer/customizer.php:328
+msgid "Search Layout"
+msgstr ""
+
+#: template-parts/content-banner.php:12
+msgid "Search Results for : "
+msgstr ""
+
+#: inc/general.php:34 inc/customizer/settings/color.php:57
+msgid "Secondary Color"
+msgstr ""
+
+#: template-parts/content-services-1.php:32
+#: template-parts/content-services-2.php:48
+msgid "See Details"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:173
+#: inc/customizer/settings/banner.php:178
+#: inc/customizer/settings/banner.php:198
+#: inc/customizer/settings/banner.php:203
+#: inc/customizer/settings/blog-layout.php:164
+#: inc/customizer/settings/blog-layout.php:169
+#: inc/customizer/settings/blog-layout.php:209
+#: inc/customizer/settings/blog-layout.php:214
+#: inc/customizer/settings/blog-single-layout.php:164
+#: inc/customizer/settings/blog-single-layout.php:169
+#: inc/customizer/settings/blog-single-layout.php:209
+#: inc/customizer/settings/blog-single-layout.php:214
+#: inc/customizer/settings/error-layout.php:123
+#: inc/customizer/settings/error-layout.php:128
+#: inc/customizer/settings/error-layout.php:168
+#: inc/customizer/settings/error-layout.php:173
+#: inc/customizer/settings/error.php:56 inc/customizer/settings/error.php:61
+#: inc/customizer/settings/footer.php:213
+#: inc/customizer/settings/footer.php:218
+#: inc/customizer/settings/footer.php:280
+#: inc/customizer/settings/footer.php:285
+#: inc/customizer/settings/footer.php:347
+#: inc/customizer/settings/footer.php:352
+#: inc/customizer/settings/footer.php:551
+#: inc/customizer/settings/footer.php:556
+#: inc/customizer/settings/general.php:56
+#: inc/customizer/settings/general.php:61
+#: inc/customizer/settings/general.php:81
+#: inc/customizer/settings/general.php:86
+#: inc/customizer/settings/general.php:231
+#: inc/customizer/settings/general.php:236
+#: inc/customizer/settings/page-layout.php:164
+#: inc/customizer/settings/page-layout.php:169
+#: inc/customizer/settings/page-layout.php:209
+#: inc/customizer/settings/page-layout.php:214
+#: inc/customizer/settings/locations-layout.php:164
+#: inc/customizer/settings/locations-layout.php:169
+#: inc/customizer/settings/locations-layout.php:209
+#: inc/customizer/settings/locations-layout.php:214
+#: inc/customizer/settings/locations-single-layout.php:164
+#: inc/customizer/settings/locations-single-layout.php:169
+#: inc/customizer/settings/locations-single-layout.php:209
+#: inc/customizer/settings/locations-single-layout.php:214
+#: inc/customizer/settings/search-layout.php:164
+#: inc/customizer/settings/search-layout.php:169
+#: inc/customizer/settings/search-layout.php:209
+#: inc/customizer/settings/search-layout.php:214
+#: inc/customizer/settings/service-layout.php:164
+#: inc/customizer/settings/service-layout.php:169
+#: inc/customizer/settings/service-layout.php:209
+#: inc/customizer/settings/service-layout.php:214
+#: inc/customizer/settings/service-single-layout.php:164
+#: inc/customizer/settings/service-single-layout.php:169
+#: inc/customizer/settings/service-single-layout.php:209
+#: inc/customizer/settings/service-single-layout.php:214
+#: inc/customizer/settings/team-layout.php:164
+#: inc/customizer/settings/team-layout.php:169
+#: inc/customizer/settings/team-layout.php:209
+#: inc/customizer/settings/team-layout.php:214
+#: inc/customizer/settings/team-single-layout.php:164
+#: inc/customizer/settings/team-single-layout.php:169
+#: inc/customizer/settings/team-single-layout.php:209
+#: inc/customizer/settings/team-single-layout.php:214
+#: inc/customizer/settings/woo-product-layout.php:122
+#: inc/customizer/settings/woo-product-layout.php:127
+#: inc/customizer/settings/woo-product-layout.php:167
+#: inc/customizer/settings/woo-product-layout.php:172
+#: inc/customizer/settings/woo-shop-layout.php:152
+#: inc/customizer/settings/woo-shop-layout.php:157
+#: inc/customizer/settings/woo-shop-layout.php:197
+#: inc/customizer/settings/woo-shop-layout.php:202
+msgid "Select File"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:39
+#: inc/customizer/settings/blog-single-layout.php:39
+#: inc/customizer/settings/page-layout.php:39
+#: inc/customizer/settings/locations-layout.php:39
+#: inc/customizer/settings/locations-single-layout.php:39
+#: inc/customizer/settings/search-layout.php:39
+#: inc/customizer/settings/service-layout.php:39
+#: inc/customizer/settings/service-single-layout.php:39
+#: inc/customizer/settings/team-layout.php:39
+#: inc/customizer/settings/team-single-layout.php:39
+#: inc/customizer/settings/woo-shop-layout.php:39
+msgid "Select the default template layout for Pages"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:55
+#: inc/customizer/settings/service.php:55 inc/customizer/settings/team.php:54
+msgid "Select the gallery layout for gallery page"
+msgstr ""
+
+#: inc/customizer/settings/service.php:136
+msgid "Service Archive Excerpt Limit"
+msgstr ""
+
+#: inc/customizer/customizer.php:274 inc/customizer/settings/service.php:54
+msgid "Service Archive Layout"
+msgstr ""
+
+#: inc/customizer/settings/service.php:79
+msgid "Service Archive Post Limit"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:95
+msgid "Service Category Slug"
+msgstr ""
+
+#: template-parts/content-banner.php:35
+msgid "Service Details"
+msgstr ""
+
+#: inc/customizer/customizer.php:381
+msgid "Service Setting"
+msgstr ""
+
+#: inc/customizer/customizer.php:283
+msgid "Service Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:49
+msgid "Service Slug"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:279 inc/customizer/settings/error.php:182
+msgid "shakeX"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:280 inc/customizer/settings/error.php:183
+msgid "shakeY"
+msgstr ""
+
+#: template-parts/content-single-2.php:127
+#: template-parts/content-single.php:133 woocommerce/custom/functions.php:287
+msgid "Share:"
+msgstr ""
+
+#: inc/customizer/customizer.php:310 inc/customizer/customizer.php:406
+msgid "Shop Archive Layout"
+msgstr ""
+
+#: template-parts/content-banner.php:47
+msgid "Shop Details"
+msgstr ""
+
+#: template-parts/content-banner.php:45
+msgid "Shop Page"
+msgstr ""
+
+#: inc/customizer/customizer.php:415
+msgid "Shop Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:113
+msgid "Show Action"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:152
+msgid "Show Author"
+msgstr ""
+
+#: inc/customizer/settings/single.php:211
+msgid "Show Author Bio"
+msgstr ""
+
+#: inc/customizer/settings/single.php:113
+msgid "Show Author Name"
+msgstr ""
+
+#: inc/customizer/settings/service.php:108
+msgid "Show Button"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:180
+#: inc/customizer/settings/locations.php:99
+#: inc/customizer/settings/single.php:155
+msgid "Show Category"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:123
+msgid "Show Cloud Share Button"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:166 inc/customizer/settings/single.php:141
+msgid "Show Comment"
+msgstr ""
+
+#: inc/customizer/settings/team.php:189
+msgid "Show Contact"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:124
+msgid "Show Content"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:138
+msgid "Show Date"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:137
+msgid "Show Dribbble Share Button"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:179
+msgid "Show Email Share Button"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:127
+#: inc/customizer/settings/service.php:122 inc/customizer/settings/team.php:94
+msgid "Show Excerpt"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:39
+msgid "Show Facebook Share Button"
+msgstr ""
+
+#: inc/customizer/settings/single.php:99
+msgid "Show Featured Image"
+msgstr ""
+
+#: inc/customizer/settings/service.php:94
+msgid "Show Icon"
+msgstr ""
+
+#: inc/customizer/settings/team.php:161
+msgid "Show Info"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:81
+msgid "Show Linkedin Share Button"
+msgstr ""
+
+#: inc/customizer/settings/single.php:197
+msgid "Show Next / Previous post"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:95
+msgid "Show Pinterest Share Button"
+msgstr ""
+
+#: inc/customizer/settings/team.php:123
+msgid "Show Position"
+msgstr ""
+
+#: inc/customizer/settings/single.php:127
+msgid "Show Post Date"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:193
+msgid "Show Print Share Button"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:236
+msgid "Show Read More"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:208
+msgid "Show Reading Length"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:165
+msgid "Show Reddit Share Button"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:251
+msgid "Show Related Locations"
+msgstr ""
+
+#: inc/customizer/settings/single.php:296
+msgid "Show Related Post"
+msgstr ""
+
+#: inc/customizer/settings/single.php:326
+msgid "Show Related Post Number"
+msgstr ""
+
+#: inc/customizer/settings/single.php:342
+msgid "Show Related Post Title Length"
+msgstr ""
+
+#: inc/customizer/settings/team.php:229
+msgid "Show Related Team"
+msgstr ""
+
+#: inc/customizer/settings/single.php:183
+msgid "Show Share"
+msgstr ""
+
+#: inc/customizer/settings/team.php:175
+msgid "Show Skill"
+msgstr ""
+
+#: inc/customizer/settings/team.php:137
+msgid "Show Social"
+msgstr ""
+
+#: inc/customizer/settings/single.php:169
+msgid "Show Tags"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:151
+msgid "Show Tumblr Share Button"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:53
+msgid "Show Twitter Share Button"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:222
+msgid "Show Video"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:194 inc/customizer/settings/single.php:225
+msgid "Show Views"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:109
+msgid "Show Whatsapp Share Button"
+msgstr ""
+
+#: inc/customizer/settings/postshare.php:67
+msgid "Show Youtube Share Button"
+msgstr ""
+
+#: inc/general.php:145 inc/helper-functions.php:542
+msgid "Sidebar"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:38
+#: inc/customizer/settings/blog-single-layout.php:38
+#: inc/customizer/settings/page-layout.php:38
+#: inc/customizer/settings/locations-layout.php:38
+#: inc/customizer/settings/locations-single-layout.php:38
+#: inc/customizer/settings/search-layout.php:38
+#: inc/customizer/settings/service-layout.php:38
+#: inc/customizer/settings/service-single-layout.php:38
+#: inc/customizer/settings/team-layout.php:38
+#: inc/customizer/settings/team-single-layout.php:38
+#: inc/customizer/settings/woo-shop-layout.php:38
+msgid "Sidebar Layout"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:154
+msgid "Single Locations Option"
+msgstr ""
+
+#: inc/customizer/settings/single.php:73
+msgid "Single Post Layout"
+msgstr ""
+
+#: inc/customizer/settings/team.php:216
+msgid "Single Related Team Option"
+msgstr ""
+
+#: inc/customizer/settings/team.php:148
+msgid "Single Team Option"
+msgstr ""
+
+#: inc/customizer/settings/general.php:38
+msgid "Site Logo"
+msgstr ""
+
+#: header.php:50
+msgid "Skip to content"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:32
+msgid "SKU:"
+msgstr ""
+
+#: inc/helper-functions.php:330 inc/customizer/settings/general.php:569
+msgid "Skype"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:293 inc/customizer/settings/error.php:196
+msgid "slideInDown"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:294 inc/customizer/settings/error.php:197
+msgid "slideInLeft"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:295 inc/customizer/settings/error.php:198
+msgid "slideInRight"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:296 inc/customizer/settings/error.php:199
+msgid "slideInUp"
+msgstr ""
+
+#: inc/general.php:63
+msgid "Small"
+msgstr ""
+
+#: inc/customizer/settings/general.php:599
+msgid "Snapchat"
+msgstr ""
+
+#: inc/customizer/settings/general.php:435
+msgid "Social Label"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:448
+msgid "Sorry! This Page Is Not Available!"
+msgstr ""
+
+#: inc/lc-utility.php:161
+msgid "Sorry!!! Purchase code does not match"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/customizer/settings/single.php:382
+msgid "Sort Order"
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:104
+msgid "Special Offer !"
+msgstr ""
+
+#: inc/helper-functions.php:355
+msgid "Stackoverflow"
+msgstr ""
+
+#: template-parts/content-single-locations.php:57
+msgid "Starts On"
+msgstr ""
+
+#: inc/customizer/settings/header.php:184
+msgid "Sticky Header"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:225
+msgid "Sub Menu"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:243
+msgid "Sub Menu Font Size"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:262
+msgid "Sub Menu Line Height"
+msgstr ""
+
+#: inc/customizer/settings/color.php:199
+msgid "Submenu Background Color"
+msgstr ""
+
+#: inc/customizer/settings/color.php:167
+msgid "Submenu Color"
+msgstr ""
+
+#: inc/customizer/settings/color.php:183
+msgid "Submenu Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/blog.php:282 inc/customizer/settings/error.php:185
+msgid "swing"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:48
+msgid "Tag: "
+msgid_plural "Tags: "
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/content-single-2.php:124
+#: template-parts/content-single.php:130
+msgid "Tags:"
+msgstr ""
+
+#: inc/customizer/settings/team.php:108
+msgid "Team Archive Excerpt Limit"
+msgstr ""
+
+#: inc/customizer/customizer.php:256 inc/customizer/settings/team.php:53
+msgid "Team Archive Layout"
+msgstr ""
+
+#: inc/customizer/settings/team.php:40
+msgid "Team Archive Option"
+msgstr ""
+
+#: inc/customizer/settings/team.php:79
+msgid "Team Archive Post Limit"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:80
+msgid "Team Category Slug"
+msgstr ""
+
+#: template-parts/content-banner.php:31
+msgid "Team Details"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:281
+#: inc/customizer/settings/team.php:259
+msgid "Team Post"
+msgstr ""
+
+#: inc/customizer/customizer.php:372
+msgid "Team Setting"
+msgstr ""
+
+#: inc/customizer/customizer.php:265
+msgid "Team Single Layout"
+msgstr ""
+
+#: inc/customizer/settings/slug.php:34
+msgid "Team Slug"
+msgstr ""
+
+#: inc/customizer/customizer.php:120 inc/customizer/settings/general.php:130
+msgid "Theme Control"
+msgstr ""
+
+#: inc/customizer/customizer.php:128 inc/customizer/settings/general.php:263
+msgid "Theme General"
+msgstr ""
+
+#: inc/lc-helper.php:70 inc/lc-helper.php:84
+msgid "Theme License"
+msgstr ""
+
+#: inc/customizer/customizer.php:112
+msgid "Theme Logo"
+msgstr ""
+
+#: inc/customizer/customizer.php:136 inc/customizer/settings/general.php:422
+msgid "Theme Social"
+msgstr ""
+
+#: inc/customizer/settings/blog-layout.php:141
+#: inc/customizer/settings/blog-single-layout.php:141
+#: inc/customizer/settings/error-layout.php:100
+#: inc/customizer/settings/footer.php:170
+#: inc/customizer/settings/footer.php:237
+#: inc/customizer/settings/footer.php:304
+#: inc/customizer/settings/page-layout.php:141
+#: inc/customizer/settings/locations-layout.php:141
+#: inc/customizer/settings/locations-single-layout.php:141
+#: inc/customizer/settings/search-layout.php:141
+#: inc/customizer/settings/service-layout.php:141
+#: inc/customizer/settings/service-single-layout.php:141
+#: inc/customizer/settings/team-layout.php:141
+#: inc/customizer/settings/team-single-layout.php:141
+#: inc/customizer/settings/woo-product-layout.php:99
+#: inc/customizer/settings/woo-shop-layout.php:129
+msgid "This is banner background type."
+msgstr ""
+
+#: inc/customizer/settings/banner.php:169
+#: inc/customizer/settings/banner.php:194
+#: inc/customizer/settings/blog-layout.php:160
+#: inc/customizer/settings/blog-layout.php:205
+#: inc/customizer/settings/blog-single-layout.php:160
+#: inc/customizer/settings/blog-single-layout.php:205
+#: inc/customizer/settings/error-layout.php:119
+#: inc/customizer/settings/error-layout.php:164
+#: inc/customizer/settings/error.php:52 inc/customizer/settings/footer.php:209
+#: inc/customizer/settings/footer.php:276
+#: inc/customizer/settings/footer.php:343
+#: inc/customizer/settings/footer.php:547
+#: inc/customizer/settings/general.php:52
+#: inc/customizer/settings/general.php:77
+#: inc/customizer/settings/general.php:226
+#: inc/customizer/settings/page-layout.php:160
+#: inc/customizer/settings/page-layout.php:205
+#: inc/customizer/settings/locations-layout.php:160
+#: inc/customizer/settings/locations-layout.php:205
+#: inc/customizer/settings/locations-single-layout.php:160
+#: inc/customizer/settings/locations-single-layout.php:205
+#: inc/customizer/settings/search-layout.php:160
+#: inc/customizer/settings/search-layout.php:205
+#: inc/customizer/settings/service-layout.php:160
+#: inc/customizer/settings/service-layout.php:205
+#: inc/customizer/settings/service-single-layout.php:160
+#: inc/customizer/settings/service-single-layout.php:205
+#: inc/customizer/settings/team-layout.php:160
+#: inc/customizer/settings/team-layout.php:205
+#: inc/customizer/settings/team-single-layout.php:160
+#: inc/customizer/settings/team-single-layout.php:205
+#: inc/customizer/settings/woo-product-layout.php:118
+#: inc/customizer/settings/woo-product-layout.php:163
+#: inc/customizer/settings/woo-shop-layout.php:148
+#: inc/customizer/settings/woo-shop-layout.php:193
+msgid "This is the description for the Media Control"
+msgstr ""
+
+#: inc/customizer/settings/single.php:267
+msgid "Time Tormat"
+msgstr ""
+
+#: inc/customizer/settings/locations.php:297
+#: inc/customizer/settings/team.php:275
+msgid "Title Limit"
+msgstr ""
+
+#: inc/lc-utility.php:53
+msgid "to get full theme functionality and customer support."
+msgstr ""
+
+#: inc/customizer/settings/reading-progress-bar.php:110
+msgid "Top"
+msgstr ""
+
+#: inc/general.php:174
+msgid "Top Bar - Left"
+msgstr ""
+
+#: inc/general.php:183
+msgid "Top Bar - Right"
+msgstr ""
+
+#: inc/customizer/settings/header.php:92
+msgid "Top Bar Background Color"
+msgstr ""
+
+#: inc/customizer/settings/header.php:143
+msgid "Top Bar Hover Color"
+msgstr ""
+
+#: inc/customizer/settings/header.php:55
+msgid "Top Bar Layout"
+msgstr ""
+
+#: inc/customizer/settings/header.php:126
+msgid "Top Bar Link Color"
+msgstr ""
+
+#: inc/customizer/settings/header.php:40
+msgid "Top Bar On/Off"
+msgstr ""
+
+#: inc/customizer/settings/header.php:109
+msgid "Top Bar Text Color"
+msgstr ""
+
+#: woocommerce/custom/functions.php:457
+msgid "Total:"
+msgstr ""
+
+#: inc/customizer/settings/header.php:198
+msgid "Transparent Header"
+msgstr ""
+
+#: inc/customizer/settings/color.php:138
+msgid "Transparent Menu Color"
+msgstr ""
+
+#: inc/helper-functions.php:310 inc/customizer/settings/general.php:464
+msgid "Twitter"
+msgstr ""
+
+#: header.php:67
+msgid "Type your search........"
+msgstr ""
+
+#: inc/customizer/typography/typography-customizer.php:38
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:37
+msgid "Use product per col default 4"
+msgstr ""
+
+#: inc/customizer/settings/header.php:307
+msgid "Vertical Menu Icon"
+msgstr ""
+
+#: woocommerce/custom/functions.php:324
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/custom/functions.php:463
+msgid "View Cart"
+msgstr ""
+
+#: woocommerce/custom/functions.php:484 woocommerce/custom/functions.php:507
+#: woocommerce/custom/functions.php:531
+msgid "View your shopping cart"
+msgstr ""
+
+#: template-parts/content-single-locations.php:61
+msgid "Web Link"
+msgstr ""
+
+#: template-parts/content-single-team.php:61
+msgid "Website"
+msgstr ""
+
+#: inc/customizer/settings/woo-product.php:52
+msgid "Whishlist"
+msgstr ""
+
+#: inc/general.php:49
+msgid "white"
+msgstr ""
+
+#: woocommerce/custom/template-parts/wishlist-icon.php:37
+msgid "WishList"
+msgstr ""
+
+#: inc/customizer/settings/woo-shop.php:114
+msgid "Wishlist"
+msgstr ""
+
+#: inc/customizer/settings/header.php:656
+msgid "WooCommerce Cart"
+msgstr ""
+
+#: inc/customizer/settings/header.php:56 inc/customizer/settings/header.php:230
+msgid "You can override this settings only Mobile"
+msgstr ""
+
+#: inc/customizer/settings/footer.php:69
+msgid "You can set default footer form here."
+msgstr ""
+
+#: inc/customizer/customizer-default-data.php:377
+msgid "You May Also Like"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/custom/functions.php:386
+msgid "Your cart is empty"
+msgstr ""
+
+#: inc/views/comments-callback.php:22
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/lc-utility.php:43
+msgid ""
+"Your license key doesn't match your current domain. Please activate the "
+"license again for your current domain."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:55
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/custom/functions.php:317
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/custom/functions.php:328
+msgid "Your Review *"
+msgstr ""
+
+#: inc/helper-functions.php:335 inc/customizer/settings/general.php:524
+msgid "Youtube"
+msgstr ""

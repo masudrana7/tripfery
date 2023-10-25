@@ -1,0 +1,71 @@
+<wpml-config>
+    <admin-texts>
+        <key name="tripfery">
+            <key name="sidetext_label" />
+            <key name="sidetext" />            
+            <key name="address_label" />
+            <key name="address" />
+            <key name="email_label" />
+            <key name="email" />
+            <key name="phone_label" />
+            <key name="phone" />
+            <key name="opening_label" />
+            <key name="opening" />                       
+            <key name="social_label" />
+            <key name="online_button_text" />   
+            <key name="login_text" />
+            <key name="offer_text" />
+            <key name="copyright_text" />
+            <key name="scroll_indicator_position" />
+            <key name="related_title" />
+            <key name="team_contact_title" />
+            <key name="team_related_title" />
+            <key name="team_related_subtitle" />
+            <key name="team_related_shadowtitle" />
+            <key name="locations_related_title" />
+            <key name="locations_related_subtitle" />
+            <key name="locations_related_shadowtitle" />
+            <key name="error_text1" />
+            <key name="error_text2" />
+            <key name="error_buttontext" />            
+            <key name="team_slug" />          			
+            <key name="service_slug" />
+            <key name="locations_slug" />
+            <key name="team_cat_slug" />
+            <key name="service_cat_slug" />
+            <key name="locations_cat_slug" />
+        </key>
+    </admin-texts>
+	<custom-types>
+        <custom-type translate="1">tripfery_team</custom-type>
+        <custom-type translate="1">tripfery_service</custom-type>
+        <custom-type translate="1">tripfery_locations</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">tripfery_team_category</taxonomy>
+        <taxonomy translate="1">tripfery_service_category</taxonomy>
+        <taxonomy translate="1">tripfery_locations_category</taxonomy>
+    </taxonomies>
+	<custom-fields>
+       <custom-field action="translate">tripfery_youtube_link</custom-field>
+       <custom-field action="translate">tripfery_team_position</custom-field>
+       <custom-field action="translate">tripfery_team_website</custom-field>
+       <custom-field action="translate">tripfery_team_email</custom-field>
+       <custom-field action="translate">tripfery_team_phone</custom-field>
+       <custom-field action="translate">tripfery_team_address</custom-field>
+       <custom-field action="translate">tripfery_team_socials_header</custom-field>
+       <custom-field action="translate">tripfery_team_skill_info</custom-field>
+       <custom-field action="translate">skill_name</custom-field>
+       <custom-field action="translate">skill_value</custom-field>
+       <custom-field action="translate">skill_color</custom-field>       
+       <custom-field action="translate">tripfery_team_contact</custom-field>
+       <custom-field action="translate">tripfery_team_contact_form</custom-field>
+       <custom-field action="translate">tripfery_project_title</custom-field>
+       <custom-field action="translate">tripfery_project_text</custom-field>
+       <custom-field action="translate">tripfery_project_client</custom-field>
+       <custom-field action="translate">tripfery_project_start</custom-field>
+       <custom-field action="translate">tripfery_project_end</custom-field>
+       <custom-field action="translate">tripfery_project_web</custom-field>
+       <custom-field action="translate">tripfery_service_icon</custom-field>
+   </custom-fields>
+</wpml-config>

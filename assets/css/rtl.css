@@ -1,0 +1,23 @@
+.rt-button i:before,
+.btn-common i:before,
+.icon-tripfery-right-arrow:before,
+.icon-tripfery-left-arrow:before,
+.site-header .main-navigation ul li ul.sub-menu li > a:before {
+    transform: rotate(180deg);
+}
+.sidebar-widget-area .widget ul li a:before,
+.footer-content-area ul.menu li a::before {
+    transform: rotate(180deg);
+    padding-right: 10px;
+    padding-left: 0;
+}
+.about-author .pull-right {
+    padding-left: 25px;
+    width: 250px;
+}
+.wp-block-quote {
+    border-left: none;
+}
+.sidebar-widget-area .sidebar-service.widget_nav_menu ul li a:hover:before {
+    animation: unset;
+}

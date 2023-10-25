@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'radius-tripfery-font';
+  src: url('./radius-tripfery-font.eot?76453858');
+  src: url('./radius-tripfery-font.eot?76453858#iefix') format('embedded-opentype'),
+       url('./radius-tripfery-font.woff2?76453858') format('woff2'),
+       url('./radius-tripfery-font.woff?76453858') format('woff'),
+       url('./radius-tripfery-font.ttf?76453858') format('truetype'),
+       url('./radius-tripfery-font.svg?76453858#radius-tripfery-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "radius-tripfery-font";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tripfery-message {
+  font-size: 14px;
+}
+
+.icon-tripfery-instagram:before { content: '\e800'; } /* '' */
+.icon-tripfery-left-arrow:before { content: '\e801'; } /* '' */
+.icon-tripfery-location:before { content: '\e802'; } /* '' */
+.icon-tripfery-maintain:before { content: '\e803'; } /* '' */
+.icon-tripfery-message:before { content: '\e804'; } /* '' */
+.icon-tripfery-painter:before { content: '\e805'; } /* '' */
+.icon-tripfery-pdf:before { content: '\e806'; } /* '' */
+.icon-tripfery-petroleum:before { content: '\e807'; } /* '' */
+.icon-tripfery-phone:before { content: '\e808'; } /* '' */
+.icon-tripfery-pinterest:before { content: '\e809'; } /* '' */
+.icon-tripfery-play:before { content: '\e80a'; } /* '' */
+.icon-tripfery-plus:before { content: '\e80b'; } /* '' */
+.icon-tripfery-power:before { content: '\e80c'; } /* '' */
+.icon-tripfery-quality-control:before { content: '\e80d'; } /* '' */
+.icon-tripfery-quote-left:before { content: '\e80e'; } /* '' */
+.icon-tripfery-quote-right:before { content: '\e80f'; } /* '' */
+.icon-tripfery-rating:before { content: '\e810'; } /* '' */
+.icon-tripfery-right-arrow:before { content: '\e811'; } /* '' */
+.icon-tripfery-search:before { content: '\e812'; } /* '' */
+.icon-tripfery-select:before { content: '\e813'; } /* '' */
+.icon-tripfery-share:before { content: '\e814'; } /* '' */
+.icon-tripfery-shipping:before { content: '\e815'; } /* '' */
+.icon-tripfery-tags:before { content: '\e816'; } /* '' */
+.icon-tripfery-testing:before { content: '\e817'; } /* '' */
+.icon-tripfery-time:before { content: '\e818'; } /* '' */
+.icon-tripfery-twitter:before { content: '\e819'; } /* '' */
+.icon-tripfery-user:before { content: '\e81a'; } /* '' */
+.icon-tripfery-up-arrow:before { content: '\e81b'; } /* '' */
+.icon-tripfery-whatsapp:before { content: '\e81c'; } /* '' */
+.icon-tripfery-worker:before { content: '\e81d'; } /* '' */
+.icon-tripfery-youtube:before { content: '\e81e'; } /* '' */
+.icon-tripfery-angle-down:before { content: '\e81f'; } /* '' */
+.icon-tripfery-angle-left:before { content: '\e820'; } /* '' */
+.icon-tripfery-angle-right:before { content: '\e821'; } /* '' */
+.icon-tripfery-angle-up:before { content: '\e822'; } /* '' */
+.icon-tripfery-architecture:before { content: '\e823'; } /* '' */
+.icon-tripfery-automotive:before { content: '\e824'; } /* '' */
+.icon-tripfery-calendar:before { content: '\e825'; } /* '' */
+.icon-tripfery-calendar-alt:before { content: '\e826'; } /* '' */
+.icon-tripfery-cart:before { content: '\e827'; } /* '' */
+.icon-tripfery-check:before { content: '\e828'; } /* '' */
+.icon-tripfery-comment:before { content: '\e829'; } /* '' */
+.icon-tripfery-compare:before { content: '\e82a'; } /* '' */
+.icon-tripfery-construction:before { content: '\e82b'; } /* '' */
+.icon-tripfery-docs:before { content: '\e82c'; } /* '' */
+.icon-tripfery-facebook:before { content: '\e82d'; } /* '' */
+.icon-tripfery-heart:before { content: '\e82e'; } /* '' */
