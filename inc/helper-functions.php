@@ -39,11 +39,11 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 				$links[] = $paged + 2;
 				$links[] = $paged + 1;
 			}
-			include FAKTORIE_INC_DIR . 'views/pagination.php';
+			include TRIPFERY_INC_DIR . 'views/pagination.php';
 		}	
 
 		public static function comments_callback( $comment, $args, $depth ){
-			include FAKTORIE_INC_DIR . 'views/comments-callback.php';
+			include TRIPFERY_INC_DIR . 'views/comments-callback.php';
 		}
 
 
@@ -553,7 +553,7 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 		
 		public static function dynamic_internal_style(){
 			ob_start();
-			include FAKTORIE_INC_DIR . 'variable-style.php';
+			include TRIPFERY_INC_DIR . 'variable-style.php';
 			$dynamic_css  = ob_get_clean();
 			$dynamic_css  = self::minified_css( $dynamic_css );
 			wp_register_style( 'tripfery-dynamic', false );
@@ -577,7 +577,7 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 				if ( file_exists( $child_file ) ) {
 					$file = $child_file;
 				} else {
-					$file = FAKTORIE_INC_DIR . $filename;
+					$file = TRIPFERY_INC_DIR . $filename;
 				}
 			}
 			if ( file_exists( $file ) ) {

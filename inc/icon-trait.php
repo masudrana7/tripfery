@@ -37,7 +37,7 @@ trait IconTrait {
         "icon-tripfery-quote-left"  => "quote-left",
         "icon-tripfery-quote-right"  => "quote-right",
         "icon-tripfery-rating"  => "rating",
-        "icon-tripfery-search"  => "search",
+        "icon-search-icon"  => "search",
         "icon-tripfery-select"  => "select",
         "icon-tripfery-share"  => "share",
         "icon-tripfery-shipping"  => "shipping",

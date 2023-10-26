@@ -19,7 +19,7 @@ if( !empty( TripferyTheme::$options['footer_logo_light'] ) ) {
 	$logo_lights = wp_get_attachment_image( TripferyTheme::$options['footer_logo_light'], 'full' );
 	$tripfery_light_logo = $logo_lights;
 }else {
-	$tripfery_light_logo = "<img width='162' height='52' src='" . FAKTORIE_ASSETS_URL . 'img/logo-light.svg' . "' alt='" . esc_attr( get_bloginfo('name') ) . "'>";
+	$tripfery_light_logo = "<img width='162' height='52' src='" . TRIPFERY_ASSETS_URL . 'img/logo-light.svg' . "' alt='" . esc_attr( get_bloginfo('name') ) . "'>";
 }
 
 $tripfery_socials = TripferyTheme_Helper::socials();
@@ -28,7 +28,7 @@ if( !empty( TripferyTheme::$options['fbgimg2'] ) ) {
 	$f1_bg = wp_get_attachment_image_src( TripferyTheme::$options['fbgimg2'], 'full', true );
 	$footer_bg_img = $f1_bg[0];
 }else {
-	$footer_bg_img = FAKTORIE_ASSETS_URL . 'img/footer_bg.jpg';
+	$footer_bg_img = TRIPFERY_ASSETS_URL . 'img/footer_bg.jpg';
 }
 
 if ( TripferyTheme::$options['footer_bgtype2'] == 'fbgcolor2' ) {

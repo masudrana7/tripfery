@@ -108,7 +108,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 
 			// Footer
             'footer_style'        		=> 1,
-            'copyright_text'      		=> '&copy; ' . date('Y') . ' tripfery. All Rights Reserved by <a target="_blank" rel="nofollow" href="' . FAKTORIE_AUTHOR_URI . '">RadiusTheme</a>',
+            'copyright_text'      		=> '&copy; ' . date('Y') . ' tripfery. All Rights Reserved by <a target="_blank" rel="nofollow" href="' . TRIPFERY_AUTHOR_URI . '">RadiusTheme</a>',
 			'footer_column_1'			=> 4,
             'footer_column_2'           => 4,
             'footer_column_3'           => 4,

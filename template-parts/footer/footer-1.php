@@ -20,7 +20,7 @@ if( !empty( TripferyTheme::$options['fbgimg'] ) ) {
 	$f1_bg = wp_get_attachment_image_src( TripferyTheme::$options['fbgimg'], 'full', true );
 	$footer_bg_img = $f1_bg[0];
 }else {
-	$footer_bg_img = FAKTORIE_ASSETS_URL . 'img/footer_bg.jpg';
+	$footer_bg_img = TRIPFERY_ASSETS_URL . 'img/footer_bg.jpg';
 }
 
 if ( TripferyTheme::$options['footer_bgtype'] == 'fbgcolor' ) {

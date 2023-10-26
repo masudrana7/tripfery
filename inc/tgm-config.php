@@ -64,7 +64,7 @@ function tripfery_register_required_plugins() {
 
 	$config = array(
 		'id'           => 'tripfery',                 	// Unique ID for hashing notices for multiple instances of TGMPA.
-		'default_path' => FAKTORIE_INC_DIR. '/plugins/', // Default absolute path to bundled plugins.
+		'default_path' => TRIPFERY_INC_DIR. '/plugins/', // Default absolute path to bundled plugins.
 		'menu'         => 'tripfery-install-plugins', 	// Menu slug.
 		'has_notices'  => true,                    		// Show admin notices or not.
 		'dismissable'  => true,                    		// If false, a user cannot dismiss the nag message.

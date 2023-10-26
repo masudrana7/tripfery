@@ -25,7 +25,7 @@ CSS INDEX
 #. EL: Team Grid & Slider
 #. EL: Team Single
 #. EL: Service Grid & Slider
-#. EL: Service Tab
+#. EL: Service Isotope
 #. EL: Service Single
 #. EL: Locations Grid & Slider
 #. EL: Locations Single
@@ -3387,6 +3387,227 @@ CSS INDEX
 .rt-service-layout-4 .service-item:hover svg,
 .rt-service-layout-4 .hover-animation-active svg {
     color: var(--tripfery-primary-color);
+}
+/*-------------------------------------
+#. EL: Service Isotope
+---------------------------------------*/
+.listing-filter-btns {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    padding: 12px;
+    margin-bottom: 50px;
+    min-height: 75px;
+}
+.listing-filter-btns .filter-btn {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 10px;
+    position: relative;
+    background-color: transparent;
+    z-index: 5;
+    color: var(--tripfery-title-color);
+}
+.listing-filter-btns .filter-btn::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+    z-index: -2;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.listing-filter-btns .filter-btn.active::after {
+    width: 100%;
+    background-color: #384bff;
+}
+.listing-filter-btns .filter-btn.active{
+    color: var(--tripfery-white-color);
+}
+.listing-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 8px;
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.listing-card .listing-card-content {
+    padding: 20px 12px;
+}
+.listing-card .listing-thumb-wrapper {
+    overflow: hidden;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.listing-card img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.listing-card .listing-card-title{
+    margin: 0;
+}
+.wishlist svg {
+    color: #b4b4b4;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.wishlist svg:hover {
+    color: #e7233a;
+}
+.listing-card .listing-card-title a {
+    font-size: 20px;
+    color: #232323;
+    font-weight: 600;
+    margin-top: 11px;
+    display: inline-block;
+}
+.listing-card .listing-card-review-area {
+    gap: 10px;
+    margin-top: 10px;
+}
+.listing-card .listing-card-review-area .listing-card-review-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.listing-card .listing-card-review-area .review-stars-area {
+    gap: 5px;
+}
+.listing-card .listing-card-review-area .number-of-reviews {
+    font-size: 13px;
+    color: #999999;
+    line-height: 1;
+}
+.listing-card .price-area {
+    padding-top: 25px;
+}
+.listing-card .price-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #232323;
+}
+.listing-card .price-time {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8d8c8c;
+}
+.listing-card .btn-light-sm.btn-light-animated {
+    border-radius: 40px;
+    height: 35px;
+    background-color: #f8f8ff;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #384bff;
+}
+.listing-card .btn-light-sm.btn-light-animated:hover {
+    background-color: #384bff;
+    color: #ffffff;
+}
+.listing-card:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.listing-card:hover .listing-card-title a {
+    color: #384bff;
+}
+.rating-stars {
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.rating-stars li {
+    line-height: 1;
+}
+.rating-stars i {
+    color: #eca336;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.badge {
+    border-radius: 60px;
+    height: 25px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #fff8f8;
+    gap: 4px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 5px 9px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.badge .badge-text {
+    color: #232323;
+    font-weight: 500;
+    font-size: 14px;
+}
+.badge .badge-icon {
+    color: #e7233a;
+}
+.badge.badge-pink {
+    background-color: #fff8f8;
+}
+.badge:hover {
+    background-color: #e7233a;
+}
+.badge:hover .badge-text {
+    color: #ffffff;
+}
+.badge:hover .badge-icon {
+    color: #ffffff;
+}
+.discount-badge {
+    height: 25px;
+    padding: 5px 10px;
+    background-color: #0cd138;
+    color: #ffffff;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 /*-------------------------------------
 #. EL: Service Tab

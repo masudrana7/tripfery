@@ -5,9 +5,10 @@
  * @version 1.0
  */
 
-require_once FAKTORIE_INC_DIR . 'customizer/customizer-default-data.php';
-require_once FAKTORIE_INC_DIR . 'customizer/init.php';
+require_once TRIPFERY_INC_DIR . 'customizer/customizer-default-data.php';
+require_once TRIPFERY_INC_DIR . 'customizer/init.php';
+require_once TRIPFERY_INC_DIR . 'rt-cat-meta.php';
 /*woocommerce*/
 if ( class_exists( 'WooCommerce' ) ) {
-    require_once FAKTORIE_WOO_DIR . 'custom/functions.php';
+    require_once TRIPFERY_WOO_DIR . 'custom/functions.php';
 }

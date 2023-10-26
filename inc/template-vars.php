@@ -80,7 +80,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( TripferyTheme::$options[$prefix . '_bgimg'], 'full', true );
                 TripferyTheme::$bgimg = $attch_url[0];
             } else {
-                TripferyTheme::$bgimg = FAKTORIE_ASSETS_URL . 'img/banner.jpg';
+                TripferyTheme::$bgimg = TRIPFERY_ASSETS_URL . 'img/banner.jpg';
             }
 			
             TripferyTheme::$pagebgcolor = empty( $layout_settings['tripfery_page_bgcolor'] ) ? TripferyTheme::$options[$prefix . '_page_bgcolor'] : $layout_settings['tripfery_page_bgcolor'];			
@@ -133,7 +133,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( TripferyTheme::$options[$prefix . '_bgimg'], 'full', true );
                 TripferyTheme::$bgimg = $attch_url[0];
             } else {
-                TripferyTheme::$bgimg = FAKTORIE_ASSETS_URL . 'img/banner.jpg';
+                TripferyTheme::$bgimg = TRIPFERY_ASSETS_URL . 'img/banner.jpg';
             }
 			
             TripferyTheme::$pagebgcolor = TripferyTheme::$options[$prefix . '_page_bgcolor'];

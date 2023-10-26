@@ -13,7 +13,7 @@ add_action('after_setup_theme', 'tripfery_setup');
 if ( !function_exists( 'tripfery_setup' ) ) {
 	function tripfery_setup() {
 		// Language
-		load_theme_textdomain( 'tripfery', FAKTORIE_BASE_DIR . 'languages' );
+		load_theme_textdomain( 'tripfery', TRIPFERY_BASE_DIR . 'languages' );
 
 		// Theme support
 		add_theme_support( 'title-tag' );

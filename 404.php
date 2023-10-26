@@ -11,7 +11,7 @@ if( !empty( TripferyTheme::$options['error_image'] ) ) {
 	$error_bg = wp_get_attachment_image( TripferyTheme::$options['error_image'], 'full', true );
 	$tripfery_error_img = $error_bg;
 }else {
-	$tripfery_error_img = "<img src='" . FAKTORIE_ASSETS_URL . 'img/404.png' . "' alt='" . esc_attr( get_bloginfo('name') ) . "'>";
+	$tripfery_error_img = "<img src='" . TRIPFERY_ASSETS_URL . 'img/404.png' . "' alt='" . esc_attr( get_bloginfo('name') ) . "'>";
 }
 if( !empty( TripferyTheme::$options['error_image2'] ) ) {
 	$error_bg2 = wp_get_attachment_image( TripferyTheme::$options['error_image2'], 'full', true );

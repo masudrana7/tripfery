@@ -72,7 +72,7 @@ if( TripferyTheme::$options['image_blend'] == 'normal' ) {
             <button type="button" aria-label="close button" class="close"><i class="fa-solid fa-xmark"></i></button>
             <form role="search" method="get" class="header-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_html_e( 'Type your search........', 'tripfery' ); ?>">
-                <button type="submit" aria-label="submit button" class="search-btn"><i class="icon-tripfery-search"></i></button>
+                <button type="submit" aria-label="submit button" class="search-btn"><i class="icon-search-icon"></i></button>
             </form>
             </div>
         </div>

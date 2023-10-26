@@ -49,11 +49,9 @@ jQuery(document).ready(function ($) {
     Card
     -------------------------------------*/
     const panels = document.querySelectorAll(".panel");
-    
     window.onload = function () {
         panels[0].classList.add("active");
     };
-
     panels.forEach((panel) => {
         panel.addEventListener("mouseover", () => {
             removeActiveClasses();
@@ -66,6 +64,35 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    /*-------------------------------------
+    Listing Filter
+    -------------------------------------*/
+    if ($(".rt-case-isotope").length) {
+        $(".listing-filter-btns").children().first().addClass("active");
+        var $grid = $(".cardContainer").imagesLoaded(function () {
+            var filterBtnWrapper = $('.listing-filter-btns');
+            if (filterBtnWrapper.length > 0) {
+                filterBtnWrapper.each(function() {
+                    var firstFilterBtn = $(this).find('.filter-btn:first');
+                    var target = $(firstFilterBtn).attr('data-filter');
+                    $grid.isotope({
+                        itemSelector: ".card-item",
+                        layoutMode: "fitRows",
+                        filter: target,
+                    });
+                });
+            }
+        });
+        /*-------------------------------------
+        Filter Button
+        -------------------------------------*/
+        $(".listing-filter-btns").on("click", "button", function () {
+            $(".listing-filter-btns button").removeClass("active");
+            $(this).addClass("active");
+            var filterValue = $(this).attr("data-filter");
+            $grid.isotope({ filter: filterValue });
+        });
+    }
 
     // product cat menu
     var classHandler = true;
@@ -121,60 +148,8 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    /* masonary */
-    var galleryIsoContainer = $(".rt-masonry-grid");
-    if (galleryIsoContainer.length) {
-        var imageGallerIso = galleryIsoContainer.imagesLoaded(function () {
-            imageGallerIso.isotope({
-                itemSelector: ".rt-grid-item",
-                percentPosition: true,
-                isAnimated: true,
-                masonry: {
-                    columnWidth: ".rt-grid-item",                        
-                },
-                animationOptions: {
-                    duration: 700,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-        });
-    }
 
-    /* Isotope */
-    if (typeof $.fn.isotope == 'function') {
-        var $parent = $('.rt-isotope-wrapper'),
-            $isotope;
-        var blogGallerIso = $(".rt-isotope-content", $parent).imagesLoaded(function () {
-            $isotope = $(".rt-isotope-content", $parent).isotope({
-                filter: "*",
-                transitionDuration: "1s",
-                hiddenStyle: {
-                    opacity: 0,
-                    transform: "scale(0.001)"
-                },
-                visibleStyle: {
-                    transform: "scale(1)",
-                    opacity: 1
-                }
-            });
-            $('.rt-isotope-tab a').on('click', function () {
-                console.log('click');
-                var $parent = $(this).closest('.rt-isotope-wrapper'),
-                    selector = $(this).attr('data-filter');
-                console.log($parent);
-                $parent.find('.rt-isotope-tab .current').removeClass('current');
-                $(this).addClass('current');
-                $isotope.isotope({
-                    filter: selector
-                });
 
-                return false;
-            });
-
-            $(".hide-all .rt-locations-tab a").first().trigger('click');
-        });
-    }
     
     /* Mobile menu */
     $(window).on('scroll', function () {

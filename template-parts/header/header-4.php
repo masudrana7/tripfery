@@ -45,7 +45,7 @@ if( !empty( TripferyTheme::$options['logo_light'] ) ) {
 				<div class="tophead-search">
 					<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) )  ?>" class="search-form">
 						<input required="" type="text" id="search-form-5f51fb188e3b0" class="search-field" placeholder="<?php esc_attr_e( 'Enter a keyword to search products', 'tripfery');?>" value="" name="s">
-						<button class="search-button" aria-label="search button" type="submit"><i class="icon-tripfery-search"></i></button>
+						<button class="search-button" aria-label="search button" type="submit"><i class="icon-search-icon"></i></button>
 					</form>
 				</div>	
 			<?php } ?>	
@@ -74,7 +74,7 @@ if( !empty( TripferyTheme::$options['logo_light'] ) ) {
 			<?php if ( TripferyTheme::$options['phone_icon'] || TripferyTheme::$options['offer_icon'] ) { ?>
 				<div class="header-info header-phone">
 					<?php if ( TripferyTheme::$options['offer_icon'] ) { ?>
-					<div class="special-offer"><img width="22" height="22" loading='lazy' src="<?php echo FAKTORIE_ASSETS_URL . 'img/special_offer.svg'; ?>" alt="<?php echo esc_attr('special offer', 'tripfery'); ?>"> <a target="_self" href="<?php echo esc_url( TripferyTheme::$options['offer_link']  );?>"><?php echo esc_html( TripferyTheme::$options['offer_text'] );?></a></div>
+					<div class="special-offer"><img width="22" height="22" loading='lazy' src="<?php echo TRIPFERY_ASSETS_URL . 'img/special_offer.svg'; ?>" alt="<?php echo esc_attr('special offer', 'tripfery'); ?>"> <a target="_self" href="<?php echo esc_url( TripferyTheme::$options['offer_link']  );?>"><?php echo esc_html( TripferyTheme::$options['offer_text'] );?></a></div>
 					<?php } if ( TripferyTheme::$options['phone_icon'] ) { ?>
 					<div class="info-icon phone-icon">
 						<i class="icon-tripfery-phone"></i>
