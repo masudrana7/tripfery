@@ -29,7 +29,7 @@
 	add_action( 'categories_edit_form_fields', 'tripfery_colorpicker_field_edit_category' ); 
 
 	function tripfery_save_termmeta( $term_id ) {
-		// Save term color if possible
+		// Save term color 
 		if( isset( $_POST['rt_category_color'] ) && ! empty( $_POST['rt_category_color'] ) ) {
 			update_term_meta( $term_id, 'rt_category_color', sanitize_hex_color_no_hash( $_POST['rt_category_color'] ) );
 		} else {
