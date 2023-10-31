@@ -1162,6 +1162,7 @@ a.button-style-5:hover::before {
 	width: 100%;
 	background-color: var(--tripfery-white-color);
 	box-shadow: 0px 0px 90px 0px rgb(0 0 0 / 10%);
+	transition: all 0.4s ease-in-out;
 }
 .header-style-2 .rt-sticky .header-dark {
 	border-top: none;
@@ -1264,12 +1265,11 @@ a.button-style-5:hover::before {
 }
 
 .site-header .main-navigation ul.menu>li:hover>a,
+.site-header .main-navigation ul.menu li.current-menu-ancestor>a,
+.site-header .main-navigation ul.menu li.current-menu-ancestor>a::after,
 .site-header .main-navigation ul.menu>li.menu-item-has-children:hover>a:after,
 .site-header .main-navigation ul.menu li.current-menu-item > a,
 .site-header .main-navigation ul.menu > li.current > a {
-	color: var(--tripfery-primary-color);
-}
-.site-header .main-navigation ul.menu li.current-menu-ancestor > a {
 	color: var(--tripfery-primary-color);
 }
 .header-style-1 .site-header .main-navigation nav > ul > li.menu-item-has-children > a:after {
@@ -1463,7 +1463,6 @@ a.button-style-5:hover::before {
 	margin-right: 5px;
 }
 .header-style-1 .search-icon>a i:before{
-	font-weight: 600;
 	font-size: 15px;
 }
 .header-style-1 .cart-area .cart-trigger-icon > span {
@@ -2186,9 +2185,11 @@ a.button-style-5:hover::before {
 	background-color: transparent;
 }
 .tr-header .header-icon-area .search-icon > a, 
-.tr-header .header-icon-area .cart-list-trigger > a {
+.tr-header .header-icon-area .cart-list-trigger > a,
+.tr-header .site-header .main-navigation nav>ul>li.menu-item-has-children>a:after {
 	color: var(--tripfery-white-color);
 }
+
 .tr-header .header-offcanvus button.side-menu-trigger .menu-btn-icon .line,
 .tr-header .header-offcanvus button.side-menu-trigger .menu-btn-icon .line2::before,
 .tr-header .header-offcanvus button.side-menu-trigger .menu-btn-icon::before, 
@@ -3186,9 +3187,9 @@ body .rt-cover {
     width: 40px;
     font-size: 15px;
     text-align: center;
-    color: var(--tripfery-white-color);
-    background: var(--tripfery-grey-color-3);
-    border-radius: 0;
+	background: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
+    border-radius: 50px;
 }
 .footer-content-area .widget .footer-social li a:hover {
 	background: var(--tripfery-primary-color);
@@ -3414,7 +3415,7 @@ body .rt-cover {
 	color: var(--tripfery-footer-color);
 }
 .footer-copyright-area .copyright-area .copyright {
-	text-align: right;
+	text-align: left;
 }
 .footer-copyright-area .copyright-area a {
 	color: var(--tripfery-footer-color);
@@ -3487,6 +3488,54 @@ body .rt-cover {
 		margin-top: 10px;
 	}
 }
+/*Footer style 2*/
+.footer-style-2 .footer-content-area,
+.footer-style-2 .footer-copyright-area{
+	background: var(--tripfery-white-color);
+}
+.footer-style-2 .footer-copyright-area{
+	border-top: 1px solid var(--tripfery-border-color);
+}
+.footer-style-2 .footer-copyright-area .copyright-area a{
+	color: var(--tripfery-primary-color);
+}
+.footer-style-2 .footer-copyright-area .copyright-area .copyright{
+	color: var(--tripfery-heading-color);
+}
+.footer-style-2 .footer-top-area .corporate-address li i,
+.footer-style-2 .footer-content-area a,
+.footer-style-2 .footer-content-area .widget ul li a,
+.footer-style-2 .footer-area .widgettitle,
+.footer-style-2 .footer-area .widget {
+	color: var(--tripfery-heading-color);
+}
+.footer-area .footer-content-area .widget .footer-social li a{
+	color: var(--tripfery-white-color);
+}
+.footer-area .footer-content-area .widget .footer-social li.facebook a{
+	background: #1877f2;
+}
+.footer-area .footer-content-area .widget .footer-social li.twitter a{
+	background: #1da1f2;
+}
+.footer-area .footer-content-area .widget .footer-social li.instagram a{
+	background: #e1306c;
+}
+.footer-area .footer-content-area .widget .footer-social li.youtube a{
+	background: #ff0000;
+}
+.footer-area .footer-content-area .widget .footer-social li.linkedin a{
+	background: #0072b1;
+}
+.footer-area .footer-content-area .widget .footer-social li.pinterest a{
+	background: #E60023;
+}
+.footer-area .footer-content-area .widget .footer-social li a:hover i {
+	-webkit-animation: toBottomFromTop 0.5s forwards;
+	animation: toBottomFromTop 0.5s forwards;
+}
+
+
 /*Footer style 3*/
 .footer-style-3 .footer-area .widgettitle {
 	color: var(--tripfery-heading-color);

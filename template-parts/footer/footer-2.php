@@ -74,24 +74,18 @@ if( !empty( TripferyTheme::$options['footer_logo2'] ) ) {
 	<?php if ( TripferyTheme::$copyright_area == 1 ) { ?>
 	<div class="footer-copyright-area">
 		<div class="container">
-			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> <?php echo esc_attr( $menu_on ); ?> <?php echo esc_attr( $logo_on ); ?>">
-				<?php if ( TripferyTheme::$options['logo_display'] ) { ?>
-				<div class="footer-logo-wrap">
-					<a class="footer-logo" aria-label="Footer Logo" href="<?php echo esc_url( home_url( '/' ) );?>"><?php echo wp_kses( $tripfery_footer_logo, 'allow_link' ); ?></a>
-				</div>
-				<?php } ?>
+			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> <?php echo esc_attr( $menu_on ); ?>">
 				<div class="copyright-menu-wrap">
-					<?php if ( TripferyTheme::$options['copyright_menu'] ) { ?>	
-					<div class="copyright-menu"><?php dynamic_sidebar('copyright-menu'); ?></div>
-					<?php } ?>
-
 					<?php if ( TripferyTheme::$options['copyright_text'] ) { ?>
 					<div class="copyright"><?php echo wp_kses( TripferyTheme::$options['copyright_text'] , 'allow_link' );?></div>
 					<?php } ?>
 				</div>
+				<?php if ( TripferyTheme::$options['copyright_menu'] ) { ?>	
+					<div class="copyright-menu"><?php dynamic_sidebar('copyright-menu'); ?></div>
+				<?php } ?>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<?php } ?>
-</div>	
+</div>
 

@@ -602,5 +602,8 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 			}
 		}
 
+		
+
+
 	}
 }
