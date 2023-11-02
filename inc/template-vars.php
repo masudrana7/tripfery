@@ -92,6 +92,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( TripferyTheme::$options[$prefix . '_page_bgimg'], 'full', true );
                 TripferyTheme::$pagebgimg = $attch_url[0];
             }
+
+            
         }
         
         // Blog and Archive

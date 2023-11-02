@@ -2827,7 +2827,7 @@ body .rt-cover {
 	color: var(--tripfery-white-color);
 	font-size: 20px;
 	margin-bottom: 25px;
-	font-weight: 500;
+	font-weight: 600;
 }
 .footer-area .widgettitle .titleline {
     width: 0;
@@ -9620,6 +9620,15 @@ p.return-to-shop {
 /*======================================
 #. rt-search-filter
 ====================================*/
+.rt-search-norlam .rt-search-customize #search-box{
+	margin-left: auto;
+}
+.rt-search-norlam .rt-search-customize #search_form_tabs{
+	display: none;
+}
+.rt-search-norlam .rt-search-customize .babe-search-form{
+	border-radius: 10px;
+}
 .rt-search-customize #search_form_tabs{
 	background: var(--tripfery-white-color);
 	border-radius: 10px 10px 0 0;

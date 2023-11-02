@@ -48,20 +48,22 @@ jQuery(document).ready(function ($) {
     /*-------------------------------------
     Card
     -------------------------------------*/
-    const panels = document.querySelectorAll(".panel");
-    window.onload = function () {
-        panels[0].classList.add("active");
-    };
-    panels.forEach((panel) => {
-        panel.addEventListener("mouseover", () => {
-            removeActiveClasses();
-            panel.classList.add("active");
-        });
-    });
-    function removeActiveClasses() {
+    if ($(".rt-locations-default").length) {
+        const panels = document.querySelectorAll(".panel");
+        window.onload = function () {
+            panels[0].classList.add("active");
+        };
         panels.forEach((panel) => {
-            panel.classList.remove("active");
+            panel.addEventListener("mouseover", () => {
+                removeActiveClasses();
+                panel.classList.add("active");
+            });
         });
+        function removeActiveClasses() {
+            panels.forEach((panel) => {
+                panel.classList.remove("active");
+            });
+        }
     }
 
     /*-------------------------------------
@@ -94,16 +96,30 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    // product cat menu
-    var classHandler = true;
-    $("#cat-button").on('click', function(){
-        if(classHandler){
-            $(".cat-menu-close").addClass('cat-menu-open');
-        }else {
-            $(".cat-menu-close").removeClass('cat-menu-open');
-        }
-        classHandler = !classHandler;
-    });
+    /*-------------------------------------
+    Data List
+    -------------------------------------*/
+    
+    if ($(".rt-featured-room").length) {
+        $(window).on('load', function () {
+            $("[data-list-img]:first-child").addClass("active");
+        });
+        $("[data-list-hover]").hover(function () {
+            var t = $(this).attr("data-list-hover");
+            $("[data-list-img]").removeClass("active"), $('[data-list-img="'.concat(t, '"]')).addClass("active");
+        })
+
+        // product cat menu
+        var classHandler = true;
+        $("#cat-button").on('click', function(){
+            if(classHandler){
+                $(".cat-menu-close").addClass('cat-menu-open');
+            }else {
+                $(".cat-menu-close").removeClass('cat-menu-open');
+            }
+            classHandler = !classHandler;
+        });
+    }
 
     /*---------------------------------------
     Background Parallax
@@ -147,9 +163,6 @@ jQuery(document).ready(function ($) {
             $(this).removeClass("open");
         }
     });
-
-
-
     
     /* Mobile menu */
     $(window).on('scroll', function () {
