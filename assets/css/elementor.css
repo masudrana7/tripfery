@@ -658,8 +658,13 @@ CSS INDEX
 }
 
 /*info style 01*/
-.rt-info-style1 .rt-info-item .rt-media {
-   overflow: hidden;
+.rt-info-style1 .rt-info-item .rt-icon{
+    display: inline-block;
+    transition: 0.4s;
+    transform: scale(1);
+}
+.rt-info-style1 .rt-info-item:hover .rt-icon{
+    transform: scale(1.1);
 }
 .rt-info-style1 .rt-info-item .rt-title {
     margin-top: 8px;
@@ -1319,6 +1324,17 @@ CSS INDEX
 /*-------------------------------------
 #. EL: Image Addon
 -------------------------------------*/
+.rt-image-effect-zoom{
+    position: relative;
+    overflow: hidden;
+}
+.rt-image-effect-zoom img{
+    transform: scale(1);
+    transition: 0.4s;
+}
+.rt-image-effect-zoom:hover img{
+    transform: scale(1.1);
+}
 .rt-image-banner .rt-banner-item {
     position: relative;
 }
@@ -1865,9 +1881,27 @@ CSS INDEX
 /*Counter Style 02*/
 .rt-counter-style2 .rt-item {
     position: relative;
-    display: flex;
-    align-items: center;
-    column-gap: 24px;
+}
+.rt-counter-style2 .rt-content{
+    width: 183px;
+    height: 183px;
+    border-radius: 183px;
+    border: 1px solid var(--tripfery-primary-color);
+    text-align: center;
+    padding-top: 48px;
+}
+.rt-counter-style2 .rt-content .counter{
+    color: var(--tripfery-primary-color);
+}
+.rt-counter-style2 .rt-content .counter-number{
+    font-weight: 600;
+}
+.rt-counter-style2 .rt-content .rt-title{
+    letter-spacing: 0.5em;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 .rt-counter-style2 .rt-item .rt-media i {
     background-color: var(--tripfery-light-color);
@@ -1885,21 +1919,6 @@ CSS INDEX
 }
 .rt-counter-style2 .rt-item .counter-unit {
     color: var(--tripfery-primary-color);
-}
-.rt-counter-style2 .item-divider::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 50px;
-    height: 30px;
-    display: block;
-    background: var(--tripfery-grey-color-2);
-    clip-path: polygon(0 0, 33% 0, 100% 100%, 64% 100%);
-}
-@media(max-width: 1024px) {
-    .rt-counter-style2 .item-divider::after {
-        display: none;
-    }
 }
 /*Counter Style 03*/
 .rt-counter-style3 .rt-item {

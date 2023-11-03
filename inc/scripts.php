@@ -184,8 +184,8 @@ function tripfery_template_style()
 	}
 
 	.content-area {
-	padding-top: <?php echo esc_html(TripferyTheme::$padding_top); ?>px;
-	padding-bottom: <?php echo esc_html(TripferyTheme::$padding_bottom); ?>px;
+		padding-top: <?php echo esc_html(TripferyTheme::$padding_top); ?>px;
+		padding-bottom: <?php echo esc_html(TripferyTheme::$padding_bottom); ?>px;
 	}
 
 	<?php if (isset(TripferyTheme::$pagebgcolor) || isset(TripferyTheme::$pagebgimg)) { ?>

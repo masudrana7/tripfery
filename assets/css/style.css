@@ -9757,3 +9757,6 @@ p.return-to-shop {
 .rt-search-customize .add_input_field .add_ids_list li {
 	padding: 6px 15px;
 }
+.daterangepicker .drp-buttons .btn:hover{
+	color: var(--tripfery-white-color);
+}

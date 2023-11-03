@@ -36,7 +36,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             }
 			
 			$layout_settings    = get_post_meta( $post_id, 'tripfery_layout_settings', true );
-            
+
+
             TripferyTheme::$layout = ( empty( $layout_settings['tripfery_layout'] ) || $layout_settings['tripfery_layout']  == 'default' ) ? TripferyTheme::$options[$prefix . '_layout'] : $layout_settings['tripfery_layout'];
 
             TripferyTheme::$sidebar = ( empty( $layout_settings['tripfery_sidebar'] ) || $layout_settings['tripfery_sidebar'] == 'default' ) ? TripferyTheme::$options[$prefix . '_sidebar'] : $layout_settings['tripfery_sidebar'];
@@ -44,6 +45,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$top_bar = ( empty( $layout_settings['tripfery_top_bar'] ) || $layout_settings['tripfery_top_bar'] == 'default' ) ? TripferyTheme::$options['top_bar'] : $layout_settings['tripfery_top_bar'];
             
             TripferyTheme::$top_bar_style = ( empty( $layout_settings['tripfery_top_bar_style'] ) || $layout_settings['tripfery_top_bar_style'] == 'default' ) ? TripferyTheme::$options['top_bar_style'] : $layout_settings['tripfery_top_bar_style'];
+
+            TripferyTheme::$headerbg_color = (empty($layout_settings['tripfery_header_bgcolor']) || $layout_settings['tripfery_header_bgcolor'] == 'default') ? TripferyTheme::$options['header_bg_color'] : $layout_settings['tripfery_header_bgcolor'];
 			
 			TripferyTheme::$header_opt = ( empty( $layout_settings['tripfery_header_opt'] ) || $layout_settings['tripfery_header_opt'] == 'default' ) ? TripferyTheme::$options['header_opt'] : $layout_settings['tripfery_header_opt'];
 
@@ -92,8 +95,6 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $attch_url      = wp_get_attachment_image_src( TripferyTheme::$options[$prefix . '_page_bgimg'], 'full', true );
                 TripferyTheme::$pagebgimg = $attch_url[0];
             }
-
-            
         }
         
         // Blog and Archive
@@ -117,10 +118,11 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             
             TripferyTheme::$layout         		= TripferyTheme::$options[$prefix . '_layout'];
             TripferyTheme::$top_bar        		= TripferyTheme::$options['top_bar'];
-            TripferyTheme::$header_opt      	    = TripferyTheme::$options['header_opt'];
-            TripferyTheme::$tr_header             = TripferyTheme::$options['tr_header'];
-            TripferyTheme::$footer_area     	    = TripferyTheme::$options['footer_area'];
-            TripferyTheme::$copyright_area        = TripferyTheme::$options['copyright_area'];
+            TripferyTheme::$header_opt      	= TripferyTheme::$options['header_opt'];
+            TripferyTheme::$headerbg_color      = TripferyTheme::$options['header_bg_color'];
+            TripferyTheme::$tr_header           = TripferyTheme::$options['tr_header'];
+            TripferyTheme::$footer_area     	= TripferyTheme::$options['footer_area'];
+            TripferyTheme::$copyright_area      = TripferyTheme::$options['copyright_area'];
             TripferyTheme::$top_bar_style  		= TripferyTheme::$options['top_bar_style'];
             TripferyTheme::$header_style   		= TripferyTheme::$options['header_style'];
             TripferyTheme::$footer_style   		= TripferyTheme::$options['footer_style'];

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?99486839');
-  src: url('../font/fontello.eot?99486839#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?99486839') format('woff2'),
-       url('../font/fontello.woff?99486839') format('woff'),
-       url('../font/fontello.ttf?99486839') format('truetype'),
-       url('../font/fontello.svg?99486839#fontello') format('svg');
+  src: url('../font/fontello.eot?21759529');
+  src: url('../font/fontello.eot?21759529#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?21759529') format('woff2'),
+       url('../font/fontello.woff?21759529') format('woff'),
+       url('../font/fontello.ttf?21759529') format('truetype'),
+       url('../font/fontello.svg?21759529#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?99486839#fontello') format('svg');
+    src: url('../font/fontello.svg?21759529#fontello') format('svg');
   }
 }
 */
@@ -54,31 +54,33 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-search:before { content: '\e800'; } /* '' */
-.icon-profile:before { content: '\e801'; } /* '' */
-.icon-heart:before { content: '\e802'; } /* '' */
-.icon-bag:before { content: '\e803'; } /* '' */
-.icon-truck:before { content: '\e804'; } /* '' */
-.icon-cube:before { content: '\e805'; } /* '' */
-.icon-dollar-circle:before { content: '\e806'; } /* '' */
-.icon-headphone:before { content: '\e807'; } /* '' */
-.icon-wallet:before { content: '\e808'; } /* '' */
-.icon-refresh:before { content: '\e809'; } /* '' */
-.icon-badge-check:before { content: '\e80a'; } /* '' */
-.icon-truck-2:before { content: '\e80b'; } /* '' */
-.icon-tag:before { content: '\e80c'; } /* '' */
-.icon-quote-left:before { content: '\e80d'; } /* '' */
-.icon-emoji-happy:before { content: '\e80e'; } /* '' */
-.icon-cup:before { content: '\e80f'; } /* '' */
-.icon-experience:before { content: '\e810'; } /* '' */
-.icon-check-in:before { content: '\e811'; } /* '' */
-.icon-hostel:before { content: '\e812'; } /* '' */
-.icon-hotel-icon:before { content: '\e813'; } /* '' */
-.icon-map-iocn:before { content: '\e814'; } /* '' */
-.icon-tours:before { content: '\e817'; } /* '' */
-.icon-activity-icon:before { content: '\e819'; } /* '' */
-.icon-car-icon:before { content: '\e81a'; } /* '' */
-.icon-user-iocn:before { content: '\e81b'; } /* '' */
-.icon-cart-icon:before { content: '\e81c'; } /* '' */
-.icon-restaurant:before { content: '\e81d'; } /* '' */
-.icon-search-icon:before { content: '\e81e'; } /* '' */
+.icon-tripfery-search:before { content: '\e800'; } /* '' */
+.icon-tripfery-profile:before { content: '\e801'; } /* '' */
+.icon-tripfery-heart:before { content: '\e802'; } /* '' */
+.icon-tripfery-bag:before { content: '\e803'; } /* '' */
+.icon-tripfery-truck:before { content: '\e804'; } /* '' */
+.icon-tripfery-cube:before { content: '\e805'; } /* '' */
+.icon-tripfery-dollar-circle:before { content: '\e806'; } /* '' */
+.icon-tripfery-headphone:before { content: '\e807'; } /* '' */
+.icon-tripfery-wallet:before { content: '\e808'; } /* '' */
+.icon-tripfery-refresh:before { content: '\e809'; } /* '' */
+.icon-tripfery-badge-check:before { content: '\e80a'; } /* '' */
+.icon-tripfery-truck-2:before { content: '\e80b'; } /* '' */
+.icon-tripfery-tag:before { content: '\e80c'; } /* '' */
+.icon-tripfery-quote-left:before { content: '\e80d'; } /* '' */
+.icon-tripfery-emoji-happy:before { content: '\e80e'; } /* '' */
+.icon-tripfery-cup:before { content: '\e80f'; } /* '' */
+.icon-tripfery-experience:before { content: '\e810'; } /* '' */
+.icon-tripfery-check-in:before { content: '\e811'; } /* '' */
+.icon-tripfery-hostel:before { content: '\e812'; } /* '' */
+.icon-tripfery-hotel:before { content: '\e813'; } /* '' */
+.icon-tripfery-map-iocn:before { content: '\e814'; } /* '' */
+.icon-tripfery-medal-star:before { content: '\e815'; } /* '' */
+.icon-tripfery-lifebuoy:before { content: '\e816'; } /* '' */
+.icon-tripfery-tours:before { content: '\e817'; } /* '' */
+.icon-tripfery-activity:before { content: '\e819'; } /* '' */
+.icon-tripfery-car:before { content: '\e81a'; } /* '' */
+.icon-tripfery-user:before { content: '\e81b'; } /* '' */
+.icon-tripfery-cart:before { content: '\e81c'; } /* '' */
+.icon-tripfery-restaurant:before { content: '\e81d'; } /* '' */
+.icon-tripfery-search:before { content: '\e81e'; } /* '' */
