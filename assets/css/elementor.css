@@ -26,6 +26,7 @@ CSS INDEX
 #. EL: Team Single
 #. EL: Service Grid & Slider
 #. EL: Service Isotope
+#. EL: Service Activity
 #. EL: Service Single
 #. EL: RT Feature Room
 #. EL: Locations Grid & Slider
@@ -1671,52 +1672,15 @@ CSS INDEX
 }
 
 /*video style 02*/
-.rt-video-style2 .rt-video {
-    position: relative;
-    z-index: 1;
-    border-radius: 8px;
-    display: inline-block;
+.rt-video-style2 .rt-video{
+    text-align: center;
 }
-.rt-video-style2 .rt-video .rt-icon {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 32px;
-    position: absolute;
-    left: 0;
-    bottom: -35px;
-    z-index: 1;
-    background-color: var(--tripfery-primary-color);
-    padding: 30px 30px 30px 0;
-}
-.rt-video-style2 .rt-video .video-title {
-    flex: 1;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--tripfery-white-color);
-    margin-bottom: 0;
-    line-height: 1.4;
-}
-.rt-video-style2 .rt-video:after {
-    content: "";
-    height: 250px;
-    width: 250px;
-    background-color: var(--tripfery-primary-color);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-.rt-video-style2 .rt-video .rt-img {
-    margin-left: 35px;
-    margin-bottom: 35px;
-}
-.rt-video-style2 .rt-video .rt-img img {
-    object-fit: cover;
-}
-@media(max-width: 1199px) {
-    .rt-video-style2 {
-        text-align: center;
-    }
+.rt-video-style2 .play-btn-white{
+    width: 112px;
+    height: 112px;
+    line-height: 112px;
+    border-radius: 112px;
+    font-size: 32px;
 }
 /*video style 03*/
 .rt-video-style3 {
@@ -2427,11 +2391,12 @@ CSS INDEX
     gap: 10px;
 
 }
-.testimonial-multi-layout-1 .item-content {    
+.testimonial-multi-layout-1 .item-content {
     padding: 40px;
     border-radius: 20px;
     background: var(--tripfery-white-color);
     position: relative;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
 }
 .testimonial-multi-layout-1 .item-content::before{    
     position: absolute;
@@ -3472,6 +3437,9 @@ CSS INDEX
 /*-------------------------------------
 #. EL: Service Isotope
 ---------------------------------------*/
+.rt-case-isotope .rt-menu-cats-hide{
+    display: none;
+}
 .listing-filter-btns {
     background: #ffffff;
     -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
@@ -3710,6 +3678,190 @@ CSS INDEX
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+/*-------------------------------------
+#. EL: Service Activity
+---------------------------------------*/
+.top-activity .top-activity-wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: #f9f9ff;
+    border-radius: 100px 100px 20px 20px;
+    padding: 15px 13px;
+    cursor: pointer;
+}
+.top-activity .top-activity-wrapper::after {
+    width: 100%;
+    height: 0;
+    background-color: var(--tripfery-primary-color);
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+    border-radius: 100px 100px 20px 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.top-activity .top-activity-wrapper:hover::after {
+    height: 100%;
+}
+.top-activity .top-activity-wrapper:hover .top-activity-thumb-wrapper img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.top-activity .top-activity-wrapper:hover .activity-info .activity-name {
+    color: #ffffff;
+}
+.top-activity .top-activity-wrapper:hover .activity-info .activity-place {
+    color: #f1f1f1;
+}
+.top-activity .top-activity-wrapper .top-activity-thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    min-height: 170px;
+    width: 170px;
+}
+.top-activity .top-activity-wrapper .top-activity-thumb-wrapper img {
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    height: 170px;
+    width: 170px;
+}
+.top-activity .top-activity-wrapper .activity-info {
+    padding-top: 15px;
+}
+.top-activity .top-activity-wrapper .activity-info .activity-name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--tripfery-heading-color);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 0;
+}
+.top-activity .top-activity-wrapper .activity-info .activity-place {
+    font-size: 15px;
+    color: #929292;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.rt-locations-layout-3 .city-wrapper {
+    cursor: pointer;
+}
+.rt-locations-layout-3 .city-wrapper .city-thumb-wrapper {
+    margin-bottom: 15px;
+    width: 170px;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.rt-locations-layout-3 .city-wrapper .city-thumb-wrapper .city-thumb {
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.rt-locations-layout-3 .city-wrapper .city-name {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 0;
+}
+.rt-locations-layout-3 .city-wrapper .city-name a{
+    color: var(--tripfery-heading-color);
+    transition: 0.3s;
+}
+.rt-locations-layout-3 .city-wrapper .city-name a:hover {
+    color: var(--tripfery-primary-color);
+}
+.rt-locations-layout-3 .city-wrapper .city-place {
+    font-size: 15px;
+    color: #929292;
+    cursor: auto;
+}
+.rt-locations-layout-3 .city-wrapper:hover .city-thumb-wrapper .city-thumb {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.rt-car-categories .single-car-category {
+    width: 210px;
+    height: 210px;
+    cursor: pointer;
+}
+.rt-car-categories .single-car-category .car-category-thumb-wrapper {
+    position: relative;
+    width: 180px;
+    height: 100px;
+    z-index: 5;
+}
+.rt-car-categories .single-car-category .car-category-thumb-wrapper .car-category-thumb {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.rt-car-categories .single-car-category .car-category-thumb-wrapper::before {
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: -30px;
+    content: "";
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: var(--tripfery-white-color);
+    -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.rt-car-categories .single-car-category .car-category-name {
+    font-size: 20px;
+    color: var(--tripfery-heading-color);
+    font-weight: 600;
+    margin-top: 25px;
+}
+.rt-car-categories .single-car-category:hover .car-category-thumb-wrapper .car-category-thumb {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.rt-car-categories .single-car-category:hover .car-category-thumb-wrapper::before {
+    background-color: var(--tripfery-primary-color);
+    -webkit-animation: round-shake 0.4s 1 cubic-bezier(0.17, 0.88, 0.325, 1.27);
+    animation: round-shake 0.4s 1 cubic-bezier(0.17, 0.88, 0.325, 1.27);
+}
+@-webkit-keyframes round-shake {
+    0% {
+        -webkit-transform: rotate(-180deg) scale(0.3);
+        transform: rotate(-180deg) scale(0.3);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes round-shake {
+    0% {
+        -webkit-transform: rotate(-180deg) scale(0.3);
+        transform: rotate(-180deg) scale(0.3);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
 }
 /*-------------------------------------
 #. EL: Service Tab

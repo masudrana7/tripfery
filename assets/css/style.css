@@ -1253,7 +1253,7 @@ a.button-style-5:hover::before {
 	content: "\f0d7";
 	font-family: "Font Awesome 6 Free";
 	border: none !important;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: 900;
 	position: absolute;
 	line-height: 28px;
@@ -1264,10 +1264,12 @@ a.button-style-5:hover::before {
 	transition: all 0.3s ease;
 }
 
-.site-header .main-navigation ul.menu>li:hover>a,
-.site-header .main-navigation ul.menu li.current-menu-ancestor>a,
-.site-header .main-navigation ul.menu li.current-menu-ancestor>a::after,
-.site-header .main-navigation ul.menu>li.menu-item-has-children:hover>a:after,
+body:not(.tr-header) .site-header .main-navigation ul.menu>li:hover>a,
+body:not(.tr-header) .site-header .main-navigation ul.menu li.current-menu-ancestor>a,
+body:not(.tr-header) .site-header .main-navigation ul.menu li.current-menu-ancestor>a::after,
+body:not(.tr-header) .site-header .main-navigation ul.menu>li.menu-item-has-children:hover>a:after{
+	color: var(--tripfery-primary-color);
+}
 .site-header .main-navigation ul.menu li.current-menu-item > a,
 .site-header .main-navigation ul.menu > li.current > a {
 	color: var(--tripfery-primary-color);
@@ -9628,6 +9630,7 @@ p.return-to-shop {
 }
 .rt-search-norlam .rt-search-customize .babe-search-form{
 	border-radius: 10px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 .rt-search-customize #search_form_tabs{
 	background: var(--tripfery-white-color);

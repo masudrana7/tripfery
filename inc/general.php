@@ -89,8 +89,6 @@ if ( !function_exists( 'tripfery_setup' ) ) {
 		add_image_size( 'tripfery-size2', 960, 520, true );    	// Blog layout 2
 		add_image_size( 'tripfery-size4', 860, 420, true );    	// Blog layout 1
 		add_image_size( 'tripfery-size3', 520, 330, true );    	// Blog layout 3
-		add_image_size( 'tripfery-size7', 400, 271, true );    	// Service 02
-		add_image_size( 'tripfery-size8', 310, 370, true );    	// Team layout
 		
 		// Register menus
 		register_nav_menus( array(
