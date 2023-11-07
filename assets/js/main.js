@@ -67,6 +67,41 @@ jQuery(document).ready(function ($) {
     }
 
     /*-------------------------------------
+    Destination Slider
+    -------------------------------------*/
+    if ($(".rt-destionation-slider").length) {
+        let destionationSlider = new Swiper(".rt-destionation-slider", {
+            loop: true,
+            slidesPerView: 5,
+            grabCursor: true,
+            speed: 1000,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".topDestinationNav .swiper-button-next",
+                prevEl: ".topDestinationNav .swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    }
+
+    /*-------------------------------------
     Listing Filter
     -------------------------------------*/
     if ($(".rt-case-isotope").length) {
