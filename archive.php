@@ -4,7 +4,10 @@
  * @since   1.0
  * @version 1.0
  */
-
+if (is_post_type_archive("to_book") || is_tax("categories")) {
+	get_template_part('template-parts/archive', 'booking');
+	return;
+}
 // Layout class
 if ( TripferyTheme::$layout == 'full-width' ) {
 	$tripfery_layout_class = 'col-sm-12 col-12';
@@ -20,10 +23,6 @@ if ( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category"
 }
 if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_category" ) ) {
 		get_template_part( 'template-parts/archive', 'service' );
-	return;
-}
-if ( is_post_type_archive( "tripfery_locations" ) || is_tax( "tripfery_locations_category" ) ) {
-		get_template_part( 'template-parts/archive', 'locations' );
 	return;
 }
 
@@ -78,9 +77,7 @@ if ( is_post_type_archive( "tripfery_locations" ) || is_tax( "tripfery_locations
 							while ( have_posts() ) : the_post();
 								get_template_part( 'template-parts/content-1', get_post_format() );
 							endwhile;
-						}
-						?>
-
+						} ?>
 						<?php if( TripferyTheme::$options['blog_loadmore'] == 'loadmore' && TripferyTheme::$options['blog_style'] == 'style1' ) { ?> 
 							<div class="text-center blog-loadmore">
 						      	<a href="#" id="loadMore" class="loadMore"><?php esc_html_e( 'Load More', 'tripfery' ) ?></a>

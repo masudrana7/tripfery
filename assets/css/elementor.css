@@ -3702,6 +3702,245 @@ CSS INDEX
     align-items: center;
 }
 /*-------------------------------------
+#. RT Service Search Result
+---------------------------------------*/
+.search-result {
+    font-size: 22px;
+    color: #626262;
+}
+@media (max-width: 575.98px) {
+    .search-result {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+.view-switch-right {
+    gap: 8px;
+}
+@media (max-width: 575.98px) {
+    .view-switch-right {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+.view-switch-right .filter-area-trigger {
+    width: 44px;
+    height: 44px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    color: var(--tripfery-primary-color);
+}
+.view-switch-right .filter-area-trigger.active {
+    background-color: var(--tripfery-primary-color);
+    color: #ffffff;
+}
+.sort-and-filter {
+    gap: 8px;
+}
+.sort-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7f8082;
+    margin-right: 3px;
+}
+.sort-wrapper {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 0 12px;
+    height: 44px;
+}
+.sort-wrapper .select-dropdown {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+.sort-wrapper .select-dropdown.nice-select .list {
+    right: -5px;
+    left: auto;
+}
+.sort-wrapper .select-dropdown.nice-select::after {
+    display: none;
+}
+.sort-wrapper .select-dropdown .current {
+    color: #161f38;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+.nav {
+    gap: 8px;
+}
+.nav-btn {
+    width: 44px;
+    height: 44px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    color: var(--tripfery-primary-color);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.nav-btn.active {
+    background-color: var(--tripfery-primary-color);
+    color: #ffffff;
+}
+.view-switch-bar {
+    margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+    .view-switch-bar {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+@media (max-width: 575.98px) {
+    .view-switch-bar {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .view-switch-bar {
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+    }
+}
+.view-switch-bar.pt-70 {
+    padding-top: 70px;
+}
+@media (max-width: 575.98px) {
+    .view-switch-bar.pt-70 .search-result {
+        margin-bottom: 15px;
+    }
+}
+.wide-filter-area {
+    opacity: 0;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    z-index: 9;
+    top: 140px;
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--tripfery-white-color);
+    border-radius: 6px;
+    padding: 20px 60px 30px 60px;
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.wide-filter-area.hotel-filter-map {
+    padding: 30px 40px;
+}
+.wide-filter-area.hotel-filter-map .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.wide-filter-area.hotel-filter-map .filter-grid .filter-elements {
+    padding-bottom: 0;
+}
+@media (min-width: 1199.5px) {
+    .wide-filter-area.hotel-filter-map .filter-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 767.98px) {
+    .wide-filter-area.hotel-filter-map .filter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.wide-filter-area.hotel-filter-map .filter-title {
+    padding-top: 0;
+}
+.wide-filter-area.filter-area-block {
+    opacity: 1;
+    z-index: 999;
+    visibility: visible;
+    top: 50px;
+}
+@media (max-width: 767.98px) {
+    .wide-filter-area.filter-area-block {
+        top: 105px;
+    }
+}
+@media (max-width: 575.98px) {
+    .wide-filter-area.filter-area-block {
+        top: 160px !important;
+    }
+}
+@media (max-width: 575.98px) {
+    .wide-filter-area {
+        padding: 20px 30px;
+    }
+}
+.filter-elements {
+    padding-bottom: 40px;
+}
+.filter-elements:not(:last-child) {
+    border-bottom: 1px solid #d2d2d2;
+}
+.filter-elements .filter-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #232323;
+    padding-top: 24px;
+    margin-bottom: 23px;
+}
+.filter-elements .filter-btn-group {
+    gap: 5px;
+}
+.filter-elements .filter-btn {
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #151515;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight: 500;
+    display: inline-block;
+}
+.filter-elements .filter-btn:hover {
+    background-color: var(--tripfery-primary-color);
+    color: var(--tripfery-white-color);
+}
+.filter-elements .filter-btn.rating-wrap {
+    gap: 2px;
+    padding-bottom: 6px;
+}
+.filter-elements .filter-btn.rating-wrap:hover {
+    background-color: #f5f5f5;
+}
+.filter-elements .filter-btn.rating-wrap i {
+    color: #FF9901;
+    font-size: 14px;
+}
+.filter-elements .filter-map {
+    position: relative;
+}
+/*-------------------------------------
 #. RT Service Reviews
 ---------------------------------------*/
 .hotel-info-card .item-img {
