@@ -62,8 +62,32 @@ CSS INDEX
 .top:after,
 .bottom:after,
 .left:after,
-.right:after {
-	display: none;
+.right:after,
+.toggle_map{
+    transition: 0.4s;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.toggle_map.rt_show_mag{
+	height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.rt_image_zoom .elementor-background-overlay{
+    -webkit-animation: rtZoom2 20s linear infinite;
+    animation: rtZoom2 20s linear infinite;
+}
+@keyframes rtZoom2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 /*-------------------------------------
 #. EL: Swiper Nav
@@ -3797,8 +3821,13 @@ CSS INDEX
     color: var(--tripfery-primary-color);
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    padding: 0;
 }
-.nav-btn.active {
+.nav-btn:hover{
+    background-color: #f3f3f3;
+}
+.rt-fillter-inner.rt_list_service .rt_list_btn .nav-btn,
+.rt-fillter-inner:not(.rt_list_service) .rt_grid_btn .nav-btn{
     background-color: var(--tripfery-primary-color);
     color: #ffffff;
 }

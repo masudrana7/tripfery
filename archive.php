@@ -4,10 +4,7 @@
  * @since   1.0
  * @version 1.0
  */
-if (is_post_type_archive("to_book") || is_tax("categories")) {
-	get_template_part('template-parts/archive', 'booking');
-	return;
-}
+
 // Layout class
 if ( TripferyTheme::$layout == 'full-width' ) {
 	$tripfery_layout_class = 'col-sm-12 col-12';
@@ -25,7 +22,10 @@ if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_cat
 		get_template_part( 'template-parts/archive', 'service' );
 	return;
 }
-
+if (is_post_type_archive("to_book") || is_tax("categories")) {
+	get_template_part('template-parts/archive', 'booking');
+	return;
+}
 ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">

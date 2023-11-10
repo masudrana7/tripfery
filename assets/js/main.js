@@ -66,6 +66,25 @@ jQuery(document).ready(function ($) {
         }
     }
 
+    /*-------------------------------------
+        Toggle Map
+    -------------------------------------*/
+    if ($(".toggle_map").length) {
+        $("#btn_map").on("click", function () {
+            $(".toggle_map").toggleClass("rt_show_mag", 1000);
+        });
+    }
+
+    if ($(".rt_grid_btn").length){
+        $(".rt_grid_btn").click(function(){
+            $(".rt-fillter-inner").removeClass("rt_list_service");
+            $(".rt-fillter-inner").addClass("rt_grid_service");
+        });
+        $(".rt_list_btn").click(function () {
+            $(".rt-fillter-inner").removeClass("rt_grid_service");
+            $(".rt-fillter-inner").addClass("rt_list_service");
+        });
+    }
 
     /*-------------------------------------
     Destination Slider
