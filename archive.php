@@ -23,7 +23,7 @@ if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_cat
 	return;
 }
 if (is_post_type_archive("to_book") || is_tax("categories")) {
-	get_template_part('template-parts/archive', 'booking');
+	get_template_part('template-parts/archive-booking/', 'archive-booking-grid');
 	return;
 }
 ?>

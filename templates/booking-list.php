@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Booking Layout
+ * Template Name: Booking List
  * 
  * @author  RadiusTheme
  * @since   1.0
@@ -24,7 +24,7 @@ if (TripferyTheme::$layout == 'full-width') {
                 } ?>
                 <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
                     <main id="main" class="site-main">
-                        <?php get_template_part('template-parts/archive-booking/archive', 'booking'); ?>
+                        <?php get_template_part('template-parts/archive-booking/archive', 'booking-list'); ?>
                     </main>
                 </div>
                 <?php if (TripferyTheme::$layout == 'right-sidebar') {

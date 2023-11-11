@@ -3834,6 +3834,36 @@ CSS INDEX
 .view-switch-bar {
     margin-bottom: 30px;
 }
+.rt_list_service .listing-card .listing-thumb-wrapper{
+    border-radius: 15px 0 0 15px;
+}
+.rt_list_service .listing-card .listing-card-content {
+    padding: 32px 48px;
+}
+.rt_list_service .listing-card {
+    margin-bottom: 30px;
+}
+.rt_list_service .price-area{
+    border-top: 1px solid #d9d9d9;
+    padding-top: 46px;
+    margin-top: 38px;
+}
+.rt_list_service .rt-search-services > div{
+    width: 100%;
+}
+.rt_list_service .rt-search-services .listing-thumb-wrapper{
+    display: inline-block;
+}
+.rt_list_service .rt-search-services .listing-card{
+    display: flex;
+    align-items: center;
+}
+.rt_list_service .rt-search-services .listing-card-content {
+    flex-grow: 1;
+}
+.rt_list_service .rt-service-image{
+    max-width: 400px;
+}
 @media (max-width: 767.98px) {
     .view-switch-bar {
         -webkit-box-align: center;
@@ -4649,6 +4679,62 @@ CSS INDEX
 .single-service img {
     width: 100%;
 }
+/*-------------------------------------
+#. EL: RT Service Pagination
+---------------------------------------*/
+.babe_pager{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.babe_pager .page-numbers{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tripfery-heading-color);
+    padding: 0;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 35px;
+    transition: 0.4s;
+}
+.babe_pager .next,
+.babe_pager .prev{
+    font-size: 0;
+    position: relative;
+}
+.babe_pager .next:before,
+.babe_pager .prev:after{
+    position: absolute;
+    content: "\f053";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    left: 0;
+    top: 0;
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    text-align: center;
+    color: var(--tripfery-heading-color);
+    font-size: 13px;
+    border-radius: 35px;
+}
+.babe_pager .next:before{
+    content: "\f054";
+}
+.babe_pager .next:hover:before,
+.babe_pager .prev:hover:after,
+.babe_pager .page-numbers:hover,
+.babe_pager .current{
+    background: var(--tripfery-primary-color);
+    color: var(--tripfery-white-color);
+}
+
 /*-------------------------------------
 #. EL: RT Feature Room
 ---------------------------------------*/
