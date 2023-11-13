@@ -82,7 +82,10 @@ $thumb_size = 'full';
 					<div class="rt-skill-wrap">
 						<div class="rt-skills">
 							<h3><?php esc_html_e( 'Professional Skills', 'tripfery' );?></h3>
+
+
 							<?php echo esc_html( $tripfery_team_skill_info );?>
+
 							<?php foreach ( $tripfery_team_skill as $skill ): ?>
 								<?php
 								if ( empty( $skill['skill_name'] ) || empty( $skill['skill_value'] ) ) {
@@ -102,6 +105,8 @@ $thumb_size = 'full';
 									</div>								
 								</div>
 							<?php endforeach;?> 
+
+							
 						</div>
 					</div>
 					<?php } ?>

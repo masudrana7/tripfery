@@ -6398,9 +6398,7 @@ pointer-events: none;
     padding-left: 12px;
     padding-right: 12px;
 }
-/*-------------------------------------
-#. EL: Custom css
--------------------------------------*/
+
 @media(min-width: 1025px) {
     .tripfery-sticky-column {
         align-self: flex-start !important;

@@ -390,19 +390,16 @@ jQuery(document).ready(function ($) {
         });
     }
     if (typeof $.fn.magnificPopup == 'function') {
-        if ($('.zoom-gallery').length) {
-            $('.zoom-gallery').each(function () { // the containers for all your galleries
-                $(this).magnificPopup({
-                    delegate: 'a.tripfery-popup-zoom', // the selector for gallery item
-                    type: 'image',
-                    gallery: {
-                        enabled: true
-                    }
-                });
+        if ($('.image-gallery').length) {
+            $(".image-gallery").magnificPopup({
+                delegate: "a",
+                type: "image",
+                gallery: {
+                    enabled: true,
+                },
             });
         }
     }
-
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
         var isgroup = $(this).parents('.woocommerce-grouped-product-list');
