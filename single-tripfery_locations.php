@@ -22,7 +22,7 @@ else{
 					<main id="main" class="site-main">
 						<?php							
 							while ( have_posts() ) : the_post();
-								get_template_part( 'template-parts/content-single', 'locations' );
+								get_template_part( 'template-parts/content-single', 'booking' );
 							endwhile;						
 						?>
 					</main>
@@ -31,9 +31,9 @@ else{
 		</div>
 	</div>	
 </div>
-<?php if( TripferyTheme::$options['show_related_locations'] == '1' ) { ?>
-	<div class="locations-related">
-		<div class="container"><?php tripfery_related_locations(); ?></div>
+<?php if( TripferyTheme::$options['show_related_booking'] == '1' ) { ?>
+	<div class="booking-related">
+		<div class="container"><?php tripfery_related_booking(); ?></div>
 	</div>
 <?php } ?>
 <?php get_footer(); ?>

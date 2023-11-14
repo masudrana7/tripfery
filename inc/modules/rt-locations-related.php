@@ -5,23 +5,23 @@
  * @version 1.0
  */
 
-if( ! function_exists( 'tripfery_related_locations' )){
+if( ! function_exists( 'tripfery_related_booking' )){
 	
-	function tripfery_related_locations(){
+	function tripfery_related_booking(){
 		$thumb_size 			= 'tripfery-size5';
 		$post_id = get_the_id();	
 		$number_of_avail_post = '';
 		$current_post = array( $post_id );
-		$title_length = TripferyTheme::$options['related_locations_title_limit'] ? TripferyTheme::$options['related_locations_title_limit'] : '';
-		$related_post_number = TripferyTheme::$options['related_locations_number'];
+		$title_length = TripferyTheme::$options['related_booking_title_limit'] ? TripferyTheme::$options['related_booking_title_limit'] : '';
+		$related_post_number = TripferyTheme::$options['related_booking_number'];
 		
-		$locations_related_title  = get_post_meta( get_the_ID(), 'locations_related_title', true );
+		$booking_related_title  = get_post_meta( get_the_ID(), 'booking_related_title', true );
 
 		# Making ready to the Query ...
 		$query_type = TripferyTheme::$options['related_post_query'];
 
 		$args = array(
-			'post_type'				 => 'tripfery_locations',
+			'post_type'				 => 'tripfery_booking',
 			'post__not_in'           => $current_post,
 			'posts_per_page'         => $related_post_number,
 			'no_found_rows'          => true,
@@ -83,7 +83,7 @@ if( ! function_exists( 'tripfery_related_locations' )){
 		# Get related posts by categories ----------
 		else{
 			
-			$terms = get_the_terms( $post_id, 'tripfery_locations_category' );
+			$terms = get_the_terms( $post_id, 'tripfery_booking_category' );
 			if ( $terms && ! is_wp_error( $terms ) ) {
 			 
 				$port_cat_links = array();
@@ -95,7 +95,7 @@ if( ! function_exists( 'tripfery_related_locations' )){
 			
 			$args['tax_query'] = array (
 				array (
-					'taxonomy' => 'tripfery_locations_category',
+					'taxonomy' => 'tripfery_booking_category',
 					'field'    => 'ID',
 					'terms'    => $port_cat_links,
 				)
@@ -132,11 +132,11 @@ if( ! function_exists( 'tripfery_related_locations' )){
 		
 		if( $related_query->have_posts() ) { ?>
 		
-		<div class="rt-locations-default rt-locations-multi-layout-2 related-locations">
+		<div class="rt-booking-default rt-booking-multi-layout-2 related-booking">
 			<div class="rt-swiper-slider" data-xld = '<?php echo esc_attr( $swiper_data ); ?>'>
 				<div class="rt-related-title">
 					<div class="title-holder">
-						<h3 class="entry-title has-animation"><?php echo wp_kses( TripferyTheme::$options['locations_related_title'] , 'alltext_allow' ); ?></h3>
+						<h3 class="entry-title has-animation"><?php echo wp_kses( TripferyTheme::$options['booking_related_title'] , 'alltext_allow' ); ?></h3>
 					</div>
 					<div class="swiper-button">
 		                <div class="swiper-button-prev"><i class="icon-tripfery-left-arrow"></i><?php echo esc_html__( 'Prev' , 'tripfery' ) ?></div>
@@ -151,8 +151,8 @@ if( ! function_exists( 'tripfery_related_locations' )){
 						$id = get_the_ID();
 
 					?>
-						<div class="locations-item swiper-slide">
-							<div class="locations-figure">
+						<div class="booking-item swiper-slide">
+							<div class="booking-figure">
 								<a href="<?php the_permalink(); ?>">
 									<?php
 										if ( has_post_thumbnail() ){
@@ -168,23 +168,23 @@ if( ! function_exists( 'tripfery_related_locations' )){
 								</a>
 								
 							</div>
-							<div class="locations-content">
+							<div class="booking-content">
 								<div class="content-info">
 									<h3 class="entry-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $trimmed_title ); ?></a></h3>
-									<?php if ( TripferyTheme::$options['locations_ar_category'] ) { ?>
-									<span class="locations-cat"><?php
+									<?php if ( TripferyTheme::$options['booking_ar_category'] ) { ?>
+									<span class="booking-cat"><?php
 										$i = 1;
-										$term_lists = get_the_terms( get_the_ID(), 'tripfery_locations_category' );
+										$term_lists = get_the_terms( get_the_ID(), 'tripfery_booking_category' );
 										if( $term_lists ) {
 										foreach ( $term_lists as $term_list ){ 
-										$link = get_term_link( $term_list->term_id, 'tripfery_locations_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
+										$link = get_term_link( $term_list->term_id, 'tripfery_booking_category' ); ?><?php if ( $i > 1 ){ echo esc_html( ', ' ); } ?><a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $term_list->name ); ?></a><?php $i++; } } ?>
 									</span>
 									<?php } ?>				
-									<?php if ( TripferyTheme::$options['locations_ar_excerpt'] ) { ?>
+									<?php if ( TripferyTheme::$options['booking_ar_excerpt'] ) { ?>
 										<p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p>
 									<?php } ?>
 								</div>
-								<?php if ( TripferyTheme::$options['locations_ar_action'] ) { ?>
+								<?php if ( TripferyTheme::$options['booking_ar_action'] ) { ?>
 								<div class="content-action">
 									<a href="<?php the_permalink();?>"><i class="icon-tripfery-right-arrow"></i></a>
 								</div>

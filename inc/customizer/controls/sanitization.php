@@ -211,12 +211,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         }
     }
 
-    /* Locations related option */
-    if (!function_exists('rttheme_is_related_locations_enabled')) {
-        function rttheme_is_related_locations_enabled()
+    /* Booking related option */
+    if (!function_exists('rttheme_is_related_booking_enabled')) {
+        function rttheme_is_related_booking_enabled()
         {
-            $show_related_locations = get_theme_mod('show_related_locations');
-            if (empty($show_related_locations)) {
+            $show_related_booking = get_theme_mod('show_related_booking');
+            if (empty($show_related_booking)) {
                 return false;
             }
             return true;

@@ -203,8 +203,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:110
 #: inc/customizer/settings/error-layout.php:69
 #: inc/customizer/settings/page-layout.php:110
-#: inc/customizer/settings/locations-layout.php:110
-#: inc/customizer/settings/locations-single-layout.php:110
+#: inc/customizer/settings/booking-layout.php:110
+#: inc/customizer/settings/booking-single-layout.php:110
 #: inc/customizer/settings/search-layout.php:110
 #: inc/customizer/settings/service-layout.php:110
 #: inc/customizer/settings/service-single-layout.php:110
@@ -219,8 +219,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:187
 #: inc/customizer/settings/error-layout.php:146
 #: inc/customizer/settings/page-layout.php:187
-#: inc/customizer/settings/locations-layout.php:187
-#: inc/customizer/settings/locations-single-layout.php:187
+#: inc/customizer/settings/booking-layout.php:187
+#: inc/customizer/settings/booking-single-layout.php:187
 #: inc/customizer/settings/search-layout.php:187
 #: inc/customizer/settings/service-layout.php:187
 #: inc/customizer/settings/service-single-layout.php:187
@@ -235,8 +235,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:159
 #: inc/customizer/settings/error-layout.php:118
 #: inc/customizer/settings/page-layout.php:159
-#: inc/customizer/settings/locations-layout.php:159
-#: inc/customizer/settings/locations-single-layout.php:159
+#: inc/customizer/settings/booking-layout.php:159
+#: inc/customizer/settings/booking-single-layout.php:159
 #: inc/customizer/settings/search-layout.php:159
 #: inc/customizer/settings/service-layout.php:159
 #: inc/customizer/settings/service-single-layout.php:159
@@ -255,8 +255,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:139
 #: inc/customizer/settings/error-layout.php:98
 #: inc/customizer/settings/page-layout.php:139
-#: inc/customizer/settings/locations-layout.php:139
-#: inc/customizer/settings/locations-single-layout.php:139
+#: inc/customizer/settings/booking-layout.php:139
+#: inc/customizer/settings/booking-single-layout.php:139
 #: inc/customizer/settings/search-layout.php:139
 #: inc/customizer/settings/service-layout.php:139
 #: inc/customizer/settings/service-single-layout.php:139
@@ -299,8 +299,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:240
 #: inc/customizer/settings/footer.php:307
 #: inc/customizer/settings/page-layout.php:145
-#: inc/customizer/settings/locations-layout.php:145
-#: inc/customizer/settings/locations-single-layout.php:145
+#: inc/customizer/settings/booking-layout.php:145
+#: inc/customizer/settings/booking-single-layout.php:145
 #: inc/customizer/settings/search-layout.php:145
 #: inc/customizer/settings/service-layout.php:145
 #: inc/customizer/settings/service-single-layout.php:145
@@ -318,8 +318,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:241
 #: inc/customizer/settings/footer.php:308
 #: inc/customizer/settings/page-layout.php:144
-#: inc/customizer/settings/locations-layout.php:144
-#: inc/customizer/settings/locations-single-layout.php:144
+#: inc/customizer/settings/booking-layout.php:144
+#: inc/customizer/settings/booking-single-layout.php:144
 #: inc/customizer/settings/search-layout.php:144
 #: inc/customizer/settings/service-layout.php:144
 #: inc/customizer/settings/service-single-layout.php:144
@@ -407,8 +407,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:124
 #: inc/customizer/settings/error-layout.php:83
 #: inc/customizer/settings/page-layout.php:124
-#: inc/customizer/settings/locations-layout.php:124
-#: inc/customizer/settings/locations-single-layout.php:124
+#: inc/customizer/settings/booking-layout.php:124
+#: inc/customizer/settings/booking-single-layout.php:124
 #: inc/customizer/settings/search-layout.php:124
 #: inc/customizer/settings/service-layout.php:124
 #: inc/customizer/settings/service-single-layout.php:124
@@ -455,7 +455,7 @@ msgstr ""
 msgid "Cart view"
 msgstr ""
 
-#: template-parts/content-single-locations.php:44
+#: template-parts/content-single-booking.php:44
 msgid "Category"
 msgstr ""
 
@@ -482,10 +482,10 @@ msgstr[1] ""
 #: inc/customizer/settings/general.php:232
 #: inc/customizer/settings/page-layout.php:165
 #: inc/customizer/settings/page-layout.php:210
-#: inc/customizer/settings/locations-layout.php:165
-#: inc/customizer/settings/locations-layout.php:210
-#: inc/customizer/settings/locations-single-layout.php:165
-#: inc/customizer/settings/locations-single-layout.php:210
+#: inc/customizer/settings/booking-layout.php:165
+#: inc/customizer/settings/booking-layout.php:210
+#: inc/customizer/settings/booking-single-layout.php:165
+#: inc/customizer/settings/booking-single-layout.php:210
 #: inc/customizer/settings/search-layout.php:165
 #: inc/customizer/settings/search-layout.php:210
 #: inc/customizer/settings/service-layout.php:165
@@ -524,10 +524,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:237
 #: inc/customizer/settings/page-layout.php:170
 #: inc/customizer/settings/page-layout.php:215
-#: inc/customizer/settings/locations-layout.php:170
-#: inc/customizer/settings/locations-layout.php:215
-#: inc/customizer/settings/locations-single-layout.php:170
-#: inc/customizer/settings/locations-single-layout.php:215
+#: inc/customizer/settings/booking-layout.php:170
+#: inc/customizer/settings/booking-layout.php:215
+#: inc/customizer/settings/booking-single-layout.php:170
+#: inc/customizer/settings/booking-single-layout.php:215
 #: inc/customizer/settings/search-layout.php:170
 #: inc/customizer/settings/search-layout.php:215
 #: inc/customizer/settings/service-layout.php:170
@@ -545,7 +545,7 @@ msgstr ""
 msgid "Choose File"
 msgstr ""
 
-#: template-parts/content-single-locations.php:55
+#: template-parts/content-single-booking.php:55
 msgid "Client"
 msgstr ""
 
@@ -610,8 +610,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:95
 #: inc/customizer/settings/error-layout.php:54
 #: inc/customizer/settings/page-layout.php:95
-#: inc/customizer/settings/locations-layout.php:95
-#: inc/customizer/settings/locations-single-layout.php:95
+#: inc/customizer/settings/booking-layout.php:95
+#: inc/customizer/settings/booking-single-layout.php:95
 #: inc/customizer/settings/search-layout.php:95
 #: inc/customizer/settings/service-layout.php:95
 #: inc/customizer/settings/service-single-layout.php:95
@@ -626,8 +626,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:80
 #: inc/customizer/settings/error-layout.php:39
 #: inc/customizer/settings/page-layout.php:80
-#: inc/customizer/settings/locations-layout.php:80
-#: inc/customizer/settings/locations-single-layout.php:80
+#: inc/customizer/settings/booking-layout.php:80
+#: inc/customizer/settings/booking-single-layout.php:80
 #: inc/customizer/settings/search-layout.php:80
 #: inc/customizer/settings/service-layout.php:80
 #: inc/customizer/settings/service-single-layout.php:80
@@ -697,10 +697,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:233
 #: inc/customizer/settings/page-layout.php:166
 #: inc/customizer/settings/page-layout.php:211
-#: inc/customizer/settings/locations-layout.php:166
-#: inc/customizer/settings/locations-layout.php:211
-#: inc/customizer/settings/locations-single-layout.php:166
-#: inc/customizer/settings/locations-single-layout.php:211
+#: inc/customizer/settings/booking-layout.php:166
+#: inc/customizer/settings/booking-layout.php:211
+#: inc/customizer/settings/booking-single-layout.php:166
+#: inc/customizer/settings/booking-single-layout.php:211
 #: inc/customizer/settings/search-layout.php:166
 #: inc/customizer/settings/search-layout.php:211
 #: inc/customizer/settings/service-layout.php:166
@@ -760,7 +760,7 @@ msgstr ""
 msgid "Email Label"
 msgstr ""
 
-#: template-parts/content-single-locations.php:59
+#: template-parts/content-single-booking.php:59
 msgid "Ends On"
 msgstr ""
 
@@ -950,8 +950,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:48
 #: inc/customizer/settings/blog-single-layout.php:48
 #: inc/customizer/settings/page-layout.php:48
-#: inc/customizer/settings/locations-layout.php:48
-#: inc/customizer/settings/locations-single-layout.php:48
+#: inc/customizer/settings/booking-layout.php:48
+#: inc/customizer/settings/booking-single-layout.php:48
 #: inc/customizer/settings/search-layout.php:48
 #: inc/customizer/settings/service-layout.php:48
 #: inc/customizer/settings/service-single-layout.php:48
@@ -1125,7 +1125,7 @@ msgstr ""
 
 #: inc/customizer/settings/blog.php:49 inc/customizer/settings/footer.php:74
 #: inc/customizer/settings/header.php:61 inc/customizer/settings/header.php:235
-#: inc/customizer/settings/locations.php:60
+#: inc/customizer/settings/booking.php:60
 #: inc/customizer/settings/service.php:60 inc/customizer/settings/single.php:79
 #: inc/customizer/settings/team.php:59
 msgid "Layout 1"
@@ -1133,7 +1133,7 @@ msgstr ""
 
 #: inc/customizer/settings/blog.php:53 inc/customizer/settings/footer.php:78
 #: inc/customizer/settings/header.php:65 inc/customizer/settings/header.php:239
-#: inc/customizer/settings/locations.php:64
+#: inc/customizer/settings/booking.php:64
 #: inc/customizer/settings/service.php:64 inc/customizer/settings/single.php:83
 #: inc/customizer/settings/team.php:63
 msgid "Layout 2"
@@ -1141,7 +1141,7 @@ msgstr ""
 
 #: inc/customizer/settings/blog.php:57 inc/customizer/settings/footer.php:82
 #: inc/customizer/settings/header.php:69 inc/customizer/settings/header.php:243
-#: inc/customizer/settings/locations.php:68
+#: inc/customizer/settings/booking.php:68
 msgid "Layout 3"
 msgstr ""
 
@@ -1172,8 +1172,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:44
 #: inc/customizer/settings/blog-single-layout.php:44
 #: inc/customizer/settings/page-layout.php:44
-#: inc/customizer/settings/locations-layout.php:44
-#: inc/customizer/settings/locations-single-layout.php:44
+#: inc/customizer/settings/booking-layout.php:44
+#: inc/customizer/settings/booking-single-layout.php:44
 #: inc/customizer/settings/search-layout.php:44
 #: inc/customizer/settings/service-layout.php:44
 #: inc/customizer/settings/service-single-layout.php:44
@@ -1355,7 +1355,7 @@ msgstr ""
 #: template-parts/content-1.php:75 template-parts/content-2.php:75
 #: template-parts/content-3.php:92 template-parts/content-single-2.php:71
 #: template-parts/content-single.php:70
-#: inc/modules/rt-locations-related.php:143 inc/modules/rt-post-related.php:137
+#: inc/modules/rt-booking-related.php:143 inc/modules/rt-post-related.php:137
 #: inc/modules/rt-team-related.php:147
 #: woocommerce/single-product/related.php:49
 msgid "Next"
@@ -1382,10 +1382,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:235
 #: inc/customizer/settings/page-layout.php:168
 #: inc/customizer/settings/page-layout.php:213
-#: inc/customizer/settings/locations-layout.php:168
-#: inc/customizer/settings/locations-layout.php:213
-#: inc/customizer/settings/locations-single-layout.php:168
-#: inc/customizer/settings/locations-single-layout.php:213
+#: inc/customizer/settings/booking-layout.php:168
+#: inc/customizer/settings/booking-layout.php:213
+#: inc/customizer/settings/booking-single-layout.php:168
+#: inc/customizer/settings/booking-single-layout.php:213
 #: inc/customizer/settings/search-layout.php:168
 #: inc/customizer/settings/search-layout.php:213
 #: inc/customizer/settings/service-layout.php:168
@@ -1485,7 +1485,7 @@ msgid "Opening Text"
 msgstr ""
 
 #: template-parts/content-banner.php:25
-msgid "Our Locationss"
+msgid "Our Bookings"
 msgstr ""
 
 #: template-parts/content-banner.php:27
@@ -1504,8 +1504,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:231
 #: inc/customizer/settings/error-layout.php:190
 #: inc/customizer/settings/page-layout.php:231
-#: inc/customizer/settings/locations-layout.php:231
-#: inc/customizer/settings/locations-single-layout.php:231
+#: inc/customizer/settings/booking-layout.php:231
+#: inc/customizer/settings/booking-single-layout.php:231
 #: inc/customizer/settings/search-layout.php:231
 #: inc/customizer/settings/service-layout.php:231
 #: inc/customizer/settings/service-single-layout.php:231
@@ -1520,8 +1520,8 @@ msgstr ""
 #: inc/customizer/settings/blog-single-layout.php:204
 #: inc/customizer/settings/error-layout.php:163
 #: inc/customizer/settings/page-layout.php:204
-#: inc/customizer/settings/locations-layout.php:204
-#: inc/customizer/settings/locations-single-layout.php:204
+#: inc/customizer/settings/booking-layout.php:204
+#: inc/customizer/settings/booking-single-layout.php:204
 #: inc/customizer/settings/search-layout.php:204
 #: inc/customizer/settings/service-layout.php:204
 #: inc/customizer/settings/service-single-layout.php:204
@@ -1589,64 +1589,64 @@ msgid ""
 "target=\"_blank\">Support Center</a>"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:141
-msgid "Locations Archive Excerpt Limit"
+#: inc/customizer/settings/booking.php:141
+msgid "Booking Archive Excerpt Limit"
 msgstr ""
 
-#: inc/customizer/customizer.php:292 inc/customizer/settings/locations.php:54
-msgid "Locations Archive Layout"
+#: inc/customizer/customizer.php:292 inc/customizer/settings/booking.php:54
+msgid "Booking Archive Layout"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:41
-msgid "Locations Archive Option"
+#: inc/customizer/settings/booking.php:41
+msgid "Booking Archive Option"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:84
-msgid "Locations Archive Post Limit"
+#: inc/customizer/settings/booking.php:84
+msgid "Booking Archive Post Limit"
 msgstr ""
 
 #: inc/customizer/settings/slug.php:110
-msgid "Locations Category Slug"
+msgid "Booking Category Slug"
 msgstr ""
 
 #: template-parts/content-banner.php:33
-msgid "Locations Details"
+msgid "Booking Details"
 msgstr ""
 
 #: inc/customizer/customizer.php:390
-msgid "Locations Setting"
+msgid "Booking Setting"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:167
-msgid "Locations Single Category"
+#: inc/customizer/settings/booking.php:167
+msgid "Booking Single Category"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:181
-msgid "Locations Single Client"
+#: inc/customizer/settings/booking.php:181
+msgid "Booking Single Client"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:209
-msgid "Locations Single End Date"
+#: inc/customizer/settings/booking.php:209
+msgid "Booking Single End Date"
 msgstr ""
 
 #: inc/customizer/customizer.php:301
-msgid "Locations Single Layout"
+msgid "Booking Single Layout"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:237
-msgid "Locations Single Rating"
+#: inc/customizer/settings/booking.php:237
+msgid "Booking Single Rating"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:195
-msgid "Locations Single Start Date"
+#: inc/customizer/settings/booking.php:195
+msgid "Booking Single Start Date"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:223
-msgid "Locations Single WebLink"
+#: inc/customizer/settings/booking.php:223
+msgid "Booking Single WebLink"
 msgstr ""
 
 #: inc/customizer/settings/slug.php:64
-msgid "Locations Slug"
+msgid "Booking Slug"
 msgstr ""
 
 #. Name of the template
@@ -1716,7 +1716,7 @@ msgstr ""
 #: template-parts/content-1.php:74 template-parts/content-2.php:74
 #: template-parts/content-3.php:91 template-parts/content-single-2.php:70
 #: template-parts/content-single.php:69
-#: inc/modules/rt-locations-related.php:142 inc/modules/rt-post-related.php:136
+#: inc/modules/rt-booking-related.php:142 inc/modules/rt-post-related.php:136
 #: inc/modules/rt-team-related.php:146
 #: woocommerce/single-product/related.php:48
 msgid "Prev"
@@ -1800,7 +1800,7 @@ msgstr ""
 msgid "Rate&hellip;"
 msgstr ""
 
-#: template-parts/content-single-locations.php:66
+#: template-parts/content-single-booking.php:66
 #: inc/customizer/settings/woo-shop.php:144
 msgid "Rating"
 msgstr ""
@@ -1852,7 +1852,7 @@ msgstr ""
 msgid "Related Products"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:265
+#: inc/customizer/settings/booking.php:265
 #: inc/customizer/settings/single.php:310 inc/customizer/settings/team.php:243
 msgid "Related Title"
 msgstr ""
@@ -1874,10 +1874,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:234
 #: inc/customizer/settings/page-layout.php:167
 #: inc/customizer/settings/page-layout.php:212
-#: inc/customizer/settings/locations-layout.php:167
-#: inc/customizer/settings/locations-layout.php:212
-#: inc/customizer/settings/locations-single-layout.php:167
-#: inc/customizer/settings/locations-single-layout.php:212
+#: inc/customizer/settings/booking-layout.php:167
+#: inc/customizer/settings/booking-layout.php:212
+#: inc/customizer/settings/booking-single-layout.php:167
+#: inc/customizer/settings/booking-single-layout.php:212
 #: inc/customizer/settings/search-layout.php:167
 #: inc/customizer/settings/search-layout.php:212
 #: inc/customizer/settings/service-layout.php:167
@@ -1906,8 +1906,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:52
 #: inc/customizer/settings/blog-single-layout.php:52
 #: inc/customizer/settings/page-layout.php:52
-#: inc/customizer/settings/locations-layout.php:52
-#: inc/customizer/settings/locations-single-layout.php:52
+#: inc/customizer/settings/booking-layout.php:52
+#: inc/customizer/settings/booking-single-layout.php:52
 #: inc/customizer/settings/search-layout.php:52
 #: inc/customizer/settings/service-layout.php:52
 #: inc/customizer/settings/service-single-layout.php:52
@@ -2005,14 +2005,14 @@ msgstr ""
 #: inc/customizer/settings/page-layout.php:169
 #: inc/customizer/settings/page-layout.php:209
 #: inc/customizer/settings/page-layout.php:214
-#: inc/customizer/settings/locations-layout.php:164
-#: inc/customizer/settings/locations-layout.php:169
-#: inc/customizer/settings/locations-layout.php:209
-#: inc/customizer/settings/locations-layout.php:214
-#: inc/customizer/settings/locations-single-layout.php:164
-#: inc/customizer/settings/locations-single-layout.php:169
-#: inc/customizer/settings/locations-single-layout.php:209
-#: inc/customizer/settings/locations-single-layout.php:214
+#: inc/customizer/settings/booking-layout.php:164
+#: inc/customizer/settings/booking-layout.php:169
+#: inc/customizer/settings/booking-layout.php:209
+#: inc/customizer/settings/booking-layout.php:214
+#: inc/customizer/settings/booking-single-layout.php:164
+#: inc/customizer/settings/booking-single-layout.php:169
+#: inc/customizer/settings/booking-single-layout.php:209
+#: inc/customizer/settings/booking-single-layout.php:214
 #: inc/customizer/settings/search-layout.php:164
 #: inc/customizer/settings/search-layout.php:169
 #: inc/customizer/settings/search-layout.php:209
@@ -2047,8 +2047,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:39
 #: inc/customizer/settings/blog-single-layout.php:39
 #: inc/customizer/settings/page-layout.php:39
-#: inc/customizer/settings/locations-layout.php:39
-#: inc/customizer/settings/locations-single-layout.php:39
+#: inc/customizer/settings/booking-layout.php:39
+#: inc/customizer/settings/booking-single-layout.php:39
 #: inc/customizer/settings/search-layout.php:39
 #: inc/customizer/settings/service-layout.php:39
 #: inc/customizer/settings/service-single-layout.php:39
@@ -2058,7 +2058,7 @@ msgstr ""
 msgid "Select the default template layout for Pages"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:55
+#: inc/customizer/settings/booking.php:55
 #: inc/customizer/settings/service.php:55 inc/customizer/settings/team.php:54
 msgid "Select the gallery layout for gallery page"
 msgstr ""
@@ -2124,7 +2124,7 @@ msgstr ""
 msgid "Shop Single Layout"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:113
+#: inc/customizer/settings/booking.php:113
 msgid "Show Action"
 msgstr ""
 
@@ -2145,7 +2145,7 @@ msgid "Show Button"
 msgstr ""
 
 #: inc/customizer/settings/blog.php:180
-#: inc/customizer/settings/locations.php:99
+#: inc/customizer/settings/booking.php:99
 #: inc/customizer/settings/single.php:155
 msgid "Show Category"
 msgstr ""
@@ -2178,7 +2178,7 @@ msgstr ""
 msgid "Show Email Share Button"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:127
+#: inc/customizer/settings/booking.php:127
 #: inc/customizer/settings/service.php:122 inc/customizer/settings/team.php:94
 msgid "Show Excerpt"
 msgstr ""
@@ -2235,8 +2235,8 @@ msgstr ""
 msgid "Show Reddit Share Button"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:251
-msgid "Show Related Locations"
+#: inc/customizer/settings/booking.php:251
+msgid "Show Related Booking"
 msgstr ""
 
 #: inc/customizer/settings/single.php:296
@@ -2302,8 +2302,8 @@ msgstr ""
 #: inc/customizer/settings/blog-layout.php:38
 #: inc/customizer/settings/blog-single-layout.php:38
 #: inc/customizer/settings/page-layout.php:38
-#: inc/customizer/settings/locations-layout.php:38
-#: inc/customizer/settings/locations-single-layout.php:38
+#: inc/customizer/settings/booking-layout.php:38
+#: inc/customizer/settings/booking-single-layout.php:38
 #: inc/customizer/settings/search-layout.php:38
 #: inc/customizer/settings/service-layout.php:38
 #: inc/customizer/settings/service-single-layout.php:38
@@ -2313,8 +2313,8 @@ msgstr ""
 msgid "Sidebar Layout"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:154
-msgid "Single Locations Option"
+#: inc/customizer/settings/booking.php:154
+msgid "Single Booking Option"
 msgstr ""
 
 #: inc/customizer/settings/single.php:73
@@ -2399,7 +2399,7 @@ msgstr ""
 msgid "Stackoverflow"
 msgstr ""
 
-#: template-parts/content-single-locations.php:57
+#: template-parts/content-single-booking.php:57
 msgid "Starts On"
 msgstr ""
 
@@ -2470,7 +2470,7 @@ msgstr ""
 msgid "Team Details"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:281
+#: inc/customizer/settings/booking.php:281
 #: inc/customizer/settings/team.php:259
 msgid "Team Post"
 msgstr ""
@@ -2514,8 +2514,8 @@ msgstr ""
 #: inc/customizer/settings/footer.php:237
 #: inc/customizer/settings/footer.php:304
 #: inc/customizer/settings/page-layout.php:141
-#: inc/customizer/settings/locations-layout.php:141
-#: inc/customizer/settings/locations-single-layout.php:141
+#: inc/customizer/settings/booking-layout.php:141
+#: inc/customizer/settings/booking-single-layout.php:141
 #: inc/customizer/settings/search-layout.php:141
 #: inc/customizer/settings/service-layout.php:141
 #: inc/customizer/settings/service-single-layout.php:141
@@ -2543,10 +2543,10 @@ msgstr ""
 #: inc/customizer/settings/general.php:226
 #: inc/customizer/settings/page-layout.php:160
 #: inc/customizer/settings/page-layout.php:205
-#: inc/customizer/settings/locations-layout.php:160
-#: inc/customizer/settings/locations-layout.php:205
-#: inc/customizer/settings/locations-single-layout.php:160
-#: inc/customizer/settings/locations-single-layout.php:205
+#: inc/customizer/settings/booking-layout.php:160
+#: inc/customizer/settings/booking-layout.php:205
+#: inc/customizer/settings/booking-single-layout.php:160
+#: inc/customizer/settings/booking-single-layout.php:205
 #: inc/customizer/settings/search-layout.php:160
 #: inc/customizer/settings/search-layout.php:205
 #: inc/customizer/settings/service-layout.php:160
@@ -2568,7 +2568,7 @@ msgstr ""
 msgid "Time Tormat"
 msgstr ""
 
-#: inc/customizer/settings/locations.php:297
+#: inc/customizer/settings/booking.php:297
 #: inc/customizer/settings/team.php:275
 msgid "Title Limit"
 msgstr ""
@@ -2658,7 +2658,7 @@ msgstr ""
 msgid "View your shopping cart"
 msgstr ""
 
-#: template-parts/content-single-locations.php:61
+#: template-parts/content-single-booking.php:61
 msgid "Web Link"
 msgstr ""
 

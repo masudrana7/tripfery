@@ -30,7 +30,7 @@ TripferyTheme_Helper::requires( 'customizer/settings/error.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/reading-progress-bar.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/team.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/service.php' );
-TripferyTheme_Helper::requires( 'customizer/settings/locations.php' );
+TripferyTheme_Helper::requires( 'customizer/settings/booking.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-shop.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-product.php' );
 
@@ -45,8 +45,8 @@ TripferyTheme_Helper::requires( 'customizer/settings/team-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/team-single-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/service-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/service-single-layout.php' );
-TripferyTheme_Helper::requires( 'customizer/settings/locations-layout.php' );
-TripferyTheme_Helper::requires( 'customizer/settings/locations-single-layout.php' );
+TripferyTheme_Helper::requires( 'customizer/settings/booking-layout.php' );
+TripferyTheme_Helper::requires( 'customizer/settings/booking-single-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-shop-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-product-layout.php' );
 

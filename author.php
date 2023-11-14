@@ -85,7 +85,7 @@ $tripfery_author_designation = get_user_meta( $author, 'tripfery_author_designat
 							endwhile;
 							echo '</div>';
 						} else if ( class_exists( 'Tripfery_Core' ) ) {
-							if ( is_tax( 'tripfery_locations_category' ) ) {
+							if ( is_tax( 'tripfery_booking_category' ) ) {
 								echo '<div class="row rt-masonry-grid">';
 								while ( have_posts() ) : the_post();
 									get_template_part( 'template-parts/content-1', get_post_format() );

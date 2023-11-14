@@ -5975,7 +5975,7 @@ textarea.form-control::placeholder {
 	background-color: var(--tripfery-grey-color-1);
 	transition: all ease 0.31s;
 }
-.related-locations .rt-related-title .swiper-button > div {
+.related-booking .rt-related-title .swiper-button > div {
 	background-color: var(--tripfery-white-color);
 }
 .rt-related-title .swiper-button > div:hover {

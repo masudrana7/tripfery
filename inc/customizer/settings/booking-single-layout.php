@@ -15,29 +15,29 @@ use WP_Customize_Color_Control;
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Customizer {
+class TripferyTheme_Booking_Single_Layout_Settings extends TripferyTheme_Customizer {
 
 	public function __construct() {
         parent::instance();
         $this->populated_default_data();
         // Register Page Controls
-        add_action( 'customize_register', array( $this, 'register_locations_single_layout_controls' ) );
+        add_action( 'customize_register', array( $this, 'register_booking_single_layout_controls' ) );
 	}
 
-    public function register_locations_single_layout_controls( $wp_customize ) {
+    public function register_booking_single_layout_controls( $wp_customize ) {
 
-        $wp_customize->add_setting( 'locations_layout',
+        $wp_customize->add_setting( 'booking_layout',
             array(
-                'default' => $this->defaults['locations_layout'],
+                'default' => $this->defaults['booking_layout'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_radio_sanitization'
             )
         );
-        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'locations_layout',
+        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'booking_layout',
             array(
                 'label' => __( 'Sidebar Layout', 'tripfery' ),
                 'description' => esc_html__( 'Select the default template layout for Pages', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'choices' => array(
                     'left-sidebar' => array(
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-left.png',
@@ -64,80 +64,80 @@ class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Custo
         ));
         $wp_customize->add_control(new Customizer_Separator_Control($wp_customize, 'separator_page', array(
             'settings' => 'separator_page',
-            'section' => 'locations_single_layout_section',
+            'section' => 'booking_single_layout_section',
         )));
 		
 		// Content padding top
-        $wp_customize->add_setting( 'locations_padding_top',
+        $wp_customize->add_setting( 'booking_padding_top',
             array(
-                'default' => $this->defaults['locations_padding_top'],
+                'default' => $this->defaults['booking_padding_top'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_sanitize_integer',
             )
         );
-        $wp_customize->add_control( 'locations_padding_top',
+        $wp_customize->add_control( 'booking_padding_top',
             array(
                 'label' => __( 'Content Padding Top', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'type' => 'number',
             )
         );
         // Content padding bottom
-        $wp_customize->add_setting( 'locations_padding_bottom',
+        $wp_customize->add_setting( 'booking_padding_bottom',
             array(
-                'default' => $this->defaults['locations_padding_bottom'],
+                'default' => $this->defaults['booking_padding_bottom'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_sanitize_integer',
             )
         );
-        $wp_customize->add_control( 'locations_padding_bottom',
+        $wp_customize->add_control( 'booking_padding_bottom',
             array(
                 'label' => __( 'Content Padding Bottom', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'type' => 'number',
             )
         );
 		
-		$wp_customize->add_setting( 'locations_banner',
+		$wp_customize->add_setting( 'booking_banner',
             array(
-                'default' => $this->defaults['locations_banner'],
+                'default' => $this->defaults['booking_banner'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'locations_banner',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_banner',
             array(
                 'label' => __( 'Banner', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
             )
         ) );
 		
-		$wp_customize->add_setting( 'locations_breadcrumb',
+		$wp_customize->add_setting( 'booking_breadcrumb',
             array(
-                'default' => $this->defaults['locations_breadcrumb'],
+                'default' => $this->defaults['booking_breadcrumb'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'locations_breadcrumb',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_breadcrumb',
             array(
                 'label' => __( 'Breadcrumb', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
             )
         ) );
 		
         // Banner BG Type 
-        $wp_customize->add_setting( 'locations_bgtype',
+        $wp_customize->add_setting( 'booking_bgtype',
             array(
-                'default' => $this->defaults['locations_bgtype'],
+                'default' => $this->defaults['booking_bgtype'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_radio_sanitization',
             )
         );
-        $wp_customize->add_control( 'locations_bgtype',
+        $wp_customize->add_control( 'booking_bgtype',
             array(
                 'label' => __( 'Banner Background Type', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'description' => esc_html__( 'This is banner background type.', 'tripfery' ),
                 'type' => 'select',
                 'choices' => array(
@@ -147,18 +147,18 @@ class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Custo
             )
         );
 
-        $wp_customize->add_setting( 'locations_bgimg',
+        $wp_customize->add_setting( 'booking_bgimg',
             array(
-                'default' => $this->defaults['locations_bgimg'],
+                'default' => $this->defaults['booking_bgimg'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'absint',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'locations_bgimg',
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'booking_bgimg',
             array(
                 'label' => __( 'Banner Background Image', 'tripfery' ),
                 'description' => esc_html__( 'This is the description for the Media Control', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'mime_type' => 'image',
                 'button_labels' => array(
                     'select' => __( 'Select File', 'tripfery' ),
@@ -173,37 +173,37 @@ class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Custo
         ) );
 
         // Banner background color
-        $wp_customize->add_setting('locations_bgcolor', 
+        $wp_customize->add_setting('booking_bgcolor', 
             array(
-                'default' => $this->defaults['locations_bgcolor'],
+                'default' => $this->defaults['booking_bgcolor'],
                 'type' => 'theme_mod', 
                 'capability' => 'edit_theme_options', 
                 'transport' => 'refresh', 
                 'sanitize_callback' => 'sanitize_hex_color',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'locations_bgcolor',
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'booking_bgcolor',
             array(
                 'label' => esc_html__('Banner Background Color', 'tripfery'),
-                'settings' => 'locations_bgcolor', 
+                'settings' => 'booking_bgcolor', 
                 'priority' => 10, 
-                'section' => 'locations_single_layout_section', 
+                'section' => 'booking_single_layout_section', 
             )
         ));
 		
 		// Page background image
-		$wp_customize->add_setting( 'locations_page_bgimg',
+		$wp_customize->add_setting( 'booking_page_bgimg',
             array(
-                'default' => $this->defaults['locations_page_bgimg'],
+                'default' => $this->defaults['booking_page_bgimg'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'absint',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'locations_page_bgimg',
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'booking_page_bgimg',
             array(
                 'label' => __( 'Page / Post Background Image', 'tripfery' ),
                 'description' => esc_html__( 'This is the description for the Media Control', 'tripfery' ),
-                'section' => 'locations_single_layout_section',
+                'section' => 'booking_single_layout_section',
                 'mime_type' => 'image',
                 'button_labels' => array(
                     'select' => __( 'Select File', 'tripfery' ),
@@ -217,20 +217,20 @@ class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Custo
             )
         ) );
 		
-		$wp_customize->add_setting('locations_page_bgcolor', 
+		$wp_customize->add_setting('booking_page_bgcolor', 
             array(
-                'default' => $this->defaults['locations_page_bgcolor'],
+                'default' => $this->defaults['booking_page_bgcolor'],
                 'type' => 'theme_mod', 
                 'capability' => 'edit_theme_options', 
                 'transport' => 'refresh', 
                 'sanitize_callback' => 'sanitize_hex_color',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'locations_page_bgcolor',
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'booking_page_bgcolor',
             array(
                 'label' => esc_html__('Page / Post Background Color', 'tripfery'),
-                'settings' => 'locations_page_bgcolor', 
-                'section' => 'locations_single_layout_section', 
+                'settings' => 'booking_page_bgcolor', 
+                'section' => 'booking_single_layout_section', 
             )
         ));
         
@@ -243,5 +243,5 @@ class TripferyTheme_Locations_Single_Layout_Settings extends TripferyTheme_Custo
  * Initialise our Customizer settings only when they're required
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	new TripferyTheme_Locations_Single_Layout_Settings();
+	new TripferyTheme_Booking_Single_Layout_Settings();
 }

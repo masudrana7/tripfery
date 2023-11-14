@@ -5540,10 +5540,10 @@ figure.is-type-video {
 .comments-area > h3 {
 	display: block;
 	position: relative;
-	font-size: 22px;
+	font-size: 24px;
 	margin-bottom: 30px;
 	line-height: 1.4;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 #respond .comment-notes {
@@ -6327,7 +6327,7 @@ textarea.form-control::placeholder {
 	background-color: var(--tripfery-grey-color-1);
 	transition: all ease 0.31s;
 }
-.related-locations .rt-related-title .swiper-button > div {
+.related-booking .rt-related-title .swiper-button > div {
 	background-color: var(--tripfery-white-color);
 }
 .rt-related-title .swiper-button > div:hover {
@@ -9987,7 +9987,7 @@ p.return-to-shop {
 	}
 }
 .info-card {
-	background-color: #f9f9fa;
+	background-color: var(--tripfery-grey-color-1);
 	padding: 30px;
 	border-radius: 20px;
 	margin:  30px 0;
@@ -10079,10 +10079,129 @@ p.return-to-shop {
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 26px;
-	color: #232323;
+	color: var(--tripfery-heading-color);
+	margin-bottom: 0;
 }
 .hotel-rules-list .hotel-rules-list-item .supporting-text {
 	font-size: 15px;
 	line-height: 26px;
 	color: #929292;
+}
+.hotel-rules-list{
+	margin: 0;
+	padding: 0;
+}
+.review-wrapper {
+	border: 1px solid #dedede;
+	border-radius: 30px;
+	padding: 30px;
+	margin-top: 25px;
+}
+
+.review-wrapper .review-text {
+	margin-bottom: 15px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 26px;
+	color: var(--tripfery-heading-color);
+}
+
+.review-wrapper .review-text i {
+	color: #e8ad16;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+.review-wrapper .review-text .review-count {
+	font-size: 15px;
+	color: #858585;
+	font-weight: 400;
+}
+
+.review-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+}
+
+@media (min-width: 768px) {
+	.review-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+.single-progress .progress-label {
+	margin-bottom: 10px;
+}
+.single-progress .rating-name,
+.single-progress .rating-count {
+	font-size: 15px;
+	color: var(--tripfery-heading-color);
+	font-weight: 500;
+}
+.single-progress .progress {
+	height: 5px;
+	border-radius: 3px;
+}
+.rt-booking-single .comments-area{
+	margin-top: 0;
+}
+.rtrs-review-wrap{
+	background-color: var(--tripfery-grey-color-1);
+}
+.rtrs-review-box .rtrs-each-review,
+.rtrs-review-form,
+.rtrs-sorting-bar,
+.rtrs-summary .rtrs-progress-wrap,
+.rtrs-summary .rtrs-rating-box {
+	background: var(--tripfery-white-color);
+}
+.rtrs-review-box .rtrs-review-body .rtrs-reply-btn .rtrs-item-btn {
+	background-color: transparent;
+	border: 1px solid var(--tripfery-primary-color);
+	border-radius: 60px;
+	box-shadow: none;
+	color: var(--tripfery-heading-color);
+
+}
+.rtrs-review-form .rtrs-form-group .rtrs-submit-btn{
+	border: 1px solid #dcdcdc;
+	color: var(--tripfery-heading-color);
+	background: transparent;
+}
+.rtrs-review-form .rtrs-form-group .rtrs-submit-btn:hover,
+.rtrs-review-box .rtrs-review-body .rtrs-reply-btn .rtrs-item-btn:hover {
+	background-color: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
+}
+.rtrs-review-form .rtrs-feedback-input .rtrs-input-title .item-icon{
+	background-color: var(--tripfery-primary-color);
+}
+.rt-booking-single .rtrs-review-form .rtrs-form-group .rtrs-submit-btn{
+	margin-top: 40px;
+}
+.rtrs-rating-container>input+label{
+	font-size: 14px;
+}
+.rtrs-review-box .rtrs-review-body .rtrs-review-meta .rtrs-review-rating i,
+.comment-rating-stars .star,
+.comment-total-rating-stars .star,
+.comment-form-rating-stars .star{
+	color: #eca336;
+	font-size: 14px;
+}
+.rtrs-star::before,
+.rtrs-rating-container>input+label::before {
+	content: "\f005";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+}
+.rtrs-rating-container:hover>input+label:hover::before,
+.rtrs-rating-container:hover>input+label:hover~label::before,
+.rtrs-rating-container>input+label:hover::before,
+.rtrs-rating-container>input+label:hover~label::before,
+.rtrs-rating-container>input:checked~label::before {
+	color: #eca336;
+	content: "\f005";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
 }

@@ -153,10 +153,10 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			// Post Type Slug
 			'team_slug' 				=> 'team',
             'service_slug'              => 'service',
-            'locations_slug'            => 'locations',
+            'booking_slug'            => 'booking',
 			'team_cat_slug' 			=> 'team-category',		
             'service_cat_slug'          => 'service-category',     
-            'locations_cat_slug'        => 'locations-category',     
+            'booking_cat_slug'        => 'booking-category',     
 			
             // Page Layout Setting 
             'page_layout'        => 'full-width',
@@ -249,31 +249,31 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'service_page_bgimg' => '',
             'service_page_bgcolor' => '',
 
-            //Locations Layout Setting 
-            'locations_archive_layout' => 'full-width',
-            'locations_archive_sidebar'        => '',
-            'locations_archive_padding_top'    => 120,
-            'locations_archive_padding_bottom' => 120,
-            'locations_archive_banner' => 1,
-            'locations_archive_breadcrumb' => 0,         
-            'locations_archive_bgtype' => 'bgcolor',
-            'locations_archive_bgcolor' => '',
-            'locations_archive_bgimg' => '',
-            'locations_archive_page_bgimg' => '',
-            'locations_archive_page_bgcolor' => '',
+            //Booking Layout Setting 
+            'booking_archive_layout' => 'full-width',
+            'booking_archive_sidebar'        => '',
+            'booking_archive_padding_top'    => 120,
+            'booking_archive_padding_bottom' => 120,
+            'booking_archive_banner' => 1,
+            'booking_archive_breadcrumb' => 0,         
+            'booking_archive_bgtype' => 'bgcolor',
+            'booking_archive_bgcolor' => '',
+            'booking_archive_bgimg' => '',
+            'booking_archive_page_bgimg' => '',
+            'booking_archive_page_bgcolor' => '',
             
-            //Locations Single Layout Setting 
-            'locations_layout' => 'full-width',
-            'locations_sidebar'        => '',
-            'locations_padding_top'    => 120,
-            'locations_padding_bottom' => 120,
-            'locations_banner' => 1,
-            'locations_breadcrumb' => 0,         
-            'locations_bgtype' => 'bgcolor',
-            'locations_bgcolor' => '',
-            'locations_bgimg' => '',
-            'locations_page_bgimg' => '',
-            'locations_page_bgcolor' => '',
+            //Booking Single Layout Setting 
+            'booking_layout' => 'full-width',
+            'booking_sidebar'        => '',
+            'booking_padding_top'    => 120,
+            'booking_padding_bottom' => 120,
+            'booking_banner' => 1,
+            'booking_breadcrumb' => 0,         
+            'booking_bgtype' => 'bgcolor',
+            'booking_bgcolor' => '',
+            'booking_bgimg' => '',
+            'booking_page_bgimg' => '',
+            'booking_page_bgcolor' => '',
 			
 			//Search Layout Setting 
 			'search_layout' => 'right-sidebar',
@@ -423,25 +423,25 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'service_excerpt_limit'     => 20,
 
 
-            // Locations
-            'locations_archive_style'     => 'style1',
-            'locations_post_number'       => 6,
-            'locations_arexcerpt_limit'   => 20,
-            'locations_ar_excerpt'        => 0,
-            'locations_ar_category'       => 1,
-            'locations_ar_action'         => 1,
+            // Booking
+            'booking_archive_style'     => 'style1',
+            'booking_post_number'       => 6,
+            'booking_arexcerpt_limit'   => 20,
+            'booking_ar_excerpt'        => 0,
+            'booking_ar_category'       => 1,
+            'booking_ar_action'         => 1,
 
-            'single_locations_cat'        => 1,
-            'single_locations_client'     => 1,
-            'single_locations_startdate'  => 1,
-            'single_locations_enddate'    => 1,
-            'single_locations_weblink'    => 1,
-            'single_locations_rating'     => 1,
+            'single_booking_cat'        => 1,
+            'single_booking_client'     => 1,
+            'single_booking_startdate'  => 1,
+            'single_booking_enddate'    => 1,
+            'single_booking_weblink'    => 1,
+            'single_booking_rating'     => 1,
 
-            'show_related_locations'      => 0,
-            'locations_related_title'     => esc_html__('Related Case', 'tripfery'),
-            'related_locations_number'    => 5,
-            'related_locations_title_limit'=> 5,
+            'show_related_booking'      => 0,
+            'booking_related_title'     => esc_html__('Availability', 'tripfery'),
+            'related_booking_number'    => 5,
+            'related_booking_title_limit'=> 5,
 			
             // Error
             'error_bodybg_color' 		=> '',

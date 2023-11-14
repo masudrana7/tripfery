@@ -52,16 +52,16 @@ class TripferyTheme_Slug_Settings extends TripferyTheme_Customizer {
             )
         );
 		
-		$wp_customize->add_setting( 'locations_slug',
+		$wp_customize->add_setting( 'booking_slug',
             array(
-                'default' => $this->defaults['locations_slug'],
+                'default' => $this->defaults['booking_slug'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_text_sanitization'
             )
         );
-        $wp_customize->add_control( 'locations_slug',
+        $wp_customize->add_control( 'booking_slug',
             array(
-                'label' => __( 'Locations Slug', 'tripfery' ),
+                'label' => __( 'Booking Slug', 'tripfery' ),
                 'section' => 'slug_layout_section',
                 'type' => 'text',
             )
@@ -98,16 +98,16 @@ class TripferyTheme_Slug_Settings extends TripferyTheme_Customizer {
             )
         );
 		
-		$wp_customize->add_setting( 'locations_cat_slug',
+		$wp_customize->add_setting( 'booking_cat_slug',
             array(
-                'default' => $this->defaults['locations_cat_slug'],
+                'default' => $this->defaults['booking_cat_slug'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_text_sanitization'
             )
         );
-        $wp_customize->add_control( 'locations_cat_slug',
+        $wp_customize->add_control( 'booking_cat_slug',
             array(
-                'label' => __( 'Locations Category Slug', 'tripfery' ),
+                'label' => __( 'Booking Category Slug', 'tripfery' ),
                 'section' => 'slug_layout_section',
                 'type' => 'text',
             )

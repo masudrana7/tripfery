@@ -48,7 +48,7 @@ jQuery(document).ready(function ($) {
     /*-------------------------------------
     Card
     -------------------------------------*/
-    if ($(".rt-locations-default").length) {
+    if ($(".rt-booking-default").length) {
         const panels = document.querySelectorAll(".panel");
         window.onload = function () {
             panels[0].classList.add("active");
@@ -388,17 +388,6 @@ jQuery(document).ready(function ($) {
             midClick: true,
             mainClass: 'mfp-fade'
         });
-    }
-    if (typeof $.fn.magnificPopup == 'function') {
-        if ($('.image-gallery').length) {
-            $(".image-gallery").magnificPopup({
-                delegate: "a",
-                type: "image",
-                gallery: {
-                    enabled: true,
-                },
-            });
-        }
     }
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
@@ -898,11 +887,11 @@ function tripfery_content_load_scripts() {
         $(".rt-service-tab [data-list-img]").removeClass("active"), $('.rt-service-tab [data-list-img="'.concat(t, '"]')).addClass("active");
     });
 
-    /*Locations move title with cursor*/
-    function mousemove_locations_hover_effect() {
+    /*Booking move title with cursor*/
+    function mousemove_booking_hover_effect() {
         if (jQuery( window ).width() > 0 ) {
-            if ( jQuery('#content').find(".rt-locations-default").length > 0 ) {
-                jQuery(".rt-locations-default .locations-item").each(function() {
+            if ( jQuery('#content').find(".rt-booking-default").length > 0 ) {
+                jQuery(".rt-booking-default .booking-item").each(function() {
                     let $Purpose = jQuery(this);
                     let $PurposeInner = $Purpose.find('.port-hover-effect');
                     $Purpose.mousemove(function(event){
@@ -920,7 +909,7 @@ function tripfery_content_load_scripts() {
 
     /*Button*/
     $(function() {
-        mousemove_locations_hover_effect();
+        mousemove_booking_hover_effect();
     });
 
     // Tooltip

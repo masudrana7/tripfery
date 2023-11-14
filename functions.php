@@ -46,7 +46,8 @@ $tripfery_theme_data = wp_get_theme();
 		// Includes Modules
 		require_once TRIPFERY_INC_DIR . 'modules/rt-post-related.php';
 		require_once TRIPFERY_INC_DIR . 'modules/rt-team-related.php';
-		require_once TRIPFERY_INC_DIR . 'modules/rt-locations-related.php';
+		require_once TRIPFERY_INC_DIR . 'modules/rt-booking-related.php';
+		require_once TRIPFERY_INC_DIR . 'modules/rt-booking-related.php';
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 

@@ -22,8 +22,8 @@ if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_cat
 		get_template_part( 'template-parts/archive', 'service' );
 	return;
 }
-if ( is_post_type_archive( "tripfery_locations" ) || is_tax( "tripfery_locations_category" ) ) {
-		get_template_part( 'template-parts/archive', 'locations' );
+if ( is_post_type_archive( "tripfery_booking" ) || is_tax( "tripfery_booking_category" ) ) {
+		get_template_part( 'template-parts/archive', 'booking' );
 	return;
 }
 
@@ -60,7 +60,7 @@ if ( is_post_type_archive( "tripfery_locations" ) || is_tax( "tripfery_locations
 							endwhile;
 							echo '</div>';
 						} else if ( class_exists( 'Tripfery_Core' ) ) {
-							if ( is_tax( 'tripfery_locations_category' ) ) {
+							if ( is_tax( 'tripfery_booking_category' ) ) {
 								echo '<div class="row rt-masonry-grid">';
 								while ( have_posts() ) : the_post();
 									get_template_part( 'template-parts/content-1', get_post_format() );

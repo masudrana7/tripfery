@@ -286,19 +286,19 @@ class TripferyTheme_Customizer {
             )
         );
 
-        // Add Locations Layout Section
-        $wp_customize->add_section( 'locations_layout_section',
+        // Add Booking Layout Section
+        $wp_customize->add_section( 'booking_layout_section',
             array(
-                'title' => __( 'Locations Archive Layout', 'tripfery' ),
+                'title' => __( 'Booking Archive Layout', 'tripfery' ),
                 'priority' => 9,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
 
-        // Add Locations Single Layout Section
-        $wp_customize->add_section( 'locations_single_layout_section',
+        // Add Booking Single Layout Section
+        $wp_customize->add_section( 'booking_single_layout_section',
             array(
-                'title' => __( 'Locations Single Layout', 'tripfery' ),
+                'title' => __( 'Booking Single Layout', 'tripfery' ),
                 'priority' => 11,
                 'panel' => 'rttheme_layouts_defaults',
             )
@@ -384,10 +384,10 @@ class TripferyTheme_Customizer {
             )
         );
 
-        // Add Locations Section
-        $wp_customize->add_section( 'rttheme_locations_settings',
+        // Add Booking Section
+        $wp_customize->add_section( 'rttheme_booking_settings',
             array(
-                'title' => __( 'Locations Setting', 'tripfery' ),
+                'title' => __( 'Booking Setting', 'tripfery' ),
                 'priority' => 3,
                 'panel' => 'rttheme_cpt_settings',
             )

@@ -22,29 +22,29 @@
             <key name="team_related_title" />
             <key name="team_related_subtitle" />
             <key name="team_related_shadowtitle" />
-            <key name="locations_related_title" />
-            <key name="locations_related_subtitle" />
-            <key name="locations_related_shadowtitle" />
+            <key name="booking_related_title" />
+            <key name="booking_related_subtitle" />
+            <key name="booking_related_shadowtitle" />
             <key name="error_text1" />
             <key name="error_text2" />
             <key name="error_buttontext" />            
             <key name="team_slug" />          			
             <key name="service_slug" />
-            <key name="locations_slug" />
+            <key name="booking_slug" />
             <key name="team_cat_slug" />
             <key name="service_cat_slug" />
-            <key name="locations_cat_slug" />
+            <key name="booking_cat_slug" />
         </key>
     </admin-texts>
 	<custom-types>
         <custom-type translate="1">tripfery_team</custom-type>
         <custom-type translate="1">tripfery_service</custom-type>
-        <custom-type translate="1">tripfery_locations</custom-type>
+        <custom-type translate="1">tripfery_booking</custom-type>
     </custom-types>
     <taxonomies>
         <taxonomy translate="1">tripfery_team_category</taxonomy>
         <taxonomy translate="1">tripfery_service_category</taxonomy>
-        <taxonomy translate="1">tripfery_locations_category</taxonomy>
+        <taxonomy translate="1">tripfery_booking_category</taxonomy>
     </taxonomies>
 	<custom-fields>
        <custom-field action="translate">tripfery_youtube_link</custom-field>

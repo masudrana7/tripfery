@@ -21,16 +21,16 @@ elseif ( is_home() ) {
 }
 elseif (is_post_type_archive('tripfery_team')) {
 	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Teams', 'tripfery' ) );
-} elseif (is_post_type_archive('tripfery_locations')) {
-	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Locationss', 'tripfery' ) );
+} elseif (is_post_type_archive('tripfery_booking')) {
+	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Bookings', 'tripfery' ) );
 } elseif (is_post_type_archive('tripfery_service')) {
 	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Our Services', 'tripfery' ) );
 } elseif ( is_archive() ) {
 	$tripfery_title = apply_filters( 'theme_blog_title', esc_html__( 'All Posts', 'tripfery' ) );
 } elseif (is_singular('tripfery_team')) {
 	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Team Details', 'tripfery' ) );
-} elseif (is_singular('tripfery_locations')) {
-	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Locations Details', 'tripfery' ) );
+} elseif (is_singular('tripfery_booking')) {
+	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Booking Details', 'tripfery' ) );
 } elseif (is_singular('tripfery_service')) {
 	$tripfery_title  = apply_filters( 'theme_blog_title', esc_html__( 'Service Details', 'tripfery' ) );
 } elseif (is_single()) {

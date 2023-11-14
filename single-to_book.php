@@ -6,6 +6,7 @@
  * @version 1.0
  */
 get_header();
+if (class_exists('BABE_Functions')) {
 $post_id = get_the_ID();
 $ba_info	= BABE_Post_types::get_post($post_id);
 $address = isset($ba_info['address']) ? $ba_info['address'] : false;
@@ -19,6 +20,16 @@ $property_title = get_post_meta($post_id, 'tripfery_booking_property_title', tru
 $booking_propertys = get_post_meta($post_id, 'tripfery_booking_property', true);
 $property_name = get_post_meta($post_id, 'property_name', true);
 $property_image = get_post_meta($post_id, 'property_image', true);
+$booking_rules = get_post_meta($post_id, 'tripfery_booking_rules', true);
+$rules_title = get_post_meta($post_id, 'tripfery_booking_rules_title', true);
+$rules_time = get_post_meta($post_id, 'rules_time', true);
+
+$total_rating = BABE_Rating::get_post_total_rating($post_id);
+$total_votes  = BABE_Rating::get_post_total_votes($post_id);
+$stars_num    = BABE_Settings::get_rating_stars_num($post_id);
+$rating_criteria = BABE_Settings::get_rating_criteria();
+
+
 ?>
 <div id="primary" class="rt-booking-single content-area">
 	<div id="contentHolder">
@@ -31,7 +42,7 @@ $property_image = get_post_meta($post_id, 'property_image', true);
 								<?php the_title(); ?>
 							</h3>
 							<?php
-							echo BABE_Rating::post_stars_rendering(get_the_ID());
+							echo BABE_Rating::post_stars_rendering($post_id);
 							?>
 						</div>
 						<div class="details-address-info align-items-center">
@@ -71,7 +82,7 @@ $property_image = get_post_meta($post_id, 'property_image', true);
 					</div>
 				</div>
 			</div>
-			<div class="hero-img-grid image-gallery">
+			<div class="hero-img-grid">
 				<?php
 				foreach ($images as $key => $image) {
 					$image_id = $image['image_id'];
@@ -84,32 +95,75 @@ $property_image = get_post_meta($post_id, 'property_image', true);
 			</div>
 			<div class="row">
 				<div class="col-md-8">
-					<?php if ( !empty($tripfery_booking_property ) ) { ?>
-					<div class="info-card">
-						<?php if (!empty($property_title)) { ?>
-							<h3 class="info-card-title"><?php echo esc_html($property_title); ?></h3>
-						<?php } ?>
-
-						<ul class="highligts d-flex flex-wrap">
-							<?php foreach ($booking_propertys as $booking_property) {
-								$image_id = $booking_property['property_image'];
-								$image_url = wp_get_attachment_image_url($image_id, 'full');
-							?>
-								<li class="highligts-item d-flex align-items-center justify-content-center">
-									<img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-									<h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
-								</li>
+					<?php if (!empty($booking_propertys)) { ?>
+						<div class="info-card">
+							<?php if (!empty($property_title)) { ?>
+								<h3 class="info-card-title"><?php echo esc_html($property_title); ?></h3>
 							<?php } ?>
-						</ul>
-					</div>
+
+							<ul class="highligts d-flex flex-wrap">
+								<?php foreach ($booking_propertys as $booking_property) {
+									$image_id = $booking_property['property_image'];
+									$image_url = wp_get_attachment_image_url($image_id, 'full');
+								?>
+									<li class="highligts-item d-flex align-items-center justify-content-center">
+										<img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+										<h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
+									</li>
+								<?php } ?>
+							</ul>
+						</div>
 					<?php } ?>
+
+
+					<!-- Description Text  -->
 					<div class="rt-booking-content">
 						<?php the_content(); ?>
 					</div>
+
+					<!-- Hotel Rules  -->
+					<?php if (!empty($booking_rules)) { ?>
+						<div class="info-card">
+							<?php if (!empty($rules_title)) { ?>
+								<h3 class="info-card-title"><?php echo esc_html($rules_title); ?></h3>
+							<?php } ?>
+							<ul class="d-flex flex-wrap hotel-rules-list">
+								<?php foreach ($booking_rules as $booking_rule) {
+								?>
+									<li class="hotel-rules-list-item d-flex justify-content-between">
+										<?php if ($booking_rule['rules_name']) { ?>
+											<h4 class="rule-name"><?php echo esc_html($booking_rule['rules_name']) ?></h4>
+										<?php } ?>
+										<?php if ($booking_rule['rules_time']) { ?>
+											<span class="supporting-text"><?php echo esc_html($booking_rule['rules_time']) ?></span>
+										<?php } ?>
+									</li>
+								<?php } ?>
+							</ul>
+						</div>
+					<?php } ?>
+
+
+					<?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
+						<div class="info-card">
+							<?php tripfery_related_booking(); ?>
+						</div>
+					<?php } ?>
+
+					
+					<div class="info-card">
+						<?php
+							if (comments_open() || get_comments_number()) {
+								comments_template();
+							}
+						?>
+					</div>	
+
 				</div>
 				<div class="col-md-4"></div>
 			</div>
 		</div>
 	</div>
 </div>
+<?php } ?>
 <?php get_footer(); ?>
