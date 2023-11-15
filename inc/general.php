@@ -169,8 +169,8 @@ if ( !function_exists( 'tripfery_widgets_register' ) ) {
 		}
 		
 		register_sidebar( array(
-			'name'          => esc_html__( 'Top Bar - Left', 'tripfery' ),
-			'id'            => 'topbar-left',
+			'name'          => esc_html__( 'Booking Form', 'tripfery' ),
+			'id'            => 'booking-form',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="hidden">',

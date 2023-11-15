@@ -33,6 +33,7 @@ class TripferyTheme_Booking_Single_Layout_Settings extends TripferyTheme_Customi
                 'sanitize_callback' => 'rttheme_radio_sanitization'
             )
         );
+
         $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'booking_layout',
             array(
                 'label' => __( 'Sidebar Layout', 'tripfery' ),
@@ -54,6 +55,41 @@ class TripferyTheme_Booking_Single_Layout_Settings extends TripferyTheme_Customi
                 )
             )
         ) );
+
+
+        // Booking Single Layout                
+        $wp_customize->add_setting(
+            'booking_style',
+            array(
+                'default' => $this->defaults['booking_style'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_radio_sanitization'
+            )
+        );
+
+        $wp_customize->add_control(new Customizer_Image_Radio_Control( $wp_customize, 'booking_style',
+            array(
+                'label' => __('Single Booking Layout', 'tripfery'),
+                'description' => esc_html__('Booking single layout variation you can selecr and use.', 'tripfery'),
+                'section' => 'booking_single_layout_section',
+                'choices' => array(
+                    'style1' => array(
+                        'image' => trailingslashit(get_template_directory_uri()) . 'assets/img/post-style-1.png',
+                        'name' => __('Layout 1', 'tripfery')
+                    ),
+                    'style2' => array(
+                        'image' => trailingslashit(get_template_directory_uri()) . 'assets/img/post-style-3.png',
+                        'name' => __('Layout 2', 'tripfery')
+                    ),
+
+                    'style3' => array(
+                        'image' => trailingslashit(get_template_directory_uri()) . 'assets/img/post-style-3.png',
+                        'name' => __('Layout 2', 'tripfery')
+                    ),
+                )
+            )
+        ));
+
 
         /**
          * Separator

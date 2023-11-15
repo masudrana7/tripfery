@@ -63,7 +63,6 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             $padding_top = ( empty( $layout_settings['tripfery_top_padding'] ) || $layout_settings['tripfery_top_padding'] == 'default' ) ? TripferyTheme::$options[$prefix . '_padding_top'] : $layout_settings['tripfery_top_padding'];
 			
             TripferyTheme::$padding_top = (int) $padding_top;
-            
             $padding_bottom = ( empty( $layout_settings['tripfery_bottom_padding'] ) || $layout_settings['tripfery_bottom_padding'] == 'default' ) ? TripferyTheme::$options[$prefix . '_padding_bottom'] : $layout_settings['tripfery_bottom_padding'];
 			
             TripferyTheme::$padding_bottom = (int) $padding_bottom;
@@ -178,6 +177,11 @@ if( !function_exists( 'tripfery_body_classes' ) ) {
         
 		if ( is_singular('post') ) {
 			$classes[] =  ' post-detail-' . TripferyTheme::$options['post_style'];
+        }
+        return $classes;
+
+        if (is_singular('to_book')) {
+            $classes[] =  ' booking-detail-' . TripferyTheme::$options['booking_style'];
         }
         return $classes;
     }

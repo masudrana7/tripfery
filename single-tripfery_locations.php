@@ -17,6 +17,8 @@ else{
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
+
+		
 			<?php if ( TripferyTheme::$layout == 'left-sidebar' ) { get_sidebar(); } ?>
 				<div class="<?php echo esc_attr( $tripfery_layout_class );?>">
 					<main id="main" class="site-main">
@@ -27,6 +29,8 @@ else{
 						?>
 					</main>
 				</div>
+
+
 			<?php if ( TripferyTheme::$layout == 'right-sidebar' ) { get_sidebar(); }	?>
 		</div>
 	</div>	

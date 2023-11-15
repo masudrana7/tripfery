@@ -264,6 +264,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             
             //Booking Single Layout Setting 
             'booking_layout' => 'full-width',
+            'booking_style' => 'style1',
             'booking_sidebar'        => '',
             'booking_padding_top'    => 120,
             'booking_padding_bottom' => 120,

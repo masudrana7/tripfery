@@ -12,6 +12,7 @@ if ( TripferyTheme::$layout == 'full-width' ) {
 	$tripfery_layout_class = TripferyTheme_Helper::has_active_widget();
 }
 $service_layout_ops = get_post_meta( get_the_ID() ,'tripfery_service_style', true );
+
 $f_layout = ( empty( $service_layout ) || ( $service_layout  == 'default' ) ) ? $service_layout_ops : $service_layout;
 
 ?>
