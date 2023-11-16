@@ -389,6 +389,19 @@ jQuery(document).ready(function ($) {
             mainClass: 'mfp-fade'
         });
     }
+    // if (typeof $.fn.magnificPopup == 'function') {
+    //     if ($('.image-gallery').length) {
+    //         $('.image-gallery').each(function () { // the containers for all your galleries
+    //             $(this).magnificPopup({
+    //                 delegate: 'a', // the selector for gallery item
+    //                 type: 'image',
+    //                 gallery: {
+    //                     enabled: true
+    //                 }
+    //             });
+    //         });
+    //     }
+    // }
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
         var isgroup = $(this).parents('.woocommerce-grouped-product-list');

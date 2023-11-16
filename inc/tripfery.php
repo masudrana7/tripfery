@@ -28,6 +28,7 @@ if ( !class_exists( 'TripferyTheme' ) ) {
 		public static $copyright_area2 = null;
 		public static $top_bar_style = null;
 		public static $header_style = null;
+		public static $booking_style = null;
 		public static $footer_style = null;
 		public static $padding_top = null;
 		public static $padding_bottom = null;

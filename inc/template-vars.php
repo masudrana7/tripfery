@@ -36,8 +36,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             }
 			
 			$layout_settings    = get_post_meta( $post_id, 'tripfery_layout_settings', true );
-
-
+            $tripfery_booking_style = get_post_meta(get_the_ID(), 'tripfery_booking_style', true);
+            
             TripferyTheme::$layout = ( empty( $layout_settings['tripfery_layout'] ) || $layout_settings['tripfery_layout']  == 'default' ) ? TripferyTheme::$options[$prefix . '_layout'] : $layout_settings['tripfery_layout'];
 
             TripferyTheme::$sidebar = ( empty( $layout_settings['tripfery_sidebar'] ) || $layout_settings['tripfery_sidebar'] == 'default' ) ? TripferyTheme::$options[$prefix . '_sidebar'] : $layout_settings['tripfery_sidebar'];
@@ -57,6 +57,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$footer_style = ( empty( $layout_settings['tripfery_footer'] ) || $layout_settings['tripfery_footer'] == 'default' ) ? TripferyTheme::$options['footer_style'] : $layout_settings['tripfery_footer'];
 			
 			TripferyTheme::$footer_area = ( empty( $layout_settings['tripfery_footer_area'] ) || $layout_settings['tripfery_footer_area'] == 'default' ) ? TripferyTheme::$options['footer_area'] : $layout_settings['tripfery_footer_area'];
+
+            TripferyTheme::$booking_style = (empty($tripfery_booking_style) || $tripfery_booking_style == 'default') ? TripferyTheme::$options['booking_style'] : $tripfery_booking_style;
 
             TripferyTheme::$copyright_area = ( empty( $layout_settings['tripfery_copyright_area'] ) || $layout_settings['tripfery_copyright_area'] == 'default' ) ? TripferyTheme::$options['copyright_area'] : $layout_settings['tripfery_copyright_area'];
 			
@@ -125,6 +127,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$top_bar_style  		= TripferyTheme::$options['top_bar_style'];
             TripferyTheme::$header_style   		= TripferyTheme::$options['header_style'];
             TripferyTheme::$footer_style   		= TripferyTheme::$options['footer_style'];
+            TripferyTheme::$booking_style   	= TripferyTheme::$options['booking_style'];
             TripferyTheme::$padding_top    		= TripferyTheme::$options[$prefix . '_padding_top'];
             TripferyTheme::$padding_bottom 		= TripferyTheme::$options[$prefix . '_padding_bottom'];
             TripferyTheme::$has_banner     		= TripferyTheme::$options[$prefix . '_banner'];
@@ -177,11 +180,6 @@ if( !function_exists( 'tripfery_body_classes' ) ) {
         
 		if ( is_singular('post') ) {
 			$classes[] =  ' post-detail-' . TripferyTheme::$options['post_style'];
-        }
-        return $classes;
-
-        if (is_singular('to_book')) {
-            $classes[] =  ' booking-detail-' . TripferyTheme::$options['booking_style'];
         }
         return $classes;
     }

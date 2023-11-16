@@ -242,6 +242,17 @@ button:focus,
 .mfp-close-btn-in .mfp-white-popup .mfp-close {
 	color: var(--tripfery-heading-color);
 }
+.rt-mp-0 {
+	margin: 0;
+	padding: 0;
+}
+.rt-two-col {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.rt-mb-10 {
+	margin-bottom: 10px;
+}
 /*for theme only*/
 .primary-color {
 	color: var(--tripfery-primary-color);
@@ -4954,10 +4965,13 @@ form.post-password-form input[type="submit"]:hover {
 	display: none;
 }
 /*post header title*/
-.content-area {
+.content-area{
 	padding-top: 120px;
 	padding-bottom: 120px;
 	background-repeat: no-repeat;
+}
+.single-to_book .content-area{
+	padding: 120px 0 90px;
 }
 .entry-header .entry-title {
 	font-size: 30px;
@@ -9851,11 +9865,12 @@ p.return-to-shop {
 }
 .hero-img-grid {
 	display: grid;
-	margin-top: 30px;
 	gap: 30px;
 	grid-template-areas: "four" "two" "three" "one ";
 }
-
+.rt_booking_single_style1 .hero-img-grid{
+	margin-top: 30px;
+}
 @media (min-width: 992px) {
 	.hero-img-grid {
 		grid-template-areas: "four one" "two two" "three three";
@@ -10331,5 +10346,116 @@ p.return-to-shop {
 	height: 12px;
 	background: var(--tripfery-white-color);
 	display: inline-block;
-	
+}
+.container-fluid-gallery{
+	padding: 0 100px;
+}
+.rt_booking_single_style2 .activity-price{
+	justify-content: flex-end;
+}
+.rt_booking_single_style2 .activity-price .price-area{
+	display: flex;
+}
+.rt_booking_single_style2 .activity-title{
+	margin-bottom: 5px;
+}
+.activity-info-container {
+	gap: 40px;
+}
+@media (max-width: 767.98px) {
+	.activity-info-container {
+		gap: 30px;
+	}
+}
+@media (max-width: 575.98px) {
+	.activity-title {
+		font-size: 26px;
+	}
+}
+.activity-location {
+	font-size: 16px;
+	color: #858585;
+}
+.activity-location {
+	font-size: 16px;
+	color: #858585;
+}
+.info-item {
+	gap: 10px;
+}
+.info-item .info-text .info-text-one {
+	font-size: 16px;
+	color: var(--tripfery-heading-color);
+	font-weight: 500;
+}
+.info-item .info-text .info-text-two {
+	font-size: 14px;
+}
+.info-item .info-text .info-text-two,
+.info-item .info-text .info-text-two a{
+	color: #8d8d8d;
+}
+.info-item .info-text .info-text-two a:hover{
+	color: var(--tripfery-primary-color);
+}
+.activity-price {
+	gap: 12px;
+}
+.activity-price .share-btn {
+	background-color: #f6f6f6;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	line-height: 40px;
+	color: var(--tripfery-heading-color);
+}
+.activity-price .share-btn:hover {
+	color: var(--tripfery-white-color);
+	background-color: var(--tripfery-primary-color);
+}
+.rt_booking_single_style2 .activity-location{
+	margin-bottom: 0;
+}
+.rt_booking_single_style2 .rt-booking-price-area{
+	margin-top: 60px;
+}
+.info-list .info-list-item {
+	color: #565656;
+	font-size: 16px;
+	line-height: 30px;
+	gap: 9px;
+}
+.info-list .info-list-icon {
+	color: var(--tripfery-primary-color);
+	font-size: 10px;
+}
+.info-list .info-list-icon-check {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 14px;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+.info-list .info-list-icon-check.success {
+	color: #0abe1c;
+	background-color: #d6f8d9;
+}
+.info-list .info-list-icon-check.warning {
+	color: #fb0000;
+	background-color: #ffebed;
+}
+.highlight-content .info-card-title{
+	margin-bottom: 10px;
 }
