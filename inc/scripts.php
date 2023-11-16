@@ -41,6 +41,7 @@ if (!function_exists('tripfery_register_scripts')) {
 
 		/*CSS*/
 		// animate CSS	
+		wp_register_style('swiper-min',     tripfery_get_maybe_rtl('swiper-min.css'), array(), TRIPFERY_VERSION);
 		wp_register_style('magnific-popup',     tripfery_get_maybe_rtl('magnific-popup.css'), array(), TRIPFERY_VERSION);
 		wp_register_style('animate',        	 tripfery_get_maybe_rtl('animate.min.css'), array(), TRIPFERY_VERSION);
 
@@ -83,6 +84,7 @@ if (!function_exists('tripfery_enqueue_scripts')) {
 
 		elementor_scripts();
 		//Video popup
+		wp_enqueue_style('swiper-min');
 		wp_enqueue_style('magnific-popup');
 		// font-awesome CSS
 		wp_enqueue_style('font-awesome',       	TRIPFERY_ASSETS_URL . 'css/font-awesome.min.css', array(), TRIPFERY_VERSION);

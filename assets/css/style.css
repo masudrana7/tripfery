@@ -246,9 +246,14 @@ button:focus,
 	margin: 0;
 	padding: 0;
 }
-.rt-two-col {
+.rt-two-col,
+.rt-included-meta-text {
 	display: grid;
 	grid-template-columns: auto auto;
+}
+.rt-three-col {
+	display: grid;
+	grid-template-columns: auto auto auto;
 }
 .rt-mb-10 {
 	margin-bottom: 10px;
@@ -9813,7 +9818,7 @@ p.return-to-shop {
 }
 .price-text {
 	font-size: 15px;
-	color: #232323;
+	color: var(--tripfery-heading-color);
 }
 .price-text .price {
 	font-size: 30px;
@@ -9840,7 +9845,7 @@ p.return-to-shop {
 	-ms-flex-pack: center;
 	justify-content: center;
 	background-color: #f6f6f6;
-	color: #232323;
+	color: var(--tripfery-heading-color);
 }
 .share-btn:hover {
 	background-color: var(--tripfery-primary-color);
@@ -10027,11 +10032,9 @@ p.return-to-shop {
 	font-size: 24px;
 	line-height: 26px;
 	color: var(--tripfery-heading-color);
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 .info-card .info-card-desc {
-	font-size: 16px;
-	color: #565656;
 	line-height: 30px;
 }
 .info-card .info-card-desc:first-of-type {
@@ -10065,7 +10068,7 @@ p.return-to-shop {
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 26px;
-	color: #232323;
+	color: var(--tripfery-heading-color);
 	text-transform: capitalize;
 	margin-bottom: 0;
 }
@@ -10308,7 +10311,6 @@ p.return-to-shop {
 	margin-bottom: 10px;
 }
 .single-to_book #booking_form .input_group .list_service .view-list-details {
-	
 	max-width: 300px;
 	max-height: 600px;
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
@@ -10350,13 +10352,13 @@ p.return-to-shop {
 .container-fluid-gallery{
 	padding: 0 100px;
 }
-.rt_booking_single_style2 .activity-price{
+.rt-price-single-inner{
 	justify-content: flex-end;
 }
-.rt_booking_single_style2 .activity-price .price-area{
+.rt-price-single-inner .price-area{
 	display: flex;
 }
-.rt_booking_single_style2 .activity-title{
+.rt-price-single-inner .activity-title{
 	margin-bottom: 5px;
 }
 .activity-info-container {
@@ -10371,14 +10373,6 @@ p.return-to-shop {
 	.activity-title {
 		font-size: 26px;
 	}
-}
-.activity-location {
-	font-size: 16px;
-	color: #858585;
-}
-.activity-location {
-	font-size: 16px;
-	color: #858585;
 }
 .info-item {
 	gap: 10px;
@@ -10418,12 +10412,11 @@ p.return-to-shop {
 .rt_booking_single_style2 .activity-location{
 	margin-bottom: 0;
 }
+.rt_booking_single_style3 .rt-booking-price-area,
 .rt_booking_single_style2 .rt-booking-price-area{
 	margin-top: 60px;
 }
 .info-list .info-list-item {
-	color: #565656;
-	font-size: 16px;
 	line-height: 30px;
 	gap: 9px;
 }
@@ -10456,6 +10449,96 @@ p.return-to-shop {
 	color: #fb0000;
 	background-color: #ffebed;
 }
-.highlight-content .info-card-title{
-	margin-bottom: 10px;
+.info-card-accordion .accordion-flush .accordion-item {
+	background-color: transparent;
+	border: 1px solid #ebeaea;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.info-card-accordion .accordion-flush .accordion-item:last-child{
+	margin-bottom: 0;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-button {
+	background-color: transparent;
+	padding: 9px 15px 11px;
+	line-height: 1;
+	color: var(--tripfery-heading-color);
+	font-size: 16px;
+	font-weight: 600;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-button .highlighted-text {
+	color: var(--tripfery-primary-color);
+	margin-right: 10px;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-button::after {
+	content: "";
+	background-image: none;
+	font-weight: 500;
+	width: 30px;
+	height: 30px;
+	font-size: 24px;
+	border-radius: 50%;
+	background-color: #eaeaea;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	background-size: 40%;
+	background-position: 50%;
+	-webkit-transform: none;
+	transform: none;
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-button:not(.collapsed) {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-button:not(.collapsed)::after {
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23FFFFFF' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+	background-color: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-body {
+	padding: 0 15px 20px;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-body .tight-text {
+	line-height: 1;
+	color: #565656;
+}
+.info-card-accordion .accordion-flush .accordion-item .accordion-body .loose-text {
+	line-height: 29px;
+	color: #565656;
+}
+.info-card-accordion .accordion-button:focus{
+	box-shadow: none;
+}
+.largeSwiper .slider-img-wrapper {
+	margin-bottom: 24px;
+}
+.largeSwiper .slider-img-wrapper .slider-img {
+	border-radius: 20px;
+}
+.largeSwiperThumb .slider-thumb-img .thumb-img {
+	border-radius: 20px;
+}
+.r-feature-list .r-feature-list-item {
+	gap: 7px;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 600;
+}
+@media (max-width: 400px) {
+	.r-feature-list .r-feature-list-item {
+		font-size: 16px;
+	}
+}
+.r-feature-list i {
+	color: #5bdb46;
+}
+#block_address_map_with_direction h3{
+	display: none;
+}
+#google_map_address_with_direction {
+	border-radius: 20px;
+}
+.rt-cart-featured .highligts-item.restaurant-item{
+	width: auto;
 }

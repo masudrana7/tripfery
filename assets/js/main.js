@@ -374,6 +374,35 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    /*-------------------------------------
+    Thumb Slider
+    -------------------------------------*/
+    if ($('.largeSwiperThumb').length) {
+        var largeSwiper = new Swiper(".largeSwiperThumb", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                480: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+            },
+        });
+        var largeSwiper = new Swiper(".largeSwiper", {
+            spaceBetween: 24,
+            grabCursor: true,
+            thumbs: {
+                swiper: largeSwiper,
+            },
+        });
+    }
+
     // Popup - Used in video
     if (typeof $.fn.magnificPopup == 'function') {
         $('.rt-video-popup').magnificPopup({
@@ -389,19 +418,19 @@ jQuery(document).ready(function ($) {
             mainClass: 'mfp-fade'
         });
     }
-    // if (typeof $.fn.magnificPopup == 'function') {
-    //     if ($('.image-gallery').length) {
-    //         $('.image-gallery').each(function () { // the containers for all your galleries
-    //             $(this).magnificPopup({
-    //                 delegate: 'a', // the selector for gallery item
-    //                 type: 'image',
-    //                 gallery: {
-    //                     enabled: true
-    //                 }
-    //             });
-    //         });
-    //     }
-    // }
+    if (typeof $.fn.magnificPopup == 'function') {
+        if ($('.image-gallery').length) {
+            $('.image-gallery').each(function () { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a.img-grid-item', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                });
+            });
+        }
+    }
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
         var isgroup = $(this).parents('.woocommerce-grouped-product-list');
