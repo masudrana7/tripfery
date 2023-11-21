@@ -68,14 +68,11 @@ if (!function_exists('tripfery_related_booking')) {
 				foreach ($post_tags as $individual_tag) {
 					$tags_ids[] = $individual_tag->term_id;
 				}
-
 				$args['tag__in'] = $tags_ids;
 			}
 		}
-
 		# Get related posts by categories ----------
 		else {
-
 			$terms = get_the_terms($post_id, 'categories');
 			if ($terms && !is_wp_error($terms)) {
 
@@ -85,7 +82,6 @@ if (!function_exists('tripfery_related_booking')) {
 					$port_cat_links[] = $term->term_id;
 				}
 			}
-
 			$args['tax_query'] = array(
 				array(
 					'taxonomy' => 'categories',
@@ -96,13 +92,9 @@ if (!function_exists('tripfery_related_booking')) {
 		}
 
 		# Get the posts ----------
-		$related_query = new wp_query($args);
-
 
 		if (class_exists('BABE_Functions')) {
-			$posts = BABE_Post_types::get_posts($args);
-?>
-
+			$posts = BABE_Post_types::get_posts($args); ?>
 			<h3 class="info-card-title m-0"><?php echo wp_kses(TripferyTheme::$options['booking_related_title'], 'alltext_allow'); ?></h3>
 			<div class="available-rooms">
 				<?php foreach ($posts as $post) {

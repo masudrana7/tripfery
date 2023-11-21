@@ -142,6 +142,6 @@ if (class_exists('BABE_Functions')) {
 			<?php get_template_part('template-parts/single-booking/layout', TripferyTheme::$booking_style, $args); ?>
 		</div>
 	</div>
-
+	
 	<?php } ?>
 	<?php get_footer(); ?>

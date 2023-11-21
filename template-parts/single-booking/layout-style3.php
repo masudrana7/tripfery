@@ -16,7 +16,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 </div>
             <?php } ?>
         </div>
-
         <div thumbsSlider="" class="swiper largeSwiperThumb">
             <div class="swiper-wrapper">
                 <?php
@@ -32,7 +31,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 <?php } ?>
             </div>
         </div>
-
     </div>
     <div class="row align-items-center rt-booking-price-area">
         <div class="col-lg-5 col-xl-5 col-xxl-4">
@@ -63,9 +61,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
         <div class="col-lg-4 col-xl">
             <div class="activity-price rt-price-single-inner d-flex">
                 <div class="price-area">
-
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
-
                     <?php if ($discountPrice < $nPrice) { ?>
                         <div class="rt-single-price rt-old-price">
                             <?php echo $nPrice; ?>
@@ -87,14 +83,12 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 </div>
             </div>
         <?php } ?>
-
         <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
             <?php if (!empty($booking_propertys)) { ?>
                 <div class="info-card">
                     <?php if (!empty($property_title)) { ?>
                         <h3 class="info-card-title"><?php echo esc_html($property_title); ?></h3>
                     <?php } ?>
-
                     <ul class="highligts d-flex flex-wrap">
                         <?php foreach ($booking_propertys as $booking_property) {
                             $image_id = $booking_property['property_image'];
@@ -114,7 +108,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
                 <?php the_content(); ?>
             </div>
-
 
             <!-- Hotel Rules  -->
             <?php if (!empty($booking_rules)) { ?>
@@ -301,7 +294,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                     <?php if (!empty($brand_title)) { ?>
                         <h3 class="info-card-title"><?php echo esc_html($brand_title, 'tripfery'); ?></h3>
                     <?php } ?>
-
                     <ul class="highligts d-flex flex-wrap">
                         <?php foreach ($booking_brands as $booking_brand) { ?>
                             <li class="highligts-item restaurant-item d-flex align-items-center justify-content-center">
@@ -315,8 +307,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                     </ul>
                 </div>
             <?php } ?>
-
-
 
             <?php if (!empty($map_title)) { ?>
                 <h3 class="rt-single-map-title"><?php echo esc_html($map_title, 'tripfery'); ?></h3>
@@ -342,8 +332,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
     </div>
     <!-- Related Services  -->
     <?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
-        <div class="info-card">
-            <?php tripfery_related_booking(); ?>
+        <div class="rt-related-style3 related-deals">
+            <?php tripfery_related_booking_two(); ?>
         </div>
     <?php } ?>
 

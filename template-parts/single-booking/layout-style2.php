@@ -9,9 +9,9 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             $image_id = $image['image_id'];
             $image_url = wp_get_attachment_image_url($image_id, 'full');
         ?>
-            <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-            </a>
+        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+            <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+        </a>
         <?php } ?>
     </div>
 </div>
@@ -21,7 +21,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <div class="mb-4 mb-xxl-0">
                 <h3 class="activity-title"><?php the_title(); ?></h3>
                 <?php if (!empty($address['address'])) { ?>
-                    <address class="activity-location"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <address class="activity-location">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.50469 8.39365C8.58164 8.39365 9.45469 7.52061 9.45469 6.44365C9.45469 5.3667 8.58164 4.49365 7.50469 4.49365C6.42773 4.49365 5.55469 5.3667 5.55469 6.44365C5.55469 7.52061 6.42773 8.39365 7.50469 8.39365Z" stroke="#E7233A" stroke-opacity="0.99" />
                             <path d="M2.2611 5.30631C3.49235 -0.106188 11.5111 -0.0999374 12.7361 5.31256C13.4548 8.48756 11.4798 11.1751 9.7486 12.8376C8.49235 14.0501 6.50485 14.0501 5.24235 12.8376C3.51735 11.1751 1.54235 8.48131 2.2611 5.30631Z" stroke="#E7233A" stroke-opacity="0.99" />
                         </svg>
@@ -38,12 +39,10 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M15.7089 15.18L12.6089 13.33C12.0689 13.01 11.6289 12.24 11.6289 11.61V7.51001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-
                         <div class="d-flex flex-column info-text">
                             <span class="info-text-one"><?php echo esc_html('Duration', 'tripfery') ?></span>
                             <span class="info-text-two"><?php echo esc_attr($valu_duration); ?></span>
                         </div>
-
                     </li>
                 <?php } ?>
 
@@ -55,7 +54,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             <path d="M7.5 20H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M4.5 12H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-
                         <div class="d-flex flex-column info-text">
                             <span class="info-text-one"><?php echo esc_html('Tour Type', 'tripfery') ?></span>
                             <span class="info-text-two"><a href="<?php echo esc_url($type_link); ?>"><?php echo esc_attr($type_name); ?></a></span>
@@ -79,7 +77,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                         </div>
                     </li>
                 <?php } ?>
-
 
                 <?php if (!empty($booking_languages)) { ?>
                     <li class="d-flex align-items-center info-item">
@@ -278,7 +275,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </ul>
                 </div>
             <?php } ?>
-
 
             <!-- Faqs Content  -->
             <?php if (!empty($ba_info) && isset($ba_info['faq']) && !empty($ba_info['faq'])) { ?>

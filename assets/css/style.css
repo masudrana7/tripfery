@@ -10542,3 +10542,17 @@ p.return-to-shop {
 .rt-cart-featured .highligts-item.restaurant-item{
 	width: auto;
 }
+.rt-related-style3{
+	padding-top: 40px;
+}
+.rt-related-style3 .info-card-title{
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+.rt-related-style3 .listing-card{
+	margin: 0 12px 20px;
+}
+.rt-related-style3 .listing-card {
+	-webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+}
