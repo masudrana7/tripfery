@@ -9,7 +9,6 @@
 if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Functions')) {
 	function tripfery_related_booking_two()
 	{
-
 		$post_id = get_the_ID();
 		$ba_post = BABE_Post_types::get_post($post_id);
 		$related_arr = $ba_post['related_items'];
@@ -55,7 +54,6 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 					} else {
 						$prices = $ba_post;
 					}
-
 				?>
 					<div class="swiper-slide">
 						<div class="listing-card">

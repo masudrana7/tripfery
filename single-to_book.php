@@ -7,7 +7,6 @@
  */
 get_header();
 if (class_exists('BABE_Functions')) {
-
 	$tripfery_layout_class = (TripferyTheme::$layout == 'full-width') ? 'col-md-12' : 'col-md-8';
 	$post_id = 	get_the_ID();
 	$booking_faqs = "";

@@ -1153,7 +1153,7 @@ a.button-style-5:hover::before {
 .header-area {
 	background: var(--tripfery-white-color);
 	position: relative;
-	z-index: 3;
+	z-index: 11;
 	transition: all ease 0.31s;
 }
 /*-------------------------------------
@@ -9782,11 +9782,9 @@ p.return-to-shop {
 .daterangepicker .drp-buttons .btn:hover{
 	color: var(--tripfery-white-color);
 }
-
 /*======================================
 #. RT Booking Single Content
 ====================================*/
-
 .details-content .details-title {
 	font-weight: 600;
 	color: var(--tripfery-heading-color);
@@ -9799,19 +9797,15 @@ p.return-to-shop {
 		margin-bottom: 10px;
 	}
 }
-
 .details-address-info {
 	gap: 10px;
 }
-
 .details-address-info .map-link {
 	color: var(--tripfery-primary-color);
 }
-
 .details-address-info .map-link:hover {
 	text-decoration: underline;
 }
-
 .details-address {
 	font-size: 16px;
 	color: #858585;
@@ -9824,6 +9818,12 @@ p.return-to-shop {
 	font-size: 30px;
 	font-weight: 700;
 	color: var(--tripfery-primary-color);
+}
+.available-rooms .currency_amount{
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--tripfery-primary-color);
+	margin-left: 4px;
 }
 .share-link-area {
 	gap: 15px;
@@ -10555,4 +10555,39 @@ p.return-to-shop {
 .rt-related-style3 .listing-card {
 	-webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+}
+.rt-price-filter .ui-slider-range{
+	height: 6px;
+}
+.rt-price-filter .ui-slider-range,
+.rt-price-filter .babe_price_slider .ui-slider-handle {
+	background-color: var(--tripfery-primary-color);
+}
+.rt-price-filter .ui-slider-handle {
+	border-radius: 50%;
+	border: 3px solid var(--tripfery-white-color);
+	border-radius: 50%;
+	box-shadow: 1px 3px 7px 0 rgba(87, 101, 128, .4);
+}
+.rt-price-filter .ui-widget-content{
+	border:none;
+}
+.rt-price-filter .ui-slider-horizontal .ui-slider-range{
+	top: 2px;
+}
+.rt-price-filter .ui-widget.ui-widget-content {
+	border: none;
+	margin: 10px 7px 0;
+}
+.rt-price-filter #babe_range_price{
+	color: var(--tripfery-heading-color);
+	font-weight: 600;
+	width: 70%;
+}
+.rt-price-filter .price-text{
+	margin-right: 5px;
+}
+.rt-price-filter #babe_range_price:focus{
+	box-shadow: none;
+	outline: none;
 }

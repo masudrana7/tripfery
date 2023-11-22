@@ -6565,7 +6565,6 @@ pointer-events: none;
 }
 .available-rooms .single-available-room .single-available-room-info .price {
     font-size: 15px;
-    line-height: 20px;
     font-weight: 500;
     color: #838383;
 }
