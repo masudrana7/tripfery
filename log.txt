@@ -80551,3 +80551,572 @@ Array
 
     [tripfery_booking_style] => default
 )
+Array
+(
+    [ID] => 902
+    [post_author] => 1
+    [post_date] => 2023-10-31 10:10:01
+    [post_date_gmt] => 2023-10-31 10:10:01
+    [post_content] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset. Eum oratio reprehendunt cu. Nec te quem assum postea.
+    [post_title] => The best time to travel to London is during
+    [post_excerpt] => 
+    [post_status] => publish
+    [comment_status] => open
+    [ping_status] => closed
+    [post_password] => 
+    [post_name] => the-best-time-to-travel-to-london-is-during
+    [to_ping] => 
+    [pinged] => 
+    [post_modified] => 2023-11-16 17:18:37
+    [post_modified_gmt] => 2023-11-16 17:18:37
+    [post_content_filtered] => 
+    [post_parent] => 0
+    [guid] => http://tripfery.local/?post_type=to_book&#038;p=902
+    [menu_order] => 1
+    [post_type] => to_book
+    [post_mime_type] => 
+    [comment_count] => 0
+    [address] => Array
+        (
+            [address] => London
+            [latitude] => 51.509865
+            [longitude] => -0.118092
+        )
+
+    [ba_booking-locations] => Array
+        (
+            [56] => 56
+        )
+
+    [ba_booking-type] => 88
+    [ba_features] => Array
+        (
+            [59] => 59
+        )
+
+    [code] => 45-635
+    [discount] => Array
+        (
+            [discount] => 
+            [date_from] => 
+            [date_to] => 
+        )
+
+    [duration] => Array
+        (
+            [d] => 0
+            [h] => 6
+            [i] => 0
+        )
+
+    [end_date] => 24/10/2025
+    [faq] => Array
+        (
+            [0] => 2505
+            [1] => 2506
+            [2] => 633
+        )
+
+    [guests] => 100
+    [images] => Array
+        (
+            [0] => Array
+                (
+                    [image_id] => 892
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/tour-1.jpg
+                    [description] => Image description (optional)
+                )
+
+            [1] => Array
+                (
+                    [image_id] => 893
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/tour-2.jpg
+                    [description] => 
+                )
+
+            [2] => Array
+                (
+                    [image_id] => 897
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/tour-6.jpg
+                    [description] => 
+                )
+
+            [3] => Array
+                (
+                    [image_id] => 997
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/rent-2.jpg
+                )
+
+        )
+
+    [min_guests] => 1
+    [related_items] => Array
+        (
+            [0] => 636
+            [1] => 637
+            [2] => 638
+            [3] => 639
+        )
+
+    [rtrs_article_schema] => Array
+        (
+            [0] => Array
+                (
+                    [status] => show
+                    [headline] => The best time to travel to London is during
+                    [mainEntityOfPage] => http://tripfery.local/book/the-best-time-to-travel-to-london-is-during/
+                    [author] => admin
+                    [author_url] => http://tripfery.local
+                    [image] => 898
+                    [datePublished] => 2023-10-31 10:10:01
+                    [dateModified] => 2023-11-13 07:03:34
+                    [publisher] => 
+                    [publisherImage] => 0
+                    [description] => 
+                    [articleBody] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset. Eum oratio reprehendunt cu. Nec te quem assum postea.
+                    [alternativeHeadline] => 
+                    [video] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => 
+                                    [description] => 
+                                    [thumbnailUrl] => 0
+                                    [contentUrl] => 
+                                    [embedUrl] => 
+                                    [uploadDate] => 
+                                    [duration] => 
+                                )
+
+                        )
+
+                    [audio] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => 
+                                    [description] => 
+                                    [duration] => 
+                                    [contentUrl] => 
+                                    [encodingFormat] => 
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [schedule] => Array
+        (
+            [1] => Array
+                (
+                    [0] => 12:00
+                )
+
+            [3] => Array
+                (
+                    [0] => 12:00
+                    [1] => 17:00
+                )
+
+            [4] => Array
+                (
+                    [0] => 10:00
+                    [1] => 12:00
+                    [2] => 17:00
+                )
+
+            [5] => Array
+                (
+                    [0] => 10:00
+                    [1] => 12:00
+                )
+
+            [6] => Array
+                (
+                    [0] => 12:00
+                    [1] => 17:00
+                )
+
+        )
+
+    [service_selection_type] => checkbox
+    [services] => Array
+        (
+            [0] => 631
+            [1] => 632
+        )
+
+    [start_date] => 21/10/2023
+    [steps] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Day 1. Transportation
+                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad qui eros iusto te.
+                )
+
+            [1] => Array
+                (
+                    [title] => Day 2. Accommodation
+                    [attraction] => Quo illum detraxit an. Ius eius quodsi molestiae at nostrum definitiones.
+                )
+
+            [2] => Array
+                (
+                    [title] => Day 3. Meals
+                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad qui eros iusto te.
+                )
+
+            [3] => Array
+                (
+                    [title] => Day 4. Supplementary services
+                    [attraction] => Quo illum detraxit an. Ius eius quodsi molestiae at nostrum definitiones.
+                )
+
+        )
+
+    [stop_booking_before] => 2
+    [tripfery_booking_duration] => Array
+        (
+            [0] => Array
+                (
+                    [rules_name] => Durations
+                )
+
+            [1] => Array
+                (
+                    [rules_name] => 5 – 7 hours
+                )
+
+            [2] => Array
+                (
+                    [rules_name] => Fullday (+7hours)
+                )
+
+        )
+
+    [tripfery_booking_durations] => Array
+        (
+            [0] => Array
+                (
+                    [duration_name] => 3 – 5 hours
+                )
+
+            [1] => Array
+                (
+                    [duration_name] => 5 – 7 hours
+                )
+
+            [2] => Array
+                (
+                    [duration_name] => Fullday (+7hours)
+                )
+
+        )
+
+    [tripfery_booking_durations_title] => Durations
+    [tripfery_booking_excluded] => Array
+        (
+            [0] => Array
+                (
+                    [rules_name] => Visit interesting places around the world.
+                )
+
+            [1] => Array
+                (
+                    [rules_name] => places at exclusive deals.
+                )
+
+            [2] => Array
+                (
+                    [rules_name] => Discover amzaing places.
+                )
+
+            [3] => Array
+                (
+                    [rules_name] => Explore our top destinations.
+                )
+
+            [4] => Array
+                (
+                    [rules_name] => even after your trip.
+                )
+
+        )
+
+    [tripfery_booking_highlights] => Array
+        (
+            [0] => Array
+                (
+                    [rules_name] => Lorem ipsum consectetur adipiscing elit.
+                )
+
+            [1] => Array
+                (
+                    [rules_name] => Ipsum consectetur adipiscing elit.
+                )
+
+            [2] => Array
+                (
+                    [rules_name] => Consectetur adipiscing elit.
+                )
+
+            [3] => Array
+                (
+                    [rules_name] => Ipsum consectetur adipiscing elit.
+                )
+
+            [4] => Array
+                (
+                    [rules_name] => Faucibus pulvinar vulputate neque.
+                )
+
+            [5] => Array
+                (
+                    [rules_name] => Pulvinar vulputate the at neque.
+                )
+
+            [6] => Array
+                (
+                    [rules_name] => Ornare faucibus pulvinar neque.
+                )
+
+            [7] => Array
+                (
+                    [rules_name] => Pulvinar vulputate neque.
+                )
+
+        )
+
+    [tripfery_booking_highlights_title] => Highlights
+    [tripfery_booking_included] => Array
+        (
+            [0] => Array
+                (
+                    [rules_name] => Visit interesting places around the world.
+                )
+
+            [1] => Array
+                (
+                    [rules_name] => places at exclusive deals.
+                )
+
+            [2] => Array
+                (
+                    [rules_name] => Discover amzaing places.
+                )
+
+            [3] => Array
+                (
+                    [rules_name] => Explore our top destinations.
+                )
+
+            [4] => Array
+                (
+                    [rules_name] => even after your trip.
+                )
+
+        )
+
+    [tripfery_booking_included_title] => Included/Excluded
+    [tripfery_booking_language_title] => Language
+    [tripfery_booking_languages] => Array
+        (
+            [0] => Array
+                (
+                    [language_name] => English
+                )
+
+            [1] => Array
+                (
+                    [language_name] => Espanol
+                )
+
+            [2] => Array
+                (
+                    [language_name] => Hindi (+7hours)
+                )
+
+        )
+
+    [tripfery_booking_style] => style2
+    [tripfery_faq_title] => Frequently asked questions
+    [tripfery_itinerary_title] => Itinerary
+    [tripfery_languages] => Support
+)
+Array
+(
+    [ID] => 973
+    [post_author] => 1
+    [post_date] => 2023-11-01 05:54:17
+    [post_date_gmt] => 2023-11-01 05:54:17
+    [post_content] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset. Eum oratio reprehendunt cu. Nec te quem assum postea.
+    [post_title] => Audi e-tron GT
+    [post_excerpt] => 
+    [post_status] => publish
+    [comment_status] => open
+    [ping_status] => closed
+    [post_password] => 
+    [post_name] => audi-e-tron-gt
+    [to_ping] => 
+    [pinged] => 
+    [post_modified] => 2023-11-21 10:18:20
+    [post_modified_gmt] => 2023-11-21 10:18:20
+    [post_content_filtered] => 
+    [post_parent] => 0
+    [guid] => http://tripfery.local/?post_type=to_book&#038;p=973
+    [menu_order] => 7
+    [post_type] => to_book
+    [post_mime_type] => 
+    [comment_count] => 0
+    [address] => Array
+        (
+            [address] => Royal Ln. Mesa, New Jersey
+            [latitude] => 39.833851
+            [longitude] => -74.871826
+        )
+
+    [ba_booking-car] => Array
+        (
+            [99] => 99
+        )
+
+    [ba_booking-type] => 0
+    [ba-service] => Array
+        (
+            [99] => 99
+        )
+
+    [ba_features] => Array
+        (
+            [0] => 42
+            [1] => 43
+            [2] => 44
+        )
+
+    [code] => 48-638
+    [discount] => Array
+        (
+            [discount] => 
+            [date_from] => 
+            [date_to] => 
+        )
+
+    [end_date] => 24/10/2024
+    [faq] => Array
+        (
+            [0] => 633
+            [1] => 634
+        )
+
+    [guests] => 1
+    [images] => Array
+        (
+            [0] => Array
+                (
+                    [image_id] => 964
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/car-3.jpg
+                    [description] => Image description (optional)
+                )
+
+            [1] => Array
+                (
+                    [image_id] => 963
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/car-2.jpg
+                    [description] => 
+                )
+
+            [2] => Array
+                (
+                    [image_id] => 961
+                    [image] => http://tripfery.local/wp-content/uploads/2023/10/car-8.jpg
+                )
+
+        )
+
+    [min_guests] => 1
+    [related_items] => Array
+        (
+            [0] => 635
+            [1] => 636
+            [2] => 637
+            [3] => 639
+        )
+
+    [rtrs_article_schema] => Array
+        (
+            [0] => Array
+                (
+                    [status] => show
+                    [headline] => Audi e-tron GT
+                    [mainEntityOfPage] => http://tripfery.local/book/audi-e-tron-gt/
+                    [author] => admin
+                    [author_url] => http://tripfery.local
+                    [image] => 967
+                    [datePublished] => 2023-11-01 05:54:17
+                    [dateModified] => 2023-11-06 11:32:11
+                    [publisher] => 
+                    [publisherImage] => 0
+                    [description] => 
+                    [articleBody] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset. Eum oratio reprehendunt cu. Nec te quem assum postea.
+                    [alternativeHeadline] => 
+                    [video] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => 
+                                    [description] => 
+                                    [thumbnailUrl] => 0
+                                    [contentUrl] => 
+                                    [embedUrl] => 
+                                    [uploadDate] => 
+                                    [duration] => 
+                                )
+
+                        )
+
+                    [audio] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => 
+                                    [description] => 
+                                    [duration] => 
+                                    [contentUrl] => 
+                                    [encodingFormat] => 
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [service_selection_type] => checkbox
+    [services] => Array
+        (
+            [0] => 631
+            [1] => 632
+        )
+
+    [start_date] => 21/10/2023
+    [steps] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Attraction 1
+                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset.
+                )
+
+            [1] => Array
+                (
+                    [title] => Attraction 2
+                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset.
+                )
+
+        )
+
+    [tripfery_booking_style] => style3
+)

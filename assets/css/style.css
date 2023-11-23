@@ -10572,12 +10572,12 @@ p.return-to-shop {
 .rt-price-filter .ui-widget-content{
 	border:none;
 }
-.rt-price-filter .ui-slider-horizontal .ui-slider-range{
-	top: 2px;
-}
 .rt-price-filter .ui-widget.ui-widget-content {
 	border: none;
 	margin: 10px 7px 0;
+	background: var(--tripfery-footer-color);
+	height: 6px;
+	border-radius: 10px;
 }
 .rt-price-filter #babe_range_price{
 	color: var(--tripfery-heading-color);
@@ -10590,4 +10590,30 @@ p.return-to-shop {
 .rt-price-filter #babe_range_price:focus{
 	box-shadow: none;
 	outline: none;
+}
+.rt-price-filter .ui-slider-horizontal .ui-slider-handle {
+	top: -7px;
+}
+.rt-fillter-inner .filter-sort{
+	align-items: center;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	padding: 0 14px;
+	height: 44px;
+}
+.rt-fillter-inner .input_select_field .input_select_input {
+	width: 100%;
+	padding: 4px 6px;
+	border-radius: 5px;
+}
+.rt-fillter-inner .input_select_field .input_select_wrapper i,
+.rt-fillter-inner .input_select_field .input_select_wrapper svg {
+	top: 28%;
+	font-size: 14px;
+}
+.rt-filter-terms input[type="checkbox"]{
+	margin-right: 10px;
+}
+.rt-filter-terms .term_item + .term_item{
+	margin-top: 10px;
 }
