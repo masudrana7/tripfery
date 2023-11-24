@@ -7,10 +7,8 @@
  */
 
 if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions')) {
-
 	function tripfery_related_booking()
 	{
-
 		$post_id = get_the_ID();
 		$ba_post = BABE_Post_types::get_post($post_id);
 		$related_arr = $ba_post['related_items']; ?>
@@ -25,7 +23,7 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 
 				$thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
 				$image_srcs = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $thumbnail);
-				$image = $image_srcs ? '<a href="' . $url . '"><img class="room-thumb img-fluid w-100" src="' . $image_srcs[0] . '"></a>' : '';
+				$image = $image_srcs ? '<a href="' . $url . '"><img class="room-thumb img-fluid" src="' . $image_srcs[0] . '"></a>' : '';
 
 				if (!isset($ba_post['discount_price_from']) || !isset($ba_post['price_from']) || !isset($ba_post['discount_date_to']) || !isset($ba_post['discount'])) {
 					$prices = BABE_Post_types::get_post_price_from($post_id);
@@ -58,8 +56,6 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 								echo '</div>';
 							}
 							?>
-
-
 						</div>
 						<ul class="room-info-list d-flex">
 							<li class="info-text-wrapper d-flex align-items-center">

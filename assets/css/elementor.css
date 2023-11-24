@@ -6519,6 +6519,7 @@ pointer-events: none;
     max-width: 230px;
     height: 200px;
     object-fit: cover;
+    width: 230px;
 }
 .available-rooms .single-available-room .room-thumb-wrapper a{
     display: block;
