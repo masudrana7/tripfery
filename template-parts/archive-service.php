@@ -16,6 +16,13 @@ else{
 // Template
 $iso					= 'g-4 no-equal-team';
 
+$post_classes = "";
+if (TripferyTheme::$layout == 'right-sidebar' || TripferyTheme::$layout == 'left-sidebar') {
+	$post_classes = 'col-sm-6 col-lg-4';
+} else {
+	$post_classes = 'col-sm-6 col-xl-3 col-lg-4';
+}
+
 if ( TripferyTheme::$options['service_archive_style'] == 'style1' ){
 	$sercices_archive_layout = "rt-service-default rt-service-layout-1";
 	$template 				 = 'services-1';
@@ -27,12 +34,7 @@ if ( TripferyTheme::$options['service_archive_style'] == 'style1' ){
 	$template 				 = 'services-1';
 }
 
-$post_classes = "";
-if (  TripferyTheme::$layout == 'right-sidebar' || TripferyTheme::$layout == 'left-sidebar' ){
-	$post_classes = 'col-sm-6 col-lg-4';
-} else {
-	$post_classes = 'col-sm-6 col-xl-3 col-lg-4';
-}
+
 
 if ( get_query_var('paged') ) {
 	$paged = get_query_var('paged');
@@ -59,6 +61,7 @@ $query = new WP_Query( $args );
 <div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
+
 			<?php
 			if ( TripferyTheme::$layout == 'left-sidebar' ) {
 				if ( is_active_sidebar( 'service-sidebar' ) ) {
@@ -67,6 +70,7 @@ $query = new WP_Query( $args );
 					get_sidebar();
 				}
 			}?>
+
 			<div class="<?php echo esc_attr( $sercices_archive_layout );?> <?php echo esc_attr( $tripfery_layout_class );?>">
 				<main id="main" class="site-main">
 					<div class="rt-sidebar-sapcer">
@@ -86,6 +90,7 @@ $query = new WP_Query( $args );
 					</div>
 				</main>
 			</div>
+
 			<?php
 			if ( TripferyTheme::$layout == 'right-sidebar' ) {				
 				if ( is_active_sidebar( 'service-sidebar' ) ) {
@@ -95,6 +100,8 @@ $query = new WP_Query( $args );
 				}
 			}
 			?>
+
+
 		</div>
 	</div>
 </div>

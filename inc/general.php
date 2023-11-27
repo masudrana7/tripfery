@@ -173,7 +173,7 @@ if ( !function_exists( 'tripfery_widgets_register' ) ) {
 			'id'            => 'booking-form',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="hidden">',
+			'before_title'  => '<h3 class="rt-widget-title-holder">',
 			'after_title'   => '</h3>',
 		) );
 

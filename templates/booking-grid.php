@@ -18,6 +18,10 @@ if (TripferyTheme::$layout == 'full-width') {
 <div id="primary" class="content-area rt-booking-layout">
     <div id="contentHolder">
         <div class="container">
+
+
+
+        
             <div class="row">
                 <?php if (TripferyTheme::$layout == 'left-sidebar') {
                     get_sidebar();
@@ -29,7 +33,10 @@ if (TripferyTheme::$layout == 'full-width') {
                 </div>
                 <?php if (TripferyTheme::$layout == 'right-sidebar') {
                     get_sidebar();
-                }    ?>
+                } ?>
+
+
+
             </div>
         </div>
     </div>

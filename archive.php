@@ -19,11 +19,11 @@ if ( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category"
 	return;
 }
 if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_category" ) ) {
-		get_template_part( 'template-parts/archive', 'service' );
+	get_template_part( 'template-parts/archive', 'service' );
 	return;
 }
 if (is_post_type_archive("to_book") || is_tax("categories")) {
-	get_template_part('template-parts/archive-booking/', 'archive-booking-grid');
+	get_template_part('template-parts/archive-booking/archive', 'booking-grid');
 	return;
 }
 ?>

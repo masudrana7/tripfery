@@ -844,8 +844,6 @@ function tripfery_content_load_scripts() {
             }
         });
     }
-
-
     $(window).on('scroll', scrollFunction);
     function scrollFunction() {
         var target = $('#contentHolder');
