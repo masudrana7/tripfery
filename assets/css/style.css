@@ -10617,3 +10617,44 @@ p.return-to-shop {
 .rt-filter-terms .term_item + .term_item{
 	margin-top: 10px;
 }
+.rt-booking-single .rt-search-customize #search_form_tabs{
+	display: none;
+}
+.rt-booking-single .rt-search-customize .babe-search-form {
+	background: transparent;
+	border-radius: 0;
+	max-width: 100%;
+	padding: 0;
+}
+.rt-booking-single .rt-search-customize #search_form .input-group>div{
+	margin-right: 0;
+	margin-bottom: 20px;
+}
+.rt-booking-single .rt-search-customize #search_form .input-group>div:last-child{
+	margin-bottom: 0;
+}
+.rt-booking-single .add_input_field .add_ids_title i {
+	top: 12px;
+}
+.rt-booking-single .add_input_field .add_ids_title,
+.rt-booking-single #search-box,
+.rt-booking-single #search_form .input-group{
+	display: block;
+}
+.rt-booking-single .rt-search-customize #search_form .input-group>div,
+.rt-booking-single #search_form .input-group>div.submit .btn-search {
+	width: 100%;
+	height: 55px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 44px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.rt-booking-single .rt-search-customize #search_form .input-group>div:not(.submit) {
+	padding: 0 25px;
+	background: var(--tripfery-white-color);
+}
+.single-to_book .daterangepicker {
+	margin-left: -170px;
+}

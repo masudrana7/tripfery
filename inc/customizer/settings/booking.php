@@ -63,86 +63,68 @@ class TripferyTheme_Booking_Post_Settings extends TripferyTheme_Customizer {
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog3.png',
                         'name' => __( 'Layout 2', 'tripfery' )
                     ),
-                    'style3' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/blog2.png',
-                        'name' => __( 'Layout 3', 'tripfery' )
-                    ),
                 )
             )
         ) );
 
         // Booking Archive option
-        $wp_customize->add_setting( 'booking_post_number',
+        $wp_customize->add_setting( 'booking_locaton',
             array(
-                'default' => $this->defaults['booking_post_number'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization',
-            )
-        );
-        $wp_customize->add_control( 'booking_post_number',
-            array(
-                'label' => __( 'Booking Archive Post Limit', 'tripfery' ),
-                'section' => 'rttheme_booking_settings',
-                'type' => 'number',
-            )
-        );
-
-        $wp_customize->add_setting( 'booking_ar_category',
-            array(
-                'default' => $this->defaults['booking_ar_category'],
+                'default' => $this->defaults['booking_locaton'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_ar_category',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_locaton',
             array(
-                'label' => __( 'Show Category', 'tripfery' ),
+                'label' => __( 'Show Location', 'tripfery' ),
                 'section' => 'rttheme_booking_settings',
             )
         ));
 
-        $wp_customize->add_setting( 'booking_ar_action',
+        $wp_customize->add_setting( 'booking_wishlist',
             array(
-                'default' => $this->defaults['booking_ar_action'],
+                'default' => $this->defaults['booking_wishlist'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_ar_action',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_wishlist',
             array(
-                'label' => __( 'Show Action', 'tripfery' ),
+                'label' => __( 'Show Wishlist', 'tripfery' ),
                 'section' => 'rttheme_booking_settings',
             )
         ));
 
-        $wp_customize->add_setting( 'booking_ar_excerpt',
+        $wp_customize->add_setting( 'booking_rating',
             array(
-                'default' => $this->defaults['booking_ar_excerpt'],
+                'default' => $this->defaults['booking_rating'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_ar_excerpt',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'booking_rating',
             array(
-                'label' => __( 'Show Excerpt', 'tripfery' ),
+                'label' => __( 'Show Rating', 'tripfery' ),
                 'section' => 'rttheme_booking_settings',
             )
         ));
 
-        $wp_customize->add_setting( 'booking_arexcerpt_limit',
+        $wp_customize->add_setting('booking_btn',
             array(
-                'default' => $this->defaults['booking_arexcerpt_limit'],
+                'default' => $this->defaults['booking_btn'],
                 'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( 'booking_arexcerpt_limit',
+        $wp_customize->add_control(new Customizer_Switch_Control(
+            $wp_customize,
+            'booking_btn',
             array(
-                'label' => __( 'Booking Archive Excerpt Limit', 'tripfery' ),
+                'label' => __('Show Button', 'tripfery'),
                 'section' => 'rttheme_booking_settings',
-                'type' => 'number',
             )
-        );
+        ));
 
 
         // Single Booking
@@ -268,38 +250,7 @@ class TripferyTheme_Booking_Post_Settings extends TripferyTheme_Customizer {
                 'active_callback'   => 'rttheme_is_related_booking_enabled',
             )
         );
-        
-        $wp_customize->add_setting( 'related_booking_number',
-            array(
-                'default' => $this->defaults['related_booking_number'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization',
-            )
-        );
-        $wp_customize->add_control( 'related_booking_number',
-            array(
-                'label' => __( 'Team Post', 'tripfery' ),
-                'section' => 'rttheme_booking_settings',
-                'type' => 'number',
-                'active_callback'   => 'rttheme_is_related_booking_enabled',
-            )
-        );
-        
-        $wp_customize->add_setting( 'related_booking_title_limit',
-            array(
-                'default' => $this->defaults['related_booking_title_limit'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization',
-            )
-        );
-        $wp_customize->add_control( 'related_booking_title_limit',
-            array(
-                'label' => __( 'Title Limit', 'tripfery' ),
-                'section' => 'rttheme_booking_settings',
-                'type' => 'number',
-                'active_callback'   => 'rttheme_is_related_booking_enabled',
-            )
-        );
+
     }
 
 }

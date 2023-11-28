@@ -11,7 +11,7 @@ if (class_exists('BABE_Functions')) {
 	$post_id = 	get_the_ID();
 	$booking_faqs = "";
 	$ba_info	= BABE_Post_types::get_post($post_id);
-	error_log( print_r($ba_info, true ), 3, __DIR__.'/log.txt');
+	error_log(print_r($ba_info, true), 3, __DIR__ . '/log.txt');
 	if (!empty($ba_info) && isset($ba_info['faq']) && !empty($ba_info['faq'])) {
 		$booking_faqs = BABE_Post_types::get_post_faq($ba_info);
 	}
@@ -141,6 +141,6 @@ if (class_exists('BABE_Functions')) {
 			<?php get_template_part('template-parts/single-booking/layout', TripferyTheme::$booking_style, $args); ?>
 		</div>
 	</div>
-	
-	<?php } ?>
-	<?php get_footer(); ?>
+
+<?php } ?>
+<?php get_footer(); ?>

@@ -3555,6 +3555,9 @@ CSS INDEX
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+.listing-card .listing-thumb-wrapper .listing-thumb-wrapper{
+    position: relative;
+}
 .listing-card img {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -3853,6 +3856,7 @@ CSS INDEX
 }
 .rt_list_service .rt-search-services .listing-thumb-wrapper{
     display: inline-block;
+    max-width: 320px;
 }
 .rt_list_service .rt-search-services .listing-card{
     display: flex;

@@ -30,7 +30,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 case 'tripfery_service':
                 $prefix = 'service';
                 break;        
-                case 'tripfery_booking':
+                case 'to_book':
                 $prefix = 'booking';
                 break; 
             }
@@ -86,7 +86,6 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             } else {
                 TripferyTheme::$bgimg = TRIPFERY_ASSETS_URL . 'img/banner.jpg';
             }
-			
             TripferyTheme::$pagebgcolor = empty( $layout_settings['tripfery_page_bgcolor'] ) ? TripferyTheme::$options[$prefix . '_page_bgcolor'] : $layout_settings['tripfery_page_bgcolor'];			
             
             if( !empty( $layout_settings['tripfery_page_bgimg'] ) ) {
@@ -111,7 +110,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $prefix = 'team_archive'; 
             } elseif( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_category" ) ) {
                 $prefix = 'service_archive';            
-            } elseif( is_post_type_archive( "tripfery_booking" ) || is_tax( "tripfery_booking_category" ) ) {
+            } elseif( is_post_type_archive("to_book" ) || is_tax("categories" ) ) {
                 $prefix = 'booking_archive'; 
             } else {
                 $prefix = 'blog';

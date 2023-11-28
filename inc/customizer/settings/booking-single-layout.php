@@ -270,7 +270,6 @@ class TripferyTheme_Booking_Single_Layout_Settings extends TripferyTheme_Customi
             )
         ));
         
-
     }
 
 }

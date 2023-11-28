@@ -426,11 +426,10 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 
             // Booking
             'booking_archive_style'     => 'style1',
-            'booking_post_number'       => 6,
-            'booking_arexcerpt_limit'   => 20,
-            'booking_ar_excerpt'        => 0,
-            'booking_ar_category'       => 1,
-            'booking_ar_action'         => 1,
+            'booking_rating'            => 1,
+            'booking_wishlist'          => 1,
+            'booking_locaton'           => 1,
+            'booking_btn'               => 1,
 
             'single_booking_cat'        => 1,
             'single_booking_client'     => 1,
@@ -438,11 +437,9 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'single_booking_enddate'    => 1,
             'single_booking_weblink'    => 1,
             'single_booking_rating'     => 1,
-
             'show_related_booking'      => 0,
             'booking_related_title'     => esc_html__('Availability', 'tripfery'),
             'related_booking_number'    => 5,
-            'related_booking_title_limit'=> 5,
 			
             // Error
             'error_bodybg_color' 		=> '',
