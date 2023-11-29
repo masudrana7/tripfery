@@ -218,6 +218,17 @@ jQuery(document).ready(function ($) {
             $(this).removeClass("open");
         }
     });
+
+    $('.currency_amount').each(function () {
+        // Get the text content of the element
+        let originalText = $(this).text();
+
+        // Use slice to remove the last two characters (digits)
+        let newText = originalText.slice(0, -3);
+
+        // Update the content of the element
+        $(this).text(newText);
+    });
     
     /* Mobile menu */
     $(window).on('scroll', function () {

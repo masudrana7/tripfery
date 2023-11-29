@@ -10,13 +10,11 @@ if (TripferyTheme::$layout == 'right-sidebar' || TripferyTheme::$layout == 'left
 } else {
     $post_classes = 'col-sm-6 col-xl-3 col-lg-3';
 }
-
 if (TripferyTheme::$options['booking_archive_style'] == 'style1') {
     $tripfery_archive_class = "rt_grid_service";
 } else {
     $tripfery_archive_class = "rt_list_service";
 }
-
 if (get_query_var('paged')) {
     $paged = get_query_var('paged');
 } else if (get_query_var('page')) {
@@ -24,8 +22,7 @@ if (get_query_var('paged')) {
 } else {
     $paged = 1;
 }
-?>
-<?php get_header();
+ get_header();
 if (class_exists('BABE_Functions')) {
     $args = array(
         'post_type'         => 'to_book',
@@ -64,13 +61,10 @@ if (class_exists('BABE_Functions')) {
     $posts = BABE_Post_types::get_posts($args);
     $results['posts_count']    = BABE_Post_types::$get_posts_count;
     $results['sort_by_filter'] = $sort_by_filter = BABE_html::input_select_field_with_order('sr_sort_by', '', BABE_Post_types::get_search_filter_sort_by_args(), $args['search_results_sort_by']);
-
 ?>
     <div id="primary" class="content-area">
         <div class="container">
             <div class="row">
-
-
                 <?php
                 if (TripferyTheme::$layout == 'left-sidebar') {
                     echo '<div class="col-md-3">';
@@ -82,7 +76,8 @@ if (class_exists('BABE_Functions')) {
                         echo "</div>";
                     }
                     echo '</div>';
-                } ?>
+                }
+                ?>
                 <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
                     <div class="rt-fillter-inner babe_search_results <?php echo esc_attr($tripfery_archive_class); ?>">
                         <div class="d-flex align-items-center justify-content-between view-switch-bar position-relative">
@@ -143,11 +138,11 @@ if (class_exists('BABE_Functions')) {
                                 $ba_info     = BABE_Post_types::get_post($post_id);
                                 if (!empty($post['discount_price_from'])) {
                                     $item_info_price = '
-                            <div class="rt-price">	
-                                ' . $price_old . '
-                                <span class="price-text item_info_price_new">' . BABE_Currency::get_currency_price($post['discount_price_from']) . '</span>
-                                ' . $discount . ' 
-                            </div>';
+                                <div class="rt-price">	
+                                    ' . $price_old . '
+                                    <span class="price-text item_info_price_new">' . BABE_Currency::get_currency_price($post['discount_price_from']) . '</span>
+                                    ' . $discount . ' 
+                                </div>';
                                 } ?>
                                 <div class="<?php echo esc_attr($post_classes) ?> card-item mb-4">
                                     <div class="listing-card">
@@ -169,7 +164,7 @@ if (class_exists('BABE_Functions')) {
                                                     <?php } ?>
                                                 <?php } ?>
 
-                                                
+
                                                 <?php if (TripferyTheme::$options['booking_wishlist']) { ?>
                                                     <div class="wishlist">
                                                         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +190,7 @@ if (class_exists('BABE_Functions')) {
                                                 <?php echo wp_kses_post($item_info_price); ?>
 
                                                 <?php if (TripferyTheme::$options['booking_btn']) { ?>
-                                                <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery-core') ?></a>
+                                                    <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery-core') ?></a>
                                                 <?php } ?>
 
 
