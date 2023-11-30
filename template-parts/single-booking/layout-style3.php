@@ -311,7 +311,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             <?php if (!empty($map_title)) { ?>
                 <h3 class="rt-single-map-title"><?php echo esc_html($map_title, 'tripfery'); ?></h3>
             <?php } ?>
-            <?php echo $booking_map; ?>
+
+            <?php  echo $booking_map;  ?>
 
             <!-- Comments  -->
             <div class="info-card">
