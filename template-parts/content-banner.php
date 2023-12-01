@@ -18,7 +18,7 @@ if (is_404()) {
 	}
 } elseif (is_post_type_archive('tripfery_team')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Teams', 'tripfery'));
-} elseif (is_post_type_archive('tripfery_booking')) {
+} elseif (is_post_type_archive('to_book')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Bookings', 'tripfery'));
 } elseif (is_post_type_archive('tripfery_service')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Services', 'tripfery'));
@@ -38,6 +38,8 @@ if (is_404()) {
 if (class_exists('BABE_Functions')) {
 	if (is_singular('to_book')) {
 		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Details', 'tripfery'));
+	} elseif (is_post_type_archive('to_book')) {
+		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Location', 'tripfery'));
 	} else {
 		$tripfery_title = $tripfery_title;
 	}

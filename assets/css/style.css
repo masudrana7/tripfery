@@ -63,6 +63,8 @@ CSS INDEX
 #. Gutenberg Support
 #. Woocommerce
 #. rt-search-filter
+#. rt-booking-single
+#. rt-booking-archive
 ---------------------------------------*/
 /*-------------------------------------
 #. Defaults
@@ -10617,6 +10619,8 @@ p.return-to-shop {
 .rt-filter-terms .term_item + .term_item{
 	margin-top: 10px;
 }
+
+
 .rt-booking-single .rt-search-customize #search_form_tabs{
 	display: none;
 }
@@ -10657,4 +10661,14 @@ p.return-to-shop {
 }
 .single-to_book .daterangepicker {
 	margin-left: -170px;
+}
+/*======================================
+#. RT Booking Single Archive
+====================================*/
+.rt-gallery-inner,
+.rt-map-inner{
+	margin-bottom: 80px;
+}
+.rt-booking-map{
+	padding-right: 20px;
 }
