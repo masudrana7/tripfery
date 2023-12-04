@@ -3811,6 +3811,53 @@ CSS INDEX
 .rt-isotope-style2 .listing-card .listing-card-content{
     padding: 0;
 }
+.rt-search-customize.menu_bar_ #search_form_tabs{
+    display: none;
+}
+.rt-search-customize.content_align_center #search-box{
+   margin-left: auto;
+   margin-right: auto;
+}
+.rt-search-customize #search-box{
+    padding: 0;
+}
+.hotel-filter-btns {
+    margin-bottom: 50px;
+    gap: 10px;
+}
+.hotel-filter-btns .filter-btn {
+    background-color: #eef1f4;
+    border-radius: 5px;
+    padding: 12px 22px;
+    height: 45px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #232323;
+    position: relative;
+    z-index: 2;
+}
+.hotel-filter-btns .filter-btn::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: -2;
+    -webkit-transition: all 300ms ease-out 0s;
+    transition: all 300ms ease-out 0s;
+}
+.hotel-filter-btns .filter-btn.active {
+    color: var(--tripfery-white-color);
+}
+.hotel-filter-btns .filter-btn.active::after {
+    width: 100%;
+    background-color: var(--tripfery-primary-color);
+}
 /*-------------------------------------
 #. RT Service Search Result
 ---------------------------------------*/

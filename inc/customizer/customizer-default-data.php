@@ -430,6 +430,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'booking_wishlist'          => 1,
             'booking_locaton'           => 1,
             'booking_btn'               => 1,
+            'booking_arcive_single_title' => esc_html__('Discover now', 'tripfery'),
 
             'single_booking_cat'        => 1,
             'single_booking_client'     => 1,

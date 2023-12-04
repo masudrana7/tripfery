@@ -10672,3 +10672,127 @@ p.return-to-shop {
 .rt-booking-map{
 	padding-right: 20px;
 }
+.rt-gallery-inner{
+	margin-left: 100px;
+	margin-right: 100px;
+	position: relative;
+}
+.rt-gallery-inner .hide_image{
+	display: none;
+	opacity: 0;
+}
+.rt-gallery-inner .rt-sinlge-btn{
+	border-radius: 40px;
+	height: 50px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: var(--tripfery-white-color);
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	padding: 12px 20px;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--tripfery-heading-color);
+	-webkit-transition: all 0.4s ease-out 0s;
+	transition: all 0.4s ease-out 0s;
+	z-index: 1;
+	overflow: hidden;
+}
+.rt-gallery-inner .rt-sinlge-btn:before {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 0%;
+	left: 0;
+	top: 0;
+	background-color: var(--tripfery-primary-color);
+	opacity: 0;
+	z-index: -1;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	border-radius: 40px;
+}
+.rt-gallery-inner .rt-sinlge-btn:hover::before {
+	opacity: 1;
+	width: 100%;
+}
+.rt-gallery-inner .rt-sinlge-btn:hover{
+	color: var(--tripfery-white-color);
+}
+.tax-ba_locations .content-area {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.mfp-gallery .mfp-container .mfp-arrow{
+	position: absolute;
+	z-index: 10;
+	left: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: transparent;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+.mfp-gallery .mfp-container .mfp-arrow-right{
+	left: auto;
+	right: 110px;
+}
+.mfp-gallery .mfp-container .mfp-arrow::after{
+	display: none;
+}
+.mfp-gallery .mfp-container .mfp-arrow::before {
+	font-weight: 900;
+	font-family: "Font Awesome 6 Free";
+	content: "\f053";
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	color: #fff;
+	border:none;
+	font-size: 20px;
+}
+.mfp-gallery .mfp-container .mfp-arrow-right::before {
+	content: "\f054";
+}
+.rt-booking-item-inner .swiper-navigation>div {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.rt-booking-item-inner .swiper-navigation>div{
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.6s;
+}
+.rt-booking-item-inner:hover .swiper-navigation>div{
+	opacity: 1;
+	visibility: visible;
+}
+.rt-booking-item-inner .swiper-navigation .swiper-button-prev {
+	left: -30px;
+}
+.rt-booking-item-inner .swiper-navigation .swiper-button-next {
+	right: -30px;
+}
+.rt-booking-item-inner:hover .swiper-navigation .swiper-button-prev{
+	left: 0px;
+}
+.rt-booking-item-inner:hover .swiper-navigation .swiper-button-next{
+	right: 0px;
+}
+.rt-booking-item-inner{
+	position: relative;
+}
+.rt-booking-item-inner{
+	position: relative;
+}

@@ -126,6 +126,24 @@ class TripferyTheme_Booking_Post_Settings extends TripferyTheme_Customizer {
             )
         ));
 
+        $wp_customize->add_setting(
+            'booking_arcive_single_title',
+            array(
+                'default' => $this->defaults['booking_arcive_single_title'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_textarea_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'booking_arcive_single_title',
+            array(
+                'label' => __('Discover now', 'tripfery'),
+                'section' => 'rttheme_booking_settings',
+                'type' => 'text',
+                'active_callback'   => 'rttheme_is_related_booking_enabled',
+            )
+        );
+
 
         // Single Booking
         $wp_customize->add_setting('booking_related_heading', array(

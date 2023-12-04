@@ -125,6 +125,7 @@ jQuery(document).ready(function ($) {
     Listing Filter
     -------------------------------------*/
     if ($(".rt-case-isotope").length) {
+
         $(".listing-filter-btns").children().first().addClass("active");
         var $grid = $(".cardContainer").imagesLoaded(function () {
             var filterBtnWrapper = $('.listing-filter-btns');
@@ -140,6 +141,7 @@ jQuery(document).ready(function ($) {
                 });
             }
         });
+
         /*-------------------------------------
         Filter Button
         -------------------------------------*/
@@ -148,6 +150,28 @@ jQuery(document).ready(function ($) {
             $(this).addClass("active");
             var filterValue = $(this).attr("data-filter");
             $grid.isotope({ filter: filterValue });
+        });
+    }
+
+    /*-------------------------------------
+    Filter Button For Hotel
+    -------------------------------------*/
+    if ($(".hotel-filter-btns").length) {
+        $(".hotel-filter-btns").on("click", "button", function () {
+            $(".hotel-filter-btns button").removeClass("active");
+            $(this).addClass("active");
+            var filterValue = $(this).attr("data-filter");
+            $hotelGrid.isotope({ filter: filterValue });
+        });
+
+        var $hotelGrid = $(".hotelCardContainer").imagesLoaded(function () {
+            // init Isotope after all images have loaded
+            $hotelGrid.isotope({
+                // options...
+                itemSelector: ".card-item",
+                layoutMode: "fitRows",
+                // filter: "*",
+            });
         });
     }
 
@@ -437,11 +461,34 @@ jQuery(document).ready(function ($) {
                     type: 'image',
                     gallery: {
                         enabled: true
+                    },
+                    zoom: {
+                        enabled: true,
+                        duration: 300, // don't foget to change the duration also in CSS
+                        opener: function (element) {
+                            return element.find('img');
+                        }
                     }
                 });
             });
         }
     }
+    
+    if ($(".rt-archive-slider").length) {
+        var swiper = new Swiper(".rt-archive-slider", {
+            slidesPerView: 4,
+            autoplay: true,
+            loop: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+
+
+
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
         var isgroup = $(this).parents('.woocommerce-grouped-product-list');

@@ -65,10 +65,10 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <?php } ?>
     </div>
     <div class="row">
-        <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-form')) { ?>
+        <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
             <div class="col-md-4">
                 <div class="info-card rt-booking-form">
-                    <?php dynamic_sidebar('booking-form'); ?>
+                    <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
             </div>
         <?php } ?>
@@ -140,10 +140,10 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
 
         </div>
 
-        <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-form')) { ?>
+        <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
             <div class="col-md-4">
                 <div class="info-card rt-booking-form">
-                    <?php dynamic_sidebar('booking-form'); ?>
+                    <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
             </div>
         <?php } ?>
