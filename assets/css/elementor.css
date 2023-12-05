@@ -3537,6 +3537,7 @@ CSS INDEX
 
 .listing-filter-btns .filter-btn.active{
     color: var(--tripfery-white-color);
+    background: var(--tripfery-primary-color);
 }
 .listing-card {
     background-color: #ffffff;

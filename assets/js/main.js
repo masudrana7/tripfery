@@ -125,7 +125,6 @@ jQuery(document).ready(function ($) {
     Listing Filter
     -------------------------------------*/
     if ($(".rt-case-isotope").length) {
-
         $(".listing-filter-btns").children().first().addClass("active");
         var $grid = $(".cardContainer").imagesLoaded(function () {
             var filterBtnWrapper = $('.listing-filter-btns');

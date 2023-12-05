@@ -88,6 +88,8 @@ if (class_exists('BABE_Functions')) {
 	$discountPrice = BABE_Currency::get_currency_price($price['discount_price_from']);
 	$nPrice = BABE_Currency::get_currency_price($price['price_from']);
 	$languages 		= get_post_meta($post_id, 'tripfery_languages', true);
+
+	
 	$args = array(
 		'tripfery_layout_class' => $tripfery_layout_class,
 		'post_id' 				=> $post_id,
@@ -135,6 +137,9 @@ if (class_exists('BABE_Functions')) {
 		'booking_brands' 		=> $booking_brands,
 		'brand_title' 		=> $brand_title,
 	);
+
+
+
 ?>
 	<div id="primary" class="rt-booking-single content-area rt_booking_single_<?php echo esc_attr(TripferyTheme::$booking_style); ?>">
 		<div id="contentHolder">
