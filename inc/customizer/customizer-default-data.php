@@ -237,17 +237,18 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'service_archive_page_bgcolor' => '',
             
             //Service Single Layout Setting 
-            'service_layout' => 'full-width',
-            'service_sidebar'        => '',
-            'service_padding_top'    => 120,
-            'service_padding_bottom' => 120,
-            'service_banner' => 1,
-            'service_breadcrumb' => 0,         
-            'service_bgtype' => 'bgcolor',
-            'service_bgcolor' => '',
-            'service_bgimg' => '',
-            'service_page_bgimg' => '',
-            'service_page_bgcolor' => '',
+            'guided_layout' => 'full-width',
+            'guided_sidebar'        => '',
+            'guided_padding_top'    => 120,
+            'guided_padding_bottom' => 120,
+            'guided_banner' => 1,
+            'guided_breadcrumb' => 0,         
+            'guided_bgtype' => 'bgcolor',
+            'guided_bgcolor' => '',
+            'guided_bgimg' => '',
+            'guided_page_bgimg' => '',
+            'guided_page_bgcolor' => '',
+            'guided_about_me' => 'About Me',
 
             //Booking Layout Setting 
             'booking_archive_layout' => 'full-width',
@@ -416,12 +417,12 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'related_team_title_limit' 	=> 5,
 
             // Service
-            'service_archive_style'     => 'style1',
-            'service_post_number'       => 8,
-            'service_ar_icon'           => 1,
-            'service_ar_action'         => 1,
-            'service_ar_excerpt'        => 1,
-            'service_excerpt_limit'     => 20,
+            'guided_archive_style'     => 'style1',
+            'guided_post_number'       => 8,
+            'guided_ar_icon'           => 1,
+            'guided_ar_action'         => 1,
+            'guided_ar_excerpt'        => 1,
+            'guided_excerpt_limit'     => 20,
 
 
             // Booking

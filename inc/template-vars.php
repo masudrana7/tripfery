@@ -27,8 +27,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 case 'tripfery_team':
                 $prefix = 'team';
                 break;
-                case 'tripfery_service':
-                $prefix = 'service';
+                case 'tripfery_guided':
+                $prefix = 'guided';
                 break;        
                 case 'to_book':
                 $prefix = 'booking';
@@ -68,7 +68,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             $padding_bottom = ( empty( $layout_settings['tripfery_bottom_padding'] ) || $layout_settings['tripfery_bottom_padding'] == 'default' ) ? TripferyTheme::$options[$prefix . '_padding_bottom'] : $layout_settings['tripfery_bottom_padding'];
 			
             TripferyTheme::$padding_bottom = (int) $padding_bottom;
-			
+
             TripferyTheme::$has_banner = ( empty( $layout_settings['tripfery_banner'] ) || $layout_settings['tripfery_banner'] == 'default' ) ? TripferyTheme::$options[$prefix . '_banner'] : $layout_settings['tripfery_banner'];
             
             TripferyTheme::$has_breadcrumb = ( empty( $layout_settings['tripfery_breadcrumb'] ) || $layout_settings['tripfery_breadcrumb'] == 'default' ) ? TripferyTheme::$options[ $prefix . '_breadcrumb'] : $layout_settings['tripfery_breadcrumb'];
@@ -108,8 +108,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $prefix = 'shop';
             } elseif( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category" ) ) {
                 $prefix = 'team_archive'; 
-            } elseif( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_category" ) ) {
-                $prefix = 'service_archive';            
+            } elseif( is_post_type_archive( "tripfery_guided" ) || is_tax("tripfery_guided_category" ) ) {
+                $prefix = 'guided_archive';            
             } elseif( is_post_type_archive("to_book" ) || is_tax("categories" ) ) {
                 $prefix = 'booking_archive'; 
             } else {

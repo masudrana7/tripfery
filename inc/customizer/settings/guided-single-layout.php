@@ -15,29 +15,29 @@ use WP_Customize_Color_Control;
 /**
  * Adds the individual sections, settings, and controls to the theme customizer
  */
-class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customizer {
+class TripferyTheme_Guided_Single_Layout_Settings extends TripferyTheme_Customizer {
 
 	public function __construct() {
         parent::instance();
         $this->populated_default_data();
         // Register Page Controls
-        add_action( 'customize_register', array( $this, 'register_service_single_layout_controls' ) );
+        add_action( 'customize_register', array( $this, 'register_guided_single_layout_controls' ) );
 	}
 
-    public function register_service_single_layout_controls( $wp_customize ) {
+    public function register_guided_single_layout_controls( $wp_customize ) {
 
-        $wp_customize->add_setting( 'service_layout',
+        $wp_customize->add_setting( 'guided_layout',
             array(
-                'default' => $this->defaults['service_layout'],
+                'default' => $this->defaults['guided_layout'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_radio_sanitization'
             )
         );
-        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'service_layout',
+        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'guided_layout',
             array(
                 'label' => __( 'Sidebar Layout', 'tripfery' ),
                 'description' => esc_html__( 'Select the default template layout for Pages', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'choices' => array(
                     'left-sidebar' => array(
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-left.png',
@@ -64,80 +64,80 @@ class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customi
         ));
         $wp_customize->add_control(new Customizer_Separator_Control($wp_customize, 'separator_page', array(
             'settings' => 'separator_page',
-            'section' => 'service_single_layout_section',
+            'section' => 'guided_single_layout_section',
         )));
 		
 		// Content padding top
-        $wp_customize->add_setting( 'service_padding_top',
+        $wp_customize->add_setting( 'guided_padding_top',
             array(
-                'default' => $this->defaults['service_padding_top'],
+                'default' => $this->defaults['guided_padding_top'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_sanitize_integer',
             )
         );
-        $wp_customize->add_control( 'service_padding_top',
+        $wp_customize->add_control( 'guided_padding_top',
             array(
                 'label' => __( 'Content Padding Top', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'type' => 'number',
             )
         );
         // Content padding bottom
-        $wp_customize->add_setting( 'service_padding_bottom',
+        $wp_customize->add_setting( 'guided_padding_bottom',
             array(
-                'default' => $this->defaults['service_padding_bottom'],
+                'default' => $this->defaults['guided_padding_bottom'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_sanitize_integer',
             )
         );
-        $wp_customize->add_control( 'service_padding_bottom',
+        $wp_customize->add_control( 'guided_padding_bottom',
             array(
                 'label' => __( 'Content Padding Bottom', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'type' => 'number',
             )
         );
 		
-		$wp_customize->add_setting( 'service_banner',
+		$wp_customize->add_setting( 'guided_banner',
             array(
-                'default' => $this->defaults['service_banner'],
+                'default' => $this->defaults['guided_banner'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'service_banner',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'guided_banner',
             array(
                 'label' => __( 'Banner', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
             )
         ) );
 		
-		$wp_customize->add_setting( 'service_breadcrumb',
+		$wp_customize->add_setting( 'guided_breadcrumb',
             array(
-                'default' => $this->defaults['service_breadcrumb'],
+                'default' => $this->defaults['guided_breadcrumb'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'service_breadcrumb',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'guided_breadcrumb',
             array(
                 'label' => __( 'Breadcrumb', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
             )
         ) );
 		
         // Banner BG Type 
-        $wp_customize->add_setting( 'service_bgtype',
+        $wp_customize->add_setting( 'guided_bgtype',
             array(
-                'default' => $this->defaults['service_bgtype'],
+                'default' => $this->defaults['guided_bgtype'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_radio_sanitization',
             )
         );
-        $wp_customize->add_control( 'service_bgtype',
+        $wp_customize->add_control( 'guided_bgtype',
             array(
                 'label' => __( 'Banner Background Type', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'description' => esc_html__( 'This is banner background type.', 'tripfery' ),
                 'type' => 'select',
                 'choices' => array(
@@ -147,18 +147,18 @@ class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customi
             )
         );
 
-        $wp_customize->add_setting( 'service_bgimg',
+        $wp_customize->add_setting( 'guided_bgimg',
             array(
-                'default' => $this->defaults['service_bgimg'],
+                'default' => $this->defaults['guided_bgimg'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'absint',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'service_bgimg',
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'guided_bgimg',
             array(
                 'label' => __( 'Banner Background Image', 'tripfery' ),
                 'description' => esc_html__( 'This is the description for the Media Control', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'mime_type' => 'image',
                 'button_labels' => array(
                     'select' => __( 'Select File', 'tripfery' ),
@@ -173,37 +173,37 @@ class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customi
         ) );
 
         // Banner background color
-        $wp_customize->add_setting('service_bgcolor', 
+        $wp_customize->add_setting('guided_bgcolor', 
             array(
-                'default' => $this->defaults['service_bgcolor'],
+                'default' => $this->defaults['guided_bgcolor'],
                 'type' => 'theme_mod', 
                 'capability' => 'edit_theme_options', 
                 'transport' => 'refresh', 
                 'sanitize_callback' => 'sanitize_hex_color',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'service_bgcolor',
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'guided_bgcolor',
             array(
                 'label' => esc_html__('Banner Background Color', 'tripfery'),
-                'settings' => 'service_bgcolor', 
+                'settings' => 'guided_bgcolor', 
                 'priority' => 10, 
-                'section' => 'service_single_layout_section', 
+                'section' => 'guided_single_layout_section', 
             )
         ));
 		
 		// Page background image
-		$wp_customize->add_setting( 'service_page_bgimg',
+		$wp_customize->add_setting( 'guided_page_bgimg',
             array(
-                'default' => $this->defaults['service_page_bgimg'],
+                'default' => $this->defaults['guided_page_bgimg'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'absint',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'service_page_bgimg',
+        $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'guided_page_bgimg',
             array(
                 'label' => __( 'Page / Post Background Image', 'tripfery' ),
                 'description' => esc_html__( 'This is the description for the Media Control', 'tripfery' ),
-                'section' => 'service_single_layout_section',
+                'section' => 'guided_single_layout_section',
                 'mime_type' => 'image',
                 'button_labels' => array(
                     'select' => __( 'Select File', 'tripfery' ),
@@ -217,24 +217,41 @@ class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customi
             )
         ) );
 		
-		$wp_customize->add_setting('service_page_bgcolor', 
+		$wp_customize->add_setting('guided_page_bgcolor', 
             array(
-                'default' => $this->defaults['service_page_bgcolor'],
+                'default' => $this->defaults['guided_page_bgcolor'],
                 'type' => 'theme_mod', 
                 'capability' => 'edit_theme_options', 
                 'transport' => 'refresh', 
                 'sanitize_callback' => 'sanitize_hex_color',
             )
         );
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'service_page_bgcolor',
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'guided_page_bgcolor',
             array(
                 'label' => esc_html__('Page / Post Background Color', 'tripfery'),
-                'settings' => 'service_page_bgcolor', 
-                'section' => 'service_single_layout_section', 
+                'settings' => 'guided_page_bgcolor', 
+                'section' => 'guided_single_layout_section', 
             )
         ));
-        
 
+        $wp_customize->add_setting(
+            'guided_about_me',
+            array(
+                'default' => $this->defaults['guided_about_me'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'guided_about_me',
+            array(
+                'label' => __('About Me Text', 'tripfery'),
+                'section' => 'rttheme_guided_settings',
+                'type' => 'text',
+            )
+        );
+
+    
     }
 
 }
@@ -243,5 +260,5 @@ class TripferyTheme_Service_Single_Layout_Settings extends TripferyTheme_Customi
  * Initialise our Customizer settings only when they're required
  */
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	new TripferyTheme_Service_Single_Layout_Settings();
+	new TripferyTheme_Guided_Single_Layout_Settings();
 }

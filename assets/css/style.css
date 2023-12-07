@@ -65,6 +65,7 @@ CSS INDEX
 #. rt-search-filter
 #. rt-booking-single
 #. rt-booking-archive
+#. rt-guided-single
 ---------------------------------------*/
 /*-------------------------------------
 #. Defaults
@@ -10795,4 +10796,73 @@ p.return-to-shop {
 }
 .rt-booking-item-inner{
 	position: relative;
+}
+
+/*======================================
+#. RT Guided Single 
+====================================*/
+.rt-guided-inner{
+	display: flex;
+}
+.rt-guided-inner .team-thumb img{
+	max-width: 180px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+.rt-guided-inner .entry-title{
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 14px;
+}
+.rt-guided-inner .rt-guided-title-inner{
+	display: flex;
+	margin-bottom: 55px;
+}
+.rt-guided-inner .rt-guided-reviews{
+	color: #919191;
+	font-size: 18px;
+}
+.rt-guided-inner .guided-heading{
+	min-width: 400px;
+	margin-right: 15px;
+}
+.rt-guided-verify .verfiy-lists{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+.rt-guided-verify .verfiy-lists li{
+	background: #F6F6F6;
+	border-radius: 70px;
+	padding: 7px;
+	padding-right: 20px;
+	font-size: 20px;
+	font-weight: 500;
+	transition: 0.4s;
+}
+.rt-guided-verify .verfiy-lists li:hover{
+	background: var(--tripfery-white-color);
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
+}
+.rt-guided-verify .verfiy-lists li i{
+	width: 45px;
+	height: 45px;
+	border-radius: 24px;
+	background-color: #38DB48;
+	text-align: center;
+	line-height: 26px;
+	font-size: 12px;
+	color: var(--tripfery-white-color);
+	border: 10px solid var(--tripfery-white-color);
+	margin-right: 6px;
+}
+.single-tripfery_guided .rtrs-summary .rtrs-progress-wrap .rtrs-progress label {
+	min-width: 124px;
+}
+.rt-guided-verify .verfiy-lists li span{
+	position: relative;
+	top: 2px;
 }

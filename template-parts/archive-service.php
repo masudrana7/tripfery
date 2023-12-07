@@ -23,10 +23,10 @@ if (TripferyTheme::$layout == 'right-sidebar' || TripferyTheme::$layout == 'left
 	$post_classes = 'col-sm-6 col-xl-3 col-lg-4';
 }
 
-if ( TripferyTheme::$options['service_archive_style'] == 'style1' ){
+if ( TripferyTheme::$options['guided_archive_style'] == 'style1' ){
 	$sercices_archive_layout = "rt-service-default rt-service-layout-1";
 	$template 				 = 'services-1';
-}elseif( TripferyTheme::$options['service_archive_style'] == 'style2' ){
+}elseif( TripferyTheme::$options['guided_archive_style'] == 'style2' ){
 	$sercices_archive_layout = "rt-service-default rt-service-layout-2";
 	$template 				 = 'services-2';
 }else{
@@ -46,9 +46,9 @@ else {
 	$paged = 1;
 }
 
-$service_post_number = TripferyTheme::$options['service_post_number'];
+$guided_post_number = TripferyTheme::$options['guided_post_number'];
 $args = array(
-	'posts_per_page'    => $service_post_number,
+	'posts_per_page'    => $guided_post_number,
 	'post_type'			=> 'tripfery_service',
 	'post_status'		=> 'publish',
 	'paged'             => $paged,

@@ -18,6 +18,8 @@ if (is_404()) {
 	}
 } elseif (is_post_type_archive('tripfery_team')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Teams', 'tripfery'));
+} elseif (is_post_type_archive('tripfery_guided')) {
+	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Guided', 'tripfery'));
 } elseif (is_post_type_archive('to_book')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Bookings', 'tripfery'));
 } elseif (is_post_type_archive('tripfery_service')) {
@@ -26,6 +28,8 @@ if (is_404()) {
 	$tripfery_title = apply_filters('theme_blog_title', esc_html__('All Posts', 'tripfery'));
 } elseif (is_singular('tripfery_team')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Team Details', 'tripfery'));
+} elseif (is_singular('tripfery_guided')) {
+	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Guided Details', 'tripfery'));
 } elseif (is_singular('tripfery_booking')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Details', 'tripfery'));
 } elseif (is_singular('tripfery_service')) {
@@ -88,6 +92,10 @@ if (!empty(TripferyTheme::$options['banner_shape2'])) {
 				<div class="rt-search-norlam">
 					<?php dynamic_sidebar('booking-form'); ?>
 				</div>
+				<?php } elseif(is_singular('tripfery_guided')){ ?>
+					<div class="rt-search-norlam">
+						<?php dynamic_sidebar('booking-form'); ?>
+					</div>
 				<?php } else if (is_single()) { ?>
 					<h1 class="blog-title"><?php echo wp_kses($tripfery_title, 'alltext_allow'); ?></h1>
 				<?php } else if (is_page()) { ?>
@@ -96,7 +104,7 @@ if (!empty(TripferyTheme::$options['banner_shape2'])) {
 					<h1 class="entry-title"><?php echo wp_kses($tripfery_title, 'alltext_allow'); ?></h1>
 				<?php } ?>
 
-				<?php if ((TripferyTheme::$has_breadcrumb == 1) && (!is_post_type_archive('to_book'))) { ?>
+				<?php if ((TripferyTheme::$has_breadcrumb == 1) && (!is_post_type_archive('to_book')) && (!is_post_type_archive('tripfery_guided'))) { ?>
 					<?php get_template_part('template-parts/content', 'breadcrumb'); ?>
 				<?php } ?>
 

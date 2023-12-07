@@ -278,9 +278,9 @@ class TripferyTheme_Customizer {
         );
 
         // Add Service Single Layout Section
-        $wp_customize->add_section( 'service_single_layout_section',
+        $wp_customize->add_section( 'guided_single_layout_section',
             array(
-                'title' => __( 'Service Single Layout', 'tripfery' ),
+                'title' => __( 'Guided Single Layout', 'tripfery' ),
                 'priority' => 8,
                 'panel' => 'rttheme_layouts_defaults',
             )
@@ -376,9 +376,9 @@ class TripferyTheme_Customizer {
         );
 
         // Add Service Section
-        $wp_customize->add_section( 'rttheme_service_settings',
+        $wp_customize->add_section( 'rttheme_guided_settings',
             array(
-                'title' => __( 'Service Setting', 'tripfery' ),
+                'title' => __('Quided Setting', 'tripfery' ),
                 'priority' => 2,
                 'panel' => 'rttheme_cpt_settings',
             )

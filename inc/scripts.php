@@ -233,3 +233,9 @@ if (!function_exists('tripfery_top_menu')) {
 		}
 	}
 }
+function enable_comments_for_tripfery_guided(){
+	add_post_type_support('tripfery_guided', 'comments');
+}
+add_action('init', 'enable_comments_for_tripfery_guided');
+
+
