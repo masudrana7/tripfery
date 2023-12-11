@@ -10866,3 +10866,20 @@ p.return-to-shop {
 	position: relative;
 	top: 2px;
 }
+.listing-filter-btn{
+	gap: 10px;
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+.listing-filter-btn button{
+	height: 45px;
+	padding: 0 25px;
+	border-radius: 5px;
+	background-color: var(--tripfery-grey-color-1);
+	color: var(--tripfery-heading-color);
+	transition: 0.4s;
+}
+.listing-filter-btn .active{
+	background-color: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
+}

@@ -125,9 +125,9 @@ jQuery(document).ready(function ($) {
     Listing Filter
     -------------------------------------*/
     if ($(".rt-case-isotope").length) {
-        $(".listing-filter-btns").children().first().addClass("active");
+        $(".listing-filter-btns, .listing-filter-btn").children().first().addClass("active");
         var $grid = $(".cardContainer").imagesLoaded(function () {
-            var filterBtnWrapper = $('.listing-filter-btns');
+            var filterBtnWrapper = $('.listing-filter-btns, .listing-filter-btn');
             if (filterBtnWrapper.length > 0) {
                 filterBtnWrapper.each(function() {
                     var firstFilterBtn = $(this).find('.filter-btn:first');
@@ -144,8 +144,8 @@ jQuery(document).ready(function ($) {
         /*-------------------------------------
         Filter Button
         -------------------------------------*/
-        $(".listing-filter-btns").on("click", "button", function () {
-            $(".listing-filter-btns button").removeClass("active");
+        $(".listing-filter-btns, .listing-filter-btn").on("click", "button", function () {
+            $(".listing-filter-btns button, .listing-filter-btn button").removeClass("active");
             $(this).addClass("active");
             var filterValue = $(this).attr("data-filter");
             $grid.isotope({ filter: filterValue });
