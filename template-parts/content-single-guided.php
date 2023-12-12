@@ -7,14 +7,10 @@
  */
 global $post;
 $guided_verifieds       		= get_post_meta($post->ID, 'tripfery_guided_verifieds', true);
-$guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true);
-
-?>
+$guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class('quided-single'); ?>>
 	<div class="team-single-content has-sidebar">
 		<div class="rt-guided-inner">
-
-
 			<div class="rt-guided-image">
 				<div class="team-thumb">
 					<?php
@@ -30,10 +26,8 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 					?>
 				</div>
 			</div>
-
 			<div class="rt-guided-content">
 				<div class="team-contents">
-
 					<div class="rt-guided-title-inner">
 						<div class="guided-heading">
 							<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -56,11 +50,8 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 							<h3 class="guided-about"><?php echo wp_kses(TripferyTheme::$options['guided_about_me'], 'alltext_allow'); ?></h3>
 						</div>
 					<?php } ?>
-
 					<?php the_content(); ?>
-
 					<?php
-
 					$post_id = get_the_ID();
 					$taxonomy = 'categories';
 					$terms = wp_get_post_terms($post_id, $taxonomy);
@@ -76,7 +67,6 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 						),
 					);
 					$query = new WP_Query($args);
-
 					if (class_exists('BABE_Functions')) { ?>
 						<div class="rt-case-isotope case-multi-isotope-1 rt-isotope-wrapper">
 							<div class="row">
@@ -118,9 +108,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 										$image = $image_srcs ? '<a class="text-decoration-none listing-thumb-wrapper" href="' . $url . '">
 										<img class="text-decoration-none listing-thumb-wrapper" src="' . $image_srcs[0] . '">
 										</a>' : '';
-										$gea_text       			= get_post_meta($post_id, 'tripfery_gea_text', true);
-
+										$gea_text = get_post_meta($post_id, 'tripfery_gea_text', true);
 										$guide_id = get_post_meta($post['ID'], 'booking_guided', true);
+										$featured_text = get_post_meta($post['ID'], 'tripfery_featured_check', true);
 										if ($guide_id) {
 											$guided_title = get_the_title($guide_id);
 											$guided_link = get_the_permalink($guide_id);
@@ -197,7 +187,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 												</div>
 											</div>
 
-										<!-- Activity Style -->
+											<!-- Activity Style -->
 										<?php } elseif ($term->slug == "activity") { ?>
 											<div class="card-item col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
 												<div class="listing-card <?php echo esc_attr($term->name) ?>">
@@ -248,7 +238,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 												</div>
 											</div>
 
-										<!-- Rental Style -->
+											<!-- Rental Style -->
 										<?php } elseif ($term->slug == "rental") { ?>
 											<div class="card-item col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
 												<div class="listing-card <?php echo esc_attr($term->name) ?>">
@@ -292,7 +282,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 												</div>
 											</div>
 
-										<!-- Car Style -->
+											<!-- Car Style -->
 										<?php } elseif ($term->slug == "car") { ?>
 											<div class="card-item rt-car-style col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
 												<div class="listing-card <?php echo esc_attr($term->name) ?>">
@@ -356,7 +346,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 																	</span>
 																<?php } ?>
 															</div>
-															
+
 															<div class="pt-0 d-flex align-items-center justify-content-between price-area">
 																<a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated">
 																	<?php echo esc_html('Booking Now', 'tripfery') ?>
@@ -374,6 +364,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
+															<?php if ('on' == $featured_text) { ?>
+																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+															<?php } ?>
 														</a>
 													<?php } ?>
 
@@ -429,12 +422,6 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 							</div>
 						</div>
 					<?php } ?>
-
-
-					<?php
-
-					?>
-
 
 					<!-- Comments  -->
 					<div class="info-card">

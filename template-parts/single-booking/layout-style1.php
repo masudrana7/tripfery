@@ -133,7 +133,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <div class="info-card">
                 <?php
                 if (comments_open() || get_comments_number()) {
-                    comments_template();
+                   comments_template();
                 }
                 ?>
             </div>

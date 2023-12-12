@@ -3643,6 +3643,10 @@ CSS INDEX
 .listing-card .price-area {
     padding-top: 25px;
 }
+.item_info_price_old .currency_amount {
+    text-decoration: line-through;
+    text-decoration-color: #8d8c8c;
+}
 .listing-card .price-text {
     font-size: 24px;
     font-weight: 600;
@@ -3685,6 +3689,29 @@ CSS INDEX
 }
 .listing-card:hover .listing-card-title a {
     color: var(--tripfery-primary-color);
+}
+.listing-card .listing-thumb-wrapper,
+.listing-card .rt-service-image{
+    position: relative;
+}
+.listing-card .feature-text,
+.listing-card .item_info_price_discount{
+    height: 25px;
+    padding: 0 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.listing-card .feature-text{
+    background-color: var(--tripfery-primary-color);
+}
+.discount_available .feature-text{
+    top: 40px;
 }
 .rating-stars {
     gap: 2px;
@@ -4266,7 +4293,6 @@ CSS INDEX
     background-color: #f9f9ff;
     border-radius: 100px 100px 20px 20px;
     padding: 15px 13px;
-    cursor: pointer;
 }
 .top-activity-wrapper::after {
     width: 100%;
@@ -4289,10 +4315,10 @@ CSS INDEX
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
 }
-.top-activity-wrapper .activity-info .activity-name a{
+.top-activity-wrapper .activity-info .activity-name{
     color: var(--tripfery-heading-color);
 }
-.top-activity-wrapper:hover .activity-info .activity-name a{
+.top-activity-wrapper:hover .activity-info .activity-name{
     color: var(--tripfery-white-color);
 }
 .top-activity-wrapper:hover .activity-info .activity-place {
@@ -6799,7 +6825,34 @@ pointer-events: none;
     background-color: transparent;
     margin-left: 10px;
 }
-
 .btn-xs:hover {
     color: var(--tripfery-primary-color);
+}
+.activity-info .activity{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.activity-info .activity a{
+    position: relative;
+}
+.activity-info .activity a:after {
+    position: absolute;
+    content: ",";
+    top: 0;
+    right: -4px;
+    color: #929292;
+    font-size: 14px;
+    transition: 0.4s;
+}
+.top-activity-wrapper:hover .activity a:after {
+    color: var(--tripfery-white-color);
+}
+.activity-info .activity a:last-child:after{
+    display: none;
+}
+.rt-total-star .rating-stars {
+    position: relative;
+    top: -2px;
 }

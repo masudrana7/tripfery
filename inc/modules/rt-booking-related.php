@@ -20,7 +20,6 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 				$post_id 	= $post['ID'];
 				$ba_post 	= BABE_Post_types::get_post($post_id);
 				$url = BABE_Functions::get_page_url_with_args($post_id, $_GET);
-
 				$thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
 				$image_srcs = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $thumbnail);
 				$image = $image_srcs ? '<a href="' . $url . '"><img class="room-thumb img-fluid" src="' . $image_srcs[0] . '"></a>' : '';
@@ -30,6 +29,7 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 				} else {
 					$prices = $ba_post;
 				}
+
 				$group_peoples = ($ba_post['guests'] == '1') ? "Guest" : "Guests";
 				$group_max_size = $ba_post['guests'] . ' ' . $group_peoples;
 			?>
@@ -65,12 +65,16 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 								</svg>
 								<span class="info-text">200m2</span>
 							</li>
-							<li class="info-text-wrapper d-flex align-items-center">
-								<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M17.9506 3.2311H8.61628V8.64406H7.62209V6.80412C7.62093 5.76165 7.20631 4.76221 6.46918 4.02506C5.73205 3.28792 4.73262 2.87327 3.69015 2.87209H1.43605V0H0V15.4375H1.43605V13.295L20.1047 13.4443V15.4375H21.5407V6.82122C21.5396 5.86939 21.161 4.95686 20.488 4.28382C19.8149 3.61078 18.9024 3.23219 17.9506 3.2311ZM1.43605 4.30814H3.69015C4.35187 4.30889 4.98627 4.57209 5.45418 5.04C5.92209 5.50791 6.18529 6.14231 6.18604 6.80403V8.64397H1.43605V4.30814ZM20.1047 12.0082L1.43605 11.8589V10.0801H20.1047V12.0082ZM20.1047 8.64406H10.0523V4.66715H17.9506C18.5217 4.6678 19.0692 4.89496 19.473 5.29878C19.8768 5.70261 20.104 6.25013 20.1047 6.82122V8.64406Z" fill="#2B2B2B" />
-								</svg>
-								<span class="info-text">1 Bed</span>
-							</li>
+
+							<?php
+								echo '<li class="info-text-wrapper d-flex align-items-center">';
+								$av_times = BABE_Post_types::get_post_av_times($ba_post);
+								if (!empty($av_times)) {
+									echo '<span class="booking_day"><i class="las la-clock"></i><span>' . BABE_Post_types::get_post_duration($ba_post) . '</span></span>';
+								}
+								echo '</li>';
+							?>
+
 							<li class="info-text-wrapper d-flex align-items-center">
 								<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.8215 16.9768L14.2455 12.3652C14.1639 11.712 13.8464 11.1111 13.3528 10.6756C12.8593 10.24 12.2236 9.99975 11.5653 10H9.58169C8.92372 10.0002 8.28846 10.2406 7.79527 10.6762C7.30207 11.1117 6.98488 11.7123 6.90329 12.3652L6.32639 16.9768C6.29473 17.2302 6.31733 17.4874 6.3927 17.7313C6.46807 17.9753 6.59448 18.2004 6.76353 18.3918C6.93258 18.5831 7.14041 18.7363 7.37321 18.8412C7.60601 18.946 7.85846 19.0002 8.11379 19H13.035C13.2902 19.0001 13.5426 18.9458 13.7753 18.8409C14.008 18.736 14.2157 18.5828 14.3847 18.3914C14.5536 18.2001 14.6799 17.975 14.7552 17.7311C14.8306 17.4872 14.8531 17.2301 14.8215 16.9768V16.9768Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />

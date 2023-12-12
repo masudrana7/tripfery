@@ -1,133 +1,4023 @@
 Array
 (
-    [ID] => 639
-    [post_author] => 1
-    [post_date] => 2023-10-24 06:20:44
-    [post_date_gmt] => 2023-10-24 06:20:44
-    [post_content] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset. Eum oratio reprehendunt cu. Nec te quem assum postea.
-    [post_title] => Skiing + Snowboarding
-    [post_excerpt] => 
-    [post_status] => publish
-    [comment_status] => open
-    [ping_status] => closed
-    [post_password] => 
-    [post_name] => skiing-snowboarding
-    [to_ping] => 
-    [pinged] => 
-    [post_modified] => 2023-11-07 05:43:29
-    [post_modified_gmt] => 2023-11-07 05:43:29
-    [post_content_filtered] => 
-    [post_parent] => 0
-    [guid] => http://tripfery.local/to_book/one-time-event-example/
-    [menu_order] => 8
-    [post_type] => to_book
-    [post_mime_type] => 
-    [comment_count] => 1
-    [address] => Array
+    [0] => pmr.meta_value
+    [1] => Array
         (
-            [address] => British Columbia, Canada
-            [latitude] => 53.726669
-            [longitude] => -127.647621
-        )
-
-    [address_one-time-event] => Array
-        (
-            [address] => Bryce Canyon National Park, USA
-            [latitude] => 37.59303769999999
-            [longitude] => -112.18708950000001
-        )
-
-    [ba_booking-locations] => Array
-        (
-            [61] => 61
-        )
-
-    [ba_features_one-time-event] => Array
-        (
-            [0] => 42
-            [1] => 43
-            [2] => 44
-        )
-
-    [ba_our-activitys] => Array
-        (
-            [92] => 92
-        )
-
-    [code] => 49-639
-    [code_one-time-event] => 49-639
-    [discount] => Array
-        (
-            [discount] => 
             [date_from] => 
             [date_to] => 
-        )
-
-    [end_date] => 24/11/2023
-    [end_time_one-time-event] => 19:00
-    [faq_one-time-event] => Array
-        (
-            [0] => 634
-            [1] => 633
-        )
-
-    [guests] => 100
-    [images] => Array
-        (
-            [0] => Array
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
                 (
-                    [image_id] => 949
-                    [image] => http://tripfery.local/wp-content/uploads/2023/10/ac-8.jpg
-                    [description] => Image description (optional)
                 )
 
-            [1] => Array
+            [terms] => Array
                 (
-                    [image_id] => 950
-                    [image] => http://tripfery.local/wp-content/uploads/2023/10/ac-1.jpg
-                    [description] => 
+                    [44] => 44
                 )
 
-            [2] => Array
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
                 (
-                    [image_id] => 947
-                    [image] => http://tripfery.local/wp-content/uploads/2023/10/ac-6.jpg
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
                 )
 
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
         )
 
-    [min_guests] => 1
-    [related_items] => Array
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
         (
-            [0] => 635
-            [1] => 636
-            [2] => 637
-            [3] => 638
-        )
-
-    [service_selection_type] => checkbox
-    [services_one-time-event] => Array
-        (
-            [0] => 632
-            [1] => 631
-        )
-
-    [start_date] => 24/11/2023
-    [start_time_one-time-event] => 11:00
-    [steps_one-time-event] => Array
-        (
-            [0] => Array
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
                 (
-                    [title] => Attraction 1
-                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset.
                 )
 
-            [1] => Array
+            [terms] => Array
                 (
-                    [title] => Attraction 2
-                    [attraction] => Lorem ipsum dolor sit amet, utinam munere antiopam vel ad. Qui eros iusto te. Nec ad feugiat honestatis. Quo illum detraxit an. Ius eius quodsi molestiae at, nostrum definitiones his cu. Discere referrentur mea id, an pri novum possim deterruisset.
+                    [44] => 44
                 )
 
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                    [44] => 44
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 2
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                    [44] => 44
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                    [44] => 44
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                    [44] => 44
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 2
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1011
+                    [1] => 1008
+                    [2] => 1006
+                    [3] => 1004
+                    [4] => 995
+                    [5] => 992
+                    [6] => 991
+                    [7] => 986
+                    [8] => 977
+                    [9] => 959
+                    [10] => 955
+                    [11] => 953
+                    [12] => 939
+                    [13] => 906
+                    [14] => 905
+                    [15] => 904
+                    [16] => 902
+                    [17] => 900
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 2
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1010
+                    [1] => 1005
+                    [2] => 990
+                    [3] => 958
+                    [4] => 956
+                    [5] => 943
+                    [6] => 935
+                    [7] => 907
+                    [8] => 638
+                    [9] => 636
+                    [10] => 637
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 2
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1010
+                    [1] => 1005
+                    [2] => 990
+                    [3] => 958
+                    [4] => 956
+                    [5] => 943
+                    [6] => 935
+                    [7] => 907
+                    [8] => 638
+                    [9] => 636
+                    [10] => 637
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1010
+                    [1] => 1005
+                    [2] => 990
+                    [3] => 958
+                    [4] => 956
+                    [5] => 943
+                    [6] => 935
+                    [7] => 907
+                    [8] => 638
+                    [9] => 636
+                    [10] => 637
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 3
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1011
+                    [1] => 1008
+                    [2] => 1006
+                    [3] => 1004
+                    [4] => 995
+                    [5] => 992
+                    [6] => 991
+                    [7] => 986
+                    [8] => 977
+                    [9] => 959
+                    [10] => 955
+                    [11] => 953
+                    [12] => 939
+                    [13] => 906
+                    [14] => 905
+                    [15] => 904
+                    [16] => 902
+                    [17] => 900
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 4
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 2
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 973
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 1
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 1
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 1
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => pmr.meta_value
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 0
+            [sort] => rating
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                    [0] => 1007
+                    [1] => 994
+                    [2] => 993
+                    [3] => 975
+                    [4] => 974
+                    [5] => 972
+                    [6] => 971
+                    [7] => 970
+                    [8] => 969
+                    [9] => 957
+                    [10] => 954
+                    [11] => 942
+                    [12] => 940
+                    [13] => 937
+                    [14] => 639
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => Array
+                (
+                    [38] => 0
+                    [39] => 0
+                    [40] => 0
+                )
+
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 1
+            [search_results_sort_by] => rating_asc
+            [search_tab] => hotel
+            [rating_value] => 5
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [post] => 2878
+            [action] => elementor
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [preview_id] => 2878
+            [preview_nonce] => b0caf1c68c
+            [preview] => true
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => posts.post_title
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 00:00
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 9
+            [guests] => 1
+            [sort] => post_title
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 1
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+            [request_search_results] => 
+            [search_results_sort_by] => title_asc
+            [post_type] => to_book
+            [order] => DESC
+            [orderby] => recent
+            [post__not_in] => Array
+                (
+                )
+
+            [post_status] => publish
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => ASC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
+        )
+
+)
+Array
+(
+    [0] => discount_price_from
+    [1] => Array
+        (
+            [date_from] => 
+            [date_to] => 
+            [time_from] => 00:00
+            [time_to] => 
+            [categories] => Array
+                (
+                )
+
+            [terms] => Array
+                (
+                )
+
+            [posts_per_page] => 1
+            [guests] => 1
+            [sort] => price_from
+            [sort_by] => DESC
+            [min_price] => 
+            [max_price] => 
+            [post__in] => Array
+                (
+                )
+
+            [keyword] => 
+            [return_total_count] => 0
+            [paged] => 1
+            [post_author] => 0
+            [without_av_check] => 0
+            [group_results_by_date] => 0
+            [not_scheduled] => 0
+            [without_av_cal] => 0
         )
 
 )

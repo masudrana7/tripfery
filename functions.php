@@ -50,25 +50,4 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-booking-related-two.php';
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
-
 	add_editor_style( 'style-editor.css' );
-
-	// Update Breadcrumb Separator
-	add_action('bcn_after_fill', 'tripfery_hseparator_breadcrumb_trail', 1);
-	function tripfery_hseparator_breadcrumb_trail($object){
-		$object->opt['hseparator'] = '<span class="dvdr"> / </span>';
-		return $object;
-	}
-
-	/*review comment most count*/
-	add_filter('pre_wp_update_comment_count_now', function( $counts, $old, $post_id){ 
-		global $wpdb;
-		return (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->comments WHERE comment_post_ID = %d AND comment_parent = 0 AND comment_approved = '1'", $post_id ) );
-
-	}, 999, 3);
-
-	/*post order*/
-	add_action('admin_init', 'rt_add_page_attributes');
-	function rt_add_page_attributes(){
-		add_post_type_support( 'post', 'page-attributes' );
-	}

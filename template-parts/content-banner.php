@@ -42,7 +42,7 @@ if (is_404()) {
 if (class_exists('BABE_Functions')) {
 	if (is_singular('to_book')) {
 		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Details', 'tripfery'));
-	} elseif (is_post_type_archive('to_book')) {
+	} elseif (is_archive('to_book')) {
 		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Location', 'tripfery'));
 	} else {
 		$tripfery_title = $tripfery_title;
