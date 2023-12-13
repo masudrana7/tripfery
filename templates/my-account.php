@@ -1,14 +1,19 @@
 <?php $user_info = wp_get_current_user(); ?>
 <?php if ($user_info->ID > 0) : ?>
     <?php $check_role = BABE_My_account::validate_role($user_info); ?>
-
     <?php if ($check_role) : ?>
-        <div id="my_account_page_wrapper">
+        <div class="rt_my_account_page_wrapper" id="my_account_page_wrapper">
             <?php
             $nav_arr = BABE_My_account::get_nav_arr($check_role);
             $current_nav_slug_arr = BABE_My_account::get_current_nav_slug($nav_arr);
             $current_nav_slug = key($current_nav_slug_arr);
+            $current_page_id = get_the_ID();
+            $current_page_url = get_permalink($current_page_id);
+
             ?>
+            <div class="rt-wish-list">
+
+            </div>
             <div class="my_account_page_nav_wrapper">
                 <input type="text" class="my_account_page_nav_selector" name="<?php echo esc_attr($current_nav_slug); ?>_label" value="<?php echo esc_attr($current_nav_slug_arr[$current_nav_slug]); ?>">
                 <i class="fas fa-chevron-down my_account_page_nav_selector_i"></i>
@@ -17,10 +22,11 @@
                 </div>
             </div>
             <div class="my_account_page_content_wrapper">
+                <a class="rt-wishlist-btn button-style-2" href="<?php echo esc_url($current_page_url); ?>/?inner_page=posts-wishlist"><i class="fa-regular fa-heart"></i><?php echo esc_html('Wishlist', 'tripfery') ?></a>
                 <div class="my_account-content-inner">
                     <?php
                     if (isset($_GET['inner_page']) && $_GET['inner_page'] == 'posts-wishlist') {
-                        do_action('gowilds_get_all_posts_wishlist');
+                        do_action('tripfery_get_all_posts_wishlist');
                     } else {
                         echo apply_filters('babe_myaccount_page_content_' . $check_role, '', $user_info);
                     }

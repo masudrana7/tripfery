@@ -3596,6 +3596,7 @@ CSS INDEX
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.ajax-loader svg,
 .wishlist svg:hover {
     color: #e7233a;
 }

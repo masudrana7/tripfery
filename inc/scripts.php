@@ -130,7 +130,7 @@ if (!function_exists('tripfery_enqueue_scripts')) {
 			// Ajax
 			'ajaxURL' => admin_url('admin-ajax.php'),
 			'post_scroll_limit' => TripferyTheme::$options['post_scroll_limit'],
-			'nonce' => wp_create_nonce('tripfery-nonce')
+			'nonce' => wp_create_nonce('tripfery-nonce'),
 		);
 		wp_localize_script('tripfery-main', 'tripferyObj', $tripfery_localize_data);
 	}

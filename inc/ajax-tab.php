@@ -14,7 +14,6 @@ use \WP_Query;
  * 
  */
 class AjaxTab {
-	
 	function __construct()
 	{
 		/*tripfery single scroll post*/

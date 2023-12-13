@@ -39,6 +39,7 @@ $tripfery_theme_data = wp_get_theme();
 	require_once TRIPFERY_INC_DIR . 'scripts.php';
 	require_once TRIPFERY_INC_DIR . 'template-vars.php';
 	require_once TRIPFERY_INC_DIR . 'includes.php';
+	require_once TRIPFERY_INC_DIR . 'ajax-wishlist.php';
 	// require_once TRIPFERY_INC_DIR . 'lc-helper.php';
 	// require_once TRIPFERY_INC_DIR . 'lc-utility.php';
 

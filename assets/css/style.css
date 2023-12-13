@@ -10888,11 +10888,6 @@ p.return-to-shop {
 	background-color: var(--tripfery-primary-color);
 	color: var(--tripfery-white-color);
 }
-#primary .my_account_page_content_wrapper{
-	background-color: var(--tripfery-grey-color-1);
-	padding: 50px;
-	border-radius: 20px;
-}
 body:not(.logged-in) #primary .my_account_page_content_wrapper{
 	max-width: 600px;
 	margin: 0 auto;
@@ -10908,9 +10903,7 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 #lostpassword_reset div input,
 .my_account_page_content_wrapper #babe_login input{
 	height: 45px;
-	border: none;
 	border-radius: 5px;
-	border: none;
 	padding: 0 20px;
 }
 #registration_form input:focus,
@@ -10926,6 +10919,7 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 	display: block;
 	margin-bottom: 10px;
 }
+.rt_my_account_page_wrapper .submit_group .btn,
 #registration_form .new-submit input,
 #lostpassword_reset button,
 .my_account_page_content_wrapper .login_submit #login_submit {
@@ -10949,6 +10943,10 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 	width: 100%;
 	transition: 0.4s;
 }
+.rt_my_account_page_wrapper .submit_group .btn{
+	width: auto;
+}
+.rt_my_account_page_wrapper .submit_group .btn,
 #registration_form .new-submit input:hover,
 #lostpassword_reset button:hover,
 .my_account_page_content_wrapper .login_submit #login_submit:hover{
@@ -10987,18 +10985,151 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 .rt-signup-form #registration .modal-title{
 	margin-bottom: 30px;
 }
+#primary .my_account_page_content_wrapper,
 .my_account_page_nav_list{
-	background-color: var(--tripfery-grey-color-1);
-	padding: 20px;
+	background-color: var(--tripfery-white-color);
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
 	border-radius: 20px;
+	padding: 40px 25px;
 }
 .my_account_nav_item_current {
-	background-color: var(--tripfery-primary-color);
-	border-radius: 5px;
+	background-color: transparent;
 }
-.my_account_nav_item_current a{
-	color: var(--tripfery-white-color);
+.my_account_page_content_wrapper table th,
+.my_account_page_content_wrapper table td {
+	text-align: left;
+	padding: 10px;
+}
+.my_account_nav_item_with_menu > .my_account_nav_item_title{
+	color: var(--tripfery-heading-color);
 }
 .my_account_nav_item_title{
+	color: var(--tripfery-body-color);
+	transition: 0.4s;
+}
+.my_account_my_bookings_order_status{
+	border: none;
+	background: transparent;
+}
+.my_account_all_posts .title-image .title a,
+.my_account_my_bookings tr th {
 	color: var(--tripfery-heading-color);
+	transition: 0.4s;
+}
+.my_account_nav_item_current a .my_account_nav_item_title,
+.my_account_all_posts .title-image .title a:hover,
+.my_account_nav_list li a:hover .my_account_nav_item_title {
+	color: var(--tripfery-primary-color);
+}
+.my_account_nav_item_icon {
+	margin-right: 5px;
+	font-size: 14px;
+}
+#my_account_page_wrapper{
+	gap: 20px;
+}
+.my_account_user_profile table{
+	margin: 0;
+}
+.my_account_user_profile table td{
+	padding: 0 0 6px;
+	border: none;
+	position: relative;
+}
+.my_account_user_profile table td:first-child::after{
+	content: ':';
+}
+.my_account_user_profile{
+	gap: 20px;
+}
+.my_account_my_bookings tr td,
+.my_account_my_bookings tr th{
+	background-color: var(--tripfery-grey-color-1);
+	vertical-align: middle;
+}
+.my_account_my_bookings tr td a{
+	color: var(--tripfery-body-color);
+}
+.my_account_my_bookings h2{
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.my_account_my_bookings_inner{
+	padding: 0;
+	overflow: auto;
+}
+.my_account_all_posts thead tr td{
+	background-color: var(--tripfery-grey-color-1);
+}
+.my_account_all_posts tr td img{
+	max-width: 80px;
+}
+.my_account_all_posts .title-image{
+	display: flex;
+	align-items: center;
+	gap:15px;
+}
+.my_account_all_posts_table tr td:last-child{
+	text-align: center;
+}
+.cmb2-before-row-header{
+	background: var(--tripfery-heading-color);
+}
+body .my_account_page_content_wrapper input.button-primary,
+body .my_account_page_content_wrapper .cmb2-wrap input.button-secondary,
+body .my_account_page_content_wrapper .cmb2-wrap button.button-secondary {
+	background: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
+	border:none;
+}
+#my_account_page_wrapper .button_link,
+.my_account_page_content_wrapper .view-rate-title.opened{
+	background: var(--tripfery-primary-color);
+}
+.my_account_nav_item_1 .my_account_nav_item_title {
+	padding: 0 0 5px;
+}
+#my_account_page_wrapper .button_link{
+	font-weight: 500;
+}
+#edit_user_profile .user_profile_fields_group .edit-profile-avatar{
+	width: 100%;
+	flex: 0 0 100%;
+	display: block;
+}
+#edit_user_profile .user_profile_fields_group{
+	justify-content: space-between;
+}
+.rt_my_account_page_wrapper .checkout_form_input_underline{
+	display: none;
+}
+.my_account_page_content_wrapper .cmb-td input[type=text].regular-text,
+.edit-profile-form-block input,
+.rt_my_account_page_wrapper #edit_user_profile .input_group > div input{
+	border: 1px solid var(--tripfery-border-color);
+	border-radius: 10px;
+	height: 45px;
+	padding: 0 15px;
+}
+.my_account_page_content_wrapper .cmb-td input[type=text].regular-text,
+.edit-profile-form-block input:focus{
+	outline: none;
+}
+.rt_my_account_page_wrapper .submit_group{
+	margin: 0;
+	justify-content: flex-start;
+}
+.rt_my_account_page_wrapper #edit_user_profile .checkout_form_input_label {
+	left: 15px;
+}
+.rt_my_account_page_wrapper .my_account_nav_item_title{
+	padding: 0;
+}
+.rt_my_account_page_wrapper .rt-wishlist-btn{
+	position: absolute;
+	right: 25px;
+	top: 40px;
+}
+.rt_my_account_page_wrapper .rt-wishlist-btn i{
+	margin-right: 6px;
 }

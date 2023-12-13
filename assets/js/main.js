@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
     "use strict";
-
     $('a[href=\\#]').on('click', function (e) {
         e.preventDefault();
     })
@@ -543,49 +542,118 @@ jQuery(document).ready(function ($) {
         }); 
     }
 
-    //Wishlist
-    $(document).on('click', '.rdtheme-wishlist-icon', function () {
-        if ($(this).hasClass('rdtheme-add-to-wishlist') && typeof yith_wcwl_l10n != "undefined") {
-            var $obj = $(this),
-                productId = $obj.data('product-id'),
-                afterTitle = $obj.data('title-after');
-            var data = {
-                'action': 'tripfery_add_to_wishlist',
-                'context': 'frontend',
-                'nonce': $obj.data('nonce'),
-                'add_to_wishlist': productId
-            };
-
-            $.ajax({
-                url: yith_wcwl_l10n.ajax_url,
-                type: 'POST',
-                data: data,
-                success: function success(data) {
-                    if (data['result'] != 'error') {
-                        $obj.removeClass('ajaxloading');
-                        $obj.find('.wishlist-icon').removeClass('fa fa-heart').addClass('fas fa-heart').show();
-                        $obj.removeClass('rdtheme-add-to-wishlist').addClass('rdtheme-remove-from-wishlist');
-                        $obj.find('span').html(afterTitle);
-                        $('body').trigger('rt_added_to_wishlist', [productId]);
-                         $('body').trigger('added_to_wishlist', [productId]);
-                    } else {
-                        console.log(data['message']);
-                    }
+    //Add Wishlist
+    $(document).on('click', '.wishlist', function (e) {
+        e.preventDefault();
+        var link = $(this);
+        var post_id = link.data('post_id');
+        link.addClass('ajax-loader');
+        $.ajax({
+            type: 'POST',
+            //dataType: 'json',
+            url: tripferyObj.ajaxURL,
+            data: {
+                'action': 'wishlist_add',
+                'post_id': post_id,
+                'mode': 'add',
+                'security': tripferyObj.nonce
+            },
+            success: function (data) {
+                link.removeClass('ajax-loader wishlist-add');
+                link.addClass('wishlist-remove');
+                if (!data.logged_in) {
+                    $('#form-ajax-login-popup').modal('show');
                 }
-            });
+                console.log(data.add_wishlist);
+                if (data.add_wishlist === 'added') {
+                    link.addClass('wishlist-added');
+                }
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
+    });
+    
+    // Remove Wishlist
+    $(document).on('click', '.wishlist-remove', function (e) {
+        e.preventDefault();
+        var link = $(this);
+        var post_id = link.data('post_id');
+        link.addClass('ajax-preload');
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: tripferyObj.ajaxURL,
+            data: {
+                'action': 'tripfery_wishlist',
+                'post_id': post_id,
+                'mode': 'remove',
+                'security': tripferyObj.nonce
+            },
+            success: function (data) {
+                link.removeClass('ajax-preload wishlist-remove');
+                link.addClass('wishlist-add');
+                if (!data.logged_in) {
+                    $('#form-ajax-login-popup').modal('show');
+                }
+                console.log(data.remove_wishlist);
 
-            return false;
-        }
+                if (data.remove_wishlist === 'removed') {
+                    link.removeClass('wishlist-added');
+                }
+            },
+            error: function (data) {
+                console.log('error');
+            }
+        });
     });
 
-   $(document).on( 'added_to_wishlist removed_from_wishlist', function(){
-        $.get( yith_wcwl_l10n.ajax_url, {
-          action: 'yith_wcwl_update_wishlist_count'
-        }, function( data ) {
-            console.log(data);
-          $('.wishlist-icon span.wishlist-icon-num').html( data.count );
-        } );
-    });
+
+//     $(document).on('click', '.rdtheme-wishlist-icon', function () {
+//         if ($(this).hasClass('rdtheme-add-to-wishlist') && typeof yith_wcwl_l10n != "undefined") {
+//             var $obj = $(this),
+//                 productId = $obj.data('product-id'),
+//                 afterTitle = $obj.data('title-after');
+//             var data = {
+//                 'action': 'tripfery_add_to_wishlist',
+//                 'context': 'frontend',
+//                 'nonce': $obj.data('nonce'),
+//                 'add_to_wishlist': productId
+//             };
+
+//             $.ajax({
+//                 url: yith_wcwl_l10n.ajax_url,
+//                 type: 'POST',
+//                 data: data,
+//                 success: function success(data) {
+//                     if (data['result'] != 'error') {
+//                         $obj.removeClass('ajaxloading');
+//                         $obj.find('.wishlist-icon').removeClass('fa fa-heart').addClass('fas fa-heart').show();
+//                         $obj.removeClass('rdtheme-add-to-wishlist').addClass('rdtheme-remove-from-wishlist');
+//                         $obj.find('span').html(afterTitle);
+//                         $('body').trigger('rt_added_to_wishlist', [productId]);
+//                          $('body').trigger('added_to_wishlist', [productId]);
+//                     } else {
+//                         console.log(data['message']);
+//                     }
+//                 }
+//             });
+
+//             return false;
+//         }
+//     });
+
+//    $(document).on( 'added_to_wishlist removed_from_wishlist', function(){
+//         $.get( yith_wcwl_l10n.ajax_url, {
+//           action: 'yith_wcwl_update_wishlist_count'
+//         }, function( data ) {
+//             console.log(data);
+//           $('.wishlist-icon span.wishlist-icon-num').html( data.count );
+//         } );
+//     });
+
+
 
 });
 
