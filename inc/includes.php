@@ -56,3 +56,23 @@ function rtrs_avg_rating_meta_save($avRatingValue, $comment_id, $post_id)
 add_filter('babe_get_posts_sort_arg', function ($sort, $args) {
     return $sort;
 }, 15, 2);
+
+// Tripfery User Account Page
+if (class_exists('BABE_Functions')) {
+    class Tripfery_BA_My_Account
+    {
+        function __construct()
+        {
+            add_filter('template_include', [$this, 'template_include'], 11);
+        }
+        public function template_include($template)
+        {
+            $account_page = intval(BABE_Settings::$settings['my_account_page']);
+            if (intval($account_page) === get_the_ID()) {
+                return locate_template(array('dashboard.php'));
+            }
+            return $template;
+        }
+    }
+    new Tripfery_BA_My_Account();
+}

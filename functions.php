@@ -23,6 +23,11 @@ $tripfery_theme_data = wp_get_theme();
 	define( 'TRIPFERY_BASE_URL',    get_template_directory_uri(). '/' );
 	define( 'TRIPFERY_ASSETS_URL',  TRIPFERY_BASE_URL . 'assets/' );
 	
+	// BA Book Everything
+	if (defined('BABE_VERSION')) {
+		require_once TRIPFERY_INC_DIR . 'dashboard.php';
+	}
+	
 	// icon trait Plugin Activation
 	require_once TRIPFERY_INC_DIR . 'icon-trait.php';
 	// Includes
@@ -51,3 +56,4 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
+

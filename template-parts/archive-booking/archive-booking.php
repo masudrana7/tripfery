@@ -114,34 +114,39 @@ if (class_exists('BABE_Functions')) {
                             $thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
                             $item_url = BABE_Functions::get_page_url_with_args($post['ID'], $_GET);
                             $image_srcs = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), $thumbnail);
-                            $image = $image_srcs ? '<a class="text-decoration-none listing-thumb-wrapper" href="' . $item_url . '"><img class="text-decoration-none listing-thumb-wrapper" src="' . $image_srcs[0] . '"></a>' : '';
+                            $image = $image_srcs ? '<img class="text-decoration-none listing-thumb-wrapper" src="' . $image_srcs[0] . '">' : '';
                             $url           = BABE_Functions::get_page_url_with_args($post_id, $_GET);
                             $item_terms = get_the_terms($post_id, 'categories');
                             $price_from_with_taxes = ($post['price_from'] * (100 + $post['categories_add_taxes'] * $post['categories_tax'])) / 100;
                             $price_old = $post['discount_price_from'] < $price_from_with_taxes ? '<span class="item_info_price_old">' . BABE_Currency::get_currency_price($price_from_with_taxes) . '</span>' : '';
-                            $discount = $post['discount'] ? '<div class="item_info_price_discount">-' . $post['discount'] . '%</div>' : '';
+                            $discount = $post['discount'] ? '<div class="item_info_price_discount">-' . $post['discount'] . '% Off</div>' : '';
+                            $featured_text = get_post_meta($post['ID'], 'tripfery_featured_check', true);
                             $item_info_price = '';
                             $ba_info     = BABE_Post_types::get_post($post_id);
                             if (!empty($post['discount_price_from'])) {
                                 $item_info_price = '
-                        <div class="rt-price">	
-                            ' . $price_old . '
-                            <span class="price-text item_info_price_new">' . BABE_Currency::get_currency_price($post['discount_price_from']) . '</span>
-                            ' . $discount . ' 
-                        </div>';
+                            <div class="rt-price">	
+                                ' . $price_old . '
+                                <span class="price-text item_info_price_new">' . BABE_Currency::get_currency_price($post['discount_price_from']) . '</span>
+                            </div>';
                             } ?>
-
                             <div class="swiper-slide">
                                 <div class="card-item mb-4">
-                                    <div class="listing-card">
-                                        <?php echo wp_kses_post($image); ?>
+                                    <div class="listing-card <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
+                                        <?php if (!empty($image_srcs)) { ?>
+                                            <a class="text-decoration-none listing-thumb-wrapper" href="' . $item_url . '">
+                                                <?php echo wp_kses_post($image); ?>
+                                                <?php echo wp_kses_post($discount); ?>
+                                                <?php if ('on' == $featured_text) { ?>
+                                                    <div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+                                                <?php } ?>
+                                            </a>
+                                        <?php } ?>
                                         <div class="listing-card-content">
                                             <div class="d-flex justify-content-between">
-
                                                 <?php if (TripferyTheme::$options['booking_locaton']) { ?>
                                                     <?php $address = isset($ba_info['address']) ? $ba_info['address'] : false;
-                                                    if ($address) {
-                                                    ?>
+                                                    if ($address) {  ?>
                                                         <div class="badge bage-pink">
                                                             <svg class="badge-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M5.99994 6.71503C6.86151 6.71503 7.55994 6.0166 7.55994 5.15503C7.55994 4.29347 6.86151 3.59503 5.99994 3.59503C5.13838 3.59503 4.43994 4.29347 4.43994 5.15503C4.43994 6.0166 5.13838 6.71503 5.99994 6.71503Z" stroke="currentColor" stroke-opacity="0.99" />
@@ -183,15 +188,12 @@ if (class_exists('BABE_Functions')) {
                                     </div>
                                 </div>
                             </div>
-
-
                         <?php }
                         $posts_pages = BABE_Post_types::$get_posts_pages;
                         $pagination = BABE_Functions::pager($posts_pages);
                         echo $pagination;
                         ?>
                     </div>
-
                 </div>
                 <div class="swiper-navigation">
                     <div class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></div>

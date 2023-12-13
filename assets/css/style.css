@@ -10,18 +10,15 @@
 	--tripfery-rating-color: #ffb443;
     --tripfery-heading-color: #232323;
     --tripfery-footer-color: #c0c0c0;
-
 	--tripfery-white-color: #ffffff;
 	--tripfery-black-color: #010101;
 	--tripfery-grey-color-1: #f8f8f8;  
 	--tripfery-grey-color-2: #717171;  
 	--tripfery-grey-color-3: #272727;  
-
 	--tripfery-primary-color-rgb: 254, 103, 45;
 	--tripfery-secondary-color-rgb: 227, 85, 14;
 	--tripfery-light-color-rgb: 254, 244, 240;
 	--tripfery-heading-color-rgb: 16, 16, 16;
-
 }
 /*-------------------------------------    
 CSS INDEX
@@ -1490,6 +1487,14 @@ body:not(.tr-header) .site-header .main-navigation ul.menu>li.menu-item-has-chil
     position: relative;
     top: -7px;
     right: 5px;
+}
+.rt-header-user i{
+	color: var(--tripfery-heading-color);
+	font-size: 18px;
+	transition: 0.4s;
+}
+.rt-header-user i:hover{
+	color: var(--tripfery-primary-color);
 }
 /*-------------------------------------
 #. Header Layout 2
@@ -10882,4 +10887,118 @@ p.return-to-shop {
 .listing-filter-btn .active{
 	background-color: var(--tripfery-primary-color);
 	color: var(--tripfery-white-color);
+}
+#primary .my_account_page_content_wrapper{
+	background-color: var(--tripfery-grey-color-1);
+	padding: 50px;
+	border-radius: 20px;
+}
+body:not(.logged-in) #primary .my_account_page_content_wrapper{
+	max-width: 600px;
+	margin: 0 auto;
+}
+#registration_form,
+.my_account_page_content_wrapper #babe_login{
+	display: block;
+}
+.my_account_page_content_wrapper #babe_login div{
+	padding: 0 0 30px;
+}
+#registration_form input,
+#lostpassword_reset div input,
+.my_account_page_content_wrapper #babe_login input{
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	border: none;
+	padding: 0 20px;
+}
+#registration_form input:focus,
+#lostpassword_reset div input:focus,
+.my_account_page_content_wrapper #babe_login input:focus{
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+.rt-signup-form #registration label,
+#lostpassword_reset label,
+.my_account_page_content_wrapper #babe_login label{
+	display: block;
+	margin-bottom: 10px;
+}
+#registration_form .new-submit input,
+#lostpassword_reset button,
+.my_account_page_content_wrapper .login_submit #login_submit {
+	background-color: var(--tripfery-primary-color);
+	color: #ffffff;
+	padding: 0 35px;
+	height: 50px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	font-weight: 500;
+	line-height: 26px;
+	border: none;
+	border-radius: 40px;
+	z-index: 1;
+	text-transform: capitalize;
+	-webkit-transition: all ease 0.5s;
+	transition: all ease 0.5s;
+	overflow: hidden;
+	margin-top: 10px;
+	width: 100%;
+	transition: 0.4s;
+}
+#registration_form .new-submit input:hover,
+#lostpassword_reset button:hover,
+.my_account_page_content_wrapper .login_submit #login_submit:hover{
+	opacity: 0.85;
+}
+#lostpassword_reset div{
+	padding: 0;
+	margin-top: 30px;
+}
+#registration .modal-content {
+	background-color: var(--tripfery-grey-color-1);
+	padding: 50px;
+	border-radius: 20px;
+	max-width: 600;
+	margin: 0 auto;
+	border: none;
+}
+.rt-signup-form .desc{
+	margin-bottom: 10px;
+}
+.rt-signup-form #registration .close,
+#login_registration > h3,
+#login_registration > .registration_link{
+	display: none;
+}
+.rt-signup-form #registration .modal-header,
+.rt-signup-form #registration .modal-title{
+	 padding: 0;
+}
+#registration_form>div{
+	padding: 0 0 15px;
+}
+.rt-signup-form #registration .modal-header{
+	border: none;
+}
+.rt-signup-form #registration .modal-title{
+	margin-bottom: 30px;
+}
+.my_account_page_nav_list{
+	background-color: var(--tripfery-grey-color-1);
+	padding: 20px;
+	border-radius: 20px;
+}
+.my_account_nav_item_current {
+	background-color: var(--tripfery-primary-color);
+	border-radius: 5px;
+}
+.my_account_nav_item_current a{
+	color: var(--tripfery-white-color);
+}
+.my_account_nav_item_title{
+	color: var(--tripfery-heading-color);
 }

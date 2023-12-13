@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @author  RadiusTheme
  * @since   1.0
@@ -7,6 +8,5 @@
 
 ?>
 
-<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-	<?php WC_Functions::TripferyWooMiniCart(); ?>
-<?php } ?>
+<a class="rt-header-user" href="#"><i class="icon-tripfery-user">
+	</i></a>

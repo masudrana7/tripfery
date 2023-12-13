@@ -74,5 +74,5 @@ if( !empty( TripferyTheme::$options['logo_light'] ) ) {
           <span class="line line2"></span>
           <span class="line line3"></span>
         </span>
-      </button>
+    </button>
 </div>

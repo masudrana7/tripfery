@@ -105,9 +105,6 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 										$url   		= BABE_Functions::get_page_url_with_args($post_id, $_GET);
 										$thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
 										$image_srcs = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), $thumbnail);
-										$image = $image_srcs ? '<a class="text-decoration-none listing-thumb-wrapper" href="' . $url . '">
-										<img class="text-decoration-none listing-thumb-wrapper" src="' . $image_srcs[0] . '">
-										</a>' : '';
 										$gea_text = get_post_meta($post_id, 'tripfery_gea_text', true);
 										$guide_id = get_post_meta($post['ID'], 'booking_guided', true);
 										$featured_text = get_post_meta($post['ID'], 'tripfery_featured_check', true);
@@ -131,6 +128,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 													if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
+															<?php if ('on' == $featured_text) { ?>
+																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+															<?php } ?>
 														</a>
 													<?php } ?>
 
@@ -194,7 +194,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
-
+															<?php if ('on' == $featured_text) { ?>
+																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+															<?php } ?>
 															<span class="booking-top-rating">
 																<i class="fa-solid fa-star"></i>
 																<?php echo BABE_Rating::get_post_total_rating($post_id); ?>
@@ -245,11 +247,12 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
-
 															<div class="wishlist">
 																<i class="fa-regular fa-heart"></i>
 															</div>
-
+															<?php if ('on' == $featured_text) { ?>
+																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+															<?php } ?>
 														</a>
 													<?php } ?>
 
@@ -285,7 +288,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 											<!-- Car Style -->
 										<?php } elseif ($term->slug == "car") { ?>
 											<div class="card-item rt-car-style col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
-												<div class="listing-card <?php echo esc_attr($term->name) ?>">
+												<div class="listing-card  <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) {
+																													echo 'discount_available ';
+																												} ?>">
 													<div class="top-title">
 														<h3 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
@@ -314,6 +319,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 															<div class="wishlist">
 																<i class="fa-regular fa-heart"></i>
 															</div>
+															<?php if ('on' == $featured_text) { ?>
+																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
+															<?php } ?>
 
 														</a>
 													<?php } ?>
@@ -360,7 +368,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 											</div>
 										<?php } else { ?>
 											<div class="card-item col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
-												<div class="listing-card <?php echo esc_attr($term->name) ?>">
+												<div class="listing-card <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) {
+																													echo 'discount_available ';
+																												} ?>">
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
