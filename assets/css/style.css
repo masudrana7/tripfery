@@ -10909,7 +10909,6 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 #registration_form input:focus,
 #lostpassword_reset div input:focus,
 .my_account_page_content_wrapper #babe_login input:focus{
-	border: none;
 	box-shadow: none;
 	outline: none;
 }
@@ -11011,13 +11010,13 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 	border: none;
 	background: transparent;
 }
-.my_account_all_posts .title-image .title a,
+.tripfery_account_posts .title-image .title a,
 .my_account_my_bookings tr th {
 	color: var(--tripfery-heading-color);
 	transition: 0.4s;
 }
 .my_account_nav_item_current a .my_account_nav_item_title,
-.my_account_all_posts .title-image .title a:hover,
+.tripfery_account_posts .title-image .title a:hover,
 .my_account_nav_list li a:hover .my_account_nav_item_title {
 	color: var(--tripfery-primary-color);
 }
@@ -11058,18 +11057,18 @@ body:not(.logged-in) #primary .my_account_page_content_wrapper{
 	padding: 0;
 	overflow: auto;
 }
-.my_account_all_posts thead tr td{
+.tripfery_account_posts thead tr td{
 	background-color: var(--tripfery-grey-color-1);
 }
-.my_account_all_posts tr td img{
+.tripfery_account_posts tr td img{
 	max-width: 80px;
 }
-.my_account_all_posts .title-image{
+.tripfery_account_posts .title-image{
 	display: flex;
 	align-items: center;
 	gap:15px;
 }
-.my_account_all_posts_table tr td:last-child{
+.tripfery_account_posts_table tr td:last-child{
 	text-align: center;
 }
 .cmb2-before-row-header{

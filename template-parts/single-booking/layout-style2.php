@@ -9,9 +9,9 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             $image_id = $image['image_id'];
             $image_url = wp_get_attachment_image_url($image_id, 'full');
         ?>
-        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-            <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-        </a>
+            <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+            </a>
         <?php } ?>
     </div>
 </div>
@@ -101,13 +101,13 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <div class="rt-price-single-inner activity-price d-flex">
                 <div class="price-area">
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
-                    <?php if ($discountPrice < $nPrice) { ?>
+                    <?php if ($discountPrice) { ?>
                         <div class="rt-single-price rt-old-price">
-                            <?php echo $nPrice; ?>
+                            <?php echo $discountPrice; ?>
                         </div>
                     <?php } else { ?>
                         <div class="rt-single-price rt-new-price">
-                            <?php echo $discountPrice; ?>
+                            <?php echo $nPrice; ?>
                         </div>
                     <?php } ?>
                 </div>

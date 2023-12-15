@@ -9,11 +9,7 @@
             $current_nav_slug = key($current_nav_slug_arr);
             $current_page_id = get_the_ID();
             $current_page_url = get_permalink($current_page_id);
-
             ?>
-            <div class="rt-wish-list">
-
-            </div>
             <div class="my_account_page_nav_wrapper">
                 <input type="text" class="my_account_page_nav_selector" name="<?php echo esc_attr($current_nav_slug); ?>_label" value="<?php echo esc_attr($current_nav_slug_arr[$current_nav_slug]); ?>">
                 <i class="fas fa-chevron-down my_account_page_nav_selector_i"></i>

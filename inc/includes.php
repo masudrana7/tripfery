@@ -69,7 +69,7 @@ if (class_exists('BABE_Functions')) {
         {
             $account_page = intval(BABE_Settings::$settings['my_account_page']);
             if (intval($account_page) === get_the_ID()) {
-                return locate_template(array('dashboard.php'));
+                return locate_template(array('acount_dashboard.php'));
             }
             return $template;
         }

@@ -544,29 +544,29 @@ jQuery(document).ready(function ($) {
 
     //Add Wishlist
     $(document).on('click', '.wishlist', function (e) {
-        e.preventDefault();
+         e.preventDefault();
         var link = $(this);
         var post_id = link.data('post_id');
         link.addClass('ajax-loader');
         $.ajax({
             type: 'POST',
-            //dataType: 'json',
+            dataType: 'json',
             url: tripferyObj.ajaxURL,
             data: {
-                'action': 'wishlist_add',
+                'action': 'tripfery_wishlist',
                 'post_id': post_id,
                 'mode': 'add',
-                'security': tripferyObj.nonce
+                'security': tripferyObj.nonce,
             },
             success: function (data) {
                 link.removeClass('ajax-loader wishlist-add');
-                link.addClass('wishlist-remove');
+                link.addClass('remove-wishlist');
                 if (!data.logged_in) {
                     $('#form-ajax-login-popup').modal('show');
                 }
                 console.log(data.add_wishlist);
                 if (data.add_wishlist === 'added') {
-                    link.addClass('wishlist-added');
+                    link.addClass('added-wishlist');
                 }
             },
             error: function (data) {
@@ -576,7 +576,7 @@ jQuery(document).ready(function ($) {
     });
     
     // Remove Wishlist
-    $(document).on('click', '.wishlist-remove', function (e) {
+    $(document).on('click', '.remove-wishlist', function (e) {
         e.preventDefault();
         var link = $(this);
         var post_id = link.data('post_id');
@@ -592,15 +592,14 @@ jQuery(document).ready(function ($) {
                 'security': tripferyObj.nonce
             },
             success: function (data) {
-                link.removeClass('ajax-preload wishlist-remove');
-                link.addClass('wishlist-add');
+                link.removeClass('ajax-preload remove-wishlist');
+                link.addClass('add-wishlist');
                 if (!data.logged_in) {
                     $('#form-ajax-login-popup').modal('show');
                 }
                 console.log(data.remove_wishlist);
-
                 if (data.remove_wishlist === 'removed') {
-                    link.removeClass('wishlist-added');
+                    link.removeClass('added-wishlist');
                 }
             },
             error: function (data) {

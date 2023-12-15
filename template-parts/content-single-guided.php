@@ -113,7 +113,12 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 											$guided_link = get_the_permalink($guide_id);
 											$post_thumbnail_url = get_the_post_thumbnail_url($guide_id, 'full');
 										}
-
+										$price = "";
+										if (!isset($post['discount_price_from']) || !isset($post['price_from']) || !isset($post['discount_date_to']) || !isset($post['discount'])) {
+											$price = BABE_Post_types::get_post_price_from($post['ID']);
+										}
+										$discountPrice = BABE_Currency::get_currency_price($price['discount_price_from']);
+										$nPrice = BABE_Currency::get_currency_price($price['price_from']);
 										foreach ($post_terms as $term) {
 											if (!in_array($term->term_id, $term_ids)) {
 												$term_ids[] = $term->term_id; ?>
@@ -147,32 +152,50 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 																	<span class="badge-text"><?php echo esc_html($address['address']); ?></span>
 																</div>
 															<?php } ?>
-															<div class="wishlist">
-																<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M10.5167 16.3416C10.2334 16.4416 9.76675 16.4416 9.48341 16.3416C7.06675 15.5166 1.66675 12.075 1.66675 6.24165C1.66675 3.66665 3.74175 1.58331 6.30008 1.58331C7.81675 1.58331 9.15841 2.31665 10.0001 3.44998C10.8417 2.31665 12.1917 1.58331 13.7001 1.58331C16.2584 1.58331 18.3334 3.66665 18.3334 6.24165C18.3334 12.075 12.9334 15.5166 10.5167 16.3416Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 														</div>
 
 														<h3 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
 														</h3>
 
-														<?php if ($guide_id) { ?>
-															<div class="d-flex flex-column tour-info-middle">
-																<span class="text-gray"><?php echo esc_html('Guided By', 'tripfery-core') ?></span>
-																<div class="d-flex align-items-center">
-																	<?php if (!empty($post_thumbnail_url)) { ?>
-																		<div>
-																			<img src="<?php echo esc_html($post_thumbnail_url); ?>" class="author-avatar" alt="People">
-																		</div>
+
+														<div class="d-flex align-items-center justify-content-between tour-info-middle">
+															<?php if ($nPrice || $discountPrice) { ?>
+																<div class="d-flex flex-column">
+																	<span class="text-gray"><?php echo esc_html('Start from', 'tripfery')?></span>
+																	<?php if ($price['discount_price_from']) { ?>
+																		<span class="price-text item_info_price_new">
+																			<span class="currency_amount" data-amount="<?php echo esc_attr($discountPrice); ?>"><?php echo wp_kses_post($discountPrice); ?></span>
+																		</span>
+																	<?php } else { ?>
+																		<span class="price-text item_info_price_new">
+																			<span class="currency_amount" data-amount="<?php echo esc_attr($nPrice); ?>"><?php echo wp_kses_post($nPrice); ?></span>
+																		</span>
 																	<?php } ?>
-
-																	<h4><a href="<?php echo esc_url($guided_link); ?>" class="author-name"><?php echo esc_html($guided_title); ?></a></h4>
-
 																</div>
-															</div>
-														<?php } ?>
+															<?php } ?>
+
+															<?php if ($guide_id) { ?>
+																<div class="d-flex flex-column">
+																	<span class="text-gray"><?php echo esc_html('Guided By', 'tripfery-core') ?></span>
+																	<div class="d-flex align-items-center">
+																		<?php if (!empty($post_thumbnail_url)) { ?>
+																			<div>
+																				<img src="<?php echo esc_html($post_thumbnail_url); ?>" class="author-avatar" alt="People">
+																			</div>
+																		<?php } ?>
+
+																		<h4><a href="<?php echo esc_url($guided_link); ?>" class="author-name"><?php echo esc_html($guided_title); ?></a></h4>
+
+																	</div>
+																</div>
+															<?php } ?>
+														</div>
+
+
 
 														<?php if (!empty(BABE_Rating::post_stars_rendering($post['ID']))) { ?>
 															<div class="d-flex align-item listing-card-review-area">
@@ -218,11 +241,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 																	<span class="badge-text"><?php echo esc_html($address['address']); ?></span>
 																</div>
 															<?php } ?>
-															<div class="wishlist">
-																<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M10.5167 16.3416C10.2334 16.4416 9.76675 16.4416 9.48341 16.3416C7.06675 15.5166 1.66675 12.075 1.66675 6.24165C1.66675 3.66665 3.74175 1.58331 6.30008 1.58331C7.81675 1.58331 9.15841 2.31665 10.0001 3.44998C10.8417 2.31665 12.1917 1.58331 13.7001 1.58331C16.2584 1.58331 18.3334 3.66665 18.3334 6.24165C18.3334 12.075 12.9334 15.5166 10.5167 16.3416Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 														</div>
 
 														<h3 class="listing-card-title">
@@ -230,6 +251,15 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 														</h3>
 
 														<div class="d-flex align-items-center justify-content-between price-area">
+															<?php if ($price['discount_price_from']) { ?>
+																<span class="price-text item_info_price_new">
+																	<span class="currency_amount" data-amount="<?php echo esc_attr($discountPrice); ?>"><?php echo wp_kses_post($discountPrice); ?></span>
+																</span>
+															<?php } else { ?>
+																<span class="price-text item_info_price_new">
+																	<span class="currency_amount" data-amount="<?php echo esc_attr($nPrice); ?>"><?php echo wp_kses_post($nPrice); ?></span>
+																</span>
+															<?php } ?>
 															<a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated">
 																<?php echo esc_html('Book Now', 'tripfery') ?>
 															</a>
@@ -247,9 +277,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
-															<div class="wishlist">
-																<i class="fa-regular fa-heart"></i>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 															<?php if ('on' == $featured_text) { ?>
 																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
 															<?php } ?>
@@ -275,11 +305,15 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
 														</h3>
 
-														<div class="d-flex align-items-center justify-content-between price-area">
-															<a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated">
-																<?php echo esc_html('Book Now', 'tripfery') ?>
-															</a>
-														</div>
+														<?php if ($price['discount_price_from']) { ?>
+															<span class="price-text item_info_price_new">
+																<span class="currency_amount" data-amount="<?php echo esc_attr($discountPrice); ?>"><?php echo wp_kses_post($discountPrice); ?></span>
+															</span>
+														<?php } else { ?>
+															<span class="price-text item_info_price_new">
+																<span class="currency_amount" data-amount="<?php echo esc_attr($nPrice); ?>"><?php echo wp_kses_post($nPrice); ?></span>
+															</span>
+														<?php } ?>
 
 													</div>
 												</div>
@@ -304,11 +338,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 
 																</div>
 															<?php } ?>
-															<div class="wishlist">
-																<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M13.1455 21.6771C12.7913 21.8021 12.208 21.8021 11.8538 21.6771C8.83301 20.6459 2.08301 16.3438 2.08301 9.05215C2.08301 5.8334 4.67676 3.22923 7.87467 3.22923C9.77051 3.22923 11.4476 4.1459 12.4997 5.56257C13.5518 4.1459 15.2393 3.22923 17.1247 3.22923C20.3226 3.22923 22.9163 5.8334 22.9163 9.05215C22.9163 16.3438 16.1663 20.6459 13.1455 21.6771Z" fill="#F12C5B"></path>
-																</svg>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 														</div>
 													</div>
 
@@ -316,9 +348,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />
 
-															<div class="wishlist">
-																<i class="fa-regular fa-heart"></i>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 															<?php if ('on' == $featured_text) { ?>
 																<div class="feature-text"><?php echo wp_kses_post('Featured', 'tripfery') ?></div>
 															<?php } ?>
@@ -393,11 +425,9 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 																	<span class="badge-text"><?php echo esc_html($address['address']); ?></span>
 																</div>
 															<?php } ?>
-															<div class="wishlist">
-																<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<path d="M10.5167 16.3416C10.2334 16.4416 9.76675 16.4416 9.48341 16.3416C7.06675 15.5166 1.66675 12.075 1.66675 6.24165C1.66675 3.66665 3.74175 1.58331 6.30008 1.58331C7.81675 1.58331 9.15841 2.31665 10.0001 3.44998C10.8417 2.31665 12.1917 1.58331 13.7001 1.58331C16.2584 1.58331 18.3334 3.66665 18.3334 6.24165C18.3334 12.075 12.9334 15.5166 10.5167 16.3416Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
+															<?php if (class_exists('RTWishlist')) {
+																echo RTWishlist::wishlist_html($post_id);
+															} ?>
 														</div>
 
 														<h3 class="listing-card-title">
@@ -414,18 +444,27 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 														<?php } ?>
 
 														<div class="d-flex align-items-center justify-content-between price-area">
+															<div class="rt-price">
+
+																<?php if ($price['discount_price_from']) { ?>
+																	<span class="price-text item_info_price_new">
+																		<span class="currency_amount" data-amount="<?php echo esc_attr($discountPrice); ?>"><?php echo wp_kses_post($discountPrice); ?></span>
+																	</span>
+																<?php } else { ?>
+																	<span class="price-text item_info_price_new">
+																		<span class="currency_amount" data-amount="<?php echo esc_attr($nPrice); ?>"><?php echo wp_kses_post($nPrice); ?></span>
+																	</span>
+																<?php } ?>
+
+															</div>
 															<a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated">
 																<?php echo esc_html('View Availability', 'tripfery') ?>
 															</a>
-
 														</div>
-
 													</div>
 												</div>
 											</div>
-										<?php }
-										?>
-
+										<?php } ?>
 								<?php }
 									wp_reset_postdata();
 								} ?>

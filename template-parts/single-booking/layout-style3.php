@@ -62,13 +62,13 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             <div class="activity-price rt-price-single-inner d-flex">
                 <div class="price-area">
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
-                    <?php if ($discountPrice < $nPrice) { ?>
+                    <?php if ($discountPrice) { ?>
                         <div class="rt-single-price rt-old-price">
-                            <?php echo $nPrice; ?>
+                            <?php echo $discountPrice; ?>
                         </div>
                     <?php } else { ?>
                         <div class="rt-single-price rt-new-price">
-                            <?php echo $discountPrice; ?>
+                            <?php echo $nPrice; ?>
                         </div>
                     <?php } ?>
                 </div>

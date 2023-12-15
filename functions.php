@@ -25,7 +25,7 @@ $tripfery_theme_data = wp_get_theme();
 	
 	// BA Book Everything
 	if (defined('BABE_VERSION')) {
-		require_once TRIPFERY_INC_DIR . 'dashboard.php';
+		require_once TRIPFERY_INC_DIR . 'account_dashboard.php';
 	}
 	
 	// icon trait Plugin Activation

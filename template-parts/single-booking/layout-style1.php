@@ -12,31 +12,29 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </h3>
                     <?php echo $rt_stars; ?>
                 </div>
-                <?php if(!empty($address['address'])){?>
-                <div class="details-address-info align-items-center">
-                    <p class="details-address">
-                        <span class="address-icon"><i class="icon-tripfery-map-iocn"></i></span>
-                        <span class="address-text"><?php echo esc_html($address['address']); ?></span>
-                    </p>
-                </div>
+                <?php if (!empty($address['address'])) { ?>
+                    <div class="details-address-info align-items-center">
+                        <p class="details-address">
+                            <span class="address-icon"><i class="icon-tripfery-map-iocn"></i></span>
+                            <span class="address-text"><?php echo esc_html($address['address']); ?></span>
+                        </p>
+                    </div>
                 <?php } ?>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="d-flex share-link-area justify-content-lg-end align-items-center">
                 <div class="d-flex">
-
-                    <?php echo esc_html('From', 'tripfery') ?>
-                    <?php if ($price['discount_price_from'] < $price['price_from']) { ?>
+                    <?php echo esc_html('From', 'tripfery')  ?>
+                    <?php if ($price['discount_price_from']) { ?>
                         <div class="rt-single-price rt-old-price">
-                            <?php echo BABE_Currency::get_currency_price($price['price_from']); ?>
+                            <?php echo BABE_Currency::get_currency_price($price['discount_price_from']); ?>
                         </div>
                     <?php } else { ?>
                         <div class="rt-single-price rt-new-price">
-                            <?php echo BABE_Currency::get_currency_price($price['discount_price_from']); ?>
+                            <?php echo BABE_Currency::get_currency_price($price['price_from']); ?>
                         </div>
                     <?php } ?>
-
                 </div>
                 <div class="d-flex share-btns-link">
                     <a href="rental-details.html" class="share-btn">
@@ -133,7 +131,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <div class="info-card">
                 <?php
                 if (comments_open() || get_comments_number()) {
-                   comments_template();
+                    comments_template();
                 }
                 ?>
             </div>
