@@ -5,7 +5,6 @@
  * @since   1.0
  * @version 1.0
  */
-
 if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Functions')) {
 	function tripfery_related_booking_two()
 	{
@@ -33,13 +32,13 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 			),
 			'auto'   => false
 		);
-
 		$swiper_data = json_encode($swiper_data); ?>
 		<h3 class="info-card-title"><?php echo wp_kses(TripferyTheme::$options['booking_related_title'], 'alltext_allow'); ?></h3>
 		<div class="rt-swiper-slider" data-xld='<?php echo esc_attr($swiper_data); ?>'>
 			<div class="swiper-wrapper">
 				<?php
 				foreach ($related_arr as $rel_post) {
+					error_log( print_r($rel_post, true ), 3, __DIR__.'/log.txt');
 					$post = get_post($rel_post, ARRAY_A);
 					$post_id 	= $post['ID'];
 					$ba_post 	= BABE_Post_types::get_post($post_id);

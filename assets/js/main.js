@@ -574,7 +574,31 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-    
+
+    if ($('.rt-search-customize #search_form .input-group>div').length) {
+        $('.rt-search-customize #search_form .input-group>div').wrap('<div class="parent-inner"></div>');
+    }
+    // Location Title
+    if ($('.rt_location_title').length) {
+        var location_title = $('.rt_location_title').text();
+        $('.rt-search-customize #search_form .parent-inner:nth-child(1)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-map-iocn"></i> ' + location_title + ' </span>');
+    }
+    // Start Date Title
+    if ($('.rt_start_date').length) {
+        var sd_title = $('.rt_start_date').text();
+        $('.rt-search-customize #search_form .parent-inner:nth-child(2)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + sd_title + ' </span>');
+    }
+    // End Date Title
+    if ($('.rt_end_date').length) {
+        var ed_title = $('.rt_end_date').text();
+        $('.rt-search-customize #search_form .parent-inner:nth-child(4)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + ed_title + ' </span>');
+    }
+    // Guests Title
+    if ($('.rt_end_date').length) {
+        var guests_title = $('.rt_guests').text();
+        $('.rt-search-customize #search_form .parent-inner:nth-child(6)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-user"></i> ' + guests_title + ' </span>');
+    }
+
     // Remove Wishlist
     $(document).on('click', '.remove-wishlist', function (e) {
         e.preventDefault();

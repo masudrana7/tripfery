@@ -9670,8 +9670,9 @@ p.return-to-shop {
 }
 .rt-search-customize #search-box .input-group{
 	justify-content: flex-start;
+	align-items: flex-end;
 }
-.rt-search-customize #search_form .input-group .search-date .search_date {
+.rt-search-customize #search_form .input-group .parent-inner .search-date .search_date {
 	width: 112px;
 	font-size: 15px;
 }
@@ -9711,7 +9712,7 @@ p.return-to-shop {
 	max-width: max-content;
 	padding: 30px;
 }
-.rt-search-customize #search_form .input-group>div:not(.submit){
+.rt-search-customize #search_form .input-group .parent-inner >div:not(.submit){
 	border-bottom: none;
 	margin: 0;
 	min-width: 135px;
@@ -9728,14 +9729,14 @@ p.return-to-shop {
 	border: 1px solid var(--tripfery-border-color);
 	margin-right: 5px;
 }
-.rt-search-customize #search_form .input-group>div.submit{
+.rt-search-customize #search_form .input-group .parent-inner >div.submit{
 	margin: 0;
 }
-.rt-search-customize #search_form .input-group>div .btn-search{
+.rt-search-customize #search_form .input-group .parent-inner >div .btn-search{
 	position: relative;
 	overflow: hidden;
 }
-.rt-search-customize #search_form .input-group>div .btn-search:after {
+.rt-search-customize #search_form .input-group .parent-inner >div .btn-search:after {
 	position: absolute;
 	content: "";
 	height: 100%;
@@ -9746,15 +9747,15 @@ p.return-to-shop {
 	transition: 0.4s;
 	z-index: -1;
 }
-.rt-search-customize #search_form .input-group>div .btn-search:hover:after{
+.rt-search-customize #search_form .input-group .parent-inner>div .btn-search:hover:after{
 	width: 100%;
 }
-.rt-search-customize #search_form .input-group>div.submit .btn-search{
+.rt-search-customize #search_form .input-group .parent-inner >div.submit .btn-search{
 	border-radius: 500px;
 	font-size: 15px;
 	background: var(--tripfery-primary-color);
 }
-.rt-search-customize #search_form .input-group>div.submit .btn:focus{
+.rt-search-customize #search_form .input-group .parent-inner >div.submit .btn:focus{
 	outline: none;
 	box-shadow: none;
 }
@@ -9771,8 +9772,25 @@ p.return-to-shop {
 	border: 1px solid var(--tripfery-border-color);
 	border-radius: 5px;
 }
+.rt-search-customize .babe-search-form .add_ids_title ul.add_ids_list li{
+	color: var(--tripfery-heading-color);
+	font-weight: 600;
+}
+.rt-search-customize .babe-search-form .add_ids_title ul li ul li.term_item {
+	color: var(--tripfery-body-color);
+	font-weight: 400;
+	padding: 4px 15px;
+}
+.rt-search-customize .babe-search-form .add_ids_title ul li ul li.term_item:hover{
+	color:var(--tripfery-primary-color);
+}
 .rt-search-customize .add_ids_title ul.add_ids_list li.term_item:hover {
-	background-color: var(--tripfery-primary-color);
+	background-color: transparent;
+}
+.rt-search-customize .add_ids_title ul.add_ids_list li ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .rt-search-customize .search_guests_select_wrapper > div:not(.search_guests_apply){
 	border-bottom: 1px solid var(--tripfery-border-color);
@@ -9789,6 +9807,28 @@ p.return-to-shop {
 }
 .daterangepicker .drp-buttons .btn:hover{
 	color: var(--tripfery-white-color);
+}
+.rt-search-customize .rt-title-field i{
+	width: 26px;
+	height: 26px;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #ffffff;
+	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.rt-search-customize .rt-title-field{
+	font-weight: 500;
+	color: var(--tripfery-heading-color);
+	margin-bottom: 18px;
 }
 /*======================================
 #. RT Booking Single Content
@@ -10667,6 +10707,20 @@ p.return-to-shop {
 }
 .single-to_book .daterangepicker {
 	margin-left: -170px;
+}
+#search_form .input-group .parent-inner>div.input_select_field_time_from.is-active[data-inputfield],
+#search_form .input-group .parent-inner>div.input_select_field_time_to.is-active[data-inputfield]{
+	display: none;
+}
+#search_form .input-group .parent-inner{
+	border: none;
+	margin: 0;
+}
+.rt-hide{
+	display: none;
+}
+.rt-title-field{
+	display: block;
 }
 /*======================================
 #. RT Booking Single Archive
