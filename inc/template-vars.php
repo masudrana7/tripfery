@@ -53,6 +53,8 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$tr_header = ( empty( $layout_settings['tripfery_tr_header'] ) || $layout_settings['tripfery_tr_header'] == 'default' ) ? TripferyTheme::$options['tr_header'] : $layout_settings['tripfery_tr_header'];
             
             TripferyTheme::$header_style = ( empty( $layout_settings['tripfery_header'] ) || $layout_settings['tripfery_header'] == 'default' ) ? TripferyTheme::$options['header_style'] : $layout_settings['tripfery_header'];
+
+            TripferyTheme::$footer_fun_fact = (empty($layout_settings['tripfery_footer_fun_fact']) || $layout_settings['tripfery_footer_fun_fact'] == 'default') ? TripferyTheme::$options['footer_fun_fact'] : $layout_settings['tripfery_footer_fun_fact'];
 			
             TripferyTheme::$footer_style = ( empty( $layout_settings['tripfery_footer'] ) || $layout_settings['tripfery_footer'] == 'default' ) ? TripferyTheme::$options['footer_style'] : $layout_settings['tripfery_footer'];
 			
@@ -121,6 +123,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$header_opt      	= TripferyTheme::$options['header_opt'];
             TripferyTheme::$headerbg_color      = TripferyTheme::$options['header_bg_color'];
             TripferyTheme::$tr_header           = TripferyTheme::$options['tr_header'];
+            TripferyTheme::$footer_fun_fact     	= TripferyTheme::$options['footer_fun_fact'];
             TripferyTheme::$footer_area     	= TripferyTheme::$options['footer_area'];
             TripferyTheme::$copyright_area      = TripferyTheme::$options['copyright_area'];
             TripferyTheme::$top_bar_style  		= TripferyTheme::$options['top_bar_style'];

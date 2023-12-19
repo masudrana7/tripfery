@@ -52,7 +52,7 @@ class TripferyTheme_Customizer {
                 'description' => esc_html__( 'Adjust the overall layout for your site.', 'tripfery' ),
                 'priority' => 2,
             )
-        );        
+        );         
 
         // Add Color Section
         $wp_customize->add_panel( 'rttheme_color_panel',
@@ -155,6 +155,7 @@ class TripferyTheme_Customizer {
                 'panel' => 'rttheme_header_panel',
             )
         );
+
         // Add Header Mobile Section
         $wp_customize->add_section( 'header_mobile_section',
             array(
@@ -162,9 +163,19 @@ class TripferyTheme_Customizer {
                 'priority' => 3,
                 'panel' => 'rttheme_header_panel',
             )
-        );        
+        );
 
-        // Add Footer Section
+      
+
+        // Add Header Panel
+        $wp_customize->add_section(
+            'footer_funfact_section',
+            array(
+                'title' => __('Footer Fun Fact', 'tripfery'),
+                'priority' => 3,
+            )
+        );
+
         $wp_customize->add_section( 'footer_section',
             array(
                 'title' => __( 'Footer', 'tripfery' ),

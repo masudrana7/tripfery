@@ -296,19 +296,36 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
             )
         ) );		
 
-        $wp_customize->add_setting( 'cart_icon',
+        $wp_customize->add_setting( 'user_icon',
             array(
-                'default' => $this->defaults['cart_icon'],
+                'default' => $this->defaults['user_icon'],
                 'transport' => 'refresh',
                 'sanitize_callback' => 'rttheme_switch_sanitization',
             )
         );
-        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'cart_icon',
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize,'user_icon',
             array(
-                'label' => __( 'Cart Icon', 'tripfery' ),
+                'label' => __( 'User Icon', 'tripfery' ),
                 'section' => 'header_section',
             )
         ) );
+
+        $wp_customize->add_setting( 'user_icon_link',
+            array(
+                'default' => $this->defaults['user_icon_link'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_url_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'user_icon_link',
+            array(
+                'label' => __('User Icon Link', 'tripfery'),
+                'section' => 'header_section',
+                'type' => 'url',
+                'active_callback'   => 'rttheme_is_usericon_enabled',
+            )
+        );
 
         $wp_customize->add_setting( 'vertical_menu_icon',
             array(

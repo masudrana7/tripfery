@@ -583,16 +583,19 @@ jQuery(document).ready(function ($) {
         var location_title = $('.rt_location_title').text();
         $('.rt-search-customize #search_form .parent-inner:nth-child(1)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-map-iocn"></i> ' + location_title + ' </span>');
     }
+
     // Start Date Title
     if ($('.rt_start_date').length) {
         var sd_title = $('.rt_start_date').text();
         $('.rt-search-customize #search_form .parent-inner:nth-child(2)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + sd_title + ' </span>');
     }
+
     // End Date Title
     if ($('.rt_end_date').length) {
         var ed_title = $('.rt_end_date').text();
         $('.rt-search-customize #search_form .parent-inner:nth-child(4)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + ed_title + ' </span>');
     }
+    
     // Guests Title
     if ($('.rt_end_date').length) {
         var guests_title = $('.rt_guests').text();
@@ -705,12 +708,10 @@ function tripfery_load_content_area_scripts($) {
 function tripfery_content_load_scripts() {
     var $ = jQuery;
     // Preloader
-    $('#preloader').fadeOut('slow', function () {
+    $('#preloader').delay(1000).fadeOut('slow', function () {
         $(this).remove();
     });
-
     var windowWidth = $(window).width();
-
     imageFunction();
     function imageFunction() {
         $("[data-bg-image]").each(function () {
@@ -1161,8 +1162,65 @@ function tripfery_content_load_scripts() {
         }).viewer(options);
     }
 
+    $(document).ready(function () {
+        /////////search form & widgets /////////
+        if ($('form#search_form').length > 0) {
+            $('.widget-babe-search-filter-rating').on('change', 'input:checkbox', function (ev) {
+                update_ratting_values_in_search_form(this);
+                babe_search_form_submit();
+            });
+        }
 
+        function update_ratting_values_in_search_form(elm) {
+            var rating_val = $(elm).val();
+            if ($(elm).is(':checked')) {
+                // append
+                $('form#search_form').append('<input type="hidden" name="rating_value" value="' + rating_val + '">');
+            } else {
+                $('form#search_form input[type="hidden"][name="rating_value').remove();
+            }
+        }
+
+        function babe_search_form_submit() {
+
+            $('#babe_search_result_refresh').css('display', 'block');
+
+            $('.daterangepicker .drp-calendar.left .calendar-time .input_select_field').appendTo('#search_form .input-group');
+            $('.daterangepicker .drp-calendar.right .calendar-time .input_select_field').appendTo('#search_form .input-group');
+
+            if ($('#search_form_tabs').length > 0) {
+                var tab_slug = $('#search_form input[name="search_tab"]').val();
+                $('#search_form div[data-inputfield="1"]:not([data-active-' + tab_slug + '])').remove();
+            }
+            $('#search_form input.input_select_input').removeAttr('name');
+            $('#search_form .add_input_field[data-tax] .input_select_input_value').each(function (ind, elm) {
+                var term_taxonomy_id = $(elm).val();
+                $('#search_form input[name="terms[' + term_taxonomy_id + ']"]').remove();
+                if (term_taxonomy_id != 0) {
+                    // append
+                    $('#search_form').append('<input type="hidden" name="terms[' + term_taxonomy_id + ']" value="' + term_taxonomy_id + '">');
+                }
+            });
+
+            var args = $('#search_form').serialize();
+            var action = $('#search_form').attr('action');
+            var action_args = action.split('?')[1];
+            var url;
+            if (action_args != undefined) {
+                url = action + '&' + args;
+            } else {
+                url = action + '?' + args;
+            }
+
+            document.location.href = url;
+        }
+
+        ///////////////////////////////
+
+    });
 
 })(jQuery);
+
+
 
 

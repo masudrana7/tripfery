@@ -88,12 +88,12 @@ if( !empty( TripferyTheme::$options['logo_light'] ) ) {
 					<?php wp_nav_menu( $nav_menu_args );?>
 				</div>
 			</div>
-			<?php if ( TripferyTheme::$options['search_icon'] || TripferyTheme::$options['cart_icon'] || TripferyTheme::$options['online_button'] ) { ?>
+			<?php if ( TripferyTheme::$options['search_icon'] || TripferyTheme::$options['cart_user'] || TripferyTheme::$options['online_button'] ) { ?>
 			<div class="header-icon-area">
 				<?php if ( TripferyTheme::$options['online_button'] ) { ?>
 					<?php get_template_part( 'template-parts/header/icon', 'button' );?>
-				<?php } if ( TripferyTheme::$options['cart_icon'] ) { ?>
-					<?php get_template_part( 'template-parts/header/icon', 'cart' );?>
+				<?php } if ( TripferyTheme::$options['cart_user'] ) { ?>
+					<?php get_template_part( 'template-parts/header/icon', 'user' );?>
 				<?php } if ( TripferyTheme::$options['search_icon'] ) { ?>
 					<?php get_template_part( 'template-parts/header/icon', 'search' );?>
 				<?php } ?>

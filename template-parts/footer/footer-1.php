@@ -14,6 +14,7 @@ switch ( $tripfery_footer_column ) {
 	$tripfery_footer_class = 'col-xl-3 col-md-6';
 	break;
 }
+
 $tripfery_socials = TripferyTheme_Helper::socials();
 
 if( !empty( TripferyTheme::$options['fbgimg'] ) ) {
@@ -53,6 +54,7 @@ $copyright_on = ( TripferyTheme::$options['copyright_text'] ) ? "copyright-on" :
 		</div>
 	</div>
 	<?php } ?>
+
 	<?php if ( TripferyTheme::$copyright_area == 1 ) { ?>
 	<div class="footer-copyright-area">
 		<div class="container">

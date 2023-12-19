@@ -14,6 +14,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
         }
     }
 
+    /* Header User Icon */
+    if (!function_exists('rttheme_is_usericon_enabled')) {
+        function rttheme_is_usericon_enabled()
+        {
+            $online_button = get_theme_mod('user_icon');
+            if (empty($online_button)) {
+                return false;
+            }
+            return true;
+        }
+    }
+
     /* Header action button */
     if (!function_exists('rttheme_is_button_enabled')) {
         function rttheme_is_button_enabled()
@@ -232,6 +244,17 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
                 return false;
             }
             return true;
+        }
+    }
+
+    /*Footer 1 check is enabled option*/
+    if ( ! function_exists('rttheme_is_footer_funfact_enabled' ) ) {
+        function rttheme_is_footer_funfact_enabled() {
+            $footer_fun_fact = get_theme_mod('footer_fun_fact' );
+            if ($footer_fun_fact == 1 ) {
+                return true;
+            }
+            return false;
         }
     }
 

@@ -22,6 +22,7 @@ if ( !class_exists( 'TripferyTheme' ) ) {
 		public static $top_bar = null;
 		public static $header_opt = null;
 		public static $headerbg_color = null;
+		public static $footer_fun_fact = null;
 		public static $footer_area = null;
 		public static $footer_area2 = null;
 		public static $copyright_area = null;

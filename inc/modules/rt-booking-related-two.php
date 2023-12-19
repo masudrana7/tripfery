@@ -38,7 +38,7 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 			<div class="swiper-wrapper">
 				<?php
 				foreach ($related_arr as $rel_post) {
-					error_log( print_r($rel_post, true ), 3, __DIR__.'/log.txt');
+
 					$post = get_post($rel_post, ARRAY_A);
 					$post_id 	= $post['ID'];
 					$ba_post 	= BABE_Post_types::get_post($post_id);

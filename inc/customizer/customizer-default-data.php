@@ -88,8 +88,9 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'body_line_animate'         => 0,
             'header_style'      		=> 1,
             'search_icon'      			=> 0,
+            'user_icon_link'      		=> '#',
             'vertical_menu_icon' 		=> 0,
-            'cart_icon' 				=> 0,
+            'user_icon' 				=> 0,
             'address_icon'              => 0,
             'phone_icon'                => 0,
             'email_icon'                => 0,
@@ -105,6 +106,19 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'offer_icon'                => 0,
             'offer_text'                => esc_html__('Special Offer !', 'tripfery'),
             'offer_link'                => '#',
+
+            //footer Fun Fact
+            'footer_fun_fact'           => 1,
+            'footer_fun_fact_column'    => 3,
+            'fff_image_one'             => '',
+            'fff_title_one'             => '',
+            'fff_desc_one'              => '',
+            'fff_image_two'             => '',
+            'fff_title_two'             => '',
+            'fff_desc_two'              => '',
+            'fff_image_three'           => '',
+            'fff_title_three'           => '',
+            'fff_desc_three'            => '',
 
 			// Footer
             'footer_style'        		=> 1,

@@ -43,6 +43,7 @@ CSS INDEX
 #. Transparent Header
 #. Header Right Menu
 #. Preloader css
+#. Footer - Fun Fact
 #. Footer - Scroll to top
 #. Widgets - Footer Widgets
 #. Widgets - Sidebar
@@ -2770,6 +2771,90 @@ body .rt-cover {
 	-webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
 	transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
+}
+@media (max-width: 1200px) {
+	.hero-arrow {
+		display: none;
+	}
+}
+.hero-arrow .hero-svg {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	-webkit-transform: rotate(-100deg);
+	transform: rotate(-100deg);
+}
+.hero-arrow .hero-svg .draw-arrow {
+	stroke-width: 2;
+	stroke: white;
+	fill: none;
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: rt-draw;
+	animation-name: rt-draw;
+}
+.hero-arrow .hero-svg .draw-arrow.tail-1 {
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+.hero-arrow .hero-svg .draw-arrow.tail-2 {
+	-webkit-animation-delay: 1.7s;
+	animation-delay: 1.7s;
+}
+@-webkit-keyframes rt-draw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes rt-draw {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+/*---------------------------------------------------------
+#. Footer - Fun Fact
+-----------------------------------------------------------*/
+.fun-fact-area {
+	background-color: #f6f9ff;
+	padding: 80px 0;
+}
+@media (max-width: 575.98px) {
+	.fun-fact-area {
+		padding: 70px 0 40px;
+	}
+}
+@media (max-width: 767.98px) {
+	.fun-fact-area .single-fun-fact {
+		text-align: center;
+	}
+}
+.fun-fact-area .single-fun-fact .fun-fact-icon {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.fun-fact-area .single-fun-fact .fun-fact-icon img {
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.fun-fact-area .single-fun-fact .fun-fact-content .fun-fact-title {
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: var(--tripfery-heading-color);
+	font-weight: 600;
+}
+@media (max-width: 575.98px) {
+	.fun-fact-area .single-fun-fact .fun-fact-content .fun-fact-title {
+		font-size: 26px;
+	}
+}
+.fun-fact-area .single-fun-fact .fun-fact-content .fun-fact-desc {
+	color: #565656;
+	font-size: 15px;
 }
 /*---------------------------------------------------------
 #. Footer - Scroll to top

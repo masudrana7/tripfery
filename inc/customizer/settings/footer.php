@@ -25,6 +25,262 @@ class TripferyTheme_Footer_Settings extends TripferyTheme_Customizer {
 	}
 
     public function register_footer_controls( $wp_customize ) {
+        // Footer Fun Fact Off & On
+        $wp_customize->add_setting(
+            'footer_fun_fact',
+            array(
+                'default' => $this->defaults['footer_fun_fact'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control(new Customizer_Switch_Control(
+            $wp_customize,
+            'footer_fun_fact',
+            array(
+                'label' => __('Footer Fun Fact', 'tripfery'),
+                'section' => 'footer_funfact_section',
+            )
+        ));
+        // Footer Fuct Fact Column
+        $wp_customize->add_setting(
+            'footer_fun_fact_column',
+            array(
+                'default' => $this->defaults['footer_fun_fact_column'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_radio_sanitization',
+                'active_callback' => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        $wp_customize->add_control(
+            'footer_fun_fact_column',
+            array(
+                'label' => __('Number of Columns for Footer Fun Fact', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'select',
+                'choices' => array(
+                    '1' => esc_html__('1 Column', 'tripfery'),
+                    '2' => esc_html__('2 Columns', 'tripfery'),
+                    '3' => esc_html__('3 Columns', 'tripfery'),
+                    '4' => esc_html__('4 Columns', 'tripfery'),
+                ),
+                'active_callback' => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        // Footer image One
+        $wp_customize->add_setting(
+            'fff_image_one',
+            array(
+                'default' => $this->defaults['fff_image_one'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'absint',
+            )
+        );
+        $wp_customize->add_control(new WP_Customize_Media_Control(
+            $wp_customize,
+            'fff_image_one',
+            array(
+                'label' => __('Footer Image One', 'tripfery'),
+                'description' => esc_html__(
+                    'This is the description for the Media Control',
+                    'tripfery'
+                ),
+                'section' => 'footer_funfact_section',
+                'mime_type' => 'image',
+                'button_labels' => array(
+                    'select' => __('Select File', 'tripfery'),
+                    'change' => __('Change File', 'tripfery'),
+                    'default' => __('Default', 'tripfery'),
+                    'remove' => __(
+                        'Remove',
+                        'tripfery'
+                    ),
+                    'placeholder' => __('No file selected', 'tripfery'),
+                    'frame_title' => __('Select File', 'tripfery'),
+                    'frame_button' => __('Choose File', 'tripfery'),
+                ),
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        ));
+        // Footer Title One
+        $wp_customize->add_setting(
+            'fff_title_one',
+            array(
+                'default' => $this->defaults['fff_title_one'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'fff_title_one',
+            array(
+                'label' => __('Footer Title One', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'text',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        // Footer Desc One
+        $wp_customize->add_setting(
+            'fff_desc_one',
+            array(
+                'default' => $this->defaults['fff_desc_one'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+
+        $wp_customize->add_control(
+            'fff_desc_one',
+            array(
+                'label' => __('Footer Description One', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'textarea',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        // Footer image Two
+        $wp_customize->add_setting(
+            'fff_image_two',
+            array(
+                'default' => $this->defaults['fff_image_two'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'absint',
+            )
+        );
+        $wp_customize->add_control(new WP_Customize_Media_Control(
+            $wp_customize,
+            'fff_image_two',
+            array(
+                'label' => __('Footer Image Two', 'tripfery'),
+                'description' => esc_html__(
+                    'This is the description for the Media Control',
+                    'tripfery'
+                ),
+                'section' => 'footer_funfact_section',
+                'mime_type' => 'image',
+                'button_labels' => array(
+                    'select' => __('Select File', 'tripfery'),
+                    'change' => __('Change File', 'tripfery'),
+                    'default' => __('Default', 'tripfery'),
+                    'remove' => __('Remove',
+                        'tripfery'
+                    ),
+                    'placeholder' => __('No file selected', 'tripfery'),
+                    'frame_title' => __('Select File', 'tripfery'),
+                    'frame_button' => __('Choose File', 'tripfery'),
+                ),
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        ));
+        // Footer  Title Two
+        $wp_customize->add_setting(
+            'fff_title_two',
+            array(
+                'default' => $this->defaults['fff_title_two'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'fff_title_two',
+            array(
+                'label' => __('Footer Title Two', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'text',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        // Footer  Desc Two
+        $wp_customize->add_setting(
+            'fff_desc_two',
+            array(
+                'default' => $this->defaults['fff_desc_two'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+
+        $wp_customize->add_control(
+            'fff_desc_two',
+            array(
+                'label' => __('Footer Description Two', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'textarea',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+
+        // Footer  image Three
+        $wp_customize->add_setting(
+            'fff_image_three',
+            array(
+                'default' => $this->defaults['fff_image_three'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'absint',
+            )
+        );
+        $wp_customize->add_control(new WP_Customize_Media_Control(
+            $wp_customize,
+            'fff_image_three',
+            array(
+                'label' => __('Footer Image Three', 'tripfery'),
+                'description' => esc_html__(
+                    'This is the description for the Media Control',
+                    'tripfery'
+                ),
+                'section' => 'footer_funfact_section',
+                'mime_type' => 'image',
+                'button_labels' => array(
+                    'select' => __('Select File', 'tripfery'),
+                    'change' => __('Change File', 'tripfery'),
+                    'default' => __('Default', 'tripfery'),
+                    'remove' => __('Remove', 'tripfery'),
+                    'placeholder' => __('No file selected', 'tripfery'),
+                    'frame_title' => __('Select File', 'tripfery'),
+                    'frame_button' => __('Choose File', 'tripfery'),
+                ),
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        ));
+
+        // Footer  Title Three
+        $wp_customize->add_setting(
+            'fff_title_three',
+            array(
+                'default' => $this->defaults['fff_title_three'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+        $wp_customize->add_control(
+            'fff_title_three',
+            array(
+                'label' => __('Footer Title Three', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'text',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
+        // Footer  Desc Three
+        $wp_customize->add_setting(
+            'fff_desc_three',
+            array(
+                'default' => $this->defaults['fff_desc_three'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_text_sanitization',
+            )
+        );
+
+        $wp_customize->add_control(
+            'fff_desc_three',
+            array(
+                'label' => __('Footer Description Three', 'tripfery'),
+                'section' => 'footer_funfact_section',
+                'type' => 'textarea',
+                'active_callback'   => 'rttheme_is_footer_funfact_enabled',
+            )
+        );
 		
 		// Footer off & on
 		$wp_customize->add_setting( 'footer_area',
@@ -40,6 +296,7 @@ class TripferyTheme_Footer_Settings extends TripferyTheme_Customizer {
                 'section' => 'footer_section',
             )
         ) );
+
         $wp_customize->add_setting( 'copyright_area',
             array(
                 'default' => $this->defaults['copyright_area'],
@@ -84,6 +341,9 @@ class TripferyTheme_Footer_Settings extends TripferyTheme_Customizer {
                 )
             )
         ) );
+		// Footer 1 column
+		
+
 		// Footer 1 column
 		$wp_customize->add_setting( 'footer_column_1',
             array(
