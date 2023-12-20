@@ -44,34 +44,6 @@ class TripferyTheme_Guided_Post_Settings extends TripferyTheme_Customizer
         )));
 
         $wp_customize->add_setting(
-            'guided_archive_style',
-            array(
-                'default' => $this->defaults['guided_archive_style'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_radio_sanitization'
-            )
-        );
-        $wp_customize->add_control(new Customizer_Image_Radio_Control(
-            $wp_customize,
-            'guided_archive_style',
-            array(
-                'label' => __('Guided Archive Layout', 'tripfery'),
-                'description' => esc_html__('Select the gallery layout for gallery page', 'tripfery'),
-                'section' => 'rttheme_guided_settings',
-                'choices' => array(
-                    'style1' => array(
-                        'image' => trailingslashit(get_template_directory_uri()) . 'assets/img/blog1.png',
-                        'name' => __('Layout 1', 'tripfery')
-                    ),
-                    'style2' => array(
-                        'image' => trailingslashit(get_template_directory_uri()) . 'assets/img/blog3.png',
-                        'name' => __('Layout 2', 'tripfery')
-                    ),
-                )
-            )
-        ));
-
-        $wp_customize->add_setting(
             'guided_post_number',
             array(
                 'default' => $this->defaults['guided_post_number'],
@@ -83,74 +55,6 @@ class TripferyTheme_Guided_Post_Settings extends TripferyTheme_Customizer
             'guided_post_number',
             array(
                 'label' => __('Guided Archive Post Limit', 'tripfery'),
-                'section' => 'rttheme_guided_settings',
-                'type' => 'number',
-            )
-        );
-
-        $wp_customize->add_setting(
-            'guided_ar_icon',
-            array(
-                'default' => $this->defaults['guided_ar_icon'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control(new Customizer_Switch_Control(
-            $wp_customize,
-            'guided_ar_icon',
-            array(
-                'label' => __('Show Icon', 'tripfery'),
-                'section' => 'rttheme_guided_settings',
-            )
-        ));
-
-        $wp_customize->add_setting(
-            'guided_ar_action',
-            array(
-                'default' => $this->defaults['guided_ar_action'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control(new Customizer_Switch_Control(
-            $wp_customize,
-            'guided_ar_action',
-            array(
-                'label' => __('Show Button', 'tripfery'),
-                'section' => 'rttheme_guided_settings',
-            )
-        ));
-
-        $wp_customize->add_setting(
-            'guided_ar_excerpt',
-            array(
-                'default' => $this->defaults['guided_ar_excerpt'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_switch_sanitization',
-            )
-        );
-        $wp_customize->add_control(new Customizer_Switch_Control(
-            $wp_customize,
-            'guided_ar_excerpt',
-            array(
-                'label' => __('Show Excerpt', 'tripfery'),
-                'section' => 'rttheme_guided_settings',
-            )
-        ));
-
-        $wp_customize->add_setting(
-            'guided_excerpt_limit',
-            array(
-                'default' => $this->defaults['guided_excerpt_limit'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization',
-            )
-        );
-        $wp_customize->add_control(
-            'guided_excerpt_limit',
-            array(
-                'label' => __('Guided Archive Excerpt Limit', 'tripfery'),
                 'section' => 'rttheme_guided_settings',
                 'type' => 'number',
             )

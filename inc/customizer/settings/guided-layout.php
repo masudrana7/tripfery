@@ -5,7 +5,6 @@
  * @version 1.0
  */
 namespace radiustheme\tripfery\Customizer\Settings;
-
 use radiustheme\tripfery\Customizer\TripferyTheme_Customizer;
 use radiustheme\tripfery\Customizer\Controls\Customizer_Switch_Control;
 use radiustheme\tripfery\Customizer\Controls\Customizer_Separator_Control;

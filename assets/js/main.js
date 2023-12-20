@@ -43,6 +43,10 @@ jQuery(document).ready(function ($) {
             return false;
         })
     }
+    if ($("#checkout_form_block").length) {
+        jQuery('#checkout_form_block > *:eq(2), #checkout_form_block > *:eq(3), #checkout_form_block > *:eq(4)').wrapAll('<div class="rt-checkout-content"></div>');
+        jQuery('#checkout_form_block > *:eq(0), #checkout_form_block > *:eq(1)').wrapAll('<div class="rt-checkout-form"></div>');
+    }
 
     /*-------------------------------------
     Card
@@ -75,15 +79,48 @@ jQuery(document).ready(function ($) {
     }
 
     if ($(".rt_grid_btn").length){
-        $(".rt_grid_btn").click(function(){
+        $(".rt_grid_btn").on("click", function(){
             $(".rt-fillter-inner").removeClass("rt_list_service");
             $(".rt-fillter-inner").addClass("rt_grid_service");
         });
-        $(".rt_list_btn").click(function () {
+        $(".rt_list_btn").on("click", function () {
             $(".rt-fillter-inner").removeClass("rt_grid_service");
             $(".rt-fillter-inner").addClass("rt_list_service");
         });
     }
+
+    if ($("#search_form_tabs").length){
+        $("#search_form_tabs .search_form_tab[data-tab-slug='activity']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_rentacar");
+            $(".rt-search-customize").removeClass("rt_active_tour");
+            $(".rt-search-customize").addClass("rt_active_activity");
+        });
+
+        $("#search_form_tabs .search_form_tab[data-tab-slug='tours']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_activity");
+            $(".rt-search-customize").removeClass("rt_active_rentacar");
+            $(".rt-search-customize").addClass("rt_active_tour");
+        });
+        $("#search_form_tabs .search_form_tab[data-tab-slug='rentacar']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_activity");
+            $(".rt-search-customize").removeClass("rt_active_tour");
+            $(".rt-search-customize").addClass("rt_active_rentacar");
+        });
+
+        $("#search_form_tabs .search_form_tab[data-tab-slug='restaurants']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
+        });
+
+        $("#search_form_tabs .search_form_tab[data-tab-slug='hotel']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
+        });
+
+        $("#search_form_tabs .search_form_tab[data-tab-slug='rental']").on("click", function(){
+            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
+        });
+    }
+
+    
 
     /*-------------------------------------
     Destination Slider
@@ -216,7 +253,6 @@ jQuery(document).ready(function ($) {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
         $('.fixed-sidebar-addon .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 160});
     }
-
 
     if (typeof $.fn.theiaStickySidebar !== "undefined") {
     $(".sticky-coloum-wrap .sticky-coloum-item").theiaStickySidebar({
@@ -575,32 +611,44 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    if ($('.rt-search-customize #search_form .input-group>div').length) {
-        $('.rt-search-customize #search_form .input-group>div').wrap('<div class="parent-inner"></div>');
-    }
-    // Location Title
-    if ($('.rt_location_title').length) {
-        var location_title = $('.rt_location_title').text();
-        $('.rt-search-customize #search_form .parent-inner:nth-child(1)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-map-iocn"></i> ' + location_title + ' </span>');
-    }
+    function tripfery_search_form() {
+        if ($('.rt-search-customize #search_form .input-group>div').length) {
+            $('.rt-search-customize #search_form .input-group>div').wrap('<div class="parent-inner"></div>');
+        }
+        // Location Title
+        if ($('.rt_location_title').length) {
+            var location_title = $('.rt_location_title').text();
+            $('.rt-search-customize #search_form .parent-inner:nth-child(1)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-map-iocn"></i> ' + location_title + ' </span>');
+        }
 
-    // Start Date Title
-    if ($('.rt_start_date').length) {
-        var sd_title = $('.rt_start_date').text();
-        $('.rt-search-customize #search_form .parent-inner:nth-child(2)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + sd_title + ' </span>');
-    }
+        // Start Date Title
+        if ($('.rt_start_date').length) {
+            var sd_title = $('.rt_start_date').text();
+            $('.rt-search-customize #search_form .parent-inner:nth-child(2)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + sd_title + ' </span>');
+        }
 
-    // End Date Title
-    if ($('.rt_end_date').length) {
-        var ed_title = $('.rt_end_date').text();
-        $('.rt-search-customize #search_form .parent-inner:nth-child(4)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + ed_title + ' </span>');
+        // End Date Title
+        if ($('.rt_end_date').length) {
+            var ed_title = $('.rt_end_date').text();
+            $('.rt-search-customize #search_form .parent-inner:nth-child(4)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-check-in"></i> ' + ed_title + ' </span>');
+        }
+
+        // Guests Title
+        if ($('.rt_end_date').length) {
+            var guests_title = $('.rt_guests').text();
+            $('.rt-search-customize #search_form .parent-inner:nth-child(6)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-user"></i> ' + guests_title + ' </span>');
+        }
+
     }
-    
-    // Guests Title
-    if ($('.rt_end_date').length) {
-        var guests_title = $('.rt_guests').text();
-        $('.rt-search-customize #search_form .parent-inner:nth-child(6)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-user"></i> ' + guests_title + ' </span>');
-    }
+    tripfery_search_form();
+    // Elementor Frontend Load
+    $(window).on('elementor/frontend/init', function () {
+        if (elementorFrontend.isEditMode()) {
+            elementorFrontend.hooks.addAction('frontend/element_ready/widget', function () {
+                tripfery_search_form();
+            });
+        }
+    });
 
     // Remove Wishlist
     $(document).on('click', '.remove-wishlist', function (e) {
@@ -1214,9 +1262,6 @@ function tripfery_content_load_scripts() {
 
             document.location.href = url;
         }
-
-        ///////////////////////////////
-
     });
 
 })(jQuery);

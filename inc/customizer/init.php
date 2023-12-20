@@ -43,7 +43,6 @@ TripferyTheme_Helper::requires( 'customizer/settings/search-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/error-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/team-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/team-single-layout.php' );
-TripferyTheme_Helper::requires( 'customizer/settings/guided-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/guided-single-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/booking-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/booking-single-layout.php' );

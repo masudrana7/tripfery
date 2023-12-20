@@ -6,8 +6,8 @@
  * @version 1.0
  */
 global $post;
-$guided_verifieds       		= get_post_meta($post->ID, 'tripfery_guided_verifieds', true);
-$guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true); ?>
+$guided_verifieds   = get_post_meta($post->ID, 'tripfery_guided_verifieds', true);
+$guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class('quided-single'); ?>>
 	<div class="team-single-content has-sidebar">
 		<div class="rt-guided-inner">
@@ -322,9 +322,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 											<!-- Car Style -->
 										<?php } elseif ($term->slug == "car") { ?>
 											<div class="card-item rt-car-style col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
-												<div class="listing-card  <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) {
-																													echo 'discount_available ';
-																												} ?>">
+												<div class="listing-card  <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
 													<div class="top-title">
 														<h3 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
@@ -391,7 +389,6 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 																<a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated">
 																	<?php echo esc_html('Booking Now', 'tripfery') ?>
 																</a>
-
 															</div>
 														</div>
 													</div>
@@ -400,9 +397,7 @@ $guided_since       			= get_post_meta($post->ID, 'tripfery_guided_since', true)
 											</div>
 										<?php } else { ?>
 											<div class="card-item col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
-												<div class="listing-card <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) {
-																													echo 'discount_available ';
-																												} ?>">
+												<div class="listing-card <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) { echo 'discount_available ';	} ?>">
 													<?php if (!empty($image_srcs)) { ?>
 														<a class="text-decoration-none listing-thumb-wrapper" href="<?php echo esc_url($url); ?>">
 															<img src="<?php echo esc_attr($image_srcs[0]); ?>" alt="featured-image" />

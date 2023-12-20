@@ -5011,8 +5011,7 @@ pointer-events: none;
     background-repeat: no-repeat;
     background-size: cover;
     height: 510px;
-    color: #fff;
-    cursor: pointer;
+    color: var(--tripfery-white-color);
     -webkit-box-flex: 0.5;
     -ms-flex: 0.5;
     flex: 0.5;
@@ -5041,6 +5040,9 @@ pointer-events: none;
 }
 .rt-booking-layout-1 .panel .panel-title a{
     color:var(--tripfery-white-color);
+}
+.rt-booking-layout-1 .panel .panel-title a:hover{
+    opacity: 0.8;
 }
 @media (max-width: 575.98px) {
     .rt-booking-layout-1 .panel .panel-title {

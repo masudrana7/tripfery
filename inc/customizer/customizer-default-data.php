@@ -98,11 +98,9 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'online_button'             => 0,
             'online_button_text'        => esc_html__('Get a Quote', 'tripfery'),
             'online_button_link'        => '#',
-
             'login_icon'                => 0,
             'login_text'                => esc_html__('Login', 'tripfery'),
             'login_link'                => '#',
-
             'offer_icon'                => 0,
             'offer_text'                => esc_html__('Special Offer !', 'tripfery'),
             'offer_link'                => '#',
@@ -236,23 +234,8 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'team_bgimg' => '',
             'team_page_bgimg' => '',
             'team_page_bgcolor' => '',
-
-            //Service Layout Setting 
-            'service_archive_layout' => 'full-width',
-            'service_archive_sidebar'        => '',
-            'service_archive_padding_top'    => 120,
-            'service_archive_padding_bottom' => 120,
-            'service_archive_banner' => 1,
-            'service_archive_breadcrumb' => 0,         
-            'service_archive_bgtype' => 'bgcolor',
-            'service_archive_bgcolor' => '',
-            'service_archive_bgimg' => '',
-            'service_archive_page_bgimg' => '',
-            'service_archive_page_bgcolor' => '',
             
-            //Service Single Layout Setting 
-            'guided_layout' => 'full-width',
-            'guided_sidebar'        => '',
+            //guided Single Layout Setting 
             'guided_padding_top'    => 120,
             'guided_padding_bottom' => 120,
             'guided_banner' => 1,
@@ -430,14 +413,8 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'related_team_number' 		=> 5,
 			'related_team_title_limit' 	=> 5,
 
-            // Service
-            'guided_archive_style'     => 'style1',
+            // guided
             'guided_post_number'       => 8,
-            'guided_ar_icon'           => 1,
-            'guided_ar_action'         => 1,
-            'guided_ar_excerpt'        => 1,
-            'guided_excerpt_limit'     => 20,
-
 
             // Booking
             'booking_archive_style'     => 'style1',

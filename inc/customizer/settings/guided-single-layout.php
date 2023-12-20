@@ -26,35 +26,6 @@ class TripferyTheme_Guided_Single_Layout_Settings extends TripferyTheme_Customiz
 
     public function register_guided_single_layout_controls( $wp_customize ) {
 
-        $wp_customize->add_setting( 'guided_layout',
-            array(
-                'default' => $this->defaults['guided_layout'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_radio_sanitization'
-            )
-        );
-        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'guided_layout',
-            array(
-                'label' => __( 'Sidebar Layout', 'tripfery' ),
-                'description' => esc_html__( 'Select the default template layout for Pages', 'tripfery' ),
-                'section' => 'guided_single_layout_section',
-                'choices' => array(
-                    'left-sidebar' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-left.png',
-                        'name' => __( 'Left Sidebar', 'tripfery' )
-                    ),
-                    'full-width' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-full.png',
-                        'name' => __( 'Full Width', 'tripfery' )
-                    ),
-                    'right-sidebar' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/sidebar-right.png',
-                        'name' => __( 'Right Sidebar', 'tripfery' )
-                    )
-                )
-            )
-        ) );
-
         /**
          * Separator
          */

@@ -361,6 +361,7 @@ a.button-style-1:hover::before {
     height: 400%;
 }
 /*button style 2*/
+.rt-checkout-content .btn,
 a.button-style-2 {
 	font-size: 14px;
 	background-color: var(--tripfery-primary-color);
@@ -380,6 +381,7 @@ a.button-style-2 {
 	transition: all ease 0.5s;
 	overflow: hidden;
 }
+.rt-checkout-content .btn::before,
 a.button-style-2::before{
 	position: absolute;
 	content: "";
@@ -394,9 +396,17 @@ a.button-style-2::before{
 	transition: all ease 0.5s;
 	border-radius: 40px;
 }
+.rt-checkout-content .btn:hover::before,
 a.button-style-2:hover::before {
 	opacity: 1;
 	width: 100%;
+}
+.rt-checkout-content .btn{
+	display: block;
+	width: 100%;
+}
+.rt-checkout-content .btn:focus{
+	box-shadow: none;
 }
 /*button style 3*/
 a.button-style-3 {
@@ -1186,6 +1196,15 @@ a.button-style-5:hover::before {
 }
 .tr-header .rt-sticky {
 	background-color: var(--tripfery-black-color);
+}
+.tr-header .header-icon-area .search-icon>a,
+.tr-header .rt-header-user i {
+	color: var(--tripfery-white-color);
+}
+body.tr-header .header-icon-area .search-icon>a:hover,
+.tr-header .rt-header-user i:hover{
+	color: var(--tripfery-white-color) !important;
+	opacity: 0.8;
 }
 /* Header Logo */
 .site-header .site-branding a {
@@ -4217,7 +4236,7 @@ input:-webkit-autofill:active
 .sidebar-widget-area .widget_product_tag_cloud a {
 	height: 35px;
 	padding: 8px 16px;
-	background: var(--tripfery-grey-color-2);
+	background: var(--tripfery-grey-color-1);
 	border: 1px solid var(--tripfery-border-color2);
 	border-radius: 40px;
 	display: -webkit-inline-box;
@@ -9773,8 +9792,9 @@ p.return-to-shop {
 	color: var(--tripfery-heading-color);
 	position: relative;
 	z-index: 2;
+	padding-left: 40px;
 }
-.rt-search-customize #search_form_tabs .search_form_tab::after{
+.rt-search-customize #search_form_tabs .search_form_tab::before{
 	position: absolute;
 	content: "";
 	height: 100%;
@@ -9785,7 +9805,70 @@ p.return-to-shop {
 	transition: 0.4s;
 	z-index: -1;
 }
-.rt-search-customize #search_form_tabs .search_form_tab.is-active::after{
+.rt-search-customize #search_form_tabs .search_form_tab{
+	position: relative;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:after {
+	position: absolute;
+	font-family: "fontello";
+	content: '\e813';
+	left: 16px;
+	top: 16px;
+	font-weight: 400;
+	font-size: 18px;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='tours']::before {
+	background-color: #0071FF;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='activity']::before {
+	background-color: #A738FF;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rental']::before {
+	background-color: #E32977;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rentacar']::before {
+	background-color: #F38D15;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='restaurants']::before {
+	background-color: #24E388;
+}
+.header-search.open .close:hover{
+	color:var(--tripfery-white-color);
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='hotel']::after {
+	color: #384BFF;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='tours']::after {
+	color: #0071FF;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='activity']::after {
+	color: #A738FF;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='rental']::after {
+	color: #E32977;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='rentacar']::after {
+	color: #F38D15;
+}
+.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='restaurants']::after {
+	color: #24E388;
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='tours']:after {
+	content: '\e817';
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='activity']:after {
+	content: '\e819';
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rental']:after {
+	content: '\e812';
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rentacar']:after {
+	content: '\e81a';
+}
+.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='restaurants']:after {
+	content: '\e81d';
+}
+.rt-search-customize #search_form_tabs .search_form_tab.is-active::before{
 	width: 100%;
 }
 .rt-search-customize #search_form_tabs .search_form_tab.is-active{
@@ -9796,6 +9879,7 @@ p.return-to-shop {
 	border-radius: 0 10px 10px 10px;
 	max-width: max-content;
 	padding: 30px;
+	transition: 0.5s;
 }
 .rt-search-customize #search_form .input-group .parent-inner >div:not(.submit){
 	border-bottom: none;
@@ -9837,15 +9921,17 @@ p.return-to-shop {
 }
 .rt-search-customize #search_form .input-group .parent-inner >div.submit .btn-search{
 	border-radius: 500px;
-	font-size: 15px;
+	font-size: 16px;
 	background: var(--tripfery-primary-color);
+	font-weight: 500;
+	letter-spacing: 1.1px;
 }
 .rt-search-customize #search_form .input-group .parent-inner >div.submit .btn:focus{
 	outline: none;
 	box-shadow: none;
 }
 .rt-search-customize .btn-primary.btn-search {
-	padding: 10px 20px;
+	padding: 12px 20px;
 }
 .rt-search-customize .btn-primary.btn-search .fa-search{
 	padding-right: 2px;
@@ -9914,6 +10000,29 @@ p.return-to-shop {
 	font-weight: 500;
 	color: var(--tripfery-heading-color);
 	margin-bottom: 18px;
+}
+.rt-search-customize #search-box .input-group,
+.rt-search-customize #search_form .parent-inner{
+	transition: all 0.4s ease-in-out;
+	position: relative;
+}
+.rt-search-customize #search_form .parent-inner:nth-child(6){
+	width: 140px;
+	position: relative;
+}
+.rt-search-customize #search_form .parent-inner:nth-child(6) .rt-title-field{
+	position: absolute;
+	left: 0;
+	top: -43px;
+}
+
+.rt-search-customize.rt_active_rentacar #search_form .parent-inner:nth-child(6),
+.rt-search-customize.rt_active_activity #search_form .parent-inner:nth-child(6),
+.rt-search-customize.rt_active_tour #search_form .parent-inner:nth-child(6){
+	width: 0;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
 }
 /*======================================
 #. RT Booking Single Content
@@ -10139,6 +10248,7 @@ p.return-to-shop {
 		height: 80px;
 	}
 }
+#checkout_form_block .rt-checkout-content,
 .info-card {
 	background-color: var(--tripfery-grey-color-1);
 	padding: 30px;
@@ -11270,4 +11380,104 @@ body .my_account_page_content_wrapper .cmb2-wrap button.button-secondary {
 }
 .rt_my_account_page_wrapper .rt-wishlist-btn i{
 	margin-right: 6px;
+}
+.single-to_book .rt-booking-form .booking_form_submit:focus{
+	outline: 0;
+	box-shadow: none;
+}
+#checkout_form_block{
+	display: flex;
+	justify-content: space-between;
+}
+#checkout_form_block .rt-checkout-form{
+	flex: 0 0 70%;
+	max-width: 70%;
+}
+#checkout_form_block .rt-checkout-content{
+	flex: 0 0 30%;
+	max-width: 30%;
+}
+@media (min-width: 992px) {
+	#checkout_form_block .rt-checkout-form {
+		padding-right: 50px;
+	}
+}
+.rt-checkout-content #checkout_form .input_group{
+	display: block;
+}
+#checkout_form_block h2{
+	font-size: 22px;
+}
+#checkout_form_block .rt-checkout-content .checkout-form-block input,
+.booking-guests-block .input_select_field .input_select_input{
+	height: 40px;
+	border: none;
+	padding: 0 15px;
+}
+#checkout_form_block .rt-checkout-content .checkout-form-block input{
+	margin: 0;
+	height: 45px;
+}
+#checkout_form_block .rt-checkout-content .checkout-form-block input,
+#checkout_form_block .rt-checkout-content .checkout-form-block input:focus{
+	outline: none;
+	border: none;
+	box-shadow: none;
+}
+.rt-checkout-content .checkout_form_input_underline{
+	display: none;
+}
+.rt-checkout-content .checkout_form_input_label {
+	position: static;
+}
+#checkout_form_block .checkout_form_input_field_focus .checkout_form_input_label,
+#checkout_form_block .checkout_form_input_field_content .checkout_form_input_label {
+	transform: unset;
+}
+#checkout_form .amount_group {
+	padding: 12px 20px;
+	border: 1px solid var(--tripfery-border-color);
+	font-weight: 600;
+}
+#checkout_form .payment_method_title{
+	font-weight: 600;
+}
+.order_item_row_price .order_item_discount_note{
+	border: none;
+}
+.rt-checkout-form td.order_item_row_price {
+	padding: 8px;
+}
+.rt-checkout-form table th,
+.rt-checkout-form table td{
+	text-align: left;
+}
+.table_order_items_details td.order_item_info_title,
+table td.order_items_row_total_amount,
+.order_items_row_total,
+table td.order_items_row_total {
+	font-weight: 600;
+}
+.order_items_row_total,
+table td.order_items_row_total {
+	background-color: var(--tripfery-grey-color-1);
+}
+table td.order_items_row_total_amount,
+.order_items_row_total,
+table td.order_items_row_total {
+	padding: 4px 8px;
+}
+.table_order_items_details td.order_item_info_title a{
+	color: var(--tripfery-heading-color);
+	transition: 0.4s;
+}
+.table_order_items_details td.order_item_info_title a:hover{
+	color: var(--tripfery-primary-color);
+}
+#checkout_form .input_group>div,
+#edit_user_profile .input_group>div {
+	margin-bottom: 20px;
+}
+.input_select_field .input_select_list{
+	border:none;
 }
