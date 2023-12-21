@@ -615,6 +615,50 @@ jQuery(document).ready(function ($) {
         if ($('.rt-search-customize #search_form .input-group>div').length) {
             $('.rt-search-customize #search_form .input-group>div').wrap('<div class="parent-inner"></div>');
         }
+        //search track
+        if ($('.rt-search-customize #search_form_tabs').length) {
+            function trackBehavior(tabContainer, target = null) {
+                var selectedTrack = target ? $(target).parent().find(
+                    '.search_form_tab.is-active'
+                ) : tabContainer.find('.search_form_tab:first');
+                var trackPosition = $(selectedTrack).position();
+                tabContainer.find('.rt-scroll-btn').css({
+                    left: trackPosition.left + 'px',
+                    width: selectedTrack.outerWidth() + 'px',
+                });
+            }
+       
+            $('.rt-search-customize #search_form_tabs').prepend('<div class="rt-scroll-btn"></div>');
+            var tabContainer = $('#search_form_tabs');
+            trackBehavior(tabContainer);
+            tabContainer.on('click', '.search_form_tab', function(e) {
+                var target = e.currentTarget;
+                trackBehavior(tabContainer,target);
+            });
+        }
+
+        //isotop track
+        if ($('.listing-filter-btns').length) {
+            function trackBehavior(tabContainer2, target2 = null) {
+                var selectedTrack2 = target2 ? $(target2).parent().find(
+                    '.filter-btn.active'
+                ) : tabContainer2.find('.filter-btn:first');
+                var trackPosition2 = $(selectedTrack2).position();
+                tabContainer2.find('.rt-color-track').css({
+                    left: trackPosition2.left + 'px',
+                    width: selectedTrack2.outerWidth() + 'px',
+                });
+            }
+            var tabContainer2 = $('.listing-filter-btns');
+            console.log(tabContainer2);
+            trackBehavior(tabContainer2);
+            tabContainer2.on('click', '.filter-btn', function (e) {
+                var target2 = e.currentTarget;
+                trackBehavior(tabContainer2, target2);
+            });
+        }
+
+
         // Location Title
         if ($('.rt_location_title').length) {
             var location_title = $('.rt_location_title').text();
@@ -682,52 +726,6 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-
-
-//     $(document).on('click', '.rdtheme-wishlist-icon', function () {
-//         if ($(this).hasClass('rdtheme-add-to-wishlist') && typeof yith_wcwl_l10n != "undefined") {
-//             var $obj = $(this),
-//                 productId = $obj.data('product-id'),
-//                 afterTitle = $obj.data('title-after');
-//             var data = {
-//                 'action': 'tripfery_add_to_wishlist',
-//                 'context': 'frontend',
-//                 'nonce': $obj.data('nonce'),
-//                 'add_to_wishlist': productId
-//             };
-
-//             $.ajax({
-//                 url: yith_wcwl_l10n.ajax_url,
-//                 type: 'POST',
-//                 data: data,
-//                 success: function success(data) {
-//                     if (data['result'] != 'error') {
-//                         $obj.removeClass('ajaxloading');
-//                         $obj.find('.wishlist-icon').removeClass('fa fa-heart').addClass('fas fa-heart').show();
-//                         $obj.removeClass('rdtheme-add-to-wishlist').addClass('rdtheme-remove-from-wishlist');
-//                         $obj.find('span').html(afterTitle);
-//                         $('body').trigger('rt_added_to_wishlist', [productId]);
-//                          $('body').trigger('added_to_wishlist', [productId]);
-//                     } else {
-//                         console.log(data['message']);
-//                     }
-//                 }
-//             });
-
-//             return false;
-//         }
-//     });
-
-//    $(document).on( 'added_to_wishlist removed_from_wishlist', function(){
-//         $.get( yith_wcwl_l10n.ajax_url, {
-//           action: 'yith_wcwl_update_wishlist_count'
-//         }, function( data ) {
-//             console.log(data);
-//           $('.wishlist-icon span.wishlist-icon-num').html( data.count );
-//         } );
-//     });
-
-
 
 });
 

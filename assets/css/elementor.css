@@ -439,6 +439,13 @@ CSS INDEX
     display: block;
     text-align: center;
 }
+@media(max-width: 1200px) {
+    .rt-social-links .rt-social a {
+        font-size: 24px;
+        padding: 35px 24px;
+    }
+}
+
 .rt-social-links .rt-social a::after{
     -webkit-transition: height 0.3s ease-in-out;
     transition: height 0.3s ease-in-out;
@@ -3110,19 +3117,7 @@ CSS INDEX
     background-color: transparent;
     z-index: 2;
     color: var(--tripfery-heading-color);
-}
-.listing-filter-btns .filter-btn::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 30px;
-    z-index: -2;
-    -webkit-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
+    transition: 0.4s;
 }
 .listing-filter-btns .filter-btn.active::after {
     width: 100%;
@@ -3135,6 +3130,20 @@ CSS INDEX
 .listing-filter-btns .filter-btn.active{
     color: var(--tripfery-white-color);
 }
+.listing-filter-btns .rt-color-track {
+    z-index: 1;
+    position: absolute;
+    left: -1px;
+    top: 9px;
+    height: calc(100% + -20px);
+    background: var(--tripfery-primary-color);
+    transition: 0.5s;
+    border-radius: 30px;
+}
+.listing-filter-btns{
+    position: relative;
+}
+
 .listing-card {
     background-color: #ffffff;
     border-radius: 15px;
@@ -5943,7 +5952,6 @@ pointer-events: none;
 /* Post Grid layout 1 */
 .rt-post-grid-style1 .rt-item .entry-content {
     padding: 0;
-    margin-left: 20px;
     padding-left: 13px;
     margin-top: 20px;
     position: relative;
@@ -6328,4 +6336,14 @@ pointer-events: none;
 .rt-total-star .rating-stars {
     position: relative;
     top: -2px;
+}
+
+@media (max-width: 991px) {
+    .rt-social-links .rt-social a,
+    .rt-social-links .rt-social i {
+        font-size: 20px;
+    }
+    .rt-social-links .rt-social a {
+        padding: 35px 10px;
+    }
 }

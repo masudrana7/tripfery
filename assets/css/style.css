@@ -2797,8 +2797,8 @@ body .rt-cover {
 	}
 }
 .hero-arrow .hero-svg {
-	width: 200px;
-	height: 200px;
+	width: 170px;
+	height: 170px;
 	margin: 0 auto;
 	-webkit-transform: rotate(-100deg);
 	transform: rotate(-100deg);
@@ -3349,6 +3349,14 @@ body .rt-cover {
 		padding: 8px;
 	}
 }
+@media(max-width:991px) {
+	body .footer-top-area .widget {
+		margin-bottom: 60px;
+	}
+	.footer-content-area{
+		padding-bottom: 30px;
+	}
+}
 .footer-top-area .widget_tag_cloud a:hover {
 	border: 1px solid transparent;
 	background-color: var(--tripfery-primary-color) !important;
@@ -3380,6 +3388,7 @@ body .rt-cover {
 .footer-top-area .widget_calendar table td a {
 	color: var(--tripfery-primary-color);
 }
+
 /*widget newsletter form*/
 .footer-top-area .fluentform .ff-el-group {
 	margin-bottom: 0;
@@ -3606,7 +3615,7 @@ body .rt-cover {
 .footer-copyright-area .copyright-area .widget {
 	margin-bottom: 0;
 }
-@media(max-width: 991px) {
+@media(max-width: 767px) {
 	.footer-copyright-area .copyright-area {
 		display: block;
 	}
@@ -7616,7 +7625,7 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	background: var(--tripfery-white-color);
 	float: none;
 	position: relative;
-	padding: 10px 12px;
+	padding: 16px 20px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -7645,7 +7654,7 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
     text-transform: capitalize;
 }
 .mean-container .mean-bar .mobile-logo img {
-	max-width: 100px;
+	max-width: 150px;
 }
 .mean-container .mean-bar .minicart {
 	list-style: none;
@@ -7687,19 +7696,19 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	display: block;
 	position: absolute;
 	background: white;
-	left: 12px;
-	right: 12px;
+	right: 0;
+	left: 0;
 	z-index: 3;
 	max-height: calc(100vh - 100px);
 	overflow-y: scroll;
-	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-	transform: translateX(-200%);
+	transform: translateX(200%);
 	transition-duration: 1s;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     will-change: transform;
     transition-property: -webkit-transform;
     transition-property: transform;
     transition-property: transform,-webkit-transform;
+	border-top: 1px solid var(--tripfery-border-color);
 }
 .slidemenuon .rt-slide-nav {
 	transform: translateX(0);
@@ -7740,11 +7749,18 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 .rt-slide-nav .offscreen-navigation .sub-menu {
 	display: none;
 }
-.rt-slide-nav .offscreen-navigation ul {
-	padding-left: 24px;
-}
 .rt-slide-nav .offscreen-navigation ul li {
 	position: relative;
+}
+.rt-slide-nav .offscreen-navigation .menu-main-menu-container ul li a{
+	padding: 10px 20px;
+	border-bottom: 1px solid var(--tripfery-border-color);
+}
+.rt-slide-nav .offscreen-navigation .menu-main-menu-container > ul > li:last-child > a{
+	border-bottom: none;
+}
+.rt-slide-nav .offscreen-navigation .menu-main-menu-container ul .sub-menu li>a{
+	padding: 10px 40px;
 }
 .rt-slide-nav .offscreen-navigation ul li > span {
     position: absolute;
@@ -7752,7 +7768,6 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
     top: 11px;
     width: 20px;
     height: 20px;
-    background-color: var(--tripfery-grey-color-2);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -7766,7 +7781,7 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	transition: .1s;
 	font-weight: 700;
 	position: absolute;
-	font-size: 12px;
+	font-size: 14px;
 	color: var(--tripfery-primary-color);
 }
 .rt-slide-nav .offscreen-navigation ul li > span.open:after {
@@ -9765,16 +9780,22 @@ p.return-to-shop {
 }
 .rt-search-customize #search_form_tabs{
 	background: var(--tripfery-white-color);
-	border-radius: 10px 10px 0 0;
+	border-radius: 20px 20px 0 0;
 	overflow: hidden;
 	max-width: max-content;
+	position: relative;
+	margin: 0 auto;
 }
 .rt-search-customize #search-box{
-	margin-left: 0;
+	position: relative;
 }
 .rt-search-customize #search-box .input-group{
 	justify-content: flex-start;
 	align-items: flex-end;
+}
+.rt-search-customize .add_input_field .add_ids_title i {
+	top: 9px;
+	font-size: 12px !important;
 }
 .rt-search-customize #search_form .input-group .parent-inner .search-date .search_date {
 	width: 112px;
@@ -9784,26 +9805,15 @@ p.return-to-shop {
 	border: none;
 	border-radius: 0;
 	margin-right: 0;
-	background-color: var(--tripfery-white-color);
+	background-color: transparent;
 	transition: 0.4s;
 	padding: 16px 20px;
 	font-size: 15px;
-	font-weight: 600;
+	font-weight: 500;
 	color: var(--tripfery-heading-color);
 	position: relative;
 	z-index: 2;
 	padding-left: 40px;
-}
-.rt-search-customize #search_form_tabs .search_form_tab::before{
-	position: absolute;
-	content: "";
-	height: 100%;
-	width: 0;
-	left: 0;
-	top: 0;
-	background-color: var(--tripfery-primary-color);
-	transition: 0.4s;
-	z-index: -1;
 }
 .rt-search-customize #search_form_tabs .search_form_tab{
 	position: relative;
@@ -9815,43 +9825,12 @@ p.return-to-shop {
 	left: 16px;
 	top: 16px;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 16px;
+	color: var(--tripfery-primary-color);
 }
-.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='tours']::before {
-	background-color: #0071FF;
-}
-.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='activity']::before {
-	background-color: #A738FF;
-}
-.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rental']::before {
-	background-color: #E32977;
-}
-.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='rentacar']::before {
-	background-color: #F38D15;
-}
-.rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='restaurants']::before {
-	background-color: #24E388;
-}
+.rt-search-customize #search_form_tabs .search_form_tab.is-active:after,
 .header-search.open .close:hover{
 	color:var(--tripfery-white-color);
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='hotel']::after {
-	color: #384BFF;
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='tours']::after {
-	color: #0071FF;
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='activity']::after {
-	color: #A738FF;
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='rental']::after {
-	color: #E32977;
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='rentacar']::after {
-	color: #F38D15;
-}
-.rt-search-customize #search_form_tabs .search_form_tab:not(.is-active)[data-tab-slug='restaurants']::after {
-	color: #24E388;
 }
 .rt-search-customize #search_form_tabs .search_form_tab[data-tab-slug='tours']:after {
 	content: '\e817';
@@ -9874,9 +9853,18 @@ p.return-to-shop {
 .rt-search-customize #search_form_tabs .search_form_tab.is-active{
 	color: var(--tripfery-white-color);
 }
+.rt-search-customize #search_form_tabs .rt-scroll-btn{
+	z-index: 1;
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	height: calc(100% + 2px);
+	background: var(--tripfery-primary-color);
+	transition: 0.5s;
+}
 .rt-search-customize .babe-search-form{
 	background: var(--tripfery-white-color);
-	border-radius: 0 10px 10px 10px;
+	border-radius: 20px;
 	max-width: max-content;
 	padding: 30px;
 	transition: 0.5s;
@@ -9884,7 +9872,6 @@ p.return-to-shop {
 .rt-search-customize #search_form .input-group .parent-inner >div:not(.submit){
 	border-bottom: none;
 	margin: 0;
-	min-width: 135px;
 	display: block;
 	background-color: #f9f8f8;
 	border: 1px solid var(--tripfery-border-color);
@@ -9892,7 +9879,7 @@ p.return-to-shop {
 	padding: 4px 16px;
 	color: #999999;
 	font-size: 15px;
-	margin-right: 10px;
+	margin-right: 25px;
 }
 .rt-search-customize .search_guests_select_wrapper {
 	border: 1px solid var(--tripfery-border-color);
@@ -9999,23 +9986,26 @@ p.return-to-shop {
 .rt-search-customize .rt-title-field{
 	font-weight: 500;
 	color: var(--tripfery-heading-color);
-	margin-bottom: 18px;
+	margin-bottom: 13px;
 }
 .rt-search-customize #search-box .input-group,
 .rt-search-customize #search_form .parent-inner{
 	transition: all 0.4s ease-in-out;
 	position: relative;
 }
+.rt-search-customize #search_form .parent-inner:nth-child(3),
+.rt-search-customize #search_form .parent-inner:nth-child(5){
+	display: none;
+}
 .rt-search-customize #search_form .parent-inner:nth-child(6){
-	width: 140px;
+	width: 170px;
 	position: relative;
 }
 .rt-search-customize #search_form .parent-inner:nth-child(6) .rt-title-field{
 	position: absolute;
 	left: 0;
-	top: -43px;
+	top: -39px;
 }
-
 .rt-search-customize.rt_active_rentacar #search_form .parent-inner:nth-child(6),
 .rt-search-customize.rt_active_activity #search_form .parent-inner:nth-child(6),
 .rt-search-customize.rt_active_tour #search_form .parent-inner:nth-child(6){
@@ -10917,6 +10907,28 @@ p.return-to-shop {
 .rt-title-field{
 	display: block;
 }
+@media (max-width: 991px) {
+	.rt-search-customize #search_form .parent-inner:nth-child(6) .rt-title-field {
+		position: static;
+	}
+	#search_form .input-group .parent-inner {
+		margin: 0 0 25px;
+	}
+		#search_form .input-group .parent-inner,
+	.rt-search-customize #search_form .parent-inner:nth-child(6){
+		width: 50%;
+	}
+	.rt-search-customize #search_form .input-group .parent-inner>div.submit .btn-search,
+	.rt-search-customize #search_form .parent-inner:nth-child(7){
+		width: 100%;
+	}
+	.rt-search-customize #search_form_tabs{
+		top: 1px;
+	}
+	.listing-filter-btns .filter-btn {
+		padding: 10px 16px;
+	}
+}
 /*======================================
 #. RT Booking Single Archive
 ====================================*/
@@ -11480,4 +11492,34 @@ table td.order_items_row_total {
 }
 .input_select_field .input_select_list{
 	border:none;
+}
+@media (max-width: 767px) {
+	.listing-filter-btns .rt-color-track,
+	.rt-search-customize #search_form_tabs .rt-scroll-btn {
+		display: none;
+	}
+	.listing-filter-btns .filter-btn.active,
+	.rt-search-customize #search_form_tabs .search_form_tab.is-active{
+		background: var(--tripfery-primary-color);
+	}
+	.rt-search-customize #search_form_tabs{
+		top: 0;
+	}
+	.menu_bar_yes .babe-search-form{
+		border-radius: 0 0 20px 20px;
+		border-top: 1px solid var(--tripfery-border-color);
+	}
+}
+@media (max-width: 576px) {
+	#search_form .input-group .parent-inner,
+	.rt-search-customize #search_form .parent-inner:nth-child(6) {
+		width: 100%;
+	}
+	.rt-search-customize #search_form .input-group .parent-inner>div:not(.submit){
+		margin-right: 0;
+	}
+	.rt-search-customize .babe-search-form{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
