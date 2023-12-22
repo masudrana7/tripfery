@@ -3254,6 +3254,9 @@ CSS INDEX
     text-decoration: line-through;
     text-decoration-color: #8d8c8c;
 }
+.item_info_price_old .currency_amount{
+    display: none;
+}
 .listing-card .price-text {
     font-size: 24px;
     font-weight: 600;
@@ -4915,6 +4918,11 @@ pointer-events: none;
         left: 100%;
     }
 }
+.rt-booking-layout-3 .cards-row,
+.rt-booking-layout-2  .cards-row{
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .rt-booking-layout-2 .destination-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4955,6 +4963,11 @@ pointer-events: none;
 @media (max-width: 1200px) {
     .rt-booking-layout-2 .destination-wrapper .destination-thumb-wrapper .destination-thumb {
         width: 100%;
+    }
+    .rt-booking-layout-2 .destination-wrapper {
+        gap: 20px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
 .rt-booking-layout-2 .destination-wrapper .star {

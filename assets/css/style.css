@@ -3023,6 +3023,16 @@ body .rt-cover {
 	opacity: 1;
 	left: 0;
 }
+@media(min-width: 1200px) {
+	#footer-1 .footer-content-area .col-lg-3:first-child{
+		padding-right: 85px;
+	}
+}
+@media(mxn-width: 1200px) {
+	.footer-top-area .widget_tripfery_address {
+		padding-right: 0;
+	}
+}
 /*About address*/
 .footer-top-area .widget_tripfery_address {
 	margin-bottom: 24px;
@@ -3354,7 +3364,7 @@ body .rt-cover {
 		margin-bottom: 60px;
 	}
 	.footer-content-area{
-		padding-bottom: 30px;
+		padding-bottom: 0;
 	}
 }
 .footer-top-area .widget_tag_cloud a:hover {
@@ -3614,6 +3624,11 @@ body .rt-cover {
 }
 .footer-copyright-area .copyright-area .widget {
 	margin-bottom: 0;
+}
+@media(max-width: 767px) {
+	.footer-copyright-area .copyright-area .copyright-menu{
+		margin-top: 10px;
+	}
 }
 @media(max-width: 767px) {
 	.footer-copyright-area .copyright-area {
@@ -9768,6 +9783,11 @@ p.return-to-shop {
 /*======================================
 #. rt-search-filter
 ====================================*/
+@media (min-width: 1199px) {
+	.menu_bar_yes.rt-search-customize .babe-search-form{
+		min-width: 972px;
+	}
+}
 .rt-search-norlam .rt-search-customize #search-box{
 	margin-left: auto;
 }
@@ -9790,7 +9810,7 @@ p.return-to-shop {
 	position: relative;
 }
 .rt-search-customize #search-box .input-group{
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-end;
 }
 .rt-search-customize .add_input_field .add_ids_title i {
@@ -9990,7 +10010,6 @@ p.return-to-shop {
 }
 .rt-search-customize #search-box .input-group,
 .rt-search-customize #search_form .parent-inner{
-	transition: all 0.4s ease-in-out;
 	position: relative;
 }
 .rt-search-customize #search_form .parent-inner:nth-child(3),
