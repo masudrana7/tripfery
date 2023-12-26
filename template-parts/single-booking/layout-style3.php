@@ -59,7 +59,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             <?php } ?>
         </div>
         <div class="col-lg-4 col-xl">
-            <div class="activity-price rt-price-single-inner d-flex">
+            <div class="activity-price rt-price-single-inner align-items-center d-flex">
                 <div class="price-area">
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
                     <?php if ($discountPrice) { ?>
@@ -72,6 +72,16 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                         </div>
                     <?php } ?>
                 </div>
+                <?php if (function_exists('tripfery_post_share')) { ?>
+                    <div class="rt-share-service">
+                        <a href="#" class="share-btn">
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.7363 6.52539L9.58008 10.9492C9.14062 11.3301 8.4375 11.0078 8.4375 10.4219V7.87305C3.86719 7.93164 1.93359 9.04492 3.25195 13.293C3.39844 13.7617 2.8125 14.1426 2.43164 13.8496C1.14258 12.9121 0 11.125 0 9.33789C0 4.88477 3.7207 3.91797 8.4375 3.85938V1.54492C8.4375 0.929688 9.14062 0.607422 9.58008 0.988281L14.7363 5.41211C15.0586 5.73438 15.0586 6.23242 14.7363 6.52539Z" />
+                            </svg>
+                            <?php tripfery_post_share(); ?>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -312,7 +322,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 <h3 class="rt-single-map-title"><?php echo esc_html($map_title, 'tripfery'); ?></h3>
             <?php } ?>
 
-            <?php  echo $booking_map;  ?>
+            <?php echo $booking_map;  ?>
 
             <!-- Comments  -->
             <div class="info-card">

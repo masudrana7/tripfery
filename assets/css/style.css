@@ -385,10 +385,10 @@ a.button-style-2 {
 a.button-style-2::before{
 	position: absolute;
 	content: "";
-	height: 100%;
+	height: 104%;
 	width: 0%;
-	left: 0;
-	top: 0;
+	left: -1px;
+	top: -1px;
 	background-color: var(--tripfery-secondary-color);
 	opacity: 0;
 	z-index: -1;
@@ -396,10 +396,27 @@ a.button-style-2::before{
 	transition: all ease 0.5s;
 	border-radius: 40px;
 }
+@media (max-width: 1024px) {
+	.rt-fillter-inner .view-switch-right,
+	.rt-fillter-inner .view-switch-bar{
+		display: block !important;
+	}
+	.rt-fillter-inner .babe_search_results_filters{
+		margin: 15px 0 !important;
+		text-align: left;
+	}
+	.input_select_field .input_select_title{
+		max-width: 200px;
+	}
+	.rt-fillter-inner .view-switch-right{
+		justify-content: space-between;
+	}
+}
+
 .rt-checkout-content .btn:hover::before,
 a.button-style-2:hover::before {
 	opacity: 1;
-	width: 100%;
+	width: 104%;
 }
 .rt-checkout-content .btn{
 	display: block;
@@ -866,8 +883,12 @@ a.button-style-5:hover::before {
 .header-top-bar ul li a{
 	position: relative;
 	color: var(--tripfery-light-color);
-	font-size: 12px;
+	font-size: 14px;
 	transition: 0.4s;
+}
+.header-top-bar ul li a{
+	color: var(--tripfery-white-color);
+	width: 600;
 }
 .top-bar-wrap .tophead-socials{
 	margin-left: 30px;
@@ -881,14 +902,22 @@ a.button-style-5:hover::before {
 .header-top-bar ul li a i{
 	transition: 0.4s;
 }
+.header-top-bar ul li a:hover,
 .header-top-bar ul li a:hover i{
 	color: var(--tripfery-primary-color);
 }
 .top-bar-wrap  ul:not(.tophead-social) li i{
 	font-size: 10px;
 }
-.top-bar-wrap  ul:not(.tophead-social) li svg{
+.top-bar-wrap  ul:not(.tophead-social)li svg{
 	margin-right: 5px;
+}
+.top-bar-wrap ul li svg {
+	width: 14px;
+	height: 14px;
+}
+.top-bar-wrap ul li svg{
+	margin-right: 6px;
 }
 .header-top-bar .tophead-social {
 	overflow: hidden;
@@ -5213,8 +5242,40 @@ figure.is-type-video {
 .post-share .share-links a:last-child {
 	margin-right: 0;
 }
+.rt-share-service .share-links,
+.single-to_book .share-links .share-btn,
+.single-to_book .rt-share-service .social-text,
 .post-share .share-links .social-text {
 	display: none;
+}
+.rt-share-service{
+	position: relative;
+}
+.rt-share-service .share-links{
+	position: absolute;
+	z-index: 2;
+}
+.rt-share-service .share-links a{
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: #f6f6f6;
+	color: var(--tripfery-heading-color);
+	transition: 0.4s;
+	margin-top: 5px;
+}
+.rt-share-service .share-links a:hover{
+	background: var(--tripfery-primary-color);
+	color: var(--tripfery-white-color);
 }
 /*post content*/
 .entry-content .single-post-list {
@@ -10127,6 +10188,39 @@ p.return-to-shop {
 .rt_booking_single_style1 .hero-img-grid{
 	margin-top: 30px;
 }
+.rt_booking_single_style1 .wishlist{
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: #f6f6f6;
+	color: var(--tripfery-heading-color);
+	cursor: pointer;
+	transition: 0.4s;
+}
+.rt_booking_single_style1 .wishlist svg{
+	width: 18px;
+	color: var(--tripfery-heading-color);
+}
+.rt_booking_single_style1 .wishlist:hover {
+	background: var(--tripfery-primary-color);
+}
+.rt_booking_single_style1 .added-wishlist,
+.rt_booking_single_style1 .wishlist:hover {
+	background: var(--tripfery-primary-color);
+}
+.rt_booking_single_style1 .added-wishlist svg,
+.rt_booking_single_style1 .wishlist:hover svg{
+	color: var(--tripfery-white-color);
+}
 @media (min-width: 992px) {
 	.hero-img-grid {
 		grid-template-areas: "four one" "two two" "three three";
@@ -10497,6 +10591,11 @@ p.return-to-shop {
 	position: relative;
 	top: 1px;
 }
+.rtrs-star-empty::before {
+	content: "\f005";
+	font-weight: 900;
+	font-family: "Font Awesome 6 Free";
+}
 .single-to_book .rt-booking-form .booking_form_submit {
 	font-size: 18px;
 	background-color: var(--tripfery-primary-color);
@@ -10776,6 +10875,7 @@ p.return-to-shop {
 	font-size: 18px;
 	line-height: 26px;
 	font-weight: 600;
+	color: var(--tripfery-heading-color);
 }
 @media (max-width: 400px) {
 	.r-feature-list .r-feature-list-item {

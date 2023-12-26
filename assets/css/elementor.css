@@ -3145,11 +3145,13 @@ CSS INDEX
 }
 
 .listing-card {
-    background-color: #ffffff;
+    background-color: var(--tripfery-white-color);
     border-radius: 15px;
     padding: 8px;
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+}
+.listing-card .wishlist{
     cursor: pointer;
 }
 .listing-card .listing-thumb-wrapper{
@@ -3297,7 +3299,7 @@ CSS INDEX
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-.listing-card:hover .listing-card-title a {
+.listing-card .listing-card-title a:hover {
     color: var(--tripfery-primary-color);
 }
 .listing-card .listing-thumb-wrapper,
@@ -3318,7 +3320,22 @@ CSS INDEX
     top: 10px;
 }
 .listing-card .feature-text{
-    background-color: var(--tripfery-primary-color);
+    background-color: #0CD138;
+}
+.rt-car-style .listing-card .feature-text,
+.rt-car-style .listing-card .item_info_price_discount{
+    left: 0;
+}
+.rtrs-rating-item .rating-percent {
+    font-size: 13px;
+    color: #999999;
+    line-height: 1;
+}
+body .rtrs-star-empty:before{
+    color: #D7D7D7;
+}
+.rtrs-star-half-alt:before{
+    color: #eca336;
 }
 .discount_available .feature-text{
     top: 40px;
@@ -3362,15 +3379,6 @@ CSS INDEX
 }
 .badge.badge-pink {
     background-color: #fff8f8;
-}
-.badge:hover {
-    background-color: #e7233a;
-}
-.badge:hover .badge-text {
-    color: #ffffff;
-}
-.badge:hover .badge-icon {
-    color: #ffffff;
 }
 .discount-badge {
     height: 25px;
@@ -3444,6 +3452,7 @@ CSS INDEX
 }
 .rt-car-style .card-bottom-info-left svg{
     width: 16px;
+    color: var(--tripfery-primary-color);
 }
 .rt-car-style .listing-card .listing-card-content{
     padding: 0;
@@ -3855,6 +3864,7 @@ CSS INDEX
     padding: 40px 50px;
     z-index: 1;
     margin-top: -130px;
+    width: 82%;
 }
 @media only screen and (max-width: 479px) {
     .hotel-info-card .hotel-short-info {
@@ -3863,7 +3873,7 @@ CSS INDEX
 }
 .hotel-info-card .info-subtitle {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.1em;
@@ -4749,9 +4759,18 @@ pointer-events: none;
 .rt-destionation-slider .swiper-slide.swiper-slide-next .destination-wrapper .destination-info {
     border-color: var(--tripfery-primary-color);
 }
+.hotel-info-card .item-img,
+.rt-destionation-slider .destination-wrapper{
+    overflow: hidden;
+}
+.hotel-info-card .item-img img,
+.rt-destionation-slider .destination-wrapper .item-img img{
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+.hotel-info-card:hover .item-img img,
 .rt-destionation-slider .destination-wrapper:hover .item-img img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    transform: scale(1.2);
 }
 .rt-destionation-slider .destination-wrapper:hover .item-img::before {
     -webkit-animation: shining 0.74s;

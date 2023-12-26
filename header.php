@@ -62,7 +62,7 @@ if (TripferyTheme::$options['image_blend'] == 'normal') {
 		<header id="masthead" class="site-header">
 			<div id="header-<?php echo esc_attr(TripferyTheme::$header_style); ?>" class="header-area">
 				<?php if (TripferyTheme::$top_bar == 1 || TripferyTheme::$top_bar === "on") { ?>
-					<?php get_template_part('template-parts/header/header-top', TripferyTheme::$top_bar_style); ?>
+					<?php get_template_part('template-parts/header/header-top', '1'); ?>
 				<?php } ?>
 				<?php if (TripferyTheme::$header_opt == 1 || TripferyTheme::$header_opt === "on") { ?>
 					<?php get_template_part('template-parts/header/header', TripferyTheme::$header_style); ?>
@@ -74,7 +74,7 @@ if (TripferyTheme::$options['image_blend'] == 'normal') {
 			<div class="header-search-wrap">
 				<button type="button" aria-label="close button" class="close"><i class="fa-solid fa-xmark"></i></button>
 				<form role="search" method="get" class="header-search-form" action="<?php echo esc_url(home_url('/')); ?>">
-					<input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_html_e('Type your search........', 'tripfery'); ?>">
+					<input type="search" value="<?php echo get_search_query(); ?>" name="s" placeholder="<?php esc_html_e('Type your search...', 'tripfery'); ?>">
 					<button type="submit" aria-label="submit button" class="search-btn"><i class="icon-tripfery-search"></i></button>
 				</form>
 			</div>

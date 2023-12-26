@@ -1,11 +1,9 @@
 <?php
-
 /**
  * @author  RadiusTheme
  * @since   1.0
  * @version 1.0
  */
-
 if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions')) {
 	function tripfery_related_booking()
 	{

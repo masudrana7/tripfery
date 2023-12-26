@@ -1,4 +1,8 @@
 <?php
+
+use Rtrs\Models\Review;
+use Rtrs\Helpers\Functions;
+
 extract($args);
 $images = isset($ba_info['images']) ? $ba_info['images'] : array();
 ?>
@@ -10,7 +14,9 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <h3 class="details-title me-3">
                         <?php the_title(); ?>
                     </h3>
-                    <?php echo $rt_stars; ?>
+                    <?php if (class_exists(Review::class) && $avg_rating = Review::getAvgRatings($post_id)) {
+                        echo Functions::review_stars($avg_rating);
+                    } ?>
                 </div>
                 <?php if (!empty($address['address'])) { ?>
                     <div class="details-address-info align-items-center">
@@ -37,16 +43,19 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <?php } ?>
                 </div>
                 <div class="d-flex share-btns-link">
-                    <a href="rental-details.html" class="share-btn">
-                        <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.7363 6.52539L9.58008 10.9492C9.14062 11.3301 8.4375 11.0078 8.4375 10.4219V7.87305C3.86719 7.93164 1.93359 9.04492 3.25195 13.293C3.39844 13.7617 2.8125 14.1426 2.43164 13.8496C1.14258 12.9121 0 11.125 0 9.33789C0 4.88477 3.7207 3.91797 8.4375 3.85938V1.54492C8.4375 0.929688 9.14062 0.607422 9.58008 0.988281L14.7363 5.41211C15.0586 5.73438 15.0586 6.23242 14.7363 6.52539Z" />
-                        </svg>
-                    </a>
-                    <a href="rental-details.html" class="share-btn">
-                        <svg width="17" height="14" viewBox="0 0 17 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.5352 1.7207C13.832 1.10547 12.9531 0.8125 12.0742 0.8125C10.9902 0.8125 9.87695 1.28125 9.05664 2.10156L8.5 2.7168L7.91406 2.10156C7.09375 1.28125 5.98047 0.8125 4.89648 0.8125C4.01758 0.8125 3.13867 1.10547 2.43555 1.7207C0.589844 3.30273 0.501953 6.11523 2.14258 7.81445L7.82617 13.6738C8.00195 13.8496 8.23633 13.9375 8.4707 13.9375C8.73438 13.9375 8.96875 13.8496 9.14453 13.6738L14.8281 7.81445C16.4688 6.11523 16.3809 3.30273 14.5352 1.7207ZM13.8027 6.84766L8.5 12.3262L3.16797 6.84766C2.23047 5.85156 1.99609 3.94727 3.34375 2.80469C4.51562 1.7793 6.12695 2.27734 6.88867 3.09766L8.5 4.73828L10.082 3.09766C10.8438 2.30664 12.4551 1.7793 13.627 2.80469C14.9746 3.94727 14.7695 5.85156 13.8027 6.84766Z" />
-                        </svg>
-                    </a>
+                    <div class="rt-share-service">
+                        <a href="#" class="share-btn">
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.7363 6.52539L9.58008 10.9492C9.14062 11.3301 8.4375 11.0078 8.4375 10.4219V7.87305C3.86719 7.93164 1.93359 9.04492 3.25195 13.293C3.39844 13.7617 2.8125 14.1426 2.43164 13.8496C1.14258 12.9121 0 11.125 0 9.33789C0 4.88477 3.7207 3.91797 8.4375 3.85938V1.54492C8.4375 0.929688 9.14062 0.607422 9.58008 0.988281L14.7363 5.41211C15.0586 5.73438 15.0586 6.23242 14.7363 6.52539Z" />
+                            </svg>
+                            <?php if (function_exists('tripfery_post_share')) {
+                                tripfery_post_share();
+                            } ?>
+                        </a>
+                    </div>
+                    <?php if (class_exists('RTWishlist')) {
+                        echo RTWishlist::wishlist_html($post_id);
+                    } ?>
                 </div>
             </div>
         </div>

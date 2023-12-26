@@ -334,10 +334,6 @@ class TripferyTheme_Footer_Settings extends TripferyTheme_Customizer {
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/footer-2.jpg',
                         'name' => __( 'Layout 2', 'tripfery' )
                     ),
-                    '3' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/footer-3.jpg',
-                        'name' => __( 'Layout 3', 'tripfery' )
-                    ),
                 )
             )
         ) );

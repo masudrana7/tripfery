@@ -120,6 +120,12 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    if ($(".rt-share-service").length) {
+        $(".rt-share-service").on("click", function(){
+            $(".rt-share-service .share-links").fadeToggle();
+        });
+    }
+
     
 
     /*-------------------------------------
@@ -234,20 +240,7 @@ jQuery(document).ready(function ($) {
             classHandler = !classHandler;
         });
     }
-
-    /*---------------------------------------
-    Background Parallax
-    --------------------------------------- */
-    if ($(".rt-parallax-bg-yes").length) {
-        $(".rt-parallax-bg-yes").each(function () {
-            var speed = $(this).data('speed');
-            $(this).parallaxie({
-                speed: speed ? speed : 0.5,
-                offset: 0,
-            });
-        })
-    }
-
+    
     /* Theia Side Bar */
     if (typeof ($.fn.theiaStickySidebar) !== "undefined") {
         $('.has-sidebar .fixed-bar-coloum').theiaStickySidebar({'additionalMarginTop': 80});
@@ -299,13 +292,6 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    /*Social print*/
-    $(document).on('click', '.print-share-button', function (e) {
-        console.log();
-        e.preventDefault();
-        window.print();
-        return false;
-    });
 
     /* Search Box */
     $(".search-box-area").on('click', '.search-button, .search-close', function (event) {
@@ -521,8 +507,6 @@ jQuery(document).ready(function ($) {
         });
     }
 
-
-
     /* when product quantity changes, update quantity attribute on add-to-cart button */
     $("form.cart").on("change", "input.qty", function () {
         var isgroup = $(this).parents('.woocommerce-grouped-product-list');
@@ -729,26 +713,6 @@ jQuery(document).ready(function ($) {
 
 });
 
-function tripfery_load_content_area_scripts($) {
-    /* progress circle */
-    $('.rt-progress-circle').each(function () {
-        var startcolor = $(this).data('rtstartcolor'),
-            endcolor = $(this).data('rtendcolor'),
-            num = $(this).data('rtnum'),
-            speed = $(this).data('rtspeed'),
-            suffix = $(this).data('rtsuffix');
-        $(this).circleProgress({
-            value: 1,
-            fill: endcolor,
-            emptyFill: startcolor,
-            thickness: 5,
-            size: 140,
-            animation: {duration: speed, easing: "circleProgressEasing"},
-        }).on('circle-animation-progress', function (event, progress) {
-            $(this).find('.rtin-num').html(Math.round(num * progress) + suffix);
-        });
-    });
-}
 
 //function Load
 function tripfery_content_load_scripts() {
@@ -774,20 +738,6 @@ function tripfery_content_load_scripts() {
         counterContainer.counterUp({
             delay: counterContainer.data('rtsteps'),
             time: counterContainer.data('rtspeed')
-        });
-    }
-
-    // pricing table
-    const pricingWrapper = $(".rt-pricing-tab");
-    if (pricingWrapper) {
-        $(".rt-pricing-tab").each(function() {
-            $(".pricing-switch-container").on("click", function() {
-                $(".pricing-switch")
-                    .parents(".price-switch-box")
-                    .toggleClass("price-switch-box--active"),
-                    $(".pricing-switch").toggleClass("pricing-switch-active"),
-                    $(".rt-tab-content").toggleClass("rt-active");
-            });
         });
     }
 
@@ -1065,17 +1015,6 @@ function tripfery_content_load_scripts() {
         }
     }
 
-    function revealPosts(){
-        var posts = $('.single-grid-item:not(.reveal)');
-        var i = 0;
-        setInterval( function(){
-          if ( i >= posts.length) return false;
-          var el = posts[i];
-          $(el).addClass('reveal');
-          i++
-        }, 100);
-    }
-
     // Ajax Blog archive layout 1 Loadmore Function
     var page = 2;
     $(document).on( 'click', '#loadMore', function( event ) {
@@ -1121,92 +1060,6 @@ function tripfery_content_load_scripts() {
         $(".rt-service-tab [data-list-hover]").removeClass("active"), $('.rt-service-tab [data-list-hover="'.concat(t, '"]')).addClass("active");
         $(".rt-service-tab [data-list-img]").removeClass("active"), $('.rt-service-tab [data-list-img="'.concat(t, '"]')).addClass("active");
     });
-
-    /*Booking move title with cursor*/
-    function mousemove_booking_hover_effect() {
-        if (jQuery( window ).width() > 0 ) {
-            if ( jQuery('#content').find(".rt-booking-default").length > 0 ) {
-                jQuery(".rt-booking-default .booking-item").each(function() {
-                    let $Purpose = jQuery(this);
-                    let $PurposeInner = $Purpose.find('.port-hover-effect');
-                    $Purpose.mousemove(function(event){
-                        let y = event.pageY - $Purpose.offset().top + 10;
-                        let x = event.pageX - $Purpose.offset().left + 10;
-                        $PurposeInner.css({'top': y,'left': x,'bottom': "auto",'right': "auto",'opacity': 1});
-                    })
-                    .mouseleave(function() {
-                        $PurposeInner.css({'top': 'auto','left': 10,'bottom': 10,'right': "auto",'opacity': 0});
-                    });
-                });
-            }
-        }
-    }
-
-    /*Button*/
-    $(function() {
-        mousemove_booking_hover_effect();
-    });
-
-    // Tooltip
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)) 
-
-    // Footer gallery viewer Function
-    if (typeof ($.fn.viewer) !== "undefined") {
-        var console = window.console || { log: function () {} };
-        var $images = $('.viewer-enabler');
-        var $toggles = $('.docs-toggles');
-        var $buttons = $('.docs-buttons');
-        var options = {
-            // inline: true,
-            url: 'data-original',
-            ready: function (e) {
-            console.log(e.type);
-            },
-            show: function (e) {
-            console.log(e.type);
-            },
-            shown: function (e) {
-            console.log(e.type);
-            },
-            hide: function (e) {
-            console.log(e.type);
-            },
-            hidden: function (e) {
-            console.log(e.type);
-            },
-            view: function (e) {
-            console.log(e.type);
-            },
-            viewed: function (e) {
-            console.log(e.type);
-            }
-        };
-
-        $images.on({
-            ready:  function (e) {
-                console.log(e.type);
-            },
-            show:  function (e) {
-                console.log(e.type);
-            },
-            shown:  function (e) {
-                console.log(e.type);
-            },
-            hide:  function (e) {
-                console.log(e.type);
-            },
-            hidden: function (e) {
-                console.log(e.type);
-            },
-            view:  function (e) {
-                console.log(e.type);
-            },
-            viewed: function (e) {
-                console.log(e.type);
-            }
-        }).viewer(options);
-    }
 
     $(document).ready(function () {
         /////////search form & widgets /////////

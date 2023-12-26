@@ -40,42 +40,7 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                 'label' => __( 'Top Bar On/Off', 'tripfery' ),
                 'section' => 'header_top_section',
             )
-        ) );
-		
-        $wp_customize->add_setting( 'top_bar_style',
-            array(
-                'default' => $this->defaults['top_bar_style'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_radio_sanitization',
-
-            )
-        );
-        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'top_bar_style',
-            array(
-                'label' => __( 'Top Bar Layout', 'tripfery' ),
-                'description' => esc_html__( 'You can override this settings only Mobile', 'tripfery' ),
-                'section' => 'header_top_section',
-                'choices' => array(
-                    '1' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-1.jpg',
-                        'name' => __( 'Layout 1', 'tripfery' )
-                    ), 
-                    '2' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-2.jpg',
-                        'name' => __( 'Layout 2', 'tripfery' )
-                    ),
-                    '3' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-3.jpg',
-                        'name' => __( 'Layout 3', 'tripfery' )
-                    ),
-                    '4' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-4.jpg',
-                        'name' => __( 'Layout 4', 'tripfery' )
-                    ),
-                ),
-                'active_callback'   => 'rttheme_is_topbar_enabled',
-            )
-        ) );       
+        ) );      
 
 		// Topbar one option
 		$wp_customize->add_setting('top_bar_bgcolor', 
@@ -252,30 +217,6 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                     '2' => array(
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-2.jpg',
                         'name' => __( 'Layout 2', 'tripfery' )
-                    ),
-                    '3' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-3.jpg',
-                        'name' => __( 'Layout 3', 'tripfery' )
-                    ),
-                    '4' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-4.jpg',
-                        'name' => __( 'Layout 4', 'tripfery' )
-                    ),
-                    '5' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-5.jpg',
-                        'name' => __( 'Layout 5', 'tripfery' )
-                    ),
-                    '6' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-6.jpg',
-                        'name' => __( 'Layout 6', 'tripfery' )
-                    ),
-                    '7' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-7.jpg',
-                        'name' => __( 'Layout 7', 'tripfery' )
-                    ),
-                    '8' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-8.jpg',
-                        'name' => __( 'Layout 8', 'tripfery' )
                     ),
                 )
             )
