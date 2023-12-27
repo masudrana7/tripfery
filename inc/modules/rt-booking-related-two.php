@@ -39,7 +39,6 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 			<div class="swiper-wrapper">
 				<?php
 				foreach ($related_arr as $rel_post) {
-
 					$post = get_post($rel_post, ARRAY_A);
 					$post_id 	= $post['ID'];
 					$ba_post 	= BABE_Post_types::get_post($post_id);
@@ -54,7 +53,7 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 						$prices = $ba_post;
 					}
 				?>
-					<div class="swiper-slide">
+					<div class="swiper-slide id-<?php echo absint($rel_post) ?>">
 						<div class="listing-card">
 							<?php echo wp_kses_post($image); ?>
 							<div class="listing-card-content">

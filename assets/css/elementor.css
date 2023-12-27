@@ -1331,7 +1331,6 @@ CSS INDEX
     line-height: 1.5;
     letter-spacing: 0.6px;
 }
-
 .rt-video-style1 .play-btn-white {
     width: 120px;
     height: 120px;
@@ -1340,7 +1339,12 @@ CSS INDEX
     color: var(--tripfery-primary-color);
     font-size: 28px;
 }
-
+@media(max-width: 767px) {
+    .rt-video-style1 .play-btn-white {
+        width: 90px;
+        height: 90px;
+    }
+}
 .rt-video-style1 .play-btn-white::before {
     content: "";
     position: absolute;
@@ -1355,7 +1359,6 @@ CSS INDEX
     animation: pulse-border 1500ms ease-out infinite;
     z-index: -1;
 }
-
 .rt-video-style1 .play-btn-white::after {
     content: "";
     position: absolute;
@@ -1381,7 +1384,6 @@ CSS INDEX
     background-color: var(--tripfery-primary-color);
     color: var(--tripfery-white-color);
 }
-
 /*video style 02*/
 .rt-video-style2 .rt-video{
     text-align: center;

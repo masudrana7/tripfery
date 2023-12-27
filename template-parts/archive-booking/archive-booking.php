@@ -24,27 +24,33 @@ if (class_exists('BABE_Functions')) {
     $get_id = get_the_ID();
     $loc_cats = get_the_terms($get_id, $loc_tex);
     $term_ids = [];
-
     $ba_info    = BABE_Post_types::get_post($get_id);
     $booking_map = BABE_html::block_address_map_with_direction($ba_info);
-
+   
     foreach ($loc_cats as $loc_cat) {
         $term_ids[] = $loc_cat->term_id;
     }
+    
     if (!is_wp_error($loc_cats && $loc_cat)) {
         $args = array(
             'post_type' => 'to_book',
             'posts_per_page' => -1,
             'paged'             => $paged,
         );
+
         $args['terms'] = $term_ids;
-        $posts = BABE_Post_types::get_posts($args);
+
+        $args = [
+            'terms' => [get_queried_object_id()]
+        ];
+        
+        $posts    = BABE_Post_types::get_posts($args);
 
         $lat_code = get_term_meta($loc_cat->term_id, 'ba_locations_meta', true);
         $long_code = get_term_meta($loc_cat->term_id, 'ba_locations_longitude_meta', true);
         $gallery_images = get_term_meta($loc_cat->term_id, 'rt_location_gallery', true);
         $gallerys = explode(',', $gallery_images);
-?>
+    ?>
         <div id="primary" class="content-area">
             <div class="rt-gallery-inner hero-img-grid image-gallery">
                 <?php
@@ -101,14 +107,15 @@ if (class_exists('BABE_Functions')) {
                     <?php } ?>
                 </div>
             </div>
+     
+            <?php if (count($posts) > 0) { ?>
             <div class="container rt-swiper-nav rt-booking-item-inner">
                 <?php if (!empty(TripferyTheme::$options['booking_arcive_single_title'])) { ?>
                     <h3><?php echo wp_kses(TripferyTheme::$options['booking_arcive_single_title'], 'alltext_allow'); ?></h3>
                 <?php } ?>
-
                 <div class="rt-archive-slider swiper  rt-search-services">
                     <div class="swiper-wrapper">
-                        <?php
+                        <?php 
                         foreach ($posts as $post) {
                             $post_id     = $post['ID'];
                             $thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
@@ -132,9 +139,7 @@ if (class_exists('BABE_Functions')) {
                             } ?>
                             <div class="swiper-slide">
                                 <div class="card-item mb-4">
-                                    <div class="listing-card <?php if (!empty($discount)) {
-                                                                    echo 'discount_available ';
-                                                                } ?>">
+                                    <div class="listing-card <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
                                         <?php if (!empty($image_srcs)) { ?>
                                             <a class="text-decoration-none listing-thumb-wrapper" href="' . $item_url . '">
                                                 <?php echo wp_kses_post($image); ?>
@@ -200,6 +205,9 @@ if (class_exists('BABE_Functions')) {
                     <div class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
+            <?php } ?>
+
+
         </div>
 <?php }
 } ?>

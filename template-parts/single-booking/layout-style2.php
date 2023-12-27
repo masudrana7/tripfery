@@ -5,19 +5,34 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
 <div class="container-fluid-gallery">
     <div class="hero-img-grid image-gallery">
         <?php
+        $i = 1;
         foreach ($images as $key => $image) {
             $image_id = $image['image_id'];
             $image_url = wp_get_attachment_image_url($image_id, 'full');
         ?>
-            <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-            </a>
-        <?php } ?>
+            <?php if ($i <= 3) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                </a>
+            <?php } ?>
+
+            <?php if (4 == $i) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                    <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
+                </a>
+            <?php } ?>
+            <?php if (5 <= $i) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
+            <?php } ?>
+
+        <?php $i++;
+        } ?>
     </div>
 </div>
 <div class="container">
     <div class="row align-items-center rt-booking-price-area">
-        <div class="col-lg-5 col-xl-5 col-xxl-4">
+        <div class="col-lg-12 col-xl-5 col-xxl-4">
             <div class="mb-4 mb-xxl-0">
                 <h3 class="activity-title"><?php the_title(); ?></h3>
                 <?php if (!empty($address['address'])) { ?>
@@ -55,7 +70,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             <path d="M4.5 12H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <div class="d-flex flex-column info-text">
-                            <span class="info-text-one"><?php echo esc_html('Tour Type', 'tripfery') ?></span>
+                            <span class="info-text-one"><?php echo esc_html('Type', 'tripfery') ?></span>
                             <span class="info-text-two"><a href="<?php echo esc_url($type_link); ?>"><?php echo esc_attr($type_name); ?></a></span>
                         </div>
                     </li>
@@ -87,10 +102,20 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             <path d="M16.9992 16.72C15.1992 16.72 13.5992 15.76 12.4492 14.25" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <?php if (!empty(esc_html('Languages'))) { ?>
+                        <?php if (!empty($booking_languages)) { ?>
                             <div class="d-flex flex-column info-text">
                                 <span class="info-text-one"><?php echo esc_html('Languages', 'tripfery') ?></span>
-                                <span class="info-text-two"><?php echo esc_attr($languages); ?></span>
+                                <div class="languages">
+                                    <?php $i = 1;
+                                    foreach ($booking_languages as $languages) { ?>
+                                        <?php
+                                        if ($i < 3) { ?>
+                                            <span class="language">
+                                                <?php echo esc_attr($languages['language_name']); ?></span>
+                                    <?php $i++;
+                                        }
+                                    } ?>
+                                </div>
                             </div>
                         <?php } ?>
                     </li>
@@ -112,14 +137,14 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <?php } ?>
                 </div>
                 <?php if (function_exists('tripfery_post_share')) { ?>
-                <div class="rt-share-service">
-                    <a href="#" class="share-btn">
-                        <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.7363 6.52539L9.58008 10.9492C9.14062 11.3301 8.4375 11.0078 8.4375 10.4219V7.87305C3.86719 7.93164 1.93359 9.04492 3.25195 13.293C3.39844 13.7617 2.8125 14.1426 2.43164 13.8496C1.14258 12.9121 0 11.125 0 9.33789C0 4.88477 3.7207 3.91797 8.4375 3.85938V1.54492C8.4375 0.929688 9.14062 0.607422 9.58008 0.988281L14.7363 5.41211C15.0586 5.73438 15.0586 6.23242 14.7363 6.52539Z" />
-                        </svg>
-                        <?php tripfery_post_share(); ?>
-                    </a>
-                </div>
+                    <div class="rt-share-service">
+                        <a href="#" class="share-btn">
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.7363 6.52539L9.58008 10.9492C9.14062 11.3301 8.4375 11.0078 8.4375 10.4219V7.87305C3.86719 7.93164 1.93359 9.04492 3.25195 13.293C3.39844 13.7617 2.8125 14.1426 2.43164 13.8496C1.14258 12.9121 0 11.125 0 9.33789C0 4.88477 3.7207 3.91797 8.4375 3.85938V1.54492C8.4375 0.929688 9.14062 0.607422 9.58008 0.988281L14.7363 5.41211C15.0586 5.73438 15.0586 6.23242 14.7363 6.52539Z" />
+                            </svg>
+                            <?php tripfery_post_share(); ?>
+                        </a>
+                    </div>
                 <?php } ?>
             </div>
         </div>
@@ -229,6 +254,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <?php } ?>
 
             <!-- Itinerary -->
+            <?php if(is_array($booking_steps)){?>
             <div class="info-card">
                 <?php if (!empty($itinerary_title)) { ?>
                     <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
@@ -257,6 +283,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </div>
                 </div>
             </div>
+            <?php } ?>
 
             <!-- durations Content  -->
             <?php if (!empty($booking_durations)) { ?>
@@ -317,9 +344,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </div>
                 </div>
             <?php } ?>
-
-
-
             <!-- Comments  -->
             <div class="info-card">
                 <?php

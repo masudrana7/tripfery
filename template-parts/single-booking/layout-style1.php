@@ -62,14 +62,29 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
     </div>
     <div class="hero-img-grid image-gallery">
         <?php
+        $i = 1;
         foreach ($images as $key => $image) {
             $image_id = $image['image_id'];
             $image_url = wp_get_attachment_image_url($image_id, 'full');
         ?>
-            <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-            </a>
-        <?php } ?>
+            <?php if ($i <= 3) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                </a>
+            <?php } ?>
+
+            <?php if (4 == $i) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                    <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
+                </a>
+            <?php } ?>
+            <?php if (5 <= $i) { ?>
+                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
+            <?php } ?>
+
+        <?php $i++;
+        } ?>
     </div>
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
