@@ -8,7 +8,6 @@
 
 use Elementor\Plugin;
 use Rtrs\Models\Review;
-
 function tripfery_get_maybe_rtl($filename)
 {
 	$file = get_template_directory_uri() . '/assets/';

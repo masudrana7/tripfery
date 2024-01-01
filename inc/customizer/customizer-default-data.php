@@ -80,7 +80,8 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'mobile_search'  			=> 0,
             'mobile_cart'               => 0,
             'mobile_button'             => 0,
-			
+
+            'header_width'              => 0,
             'header_bg_color'           => '',
 			'header_opt'       			=> 1,
 			'sticky_menu'       		=> 1,
@@ -164,10 +165,8 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			
 			// Post Type Slug
 			'team_slug' 				=> 'team',
-            'service_slug'              => 'service',
             'booking_slug'            => 'booking',
-			'team_cat_slug' 			=> 'team-category',		
-            'service_cat_slug'          => 'service-category',     
+			'team_cat_slug' 			=> 'team-category',		    
             'booking_cat_slug'        => 'booking-category',     
 			
             // Page Layout Setting 
@@ -248,7 +247,6 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'guided_about_me' => 'About Me',
 
             //Booking Layout Setting 
-            'booking_archive_layout' => 'full-width',
             'booking_archive_sidebar'        => '',
             'booking_archive_padding_top'    => 120,
             'booking_archive_padding_bottom' => 120,

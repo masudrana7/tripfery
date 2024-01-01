@@ -156,20 +156,24 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Return the list of Google Fonts from our json file. Unless otherwise specfied, list will be limited to 30 fonts.
 		 */
-		public function rttheme_getGoogleFonts( $count = 30 ) {
-			// Google Fonts json generated from https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=YOUR-API-KEY
-			$fontFile = trailingslashit( get_template_directory() ) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json';
-			if ( $this->fontOrderBy === 'popular' ) {
-				$fontFile = trailingslashit( get_template_directory() ) . 'inc/customizer/typography/google-fonts/google-fonts-popularity.json';
+		public function rttheme_getGoogleFonts($count = 30)
+		{
+			$fontFile = trailingslashit(get_template_directory_uri()) . 'inc/customizer/typography/google-fonts/google-fonts-alphabetical.json';
+			if ($this->fontOrderBy === 'popular') {
+				$fontFile = trailingslashit(get_template_directory_uri()) . 'inc/customizer/typography/google-fonts/google-fonts-popularity.json';
 			}
-
-			$body = file_get_contents($fontFile);
-			$content = json_decode( $body );
-
-			if( $count == 'all' ) {
-				return $content->items;
-			} else {
-				return array_slice( $content->items, 0, $count );
+			$request = wp_remote_get($fontFile);
+			if (is_wp_error($request)) {
+				return "";
+			}
+			$body = wp_remote_retrieve_body($request);
+			$content = json_decode($body);
+			if (!empty($content)) {
+				if ($count == 'all') {
+					return $content->items;
+				} else {
+					return array_slice($content->items, 0, $count);
+				}
 			}
 		}
 	}

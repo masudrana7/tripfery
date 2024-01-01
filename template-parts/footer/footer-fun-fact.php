@@ -15,6 +15,8 @@
         $colum = "3";
     }
 ?>
+
+    <?php if (!empty(TripferyTheme::$options['fff_title_one']) || !empty(TripferyTheme::$options['fff_title_two'] || !empty(TripferyTheme::$options['fff_title_three']))) { ?>
     <div class="fun-fact-area">
         <div class="container">
             <div class="row justify-content-center">
@@ -39,7 +41,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-<?php echo esc_attr($colum); ?> col-md-6 mb-4 mb-lg-0">
                     <div class="single-fun-fact">
                         <?php if (!empty(TripferyTheme::$options['fff_image_two'])) {
@@ -85,4 +86,7 @@
             </div>
         </div>
     </div>
+    <?php } ?>
+
+
 <?php } ?>

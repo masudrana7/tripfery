@@ -214,13 +214,26 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-1.jpg',
                         'name' => __( 'Layout 1', 'tripfery' )
                     ),                  
-                    '2' => array(
-                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-2.jpg',
-                        'name' => __( 'Layout 2', 'tripfery' )
-                    ),
                 )
             )
         ) );
+
+        $wp_customize->add_setting(
+            'header_width',
+            array(
+                'default' => $this->defaults['header_width'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control(new Customizer_Switch_Control(
+            $wp_customize,
+            'header_width',
+            array(
+                'label' => __('Header Container/Full Width container', 'tripfery'),
+                'section' => 'header_section',
+            )
+        ));
 
         //Header Action
 		$wp_customize->add_setting( 'search_icon',

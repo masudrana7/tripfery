@@ -51,14 +51,9 @@ function tripfery_register_required_plugins() {
 			'required' => false,
 		),
 		array(
-			'name'     => 'ShopBuilder',
-			'slug'     => 'shopbuilder',
+			'name'     => 'BA Book Everything',
+			'slug'     => 'ba-book-everything',
 			'required' => true,
-		),
-		array(
-			'name'     => 'WooCommerce',
-			'slug'     => 'woocommerce',
-			'required' => false,
 		),
 	);
 

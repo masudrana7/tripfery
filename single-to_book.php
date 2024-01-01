@@ -137,9 +137,6 @@ if (class_exists('BABE_Functions')) {
 		'booking_brands' 		=> $booking_brands,
 		'brand_title' 		=> $brand_title,
 	);
-
-
-
 ?>
 	<div id="primary" class="rt-booking-single content-area rt_booking_single_<?php echo esc_attr(TripferyTheme::$booking_style); ?>">
 		<div id="contentHolder">

@@ -18,10 +18,6 @@ if ( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category"
 		get_template_part( 'template-parts/archive', 'team' );
 	return;
 }
-if ( is_post_type_archive( "tripfery_service" ) || is_tax( "tripfery_service_category" ) ) {
-		get_template_part( 'template-parts/archive', 'service' );
-	return;
-}
 if ( is_post_type_archive( "tripfery_booking" ) || is_tax( "tripfery_booking_category" ) ) {
 		get_template_part( 'template-parts/archive', 'booking' );
 	return;

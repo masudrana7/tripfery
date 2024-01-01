@@ -82,7 +82,7 @@
                     <?php echo BABE_My_account::get_login_form(); ?>
                     <div class="registration-here text-center">
                         <?php echo esc_html__("Don't have an account?", ""); ?>
-                        <a class="quick-login-link" href="<?php echo $register_link; ?>"><?php echo esc_html__('Sign Up', ''); ?></a>
+                        <a class="quick-login-link" href="<?php echo esc_url($register_link); ?>"><?php echo esc_html__('Sign Up', ''); ?></a>
                     </div>
                 </div>
             <?php endif; ?>

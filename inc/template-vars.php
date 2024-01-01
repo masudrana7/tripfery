@@ -47,6 +47,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
 			
 			TripferyTheme::$header_opt = ( empty( $layout_settings['tripfery_header_opt'] ) || $layout_settings['tripfery_header_opt'] == 'default' ) ? TripferyTheme::$options['header_opt'] : $layout_settings['tripfery_header_opt'];
 
+            TripferyTheme::$header_width = (empty($layout_settings['tripfery_header_width']) || $layout_settings['tripfery_header_width'] == 'default') ? TripferyTheme::$options['header_width'] : $layout_settings['tripfery_header_width'];
             TripferyTheme::$tr_header = ( empty( $layout_settings['tripfery_tr_header'] ) || $layout_settings['tripfery_tr_header'] == 'default' ) ? TripferyTheme::$options['tr_header'] : $layout_settings['tripfery_tr_header'];
             
             TripferyTheme::$header_style = ( empty( $layout_settings['tripfery_header'] ) || $layout_settings['tripfery_header'] == 'default' ) ? TripferyTheme::$options['header_style'] : $layout_settings['tripfery_header'];
@@ -107,8 +108,6 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
                 $prefix = 'shop';
             } elseif( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category" ) ) {
                 $prefix = 'team_archive'; 
-            } elseif( is_post_type_archive("to_book" ) || is_tax("categories" ) ) {
-                $prefix = 'booking_archive'; 
             } else {
                 $prefix = 'blog';
             }

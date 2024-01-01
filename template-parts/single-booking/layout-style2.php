@@ -128,11 +128,11 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
                     <?php if ($discountPrice) { ?>
                         <div class="rt-single-price rt-old-price">
-                            <?php echo $discountPrice; ?>
+                            <?php echo wp_kses_post($discountPrice); ?>
                         </div>
                     <?php } else { ?>
                         <div class="rt-single-price rt-new-price">
-                            <?php echo $nPrice; ?>
+                            <?php echo wp_kses_post($nPrice); ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -265,15 +265,17 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                         foreach ($booking_steps as $booking_step) {
                             $uniqid = wp_rand(5);
                             $i++;
+                            $collapsed = ($i == 1 ? '' : 'collapsed');
+                            $show = ($i == 1 ? ' show' : '');
                         ?>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
-                                    <button class="accordion-button <?php echo ($i == 1 ? '' : 'collapsed') ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    <button class="accordion-button <?php echo attr($collapsed); ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                         <!-- <span class="highlighted-text">Day 1.</span> -->
                                         <?php echo esc_html($booking_step['title']); ?>
                                     </button>
                                 </h2>
-                                <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo ($i == 1 ? ' show' : '') ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
+                                <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show); ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
                                     <div class="accordion-body">
                                         <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
                                     </div>
@@ -325,15 +327,17 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             foreach ($booking_faqs as $booking_faq) {
                                 $uniqid = wp_rand(6);
                                 $i++;
+                                $collapsed = ($i == 1 ? '' : 'collapsed');
+                                $show = ($i == 1 ? ' show' : '');
                             ?>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
-                                        <button class="accordion-button <?php echo ($i == 1 ? '' : 'collapsed') ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <button class="accordion-button <?php echo esc_attr($collapsed);  ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                             <!-- <span class="highlighted-text">Day 1.</span> -->
                                             <?php echo esc_html($booking_faq['post_title'], 'tripfery'); ?>
                                         </button>
                                     </h2>
-                                    <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo ($i == 1 ? ' show' : '') ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFaqs">
+                                    <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show); ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFaqs">
                                         <div class="accordion-body">
                                             <p class="mb-0"><?php echo esc_html($booking_faq['post_content']); ?></p>
                                         </div>

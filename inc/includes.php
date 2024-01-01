@@ -30,16 +30,6 @@ function rt_add_page_attributes()
 {
     add_post_type_support('post', 'page-attributes');
 }
-
-add_action('init', 'rt_remove_comment', 15);
-function rt_remove_comment()
-{
-    if (!function_exists('rtrs')) {
-        return;
-    }
-    remove_filter('comment_form_field_comment', array(\BABE_Rating::class, 'comment_form_field_comment'), 10);
-    remove_filter('get_comment_text', array(\BABE_Rating::class, 'get_comment_text'), 10, 3);
-}
 add_action('rtrs_avg_rating_meta_save', 'rtrs_avg_rating_meta_save', 15, 3);
 function rtrs_avg_rating_meta_save($avRatingValue, $comment_id, $post_id)
 {

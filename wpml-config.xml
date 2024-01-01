@@ -13,6 +13,8 @@
             <key name="opening" />                       
             <key name="social_label" />
             <key name="online_button_text" />   
+            <key name="guided_about_me" />   
+            <key name="booking_arcive_single_title" />   
             <key name="login_text" />
             <key name="offer_text" />
             <key name="copyright_text" />
@@ -32,20 +34,28 @@
             <key name="service_slug" />
             <key name="booking_slug" />
             <key name="team_cat_slug" />
-            <key name="service_cat_slug" />
             <key name="booking_cat_slug" />
+            <key name="fff_title_one" />
+            <key name="fff_desc_one" />
+            <key name="fff_title_two" />
+            <key name="fff_desc_two" />
+            <key name="fff_title_three" />
+            <key name="fff_desc_three" />
         </key>
     </admin-texts>
+
 	<custom-types>
         <custom-type translate="1">tripfery_team</custom-type>
         <custom-type translate="1">tripfery_service</custom-type>
         <custom-type translate="1">tripfery_booking</custom-type>
     </custom-types>
+
     <taxonomies>
         <taxonomy translate="1">tripfery_team_category</taxonomy>
         <taxonomy translate="1">tripfery_service_category</taxonomy>
         <taxonomy translate="1">tripfery_booking_category</taxonomy>
     </taxonomies>
+
 	<custom-fields>
        <custom-field action="translate">tripfery_youtube_link</custom-field>
        <custom-field action="translate">tripfery_team_position</custom-field>

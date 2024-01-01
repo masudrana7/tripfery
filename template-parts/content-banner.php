@@ -22,8 +22,6 @@ if (is_404()) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Guided', 'tripfery'));
 } elseif (is_post_type_archive('to_book')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Bookings', 'tripfery'));
-} elseif (is_post_type_archive('tripfery_service')) {
-	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Our Services', 'tripfery'));
 } elseif (is_archive()) {
 	$tripfery_title = apply_filters('theme_blog_title', esc_html__('All Posts', 'tripfery'));
 } elseif (is_singular('tripfery_team')) {
@@ -32,8 +30,6 @@ if (is_404()) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Guided Details', 'tripfery'));
 } elseif (is_singular('tripfery_booking')) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Details', 'tripfery'));
-} elseif (is_singular('tripfery_service')) {
-	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Service Details', 'tripfery'));
 } elseif (is_single()) {
 	$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Blog Details', 'tripfery'));
 } else {

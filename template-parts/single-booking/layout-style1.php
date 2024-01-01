@@ -145,7 +145,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <?php } ?>
 
             <!-- Related Services  -->
-            <?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
+            <?php  if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
                 <div class="info-card">
                     <?php tripfery_related_booking(); ?>
                 </div>

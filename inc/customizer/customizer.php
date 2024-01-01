@@ -278,16 +278,7 @@ class TripferyTheme_Customizer {
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
-
-        // Add Service Layout Section
-        $wp_customize->add_section( 'service_layout_section',
-            array(
-                'title' => __( 'Service Archive Layout', 'tripfery' ),
-                'priority' => 7,
-                'panel' => 'rttheme_layouts_defaults',
-            )
-        );
-
+        
         // Add Service Single Layout Section
         $wp_customize->add_section( 'guided_single_layout_section',
             array(

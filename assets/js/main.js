@@ -164,37 +164,6 @@ jQuery(document).ready(function ($) {
     }
 
     /*-------------------------------------
-    Listing Filter
-    -------------------------------------*/
-    if ($(".rt-case-isotope").length) {
-        $(".listing-filter-btns, .listing-filter-btn").children().first().addClass("active");
-        var $grid = $(".cardContainer").imagesLoaded(function () {
-            var filterBtnWrapper = $('.listing-filter-btns, .listing-filter-btn');
-            if (filterBtnWrapper.length > 0) {
-                filterBtnWrapper.each(function() {
-                    var firstFilterBtn = $(this).find('.filter-btn:first');
-                    var target = $(firstFilterBtn).attr('data-filter');
-                    $grid.isotope({
-                        itemSelector: ".card-item",
-                        layoutMode: "fitRows",
-                        filter: target,
-                    });
-                });
-            }
-        });
-
-        /*-------------------------------------
-        Filter Button
-        -------------------------------------*/
-        $(".listing-filter-btns, .listing-filter-btn").on("click", "button", function () {
-            $(".listing-filter-btns button, .listing-filter-btn button").removeClass("active");
-            $(this).addClass("active");
-            var filterValue = $(this).attr("data-filter");
-            $grid.isotope({ filter: filterValue });
-        });
-    }
-
-    /*-------------------------------------
     Filter Button For Hotel
     -------------------------------------*/
     if ($(".hotel-filter-btns").length) {
@@ -498,11 +467,30 @@ jQuery(document).ready(function ($) {
         var swiper = new Swiper(".rt-archive-slider", {
             slidesPerView: 4,
             autoplay: true,
-            loop: true,
             spaceBetween: 30,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                576: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+                1600: {
+                    slidesPerView: 4,
+                },
             },
         });
     }
@@ -621,6 +609,37 @@ jQuery(document).ready(function ($) {
             });
         }
 
+        /*-------------------------------------
+        Listing Filter
+        -------------------------------------*/
+        if ($(".rt-case-isotope").length) {
+            $(".listing-filter-btns, .listing-filter-btn").children().first().addClass("active");
+            var $grid = $(".cardContainer").imagesLoaded(function () {
+                var filterBtnWrapper = $('.listing-filter-btns, .listing-filter-btn');
+                if (filterBtnWrapper.length > 0) {
+                    filterBtnWrapper.each(function () {
+                        var firstFilterBtn = $(this).find('.filter-btn:first');
+                        var target = $(firstFilterBtn).attr('data-filter');
+                        $grid.isotope({
+                            itemSelector: ".card-item",
+                            layoutMode: "fitRows",
+                            filter: target,
+                        });
+                    });
+                }
+            });
+
+            /*-------------------------------------
+            Filter Button
+            -------------------------------------*/
+            $(".listing-filter-btns, .listing-filter-btn").on("click", "button", function () {
+                $(".listing-filter-btns button, .listing-filter-btn button").removeClass("active");
+                $(this).addClass("active");
+                var filterValue = $(this).attr("data-filter");
+                $grid.isotope({ filter: filterValue });
+            });
+        }
+
         //isotop track
         if ($('.listing-filter-btns').length) {
             function trackBehavior(tabContainer2, target2 = null) {
@@ -641,8 +660,6 @@ jQuery(document).ready(function ($) {
                 trackBehavior(tabContainer2, target2);
             });
         }
-
-
         // Location Title
         if ($('.rt_location_title').length) {
             var location_title = $('.rt_location_title').text();
@@ -666,7 +683,6 @@ jQuery(document).ready(function ($) {
             var guests_title = $('.rt_guests').text();
             $('.rt-search-customize #search_form .parent-inner:nth-child(6)').prepend('<span class="rt-title-field"> <i class="icon-tripfery-user"></i> ' + guests_title + ' </span>');
         }
-
     }
     tripfery_search_form();
     // Elementor Frontend Load

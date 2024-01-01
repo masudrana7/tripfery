@@ -27,12 +27,13 @@ TripferyTheme_Helper::requires( 'customizer/settings/blog.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/single.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/postshare.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/error.php' );
-TripferyTheme_Helper::requires( 'customizer/settings/reading-progress-bar.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/team.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/guided.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/booking.php' );
+TripferyTheme_Helper::requires('customizer/settings/reading-progress-bar.php');
 TripferyTheme_Helper::requires( 'customizer/settings/woo-shop.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-product.php' );
+
 
 // Layout Setting
 TripferyTheme_Helper::requires( 'customizer/settings/slug.php' );

@@ -13,6 +13,7 @@ if( !empty( TripferyTheme::$options['error_image'] ) ) {
 }else {
 	$tripfery_error_img = "<img src='" . TRIPFERY_ASSETS_URL . 'img/404.png' . "' alt='" . esc_attr( get_bloginfo('name') ) . "'>";
 }
+$error_bg2 = "";
 if( !empty( TripferyTheme::$options['error_image2'] ) ) {
 	$error_bg2 = wp_get_attachment_image( TripferyTheme::$options['error_image2'], 'full', true );
 }

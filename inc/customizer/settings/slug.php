@@ -37,20 +37,6 @@ class TripferyTheme_Slug_Settings extends TripferyTheme_Customizer {
             )
         );
 		
-		$wp_customize->add_setting( 'service_slug',
-            array(
-                'default' => $this->defaults['service_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'service_slug',
-            array(
-                'label' => __( 'Service Slug', 'tripfery' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
 		
 		$wp_customize->add_setting( 'booking_slug',
             array(
@@ -78,21 +64,6 @@ class TripferyTheme_Slug_Settings extends TripferyTheme_Customizer {
         $wp_customize->add_control( 'team_cat_slug',
             array(
                 'label' => __( 'Team Category Slug', 'tripfery' ),
-                'section' => 'slug_layout_section',
-                'type' => 'text',
-            )
-        );
-		
-		$wp_customize->add_setting( 'service_cat_slug',
-            array(
-                'default' => $this->defaults['service_cat_slug'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_text_sanitization'
-            )
-        );
-        $wp_customize->add_control( 'service_cat_slug',
-            array(
-                'label' => __( 'Service Category Slug', 'tripfery' ),
                 'section' => 'slug_layout_section',
                 'type' => 'text',
             )

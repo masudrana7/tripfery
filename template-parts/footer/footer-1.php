@@ -33,10 +33,8 @@ $bgc = $menu_on = $copyright_on = '';
 if ( TripferyTheme::$options['footer_bgtype'] == 'fbgimg' ) {
 	$bgc = 'footer-bg-opacity';
 }
-
-$menu_on = ( TripferyTheme::$options['copyright_menu'] ) ? "menu-on" : "menu-off";
 $copyright_on = ( TripferyTheme::$options['copyright_text'] ) ? "copyright-on" : "copyright-off";
-
+$copy_menu_class =  (TripferyTheme::$options['copyright_menu'] && is_active_sidebar('copyright-menu')) ? "rt_copyright_menu_yes" : "rt_copyright_menu_no";
 ?>
 <div class="footer-top-area <?php echo esc_attr( $bgc ); ?>" style="background:<?php echo esc_html( $tripfery_bg ); ?>">
 	<?php if ( is_active_sidebar( 'footer-style-1-1' ) && TripferyTheme::$footer_area == 1 ) { ?>
@@ -54,17 +52,17 @@ $copyright_on = ( TripferyTheme::$options['copyright_text'] ) ? "copyright-on" :
 		</div>
 	</div>
 	<?php } ?>
-
-	<?php if ( TripferyTheme::$copyright_area == 1 ) { ?>
+		<?php if ( TripferyTheme::$copyright_area == 1 ) {
+	?>
 	<div class="footer-copyright-area">
 		<div class="container">
-			<div class="copyright-area <?php echo esc_attr( $copyright_on ); ?> <?php echo esc_attr( $menu_on ); ?>">
+			<div class="copyright-area <?php echo esc_attr( $copy_menu_class ); ?> <?php echo esc_attr( $copyright_on ); ?>">
 				<div class="copyright-menu-wrap">
 					<?php if ( TripferyTheme::$options['copyright_text'] ) { ?>
 					<div class="copyright"><?php echo wp_kses( TripferyTheme::$options['copyright_text'] , 'allow_link' );?></div>
 					<?php } ?>
 				</div>
-				<?php if ( TripferyTheme::$options['copyright_menu'] ) { ?>	
+				<?php if ( TripferyTheme::$options['copyright_menu'] && is_active_sidebar('copyright-menu')) { ?>	
 					<div class="copyright-menu"><?php dynamic_sidebar('copyright-menu'); ?></div>
 				<?php } ?>
 			</div>
