@@ -22,7 +22,6 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 				$thumbnail = apply_filters('babe_search_result_img_thumbnail', 'full');
 				$image_srcs = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), $thumbnail);
 				$image = $image_srcs ? '<a href="' . $url . '"><img class="room-thumb img-fluid" src="' . $image_srcs[0] . '"></a>' : '';
-
 				if (!isset($ba_post['discount_price_from']) || !isset($ba_post['price_from']) || !isset($ba_post['discount_date_to']) || !isset($ba_post['discount'])) {
 					$prices = BABE_Post_types::get_post_price_from($post_id);
 				} else {
@@ -30,11 +29,8 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 				}
 				$tripfery_room_square = get_post_meta($post_id, 'tripfery_room_square', true);
 				$tripfery_bed_room = get_post_meta($post_id, 'tripfery_bed_room', true);
-
 				$group_peoples = ($ba_post['guests'] == '1') ? "Guest" : "Guests";
 				$group_max_size = $ba_post['guests'] . ' ' . $group_peoples;
-
-
 			?>
 				<div class="d-md-flex single-available-room">
 					<div class="room-thumb-wrapper">
@@ -46,8 +42,8 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 							<span class="price"><?php echo esc_html('From', 'tripfery') ?></span>
 
 							<?php
-							$discount_price_from = isset($prices['discount_price_from']) ? $prices['discount_price_from'] : false;
-							$price_from = isset($prices['price_from']) ? $prices['price_from'] : false;
+								$discount_price_from = isset($prices['discount_price_from']) ? $prices['discount_price_from'] : false;
+								$price_from = isset($prices['price_from']) ? $prices['price_from'] : false;
 							if ($discount_price_from || $price_from) {
 								echo '<div class="rt-price">';
 								if ($discount_price_from) {
@@ -61,7 +57,6 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 							?>
 						</div>
 						<ul class="room-info-list d-flex">
-
 							<?php if (!empty($tripfery_room_square)) { ?>
 								<li class="info-text-wrapper d-flex align-items-center">
 									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +67,7 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 								</li>
 							<?php } ?>
 
-							<?php if (!empty($tripfery_bed_room)) { ?>	
+							<?php if (!empty($tripfery_bed_room)) { ?>
 								<li class="info-text-wrapper d-flex align-items-center">
 									<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M17.9506 3.2311H8.61628V8.64406H7.62209V6.80412C7.62093 5.76165 7.20631 4.76221 6.46918 4.02506C5.73205 3.28792 4.73262 2.87327 3.69015 2.87209H1.43605V0H0V15.4375H1.43605V13.295L20.1047 13.4443V15.4375H21.5407V6.82122C21.5396 5.86939 21.161 4.95686 20.488 4.28382C19.8149 3.61078 18.9024 3.23219 17.9506 3.2311ZM1.43605 4.30814H3.69015C4.35187 4.30889 4.98627 4.57209 5.45418 5.04C5.92209 5.50791 6.18529 6.14231 6.18604 6.80403V8.64397H1.43605V4.30814ZM20.1047 12.0082L1.43605 11.8589V10.0801H20.1047V12.0082ZM20.1047 8.64406H10.0523V4.66715H17.9506C18.5217 4.6678 19.0692 4.89496 19.473 5.29878C19.8768 5.70261 20.104 6.25013 20.1047 6.82122V8.64406Z" fill="#2B2B2B"></path>
@@ -93,8 +88,8 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 							</li>
 						</ul>
 						<div class="d-flex">
-							<a href="<?php echo esc_url($url); ?>" class="btn-xs">Room Detail</a>
-							<a href="<?php echo esc_url($url); ?>" class="btn-xs active">Book Now</a>
+							<a href="<?php echo esc_url($url); ?>" class="btn-xs"><?php echo esc_html('Room Detail', 'tripfery') ?></a>
+							<a href="<?php echo esc_url($url); ?>" class="btn-xs active"><?php echo esc_html('Book Now', 'tripfery') ?></a>
 						</div>
 					</div>
 				</div>

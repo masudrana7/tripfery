@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
     /*-------------------------------------
     Card
     -------------------------------------*/
-    if ($(".rt-booking-default").length) {
+    if ($(".rt-booking-layout-1").length) {
         const panels = document.querySelectorAll(".panel");
         window.onload = function () {
             panels[0].classList.add("active");

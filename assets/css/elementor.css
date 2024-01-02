@@ -142,6 +142,37 @@ CSS INDEX
 .rt-swiper-slider .icon-tripfery-right-arrow {
     font-size: 12px;
 }
+.rt-post-slider-style1 .rt-swiper-nav .swiper-navigation>div {
+    width: 45px;
+    height: 45px;
+    top: -75px;
+    background: transparent;
+}
+.rt-post-slider-style1 .rt-swiper-nav .swiper-navigation>div:hover{
+    background: var(--tripfery-primary-color);
+}
+.rt-post-slider-style1 .rt-swiper-nav .swiper-navigation>.swiper-button-prev{
+    left: auto;
+    right: 55px;
+}
+.rt-post-slider-style1 .rt-post-grid-style1 .rt-item .entry-content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 23px 20px 10px;
+    border-radius: 10px;
+    margin-top: -70px;
+    transition: 0.4s;
+    top: 0;
+}
+.rt-post-slider-style1 .rt-post-grid-style1 .rt-grid-item:hover .entry-content{
+    top: -30px;
+}
+.rt-post-slider-style1 .rt-item .entry-content:after,
+.rt-post-slider-style1 .rt-item .entry-content:before{
+    display: none;
+}
 /*top right*/
 .top-right .rt-swiper-slider .swiper-navigation {
     position: absolute;
@@ -160,6 +191,17 @@ CSS INDEX
 @media(max-width: 1290px) {    
     .elementor-section-full_width .top-right .rt-swiper-slider .swiper-navigation {
         right: 12px;
+    }
+}
+@media(max-width: 480px) {    
+    .rt-post-slider-style1 .rt-swiper-nav .swiper-navigation>div {
+        width: 40px;
+        height: 40px;
+        top: -68px;
+        background: transparent;
+    }
+    .rt-post-slider-style1 .rt-swiper-nav .swiper-navigation>.swiper-button-prev {
+        right: 50px;
     }
 }
 /*bottom center*/
@@ -1471,7 +1513,6 @@ CSS INDEX
 .rt-counter-style1 .rt-content .rt-title{
     font-size: 22px;
     font-weight: 500;
-    letter-spacing: 2px;
     position: absolute;
     top: 43%;
     -webkit-transform: translateY(-50%);
@@ -1508,7 +1549,6 @@ CSS INDEX
     font-weight: 600;
 }
 .rt-counter-style2 .rt-content .rt-title{
-    letter-spacing: 0.5em;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
@@ -1984,13 +2024,12 @@ CSS INDEX
 }
 .rt-testimonial-default .item-content .item-title {
     position: relative;
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 0;
     line-height: 1.4;
     font-weight: 700;
 }
 .rt-testimonial-default .item-content .item-designation {
-    font-size: 18px;
     letter-spacing: 0.2px;
     color: var(--tripfery-grey-color-2);
     font-weight: 500;
@@ -3132,6 +3171,9 @@ CSS INDEX
 .listing-card .wishlist{
     cursor: pointer;
 }
+.rt_booking_style4 .listing-card .wishlist{
+    margin-top: -17px;
+}
 .listing-card .listing-thumb-wrapper{
     position: relative;
 }
@@ -3239,7 +3281,7 @@ CSS INDEX
 }
 .listing-card .price-text {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--tripfery-heading-color);
 }
 .listing-card .price-time {
@@ -3890,7 +3932,7 @@ body .rtrs-star-empty:before{
     z-index: 1;
     background-color: #f9f9ff;
     border-radius: 100px 100px 20px 20px;
-    padding: 15px 13px;
+    padding: 15px 13px 26px;
 }
 .top-activity-wrapper::after {
     width: 100%;
@@ -4731,9 +4773,6 @@ pointer-events: none;
 .rt-destionation-slider.swiper {
     position: static;
 }
-.rt-destionation-slider .item-img img{
-    border-radius: 3px;
-}
 .rt-destionation-slider .swiper-slide.swiper-slide-next .destination-wrapper .destination-info {
     border-color: var(--tripfery-primary-color);
 }
@@ -4769,6 +4808,7 @@ pointer-events: none;
 .rt-destionation-slider .destination-wrapper .item-img {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 .rt-destionation-slider .destination-wrapper .item-img img {
     -webkit-filter: grayscale(0);
@@ -4936,7 +4976,7 @@ pointer-events: none;
 }
 .rt-booking-layout-2 .destination-wrapper .destination-thumb-wrapper {
     position: relative;
-    border: 5px solid #f8fbff;
+    border: 3px solid #f8fbff;
     overflow: hidden;
     border-radius: 173px;
     -webkit-transition: all 0.4s ease-in-out;
@@ -4949,7 +4989,7 @@ pointer-events: none;
 }
 .rt-booking-layout-2 .destination-wrapper .destination-thumb-wrapper .destination-thumb {
     border-radius: 173px;
-    height: 290px;
+    height: 320px;
     width: 230px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -5854,7 +5894,6 @@ pointer-events: none;
 .rt-post-grid-default .rt-item {
     position: relative;
     overflow: hidden;
-    background-color: var(--tripfery-white-color);
     transition: all 0.31s ease-in-out;
 }
 .rt-post-grid-default .rt-item .entry-title {
@@ -5878,14 +5917,10 @@ pointer-events: none;
     display: inline-block;
     color: var(--tripfery-meta-color);
     font-size: 15px;
-    margin-right: 18px;
+    margin-right: 15px;
     position: relative;
     letter-spacing: 0.2px;
     text-transform: capitalize;
-}
-.rt-post-grid-default ul.entry-meta li.entry-categories a{
-    font-weight: 500;
-    color: var(--tripfery-primary-color);
 }
 .rt-post-grid-default ul.entry-meta li::before {
     content: "";
@@ -5925,7 +5960,7 @@ pointer-events: none;
 .rt-post-grid-default .rt-item .rt-image {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .rt-post-grid-default .rt-item .rt-image img {
     width: 100%;
@@ -5955,7 +5990,7 @@ pointer-events: none;
     margin-top: 24px;
 }
 @media(max-width: 991px) {
-    .rt-post-grid-default > div {
+    .rt-post-grid-default:not(.rt-swiper-slider) > div {
         justify-content: center;
     }
 }
@@ -5997,92 +6032,7 @@ pointer-events: none;
 .rt-post-grid-style2 .rt-item .entry-content {
     padding: 25px 30px 30px;
 }
-/*-------------------------------------
-#. EL: Post Slider
----------------------------------------*/
-.rt-post-slider-default .rt-item {
-    position: relative;
-    overflow: hidden;
-    background-color: var(--tripfery-white-color);
-    border: 1px solid var(--tripfery-border-color);
-}
-.rt-post-slider-default .rt-item .entry-title {
-    font-size: 24px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-.rt-post-slider-default .rt-item .entry-title a {
-    color: var(--tripfery-heading-color);
-}
-.rt-post-slider-default .rt-item .entry-title a:hover {
-    color: var(--tripfery-primary-color);
-}
-.rt-post-slider-default ul.entry-meta {
-    list-style: none;
-    margin: 0 0 10px;
-    padding: 0;
-    line-height: 1.5;
-}
-.rt-post-slider-default ul.entry-meta li {
-    display: inline-block;
-    color: var(--tripfery-meta-color);
-    font-size: 15px;
-    margin-right: 18px;
-    position: relative;
-    letter-spacing: 0.2px;
-    text-transform: capitalize;
-}
-.rt-post-slider-default ul.entry-meta li:last-child {
-    margin-right: 0;
-}
-.rt-post-slider-default ul.entry-meta li i {
-    color: var(--tripfery-primary-color);
-    padding-right: 8px;
-}
-.rt-post-slider-default ul.entry-meta li a {
-    color: var(--tripfery-meta-color);
-}
-.rt-post-slider-default ul.entry-meta li a:hover {
-    color: var(--tripfery-primary-color) !important;
-}
-.rt-post-slider-default .rt-item .post-author a {
-    color: var(--tripfery-heading-color);
-    font-weight: 600;
-}
-.rt-post-slider-default .rt-item .rt-image {
-    position: relative;
-    overflow: hidden;
-}
-.rt-post-slider-default .rt-item .rt-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.31s cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
-.rt-post-slider-default .rt-item:hover .rt-image img {
-    transform: scale(1.05);
-}
-.rt-post-slider-default .rt-item .post_excerpt {
-    margin-top: 10px;
-}
-.rt-post-slider-default .rt-item .post_excerpt p {
-    margin-bottom: 0;
-}
-.rt-post-slider-default .rt-item .rt-image .rt-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-}
-.rt-post-slider-default .post-read-more {
-    margin-top: 24px;
-}
 
-/* Post Grid layout 1 */
-.rt-post-slider-style1 .rt-item .entry-content {
-    padding: 25px 30px 30px;
-}
 /* Post Grid layout 2 */
 .rt-post-slider-style2 .rt-item {
     background-color: var(--tripfery-grey-color-1);

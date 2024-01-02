@@ -64,7 +64,7 @@ if (class_exists('BABE_Functions')) {
                 <div class="d-flex align-items-center justify-content-between view-switch-bar position-relative">
                     <p class="search-result mb-0">
                         <?php echo esc_html($results['posts_count']) . ' ';
-                        echo (1 < $results['posts_count']) ? esc_html__('services', 'tripfery-core') : esc_html__('service', 'tripfery-core');
+                        echo (1 < $results['posts_count']) ? esc_html__('services', 'tripfery') : esc_html__('service', 'tripfery');
                         echo esc_html(' found', 'tripfery'); ?>
                     </p>
                     <div class="d-flex view-switch-right">
@@ -72,7 +72,7 @@ if (class_exists('BABE_Functions')) {
                             <div class="babe_search_results_filters">
                                 <div class="sort-and-filter">
                                     <?php if (isset($results['sort_by_filter']) && !empty($results['sort_by_filter'])) {
-                                        printf('<div class="filter-sort d-flex"><span>' . esc_html__('Sort by', 'tripfery-color') . '</span>%s</div>', $results['sort_by_filter']);
+                                        printf('<div class="filter-sort d-flex"><span>' . esc_html__('Sort by', 'tripfery') . '</span>%s</div>', $results['sort_by_filter']);
                                     } ?>
                                 </div>
                             </div>
@@ -158,7 +158,7 @@ if (class_exists('BABE_Functions')) {
 
                                     <?php if (TripferyTheme::$options['booking_rating']) { ?>
                                         <div class="d-flex align-item listing-card-review-area">
-                                            <div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery-core') ?></div>
+                                            <div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery') ?></div>
                                             <div class="rt-bookoing-rating">
                                                 <?php echo BABE_Rating::post_stars_rendering($post['ID']); ?>
                                             </div>
@@ -169,7 +169,7 @@ if (class_exists('BABE_Functions')) {
                                         <?php echo wp_kses_post($item_info_price); ?>
 
                                         <?php if (TripferyTheme::$options['booking_btn']) { ?>
-                                            <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery-core') ?></a>
+                                            <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery') ?></a>
                                         <?php } ?>
 
 

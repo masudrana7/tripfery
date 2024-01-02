@@ -180,7 +180,7 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 
 															<?php if ($guide_id) { ?>
 																<div class="d-flex flex-column">
-																	<span class="text-gray"><?php echo esc_html('Guided By', 'tripfery-core') ?></span>
+																	<span class="text-gray"><?php echo esc_html('Guided By', 'tripfery') ?></span>
 																	<div class="d-flex align-items-center">
 																		<?php if (!empty($post_thumbnail_url)) { ?>
 																			<div>
@@ -199,7 +199,7 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 
 														<?php if (!empty(BABE_Rating::post_stars_rendering($post['ID']))) { ?>
 															<div class="d-flex align-item listing-card-review-area">
-																<div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery-core') ?></div>
+																<div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery') ?></div>
 																<div class="rt-bookoing-rating">
 																	<?php echo BABE_Rating::post_stars_rendering($post['ID']); ?>
 																</div>
@@ -431,7 +431,7 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 
 														<?php if (!empty(BABE_Rating::post_stars_rendering($post['ID']))) { ?>
 															<div class="d-flex align-item listing-card-review-area">
-																<div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery-core') ?></div>
+																<div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery') ?></div>
 																<div class="rt-bookoing-rating">
 																	<?php echo BABE_Rating::post_stars_rendering($post['ID']); ?>
 																</div>

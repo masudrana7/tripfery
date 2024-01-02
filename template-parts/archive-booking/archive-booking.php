@@ -166,7 +166,7 @@ if (class_exists('BABE_Functions')) {
 
                                                 <?php if (TripferyTheme::$options['booking_rating']) { ?>
                                                     <div class="d-flex align-item listing-card-review-area">
-                                                        <div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery-core') ?></div>
+                                                        <div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery') ?></div>
                                                         <div class="rt-bookoing-rating">
                                                             <?php echo BABE_Rating::post_stars_rendering($post['ID']); ?>
                                                         </div>
@@ -176,7 +176,7 @@ if (class_exists('BABE_Functions')) {
                                                 <div class="d-flex align-items-center justify-content-between price-area">
                                                     <?php echo wp_kses_post($item_info_price); ?>
                                                     <?php if (TripferyTheme::$options['booking_btn']) { ?>
-                                                        <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery-core') ?></a>
+                                                        <a href="<?php echo esc_url($url); ?>" class="btn-light-sm btn-light-animated"><?php echo esc_html('View Availability', 'tripfery') ?></a>
                                                     <?php } ?>
                                                 </div>
                                             </div>

@@ -87,10 +87,11 @@ if ( !function_exists( 'tripfery_setup' ) ) {
 		// Image sizes
 		add_image_size( 'tripfery-size1', 1296, 690, true );   	// fullimage, Blog List layout
 		add_image_size( 'tripfery-size2', 960, 520, true );    	// Blog layout 2
-		add_image_size( 'tripfery-size4', 860, 420, true );    	// Blog layout 1
 		add_image_size( 'tripfery-size3', 520, 330, true );    	// Blog layout 3
+		add_image_size( 'tripfery-size4', 860, 420, true );    	// Blog layout 1
 		add_image_size( 'tripfery-size5', 416, 360, true );    	// Blog layout 3
 		add_image_size( 'tripfery-size6', 230, 200, true );    	// Blog layout 3
+		add_image_size( 'tripfery-size7', 520, 400, true );    	// Blog layout 3
 		
 		// Register menus
 		register_nav_menus( array(

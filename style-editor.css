@@ -1,9 +1,9 @@
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'inter', sans-serif;
 	font-size: 16px;
-	font-weight: 500;
-	line-height: 28px;
-	color: #575757;
+	font-weight: 400;
+	line-height: 26px;
+	color: #565656;
 	background-color: #ffffff;
 	height: 100%;
 	vertical-align: baseline;
@@ -14,7 +14,7 @@ body {
 }
 
 .edit-post-visual-editor {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'inter', sans-serif;
 }
 a {
 	color: #384bff;
@@ -122,50 +122,50 @@ h6,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6,
 .editor-post-title__block .editor-post-title__input {
-	font-family: 'Manrope', sans-serif;
-	color: #101010;
+	font-family: 'inter', sans-serif;
+	color: #232323;
 	margin: 0 0 20px 0;
 }
 .editor-styles-wrapper h1,
 .wp-block-freeform.block-library-rich-text__tinymce h1,
 h1 {
 	font-size: 44px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 54px;
 }
 .editor-styles-wrapper h2,
 .wp-block-freeform.block-library-rich-text__tinymce h2,
 h2{
 	font-size: 36px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 42px;
 }
 .editor-styles-wrapper h3,
 .wp-block-freeform.block-library-rich-text__tinymce h3,
 h3{
 	font-size: 28px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 36px;
 }
 .editor-styles-wrapper h4,
 .wp-block-freeform.block-library-rich-text__tinymce h4,
 h4 {
 	font-size: 22px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 28px;
 }
 .editor-styles-wrapper h5,
 .wp-block-freeform.block-library-rich-text__tinymce h5,
 h5 {
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 24px;
 }
 .editor-styles-wrapper h6,
 .wp-block-freeform.block-library-rich-text__tinymce h6,
 h6 {
 	font-size: 14px;
-	font-weight: 800;
+	font-weight: 700;
 	line-height: 18px;
 }
 /********** blockquote ***********/
