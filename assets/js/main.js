@@ -583,6 +583,24 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    $(function () {
+        $('.add_input_field').parent().toggleClass('activesdfsa');
+    });
+
+
+    // Mainmenu Add Class
+    if ($('.site-header .main-navigation .sub-menu li a').length) {
+        var menuItems = $('.site-header .main-navigation .sub-menu li a');
+        menuItems.each(function () {
+            var menuItemText = $(this).text();
+            var newSpan = $('<span>', {
+                'data-text': menuItemText,
+                text: menuItemText
+            });
+            $(this).html(newSpan);
+        });
+    }
+
     function tripfery_search_form() {
         if ($('.rt-search-customize #search_form .input-group>div').length) {
             $('.rt-search-customize #search_form .input-group>div').wrap('<div class="parent-inner"></div>');
