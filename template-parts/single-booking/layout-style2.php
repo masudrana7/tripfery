@@ -159,6 +159,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <?php } ?>
 
         <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
+
+
             <?php if (!empty($booking_propertys)) { ?>
                 <div class="info-card">
                     <?php if (!empty($property_title)) { ?>
@@ -173,6 +175,46 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             <li class="highligts-item d-flex align-items-center justify-content-center">
                                 <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            <?php } ?>
+
+            <?php if (!empty($booking_types)) { ?>
+                <div class="info-card">
+                    <?php if (!empty($type_title)) { ?>
+                        <h3 class="info-card-title"><?php echo esc_html($type_title); ?></h3>
+                    <?php } ?>
+
+                    <ul class="highligts d-flex flex-wrap">
+                        <?php foreach ($booking_types as $booking_type) {
+                            $image_id = $booking_type['type_image'];
+                            $image_url = wp_get_attachment_image_url($image_id, 'full');
+                        ?>
+                            <li class="highligts-item d-flex align-items-center justify-content-center">
+                                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <h4 class="highligts-name"><?php echo esc_html($booking_type['type_name']) ?></h4>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            <?php } ?>
+
+            <?php if (!empty($booking_suitabilitys)) { ?>
+                <div class="info-card">
+                    <?php if (!empty($suitability_title)) { ?>
+                        <h3 class="info-card-title"><?php echo esc_html($suitability_title); ?></h3>
+                    <?php } ?>
+
+                    <ul class="highligts d-flex flex-wrap">
+                        <?php foreach ($booking_suitabilitys as $booking_suitability) {
+                            $image_id = $booking_suitability['suitability_image'];
+                            $image_url = wp_get_attachment_image_url($image_id, 'full');
+                        ?>
+                            <li class="highligts-item d-flex align-items-center justify-content-center">
+                                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <h4 class="highligts-name"><?php echo esc_html($booking_suitability['suitability_name']) ?></h4>
                             </li>
                         <?php } ?>
                     </ul>
@@ -254,37 +296,37 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <?php } ?>
 
             <!-- Itinerary -->
-            <?php if(is_array($booking_steps)){?>
-            <div class="info-card">
-                <?php if (!empty($itinerary_title)) { ?>
-                    <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
-                <?php } ?>
-                <div class="info-card-accordion ">
-                    <div class="accordion accordion-flush" id="accordionFlush">
-                        <?php $i = 0;
-                        foreach ($booking_steps as $booking_step) {
-                            $uniqid = wp_rand(5);
-                            $i++;
-                            $collapsed = ($i == 1 ? '' : 'collapsed');
-                            $show = ($i == 1 ? ' show' : '');
-                        ?>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
-                                    <button class="accordion-button <?php echo attr($collapsed); ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <!-- <span class="highlighted-text">Day 1.</span> -->
-                                        <?php echo esc_html($booking_step['title']); ?>
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show); ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
-                                    <div class="accordion-body">
-                                        <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
+            <?php if (is_array($booking_steps) && !empty($booking_steps)) { ?>
+                <div class="info-card">
+                    <?php if (!empty($itinerary_title)) { ?>
+                        <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
+                    <?php } ?>
+                    <div class="info-card-accordion ">
+                        <div class="accordion accordion-flush" id="accordionFlush">
+                            <?php $i = 0;
+                            foreach ($booking_steps as $booking_step) {
+                                $uniqid = wp_rand(5);
+                                $i++;
+                                $collapsed = ($i == 1 ? '' : 'collapsed');
+                                $show = ($i == 1 ? ' show' : '');
+                            ?>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
+                                        <button class="accordion-button <?php echo esc_attr($collapsed); ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <!-- <span class="highlighted-text">Day 1.</span> -->
+                                            <?php echo esc_html($booking_step['title']); ?>
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show); ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
+                                        <div class="accordion-body">
+                                            <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
 
             <!-- durations Content  -->

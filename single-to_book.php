@@ -51,10 +51,22 @@ if (class_exists('BABE_Functions')) {
 		$valu_duration .= implode(' ', $arr);
 	}
 	$rt_stars = BABE_Rating::post_stars_rendering($post_id);
+
 	$property_title = get_post_meta($post_id, 'tripfery_booking_property_title', true);
 	$booking_propertys = get_post_meta($post_id, 'tripfery_booking_property', true);
 	$property_name = get_post_meta($post_id, 'property_name', true);
 	$property_image = get_post_meta($post_id, 'property_image', true);
+
+	$suitability_title = get_post_meta($post_id, 'tripfery_booking_suitability_title', true);
+	$booking_suitabilitys = get_post_meta($post_id, 'tripfery_booking_suitability', true);
+	$suitability_name = get_post_meta($post_id, 'suitability_name', true);
+	$suitability_image = get_post_meta($post_id, 'suitability_image', true);
+
+	$type_title = get_post_meta($post_id, 'tripfery_booking_type_title', true);
+	$booking_types = get_post_meta($post_id, 'tripfery_booking_type', true);
+	$type_name = get_post_meta($post_id, 'type_name', true);
+	$type_image = get_post_meta($post_id, 'type_image', true);
+
 	$booking_rules = get_post_meta($post_id, 'tripfery_booking_rules', true);
 	$rules_title = get_post_meta($post_id, 'tripfery_booking_rules_title', true);
 	$rules_time = get_post_meta($post_id, 'rules_time', true);
@@ -105,10 +117,22 @@ if (class_exists('BABE_Functions')) {
 		'booking_rules' 		=> $booking_rules,
 		'booking_highlights' 	=> $booking_highlights,
 		'highlights_title' 		=> $highlights_title,
+
 		'property_image' 		=> $property_image,
 		'property_name' 		=> $property_name,
 		'booking_propertys' 	=> $booking_propertys,
 		'property_title' 		=> $property_title,
+
+		'type_image' 		=> $type_image,
+		'type_name' 		=> $type_name,
+		'booking_types' 	=> $booking_types,
+		'type_title' 		=> $type_title,
+
+		'suitability_image' 		=> $suitability_image,
+		'suitability_name' 		=> $suitability_name,
+		'booking_suitabilitys' 	=> $booking_suitabilitys,
+		'suitability_title' 		=> $suitability_title,
+
 		'price' 				=> $price,
 		'rt_stars' 				=> $rt_stars,
 		'discountPrice' 		=> $discountPrice,

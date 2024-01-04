@@ -133,15 +133,15 @@ if (!function_exists('tripfery_related_team')) {
 
 ?>
 
-		<div class="rt-team-default rt-team-multi-layout-2 single-related-team">
+		<div class="rt-team-default rt-team-multi-layout-4 single-related-team">
 			<div class="rt-swiper-slider related-team" data-xld='<?php echo esc_attr($swiper_data); ?>'>
 				<div class="rt-related-title">
 					<div class="title-holder">
 						<h3 class="entry-title has-animation"><?php echo wp_kses(TripferyTheme::$options['team_related_title'], 'alltext_allow'); ?></h3>
 					</div>
 					<div class="swiper-button">
-						<div class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i><?php echo esc_html__('Prev', 'tripfery') ?></div>
-						<div class="swiper-button-next"><?php echo esc_html__('Next', 'tripfery') ?><i class="fa-solid fa-chevron-right"></i></div>
+						<div class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
+						<div class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></div>
 					</div>
 				</div>
 				<div class="swiper-wrapper">
@@ -180,21 +180,17 @@ if (!function_exists('tripfery_related_team')) {
 									<?php if (TripferyTheme::$options['team_ar_excerpt']) { ?>
 										<p><?php echo wp_kses($content, 'alltext_allow'); ?></p>
 									<?php } ?>
+									<?php if (TripferyTheme::$options['team_ar_social']) { ?>
+										<ul class="team-social">
+											<?php foreach ($socials as $key => $social) : ?>
+												<?php if (!empty($social)) : ?>
+													<li class="social-item"><a class="social-link" target="_blank" href="<?php echo esc_url($social); ?>"><i class="fab <?php echo esc_attr($social_fields[$key]['icon']); ?>" aria-hidden="true"></i></a></li>
+												<?php endif; ?>
+											<?php endforeach; ?>
+										</ul>
+									<?php } ?>
 								</div>
-								<?php if (TripferyTheme::$options['team_ar_social']) { ?>
-									<ul class="team-social">
-										<li class="social-item"><a href="#" class="social-hover-icon social-link">
-												<i class="fa-solid fa-share-nodes"></i></a>
-											<ul class="team-social-dropdown">
-												<?php foreach ($socials as $key => $social) : ?>
-													<?php if (!empty($social)) : ?>
-														<li class="social-item"><a class="social-link" target="_blank" href="<?php echo esc_url($social); ?>"><i class="fab <?php echo esc_attr($social_fields[$key]['icon']); ?>" aria-hidden="true"></i></a></li>
-													<?php endif; ?>
-												<?php endforeach; ?>
-											</ul>
-										</li>
-									</ul>
-								<?php } ?>
+
 							</div>
 						</div>
 					<?php } ?>

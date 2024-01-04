@@ -1085,9 +1085,14 @@ CSS INDEX
 /*banner style 1*/
 .rt-banner-style1 .rt-banner-item {
     display: block;
+    overflow: hidden;
 }
 .rt-banner-style1 .rt-banner-item img {
     width: 100%;
+    transition: 0.4s;
+}
+.rt-banner-style1 .rt-banner-item img:hover{
+    transform: scale(1.05);
 }
 /*banner style 2*/
 @media only screen and (min-width: 1200px) {
@@ -2490,21 +2495,12 @@ CSS INDEX
 .rt-team-multi-layout-4 .team-item {
     position: relative;
     z-index: 1;
-    margin-bottom: 24px;
-}
-.rt-team-multi-layout-4 .team-item:hover p {
-    color: var(--tripfery-white-color);
-}
-.rt-team-multi-layout-4 .team-item:hover .team-title a,
-.rt-team-multi-layout-4 .team-item:hover .team-title a:hover {
-    color: var(--tripfery-white-color);
-}
-.rt-team-multi-layout-4 .team-item:hover .team-designation {
-    color: var(--tripfery-white-color);
+    margin-bottom: 6px;
 }
 .rt-team-multi-layout-4 .team-thums {
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
 }
 .rt-team-multi-layout-4 .team-thums:after {
     position: absolute;
@@ -2515,7 +2511,6 @@ CSS INDEX
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    background-color: rgba(var(--tripfery-heading-color-rgb), 0.4);
     transition: all 0.31s ease-in-out;
 }
 .rt-team-multi-layout-4 .team-item:hover .team-thums:after {
@@ -2524,80 +2519,47 @@ CSS INDEX
 }
 .rt-team-multi-layout-4 .team-content {
     background-color: var(--tripfery-white-color);
-    box-shadow: 0px 0px 35px rgb(0 0 0 / 8%);
     padding: 24px;
-    position: absolute;
     overflow: hidden;
-    left: 12px;
-    right: 12px;
-    bottom: -24px;
     z-index: 1;
     transition: all 0.31s ease-in-out;
-}
-.rt-team-multi-layout-4 .team-content:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    height: 4px;
-    width: 100%;
-    background-color: var(--tripfery-primary-color);
-    z-index: -1;
-    transition: height 0.31s ease-in-out;
-}
-.rt-team-multi-layout-4 .team-item:hover .team-content:before {
-    height: 100%;
+    margin: -70px 20px 0;
+    position: relative;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 }
 .rt-team-multi-layout-4 .team-social li {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.31s ease-in-out;
+    display: inline-block;
+}
+.rt-team-multi-layout-4 .team-social li i{
+    color: #a1a1a1;
+    transition: 0.4s;
+    font-size: 14px;
+}
+.rt-team-multi-layout-4 .team-social li + li{
+    padding-left: 8px;
+}
+.rt-team-multi-layout-4 .team-social li i:hover{
+    color: var(--tripfery-primary-color);
 }
 .rt-team-multi-layout-4 .team-social li a {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    height: 44px;
-    width: 44px;
-    align-items: center;
-    justify-content: center;
-    background: var(--tripfery-white-color);
-    color: var(--tripfery-heading-color);
+    display: block;
 }
-.rt-team-multi-layout-4 .team-social li a:hover {
-    background-color: var(--tripfery-primary-color);
-    color: var(--tripfery-white-color);
+.rt-team-multi-layout-4 .team-content ul{
+    position: static;
 }
-.rt-team-multi-layout-4 .team-item:hover .team-social li {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+.rt-team-multi-layout-4 .team-content{
+    border-radius: 20px;
+    text-align: center;
 }
-.rt-team-multi-layout-4 .team-social li:nth-child(1) {
-    transition-delay: 0.6s;
+.rt-team-multi-layout-4 .team-content ul,
+.rt-team-multi-layout-4 .team-designation{
+    margin-top: 12px;
 }
-.rt-team-multi-layout-4 .team-social li:nth-child(2) {
-    transition-delay: 0.5s;
+.single-tripfery_team .rt-team-multi-layout-4 .team-content{
+    margin-bottom: 30px;
 }
-.rt-team-multi-layout-4 .team-social li:nth-child(3) {
-    transition-delay: 0.4s;
-}
-.rt-team-multi-layout-4 .team-social li:nth-child(4) {
-    transition-delay: 0.3s;
-}
-.rt-team-multi-layout-4 .team-social li:nth-child(5) {
-    transition-delay: 0.2s;
-}
-.rt-team-multi-layout-4 .team-social li:nth-child(6) {
-    transition-delay: 0.1s;
-}
-
-.rt-team-multi-layout-4 .rt-swiper-slider .team-item {
-    margin-bottom: 48px;
-}
-.rt-team-multi-layout-4 .related-team .swiper-slide {
-    margin-bottom: 48px;
+body.single-tripfery_team .content-area{
+    padding-bottom: 90px;
 }
 
 /*Team style 5*/
@@ -3699,13 +3661,10 @@ body .rtrs-star-empty:before{
     margin-bottom: 30px;
 }
 .rt_list_service .listing-card .listing-thumb-wrapper{
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px;
 }
 .rt_list_service .listing-card .listing-card-content {
-    padding: 32px 48px;
-}
-.rt_list_service .listing-card {
-    margin-bottom: 30px;
+    padding: 24px 48px;
 }
 .rt_list_service .price-area{
     border-top: 1px solid #d9d9d9;
@@ -3722,6 +3681,7 @@ body .rtrs-star-empty:before{
 .rt_list_service .rt-search-services .listing-card{
     display: flex;
     align-items: center;
+    padding: 0px 24px;
 }
 .rt_list_service .rt-search-services .listing-card-content {
     flex-grow: 1;

@@ -187,6 +187,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             <?php } ?>
 
             <!-- Itinerary -->
+            <?php if (is_array($booking_steps) && !empty($booking_steps)) { ?>
             <div class="info-card">
                 <?php if (!empty($itinerary_title)) { ?>
                     <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
@@ -218,6 +219,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                     </div>
                 </div>
             </div>
+            <?php } ?>
 
             <!-- durations Content  -->
             <?php if (!empty($booking_durations)) { ?>

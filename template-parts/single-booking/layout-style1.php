@@ -60,6 +60,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid-gallery">
     <div class="hero-img-grid image-gallery">
         <?php
         $i = 1;
@@ -86,6 +88,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <?php $i++;
         } ?>
     </div>
+</div>
+<div class="container">
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
             <div class="col-md-4">
@@ -145,7 +149,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <?php } ?>
 
             <!-- Related Services  -->
-            <?php  if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
+            <?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
                 <div class="info-card">
                     <?php tripfery_related_booking(); ?>
                 </div>

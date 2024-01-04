@@ -77,6 +77,11 @@ jQuery(document).ready(function ($) {
             $(".toggle_map").toggleClass("rt_show_mag", 1000);
         });
     }
+    if ($(".rt-search-customize #search_form .input-group .parent-inner>div:not(.submit)").length) {
+        $(".rt-search-customize #search_form .input-group .parent-inner>div:not(.submit)").on("click", function () {
+            $(".rt-search-customize #search_form .input-group .parent-inner").toggleClass("rt_show_mag", 1000);
+        });
+    }
 
     if ($(".rt_grid_btn").length){
         $(".rt_grid_btn").on("click", function(){
@@ -182,6 +187,58 @@ jQuery(document).ready(function ($) {
                 layoutMode: "fitRows",
                 // filter: "*",
             });
+        });
+    }
+
+    /*-------------------------------------
+        Listing Filter
+        -------------------------------------*/
+    if ($(".rt-case-isotope").length) {
+        $(".listing-filter-btns, .listing-filter-btn").children().first().addClass("active");
+        var $grid = $(".cardContainer").imagesLoaded(function () {
+            var filterBtnWrapper = $('.listing-filter-btns, .listing-filter-btn');
+            if (filterBtnWrapper.length > 0) {
+                filterBtnWrapper.each(function () {
+                    var firstFilterBtn = $(this).find('.filter-btn:first');
+                    var target = $(firstFilterBtn).attr('data-filter');
+                    $grid.isotope({
+                        itemSelector: ".card-item",
+                        layoutMode: "fitRows",
+                        filter: target,
+                    });
+                });
+            }
+        });
+
+        /*-------------------------------------
+        Filter Button
+        -------------------------------------*/
+        $(".listing-filter-btns, .listing-filter-btn").on("click", "button", function () {
+            $(".listing-filter-btns button, .listing-filter-btn button").removeClass("active");
+            $(this).addClass("active");
+            var filterValue = $(this).attr("data-filter");
+            $grid.isotope({ filter: filterValue });
+        });
+    }
+
+    //isotop track
+    if ($('.listing-filter-btns').length) {
+        function trackBehavior(tabContainer2, target2 = null) {
+            var selectedTrack2 = target2 ? $(target2).parent().find(
+                '.filter-btn.active'
+            ) : tabContainer2.find('.filter-btn:first');
+            var trackPosition2 = $(selectedTrack2).position();
+            tabContainer2.find('.rt-color-track').css({
+                left: trackPosition2.left + 'px',
+                width: selectedTrack2.outerWidth() + 'px',
+            });
+        }
+        var tabContainer2 = $('.listing-filter-btns');
+        console.log(tabContainer2);
+        trackBehavior(tabContainer2);
+        tabContainer2.on('click', '.filter-btn', function (e) {
+            var target2 = e.currentTarget;
+            trackBehavior(tabContainer2, target2);
         });
     }
 
@@ -583,11 +640,6 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $(function () {
-        $('.add_input_field').parent().toggleClass('activesdfsa');
-    });
-
-
     // Mainmenu Add Class
     if ($('.site-header .main-navigation .sub-menu li a').length) {
         var menuItems = $('.site-header .main-navigation .sub-menu li a');
@@ -627,57 +679,7 @@ jQuery(document).ready(function ($) {
             });
         }
 
-        /*-------------------------------------
-        Listing Filter
-        -------------------------------------*/
-        if ($(".rt-case-isotope").length) {
-            $(".listing-filter-btns, .listing-filter-btn").children().first().addClass("active");
-            var $grid = $(".cardContainer").imagesLoaded(function () {
-                var filterBtnWrapper = $('.listing-filter-btns, .listing-filter-btn');
-                if (filterBtnWrapper.length > 0) {
-                    filterBtnWrapper.each(function () {
-                        var firstFilterBtn = $(this).find('.filter-btn:first');
-                        var target = $(firstFilterBtn).attr('data-filter');
-                        $grid.isotope({
-                            itemSelector: ".card-item",
-                            layoutMode: "fitRows",
-                            filter: target,
-                        });
-                    });
-                }
-            });
-
-            /*-------------------------------------
-            Filter Button
-            -------------------------------------*/
-            $(".listing-filter-btns, .listing-filter-btn").on("click", "button", function () {
-                $(".listing-filter-btns button, .listing-filter-btn button").removeClass("active");
-                $(this).addClass("active");
-                var filterValue = $(this).attr("data-filter");
-                $grid.isotope({ filter: filterValue });
-            });
-        }
-
-        //isotop track
-        if ($('.listing-filter-btns').length) {
-            function trackBehavior(tabContainer2, target2 = null) {
-                var selectedTrack2 = target2 ? $(target2).parent().find(
-                    '.filter-btn.active'
-                ) : tabContainer2.find('.filter-btn:first');
-                var trackPosition2 = $(selectedTrack2).position();
-                tabContainer2.find('.rt-color-track').css({
-                    left: trackPosition2.left + 'px',
-                    width: selectedTrack2.outerWidth() + 'px',
-                });
-            }
-            var tabContainer2 = $('.listing-filter-btns');
-            console.log(tabContainer2);
-            trackBehavior(tabContainer2);
-            tabContainer2.on('click', '.filter-btn', function (e) {
-                var target2 = e.currentTarget;
-                trackBehavior(tabContainer2, target2);
-            });
-        }
+    
         // Location Title
         if ($('.rt_location_title').length) {
             var location_title = $('.rt_location_title').text();
