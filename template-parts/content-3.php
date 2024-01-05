@@ -11,9 +11,7 @@ use Rtrs\Helpers\Functions;
 
 
 $ul_class = $post_classes = '';
-
-$thumb_size = 'full';
-
+$thumb_size = 'tripfery-size7';
 $tripfery_has_entry_meta  = ( TripferyTheme::$options['blog_date'] || TripferyTheme::$options['blog_cats'] || TripferyTheme::$options['blog_author_name3'] || TripferyTheme::$options['blog_comment_num'] || TripferyTheme::$options['blog_length'] && function_exists( 'tripfery_reading_time' ) || TripferyTheme::$options['blog_view'] && function_exists( 'tripfery_views' ) ) ? true : false;
 
 $tripfery_time_html = sprintf( '<span>%s</span> <span>%s</span>', get_the_time( 'd' ), get_the_time( 'M' ), get_the_time( 'Y' ) );
