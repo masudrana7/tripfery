@@ -15,24 +15,29 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
                 </a>
             <?php } ?>
-
             <?php if (4 == $i) { ?>
-                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-                    <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
-                </a>
-            <?php } ?>
-            <?php if (5 <= $i) { ?>
-                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
-            <?php } ?>
+                <?php if (!empty($tripfery_video_link)) { ?>
+                    <a href="https://www.youtube.com/watch?v=XHOmBV4js_E" class="img-grid-item rt-video-popup">
+                        <i class="rt-book-video fa-solid fa-play"></i>
+                    <?php } else { ?>
+                        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                            <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
+                        <?php } ?>
+                        <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                        </a>
+                    <?php } ?>
 
-        <?php $i++;
-        } ?>
+                    <?php if (5 <= $i) { ?>
+                        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
+                    <?php } ?>
+
+                <?php $i++;
+            } ?>
     </div>
 </div>
 <div class="container">
     <div class="row align-items-center rt-booking-price-area">
-        <div class="col-lg-12 col-xl-5 col-xxl-4">
+        <div class="col-lg-12 col-xl-3 col-xxl-4">
             <div class="mb-4 mb-xxl-0">
                 <h3 class="activity-title"><?php the_title(); ?></h3>
                 <?php if (!empty($address['address'])) { ?>
@@ -48,33 +53,65 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         </div>
         <div class="col-lg-8 col-xl-7 col-xxl-6">
             <ul class="activity-info-container d-flex flex-wrap mb-4 mb-xl-0">
-                <?php if (!empty($valu_duration)) { ?>
-                    <li class="d-flex align-items-center info-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.7089 15.18L12.6089 13.33C12.0689 13.01 11.6289 12.24 11.6289 11.61V7.51001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <div class="d-flex flex-column info-text">
-                            <span class="info-text-one"><?php echo esc_html('Duration', 'tripfery') ?></span>
-                            <span class="info-text-two"><?php echo esc_attr($valu_duration); ?></span>
-                        </div>
-                    </li>
-                <?php } ?>
 
-                <?php if (!empty($type_name)) { ?>
-                    <li class="d-flex align-items-center info-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.31993 13.28H12.4099V20.48C12.4099 21.54 13.7299 22.04 14.4299 21.24L21.9999 12.64C22.6599 11.89 22.1299 10.72 21.1299 10.72H18.0399V3.52003C18.0399 2.46003 16.7199 1.96003 16.0199 2.76003L8.44994 11.36C7.79994 12.11 8.32993 13.28 9.31993 13.28Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8.5 4H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M7.5 20H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M4.5 12H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <div class="d-flex flex-column info-text">
-                            <span class="info-text-one"><?php echo esc_html('Type', 'tripfery') ?></span>
-                            <span class="info-text-two"><a href="<?php echo esc_url($type_link); ?>"><?php echo esc_attr($type_name); ?></a></span>
-                        </div>
-                    </li>
-                <?php } ?>
+                <?php if (!empty($tripfery_room_square)) {
+                    if (!empty($tripfery_room_square)) { ?>
+                        <li class="d-flex align-items-center info-item">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.91667 1.66669C7.80616 1.66669 7.70018 1.71059 7.62204 1.78873C7.5439 1.86687 7.5 1.97285 7.5 2.08335C7.5 2.19386 7.5439 2.29984 7.62204 2.37798C7.70018 2.45612 7.80616 2.50002 7.91667 2.50002H11.9125L8.05833 6.35419C8.01472 6.39154 7.97929 6.43751 7.95428 6.4892C7.92927 6.54089 7.91522 6.5972 7.913 6.65458C7.91078 6.71196 7.92045 6.76919 7.9414 6.82265C7.96235 6.87612 7.99412 6.92469 8.03473 6.96529C8.07534 7.0059 8.1239 7.03767 8.17737 7.05862C8.23083 7.07957 8.28806 7.08924 8.34544 7.08702C8.40282 7.0848 8.45913 7.07075 8.51082 7.04574C8.56251 7.02073 8.60848 6.9853 8.64583 6.94169L12.5 3.08752V7.08335C12.5 7.19386 12.5439 7.29984 12.622 7.37798C12.7002 7.45612 12.8062 7.50002 12.9167 7.50002C13.0272 7.50002 13.1332 7.45612 13.2113 7.37798C13.2894 7.29984 13.3333 7.19386 13.3333 7.08335V1.66669H7.91667Z" fill="black"></path>
+                                <path d="M1.66797 7.91667C1.66797 7.80616 1.71187 7.70018 1.79001 7.62204C1.86815 7.5439 1.97413 7.5 2.08464 7.5C2.19514 7.5 2.30112 7.5439 2.37926 7.62204C2.4574 7.70018 2.5013 7.80616 2.5013 7.91667V11.9125L6.35547 8.05833C6.39282 8.01472 6.43879 7.97929 6.49048 7.95428C6.54217 7.92927 6.59848 7.91522 6.65586 7.913C6.71325 7.91078 6.77047 7.92045 6.82394 7.9414C6.87741 7.96235 6.92597 7.99412 6.96657 8.03473C7.00718 8.07534 7.03895 8.1239 7.0599 8.17737C7.08085 8.23083 7.09052 8.28806 7.0883 8.34544C7.08608 8.40282 7.07203 8.45913 7.04702 8.51082C7.02201 8.56251 6.98659 8.60848 6.94297 8.64583L3.0888 12.5H7.08464C7.19514 12.5 7.30112 12.5439 7.37926 12.622C7.4574 12.7002 7.5013 12.8062 7.5013 12.9167C7.5013 13.0272 7.4574 13.1332 7.37926 13.2113C7.30112 13.2894 7.19514 13.3333 7.08464 13.3333H1.66797V7.91667Z" fill="black"></path>
+                            </svg>
+                            <div class="d-flex flex-column info-text">
+                                <span class="info-text-one"><?php echo esc_html('Room', 'tripfery') ?></span>
+                                <span class="info-text-two"><?php echo esc_html($tripfery_room_square); ?></span>
+                            </div>
+                        </li>
+                    <?php } ?>
+                    <?php } else {
+                    if (!empty($valu_duration)) { ?>
+                        <li class="d-flex align-items-center info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15.7089 15.18L12.6089 13.33C12.0689 13.01 11.6289 12.24 11.6289 11.61V7.51001" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="d-flex flex-column info-text">
+                                <span class="info-text-one"><?php echo esc_html('Duration', 'tripfery') ?></span>
+                                <span class="info-text-two"><?php echo esc_attr($valu_duration); ?></span>
+                            </div>
+                        </li>
+                <?php }
+                } ?>
+                <?php  ?>
+                <?php if (!empty($tripfery_bed_room)) {
+                    if (!empty($tripfery_bed_room)) { ?>
+                        <li class="d-flex align-items-center info-item">
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.9506 3.2311H8.61628V8.64406H7.62209V6.80412C7.62093 5.76165 7.20631 4.76221 6.46918 4.02506C5.73205 3.28792 4.73262 2.87327 3.69015 2.87209H1.43605V0H0V15.4375H1.43605V13.295L20.1047 13.4443V15.4375H21.5407V6.82122C21.5396 5.86939 21.161 4.95686 20.488 4.28382C19.8149 3.61078 18.9024 3.23219 17.9506 3.2311ZM1.43605 4.30814H3.69015C4.35187 4.30889 4.98627 4.57209 5.45418 5.04C5.92209 5.50791 6.18529 6.14231 6.18604 6.80403V8.64397H1.43605V4.30814ZM20.1047 12.0082L1.43605 11.8589V10.0801H20.1047V12.0082ZM20.1047 8.64406H10.0523V4.66715H17.9506C18.5217 4.6678 19.0692 4.89496 19.473 5.29878C19.8768 5.70261 20.104 6.25013 20.1047 6.82122V8.64406Z" fill="#2B2B2B"></path>
+                            </svg>
+                            <div class="d-flex flex-column info-text">
+                                <span class="info-text-one"><?php echo esc_html('Total Bed', 'tripfery') ?></span>
+                                <span class="info-text-two"><?php echo esc_html($tripfery_bed_room); ?></span>
+                            </div>
+                        </li>
+                    <?php } ?>
+                    <?php } else {
+                    if (!empty($type_name)) {  ?>
+                        <li class="d-flex align-items-center info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.31993 13.28H12.4099V20.48C12.4099 21.54 13.7299 22.04 14.4299 21.24L21.9999 12.64C22.6599 11.89 22.1299 10.72 21.1299 10.72H18.0399V3.52003C18.0399 2.46003 16.7199 1.96003 16.0199 2.76003L8.44994 11.36C7.79994 12.11 8.32993 13.28 9.31993 13.28Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.5 4H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7.5 20H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.5 12H1.5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="d-flex flex-column info-text">
+                                <span class="info-text-one"><?php echo esc_html('Type', 'tripfery') ?></span>
+                                <span class="info-text-two"><a href="<?php echo esc_url($type_link); ?>"><?php echo esc_attr($type_name); ?></a></span>
+                            </div>
+                        </li>
+                <?php }
+                } ?>
+
+                <?php  ?>
 
                 <?php if (!empty($group_max_size)) { ?>
                     <li class="d-flex align-items-center info-item">
@@ -122,19 +159,18 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                 <?php } ?>
             </ul>
         </div>
-        <div class="col-lg-4 col-xl">
+        <div class="col-lg-4 col-xl-2 col-xxl-2">
             <div class="rt-price-single-inner activity-price align-items-center d-flex">
                 <div class="price-area">
-                    <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
-                    <?php if ($discountPrice) { ?>
-                        <div class="rt-single-price rt-old-price">
-                            <?php echo wp_kses_post($discountPrice); ?>
+                    <span class="from"><?php echo esc_html('From', 'tripfery') ?></span><?php if ($discountPrice) { ?><div class="rt-single-price rt-old-price"><?php echo wp_kses_post($discountPrice); ?>
                         </div>
-                    <?php } else { ?>
-                        <div class="rt-single-price rt-new-price">
-                            <?php echo wp_kses_post($nPrice); ?>
+                    <?php } else { ?><div class="rt-single-price rt-new-price"><?php echo wp_kses_post($nPrice); ?>
                         </div>
-                    <?php } ?>
+                    <?php }
+                                                                                        if (!empty($tripfery_per_rate)) { ?>
+                        <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
+                        <?php }
+                        ?>
                 </div>
                 <?php if (function_exists('tripfery_post_share')) { ?>
                     <div class="rt-share-service">
@@ -151,7 +187,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
     </div>
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
@@ -160,6 +196,11 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
 
         <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
 
+            <!-- Description Text  -->
+            <div class="rt-booking-content info-card">
+                <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
+                <?php the_content(); ?>
+            </div>
 
             <?php if (!empty($booking_propertys)) { ?>
                 <div class="info-card">
@@ -172,7 +213,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             $image_id = $booking_property['property_image'];
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
-                            <li class="highligts-item d-flex align-items-center justify-content-center">
+                            <li class="highligts-item d-flex align-items-center">
                                 <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
                             </li>
@@ -181,20 +222,20 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                 </div>
             <?php } ?>
 
-            <?php if (!empty($booking_types)) { ?>
+            <?php if (!empty($rental_booking_types)) { ?>
                 <div class="info-card">
                     <?php if (!empty($type_title)) { ?>
                         <h3 class="info-card-title"><?php echo esc_html($type_title); ?></h3>
                     <?php } ?>
 
                     <ul class="highligts d-flex flex-wrap">
-                        <?php foreach ($booking_types as $booking_type) {
-                            $image_id = $booking_type['type_image'];
+                        <?php foreach ($rental_booking_types as $booking_type) {
+                            $image_id = $booking_type['rental_type_image'];
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
                             <li class="highligts-item d-flex align-items-center justify-content-center">
                                 <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
-                                <h4 class="highligts-name"><?php echo esc_html($booking_type['type_name']) ?></h4>
+                                <h4 class="highligts-name"><?php echo esc_html($booking_type['rental_type_name']) ?></h4>
                             </li>
                         <?php } ?>
                     </ul>
@@ -212,20 +253,16 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             $image_id = $booking_suitability['suitability_image'];
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
-                            <li class="highligts-item d-flex align-items-center justify-content-center">
+                            <li class="highligts-item d-flex align-items-center">
+                                <?php if($image_url){?>
                                 <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_suitability['suitability_name']) ?></h4>
                             </li>
                         <?php } ?>
                     </ul>
                 </div>
             <?php } ?>
-
-            <!-- Description Text  -->
-            <div class="rt-booking-content info-card">
-                <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
-                <?php the_content(); ?>
-            </div>
 
 
             <!-- Hotel Rules  -->

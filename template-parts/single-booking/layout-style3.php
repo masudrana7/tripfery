@@ -33,7 +33,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
         </div>
     </div>
     <div class="row align-items-center rt-booking-price-area">
-        <div class="col-lg-5 col-xl-5 col-xxl-4">
+        <div class="col-lg-5 col-xl-3 col-xxl-4">
             <div class="mb-4 mb-xxl-0">
                 <h3 class="activity-title"><?php the_title(); ?></h3>
                 <?php if (!empty($address['address'])) { ?>
@@ -58,7 +58,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                 </ul>
             <?php } ?>
         </div>
-        <div class="col-lg-4 col-xl">
+        <div class="col-lg-4 col-xl-2 col-xxl-2">
             <div class="activity-price rt-price-single-inner align-items-center d-flex">
                 <div class="price-area">
                     <span class="from"><?php echo esc_html('From', 'tripfery') ?></span>
@@ -70,7 +70,11 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                         <div class="rt-single-price rt-new-price">
                             <?php echo wp_kses_post($nPrice); ?>
                         </div>
-                    <?php } ?>
+                    <?php }
+                    if (!empty($tripfery_per_rate)) { ?>
+                        <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
+                        <?php }
+                        ?>
                 </div>
                 <?php if (function_exists('tripfery_post_share')) { ?>
                     <div class="rt-share-service">
@@ -87,7 +91,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
     </div>
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
@@ -104,8 +108,10 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                             $image_id = $booking_property['property_image'];
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
-                            <li class="highligts-item d-flex align-items-center justify-content-center">
-                                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                            <li class="highligts-item d-flex align-items-center">
+                                <?php if($image_url){?>
+                                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
                             </li>
                         <?php } ?>
@@ -188,37 +194,37 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
 
             <!-- Itinerary -->
             <?php if (is_array($booking_steps) && !empty($booking_steps)) { ?>
-            <div class="info-card">
-                <?php if (!empty($itinerary_title)) { ?>
-                    <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
-                <?php } ?>
-                <div class="info-card-accordion ">
-                    <div class="accordion accordion-flush" id="accordionFlush">
-                        <?php $i = 0;
-                        foreach ($booking_steps as $booking_step) {
-                            $uniqid = wp_rand(5);
-                            $i++;
-                            $collapsed = ($i == 1 ? '' : 'collapsed');
-                            $show = ($i == 1 ? ' show' : '');
+                <div class="info-card">
+                    <?php if (!empty($itinerary_title)) { ?>
+                        <h3 class="info-card-title"><?php echo esc_html($itinerary_title); ?></h3>
+                    <?php } ?>
+                    <div class="info-card-accordion ">
+                        <div class="accordion accordion-flush" id="accordionFlush">
+                            <?php $i = 0;
+                            foreach ($booking_steps as $booking_step) {
+                                $uniqid = wp_rand(5);
+                                $i++;
+                                $collapsed = ($i == 1 ? '' : 'collapsed');
+                                $show = ($i == 1 ? ' show' : '');
 
-                        ?>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
-                                    <button class="accordion-button <?php echo esc_attr($collapsed); ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        <!-- <span class="highlighted-text">Day 1.</span> -->
-                                        <?php echo esc_html($booking_step['title']); ?>
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show) ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
-                                    <div class="accordion-body">
-                                        <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
+                            ?>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne-<?php echo esc_attr($uniqid); ?>">
+                                        <button class="accordion-button <?php echo esc_attr($collapsed); ?> shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-<?php echo esc_attr($uniqid); ?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <!-- <span class="highlighted-text">Day 1.</span> -->
+                                            <?php echo esc_html($booking_step['title']); ?>
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show) ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
+                                        <div class="accordion-body">
+                                            <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
 
             <!-- durations Content  -->
@@ -340,7 +346,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             </div>
         </div>
         <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>

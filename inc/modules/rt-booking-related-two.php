@@ -52,6 +52,7 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 					} else {
 						$prices = $ba_post;
 					}
+					$tripfery_per_rate = get_post_meta($post_id, 'tripfery_per_rate', true);
 				?>
 					<div class="swiper-slide id-<?php echo absint($rel_post) ?>">
 						<div class="listing-card">
@@ -107,6 +108,9 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 										}
 										if ($discount_price_from && $price_from && ($discount_price_from < $price_from)) {
 											echo '<span class="item_info_price_old">' .  BABE_Currency::get_currency_price($prices['price_from']) . '</span>';
+										}
+										if(!empty($tripfery_per_rate)){
+											echo esc_html($tripfery_per_rate);
 										}
 										echo '</div>';
 									}

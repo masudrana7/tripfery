@@ -31,16 +31,18 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <div class="col-lg-4">
             <div class="d-flex share-link-area justify-content-lg-end align-items-center">
                 <div class="d-flex">
-                    <?php echo esc_html('From', 'tripfery')  ?>
-                    <?php if ($price['discount_price_from']) { ?>
-                        <div class="rt-single-price rt-old-price">
-                            <?php echo BABE_Currency::get_currency_price($price['discount_price_from']); ?>
-                        </div>
-                    <?php } else { ?>
-                        <div class="rt-single-price rt-new-price">
-                            <?php echo BABE_Currency::get_currency_price($price['price_from']); ?>
-                        </div>
-                    <?php } ?>
+                    <?php echo esc_html('From', 'tripfery') ?><?php if ($price['discount_price_from']) { ?>
+                    <div class="rt-single-price rt-old-price">
+                        <?php echo BABE_Currency::get_currency_price($price['discount_price_from']); ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="rt-single-price rt-new-price">
+                        <?php echo BABE_Currency::get_currency_price($price['price_from']); ?>
+                    </div>
+                <?php } if (!empty($tripfery_per_rate)) { ?>
+                    <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
+                    <?php }
+                    ?>
                 </div>
                 <div class="d-flex share-btns-link">
                     <div class="rt-share-service">
@@ -76,17 +78,23 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             <?php } ?>
 
             <?php if (4 == $i) { ?>
-                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
-                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
-                    <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
-                </a>
-            <?php } ?>
-            <?php if (5 <= $i) { ?>
-                <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
-            <?php } ?>
+                <?php if (!empty($tripfery_video_link)) { ?>
+                    <a href="https://www.youtube.com/watch?v=XHOmBV4js_E" class="img-grid-item rt-video-popup">
+                        <i class="rt-book-video fa-solid fa-play"></i>
+                    <?php } else { ?>
+                        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item">
+                            <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
+                        <?php } ?>
+                        <img src="<?php echo esc_url($image_url); ?>" class="img-fluid grid-img" alt="" />
+                        </a>
+                    <?php } ?>
 
-        <?php $i++;
-        } ?>
+                    <?php if (5 <= $i) { ?>
+                        <a href="<?php echo esc_url($image_url); ?>" class="img-grid-item hide_image"></a>
+                    <?php } ?>
+
+                <?php $i++;
+            } ?>
     </div>
 </div>
 <div class="container">
@@ -100,6 +108,12 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <?php } ?>
 
         <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
+            <!-- Description Text  -->
+            <div class="rt-booking-content info-card">
+                <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
+                <?php the_content(); ?>
+            </div>
+
             <?php if (!empty($booking_propertys)) { ?>
                 <div class="info-card">
                     <?php if (!empty($property_title)) { ?>
@@ -111,8 +125,10 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             $image_id = $booking_property['property_image'];
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
-                            <li class="highligts-item d-flex align-items-center justify-content-center">
-                                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                            <li class="highligts-item d-flex align-items-center">
+                                <?php if($image_url){?>
+                                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
                             </li>
                         <?php } ?>
@@ -120,11 +136,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                 </div>
             <?php } ?>
 
-            <!-- Description Text  -->
-            <div class="rt-booking-content info-card">
-                <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
-                <?php the_content(); ?>
-            </div>
 
             <!-- Hotel Rules  -->
             <?php if (!empty($booking_rules)) { ?>
@@ -167,7 +178,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         </div>
 
         <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>

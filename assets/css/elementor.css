@@ -2513,6 +2513,13 @@ CSS INDEX
     visibility: hidden;
     transition: all 0.31s ease-in-out;
 }
+.rt-team-multi-layout-4 .team-thums img{
+    transition: all 0.31s ease-in-out;
+    transform: scale(1);
+}
+.rt-team-multi-layout-4 .team-item:hover .team-thums img{
+     transform: scale(1.1);
+}
 .rt-team-multi-layout-4 .team-item:hover .team-thums:after {
     opacity: 1;
     visibility: visible;
@@ -2537,12 +2544,18 @@ CSS INDEX
 }
 .rt-team-multi-layout-4 .team-social li + li{
     padding-left: 8px;
+    padding-right: 1px;
 }
 .rt-team-multi-layout-4 .team-social li i:hover{
     color: var(--tripfery-primary-color);
 }
 .rt-team-multi-layout-4 .team-social li a {
     display: block;
+    overflow: hidden;
+}
+.rt-team-multi-layout-4 .team-social li a i:hover {
+    -webkit-animation: toBottomFromTop 0.5s forwards;
+    animation: toBottomFromTop 0.5s forwards;
 }
 .rt-team-multi-layout-4 .team-content ul{
     position: static;
@@ -3277,6 +3290,7 @@ body.single-tripfery_team .content-area{
 .listing-card .activity-person {
     font-size: 14px;
     color: #8d8c8c;
+    text-transform: capitalize;
 }
 .listing-card:hover img {
     -webkit-transform: scale(1.1);

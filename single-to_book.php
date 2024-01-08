@@ -8,7 +8,7 @@
 
 get_header();
 if (class_exists('BABE_Functions')) {
-	$tripfery_layout_class = (TripferyTheme::$layout == 'full-width') ? 'col-md-12' : 'col-md-8';
+	$tripfery_layout_class = (TripferyTheme::$layout == 'full-width') ? 'col-lg-12' : 'col-lg-8';
 	$post_id = 	get_the_ID();
 	$booking_faqs = "";
 	$ba_info	= BABE_Post_types::get_post($post_id);
@@ -62,10 +62,10 @@ if (class_exists('BABE_Functions')) {
 	$suitability_name = get_post_meta($post_id, 'suitability_name', true);
 	$suitability_image = get_post_meta($post_id, 'suitability_image', true);
 
-	$type_title = get_post_meta($post_id, 'tripfery_booking_type_title', true);
-	$booking_types = get_post_meta($post_id, 'tripfery_booking_type', true);
-	$type_name = get_post_meta($post_id, 'type_name', true);
-	$type_image = get_post_meta($post_id, 'type_image', true);
+	$rental_type_title = get_post_meta($post_id, 'tripfery_rental_type_title', true);
+	$rental_booking_types = get_post_meta($post_id, 'tripfery_rental_type', true);
+	$rental_type_name = get_post_meta($post_id, 'rental_type_name', true);
+	$rental_type_image = get_post_meta($post_id, 'rental_type_image', true);
 
 	$booking_rules = get_post_meta($post_id, 'tripfery_booking_rules', true);
 	$rules_title = get_post_meta($post_id, 'tripfery_booking_rules_title', true);
@@ -87,6 +87,10 @@ if (class_exists('BABE_Functions')) {
 	$feature_title = get_post_meta($post_id, 'tripfery_booking_feature_title', true);
 	$booking_brands = get_post_meta($post_id, 'tripfery_booking_brands', true);
 	$brand_title = get_post_meta($post_id, 'tripfery_booking_brand_title', true);
+	$tripfery_video_link = get_post_meta($post_id, 'tripfery_video_link', true);
+	$tripfery_per_rate = get_post_meta($post_id, 'tripfery_per_rate', true);
+	$tripfery_room_square = get_post_meta($post_id, 'tripfery_room_square', true);
+	$tripfery_bed_room = get_post_meta($post_id, 'tripfery_bed_room', true);
 
 
 	$total_rating = BABE_Rating::get_post_total_rating($post_id);
@@ -117,16 +121,21 @@ if (class_exists('BABE_Functions')) {
 		'booking_rules' 		=> $booking_rules,
 		'booking_highlights' 	=> $booking_highlights,
 		'highlights_title' 		=> $highlights_title,
+		'tripfery_video_link' 	=> $tripfery_video_link,
+		'tripfery_per_rate' 	=> $tripfery_per_rate,
 
 		'property_image' 		=> $property_image,
 		'property_name' 		=> $property_name,
 		'booking_propertys' 	=> $booking_propertys,
 		'property_title' 		=> $property_title,
 
-		'type_image' 		=> $type_image,
-		'type_name' 		=> $type_name,
-		'booking_types' 	=> $booking_types,
-		'type_title' 		=> $type_title,
+		'rental_type_image' 	=> $rental_type_image,
+		'rental_type_name' 		=> $rental_type_name,
+		'rental_booking_types' 	=> $rental_booking_types,
+		'rental_type_title' 	=> $rental_type_title,
+
+		'tripfery_room_square' 	=> $tripfery_room_square,
+		'tripfery_bed_room' 	=> $tripfery_bed_room,
 
 		'suitability_image' 		=> $suitability_image,
 		'suitability_name' 		=> $suitability_name,
