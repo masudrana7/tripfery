@@ -64,26 +64,11 @@ if (TripferyTheme::$bgtype == 'bgimg') {
 } else {
 	$banner_opacity = "opacity-off";
 }
-if (!empty(TripferyTheme::$options['banner_shape1'])) {
-	$banner_shape1 = wp_get_attachment_image_src(TripferyTheme::$options['banner_shape1'], 'full', true);
-	$banner_bg_img1 = $banner_shape1[0];
-} else {
-	$banner_bg_img1 = TRIPFERY_ASSETS_URL . 'img/hero_top_vactor.svg';
-}
-if (!empty(TripferyTheme::$options['banner_shape2'])) {
-	$banner_shape2 = wp_get_attachment_image_src(TripferyTheme::$options['banner_shape2'], 'full', true);
-	$banner_bg_img2 = $banner_shape2[0];
-} else {
-	$banner_bg_img2 = TRIPFERY_ASSETS_URL . 'img/hero_bottom_vactor.svg';
-} ?>
+ ?>
 <?php if (TripferyTheme::$has_banner == 1 || TripferyTheme::$has_banner == 'on') { ?>
 	<div class="entry-banner <?php echo esc_attr($banner_opacity); ?>">
-		<?php if (TripferyTheme::$options['banner_shape']) { ?>
-		<div class="banner-shape1 wow fadeInDown" data-wow-delay="0.1s" data-wow-duration="1.2s" style="--tripfery-banner-shape1:url(<?php echo esc_url($banner_bg_img1); ?>);"></div><?php } ?>
 		<div class="container">
 			<div class="entry-banner-content">
-
-
 				<?php if (is_post_type_archive('to_book')) { ?>
 				<div class="rt-search-norlam">
 					<?php dynamic_sidebar('booking-form'); ?>
@@ -106,7 +91,5 @@ if (!empty(TripferyTheme::$options['banner_shape2'])) {
 
 			</div>
 		</div>
-		<?php if (TripferyTheme::$options['banner_shape']) { ?>
-		<div class="banner-shape2 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.2s" style="--tripfery-banner-shape2:url(<?php echo esc_url($banner_bg_img2); ?>);"></div><?php } ?>
 	</div>
 <?php } ?>

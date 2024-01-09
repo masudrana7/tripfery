@@ -6,10 +6,9 @@
  */
 
 $tripfery_socials = TripferyTheme_Helper::socials();
-
-?>
+$class_width = (TripferyTheme::$header_width === "on" || TripferyTheme::$header_width === 1) ? "container " : "rt-container container-fluid"; ?>
 <div id="tophead" class="header-top-bar">
-	<div class="rt-container container-fluid">
+	<div class="<?php echo esc_attr($class_width); ?>">
 		<div class="top-bar-wrap">
 			<div class="topbar-left">
 				<ul class="top-address">

@@ -2098,6 +2098,11 @@ CSS INDEX
     border-radius: 50%;
     max-width: 60px;
 }
+.testimonial-multi-layout-1 .rt-swiper-slider .item-content {
+    box-shadow: unset;
+    border: 1px solid #eaeff5;
+}
+
 @media(max-width: 425px) {
     .testimonial-multi-layout-1 .item-content {
         padding: 35px 25px;
@@ -3127,7 +3132,7 @@ body.single-tripfery_team .content-area{
     z-index: 1;
     position: absolute;
     left: -1px;
-    top: 9px;
+    top: 10px;
     height: calc(100% + -20px);
     background: var(--tripfery-primary-color);
     transition: 0.5s;
@@ -3148,7 +3153,7 @@ body.single-tripfery_team .content-area{
     cursor: pointer;
 }
 .rt_booking_style4 .listing-card .wishlist{
-    margin-top: -17px;
+    margin-top: -16px;
 }
 .listing-card .listing-thumb-wrapper{
     position: relative;
@@ -3357,7 +3362,7 @@ body .rtrs-star-empty:before{
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    background-color: #fff8f8;
+    background-color: #384bff0f;
     gap: 4px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3372,7 +3377,7 @@ body .rtrs-star-empty:before{
     font-size: 14px;
 }
 .badge .badge-icon {
-    color: #e7233a;
+    color: var(--tripfery-primary-color);
 }
 .badge.badge-pink {
     background-color: #fff8f8;
@@ -3563,6 +3568,13 @@ body .rtrs-star-empty:before{
 .rt_booking_style4 .price-area,
 .rt_booking_style5 .price-area {
     padding-top: 15px;
+}
+
+.rt_booking_style4  .listing-card .listing-card-content svg{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top:-1px;
 }
 
 /*-------------------------------------

@@ -620,8 +620,9 @@ if ( !function_exists( 'tripfery_post_links_next_prev' ) ) {
     $previous_post = get_previous_post();	
 	?>
 	<div class="divider post-navigation">
+
 		<?php if ( !empty( get_next_post_link())){ ?>
-			<div class="rt-nav-post <?php if ( empty( get_previous_post_link())){ ?>-offset-md-6<?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-left' ); } else { echo esc_attr( 'text-left' ); } ?>">
+			<div class="rt-nav-post rt-next-post <?php if ( empty( get_previous_post_link())){ ?>-offset-md-6<?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-left' ); } else { echo esc_attr( 'text-left' ); } ?>">
 				<div class="pad-lr-15">
 					<?php if( has_post_thumbnail() ) { ?>
 					<div class="nav-image">
@@ -638,21 +639,23 @@ if ( !function_exists( 'tripfery_post_links_next_prev' ) ) {
 				</div>			
 			</div>
 		<?php } ?>
+
 		<?php if ( !empty( get_previous_post_link())){ ?>
-			<div class="rt-nav-post  <?php if ( empty( get_next_post_link())){ ?>offset-md-6<?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-right' ); } else { echo esc_attr( 'text-right' ); } ?>">
+			<div class="rt-nav-post rt-prev-post  <?php if ( empty( get_next_post_link())){ ?>offset-md-6<?php } ?> <?php if ( is_rtl() ){ echo esc_attr( 'text-right' ); } else { echo esc_attr( 'text-right' ); } ?>">
 				<div class="pad-lr-15">
-					<div class="nav-image">
-						<?php next_post_link('%link', get_the_post_thumbnail($previous_post->ID,'thumbnail'));?>
-					</div>
 					<div class="nav-text">
 						<span class="nav-article prev-article">
 							<?php previous_post_link( '%link', esc_html__('Next Post' , 'tripfery' ) );?>
 						</span>
 						<?php previous_post_link('<h4 class="post-nav-title">%link</h4>'); ?>
 					</div>
+					<div class="nav-image">
+						<?php next_post_link('%link', get_the_post_thumbnail($previous_post->ID,'thumbnail'));?>
+					</div>
 				</div>
 			</div>
 		<?php } ?>
+
 	</div>
 <?php }
 }

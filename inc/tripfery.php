@@ -44,7 +44,6 @@ if ( !class_exists( 'TripferyTheme' ) ) {
 		public static $footer_top_widget = null;
 
 		private function __construct() {
-
 			add_action( 'after_setup_theme', array( $this, 'set_options' ) );
 			add_action('customize_preview_init', array($this, 'set_options'));
 			

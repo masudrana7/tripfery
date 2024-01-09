@@ -167,14 +167,6 @@ $youtube_link = get_post_meta(get_the_ID(), 'tripfery_youtube_link', true); ?>
 						<div class="media-body">
 							<div class="about-author-info">
 								<h3 class="author-title"><?php the_author_posts_link(); ?></h3>
-								<div class="author-designation">
-									<?php if (!empty($tripfery_author_designation)) {
-										echo esc_html($tripfery_author_designation);
-									} else {
-										$user_info = get_userdata($author);
-										echo esc_html(implode(', ', $user_info->roles));
-									} ?>
-								</div>
 							</div>
 							<?php if ($tripfery_author_bio) { ?>
 								<div class="author-bio"><?php echo esc_html($tripfery_author_bio); ?></div>

@@ -434,7 +434,6 @@ $breadcrumb_link_color = TripferyTheme::$options['breadcrumb_link_color'];
 $breadcrumb_link_hover_color = TripferyTheme::$options['breadcrumb_link_hover_color'];
 $breadcrumb_seperator_color = TripferyTheme::$options['breadcrumb_seperator_color'];
 $breadcrumb_active_color = TripferyTheme::$options['breadcrumb_active_color'];
-$banner_shape_color = TripferyTheme::$options['banner_shape_color'];
 ?>
 
 <?php if ($breadcrumb_link_color) { ?>
@@ -463,13 +462,6 @@ $banner_shape_color = TripferyTheme::$options['banner_shape_color'];
 	.breadcrumb-area .entry-breadcrumb .current-item,
 	.entry-banner .entry-banner-content {
 	color: <?php echo esc_html($breadcrumb_active_color); ?>;
-	}
-<?php } ?>
-
-<?php if ($banner_shape_color) { ?>
-	.entry-banner .banner-shape1,
-	.entry-banner .banner-shape2 {
-	background-color: <?php echo esc_html($banner_shape_color); ?>;
 	}
 <?php } ?>
 

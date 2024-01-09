@@ -108,18 +108,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
             return true;
         }
     }
-
-    /* Banner shape check is enabled */
-    if (!function_exists('rttheme_is_banner_shape_enabled')) {
-        function rttheme_is_banner_shape_enabled()
-        {
-            $banner_shape = get_theme_mod('banner_shape');
-            if (empty($banner_shape)) {
-                return false;
-            }
-            return true;
-        }
-    }   
+  
 
 	/* = Page Layout
     ==========================================================*/

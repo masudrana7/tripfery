@@ -101,19 +101,22 @@ jQuery(document).ready(function ($) {
             $(".rt-search-customize").addClass("rt_active_activity");
         });
 
-        $("#search_form_tabs .search_form_tab[data-tab-slug='tours']").on("click", function(){
+        $("#search_form_tabs .search_form_tab[data-tab-slug='tour']").on("click", function(){
             $(".rt-search-customize").removeClass("rt_active_activity");
             $(".rt-search-customize").removeClass("rt_active_rentacar");
             $(".rt-search-customize").addClass("rt_active_tour");
         });
-        $("#search_form_tabs .search_form_tab[data-tab-slug='rentacar']").on("click", function(){
+        $("#search_form_tabs .search_form_tab[data-tab-slug='car']").on("click", function(){
             $(".rt-search-customize").removeClass("rt_active_activity");
             $(".rt-search-customize").removeClass("rt_active_tour");
             $(".rt-search-customize").addClass("rt_active_rentacar");
         });
 
         $("#search_form_tabs .search_form_tab[data-tab-slug='restaurants']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
+            $(".rt-search-customize").removeClass("rt_active_activity");
+            $(".rt-search-customize").removeClass(" rt_active_tour");
+            $(".rt-search-customize").removeClass(" rt_active_rentacar");
+            $(".rt-search-customize").addClass("rt_active_restaurants");
         });
 
         $("#search_form_tabs .search_form_tab[data-tab-slug='hotel']").on("click", function(){

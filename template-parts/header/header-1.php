@@ -22,7 +22,7 @@ if (!empty(TripferyTheme::$options['logo_light'])) {
 } else {
 	$tripfery_light_logo = get_bloginfo('name');
 }
-$class_width = (TripferyTheme::$header_width === "on" || TripferyTheme::$header_width === 1) ? "rt-container container-fluid" : "container"; ?>
+$class_width = (TripferyTheme::$header_width === "on" || TripferyTheme::$header_width === 1) ? "container " : "rt-container container-fluid"; ?>
 <div id="sticky-placeholder"></div>
 <div class="header-menu" id="header-menu">
 	<div class="<?php echo esc_attr($class_width); ?>">
