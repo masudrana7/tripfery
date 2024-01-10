@@ -5,7 +5,7 @@
  * @since   1.0
  * @version 1.0
  */
-
+$title = get_the_title();
 if (is_404()) {
 	$tripfery_title = "Error Page";
 } elseif (is_search()) {
@@ -37,8 +37,11 @@ if (is_404()) {
 }
 if (class_exists('BABE_Functions')) {
 	if (is_singular('to_book')) {
-		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Details', 'tripfery'));
-	} elseif (is_archive('to_book')) {
+		$tripfery_title  = apply_filters('theme_blog_title', esc_html__($title, 'tripfery'));
+	} elseif (is_archive('ba_locations-car')) {
+		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Car', 'tripfery'));
+	}
+	elseif (is_archive('to_book')) {
 		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Location', 'tripfery'));
 	} else {
 		$tripfery_title = $tripfery_title;
@@ -88,7 +91,6 @@ if (TripferyTheme::$bgtype == 'bgimg') {
 				<?php if ((TripferyTheme::$has_breadcrumb == 1) && (!is_post_type_archive('to_book')) && (!is_post_type_archive('tripfery_guided'))) { ?>
 					<?php get_template_part('template-parts/content', 'breadcrumb'); ?>
 				<?php } ?>
-
 			</div>
 		</div>
 	</div>

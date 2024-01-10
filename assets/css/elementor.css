@@ -600,18 +600,7 @@ CSS INDEX
     stroke-width: 0;
 }
 .rt-info-style1 .rt-info-item:hover .rt-icon svg{
-    stroke-dashoffset: 0;
     color: var(--tripfery-primary-color);
-    stroke: var(--tripfery-primary-color);
-    -webkit-transition: fill 0.5s, stroke-dashoffset 6s, -webkit-transform 0.8s;
-    transition: fill 0.5s, stroke-dashoffset 6s, -webkit-transform 0.8s;
-    transition: transform 0.8s, fill 0.5s, stroke-dashoffset 6s;
-    transition: transform 0.8s, fill 0.5s, stroke-dashoffset 6s, -webkit-transform 0.8s;
-    -webkit-animation: toBottomFromTop 0.5s forwards;
-    animation: toBottomFromTop 0.5s forwards;
-    stroke-width: 0;
-    fill: none;
-    stroke-width: 1;
 }
 /*info style 02*/
 .rt-info-style2 .rt-info-item {
@@ -625,7 +614,7 @@ CSS INDEX
 .rt-info-style3 .rt-info-item {
     -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 70px 36px;
     background-color: var(--tripfery-white-color);
     text-align: center;
@@ -1419,6 +1408,16 @@ CSS INDEX
     border-radius: 112px;
     font-size: 32px;
 }
+@media(max-width: 767px) {
+    .rt-video-style2 .play-btn-white {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        border-radius: 112px;
+        font-size: 26px;
+    }
+}
+
 /*video style 03*/
 .rt-video-style3 {
     text-align: center;
@@ -2088,10 +2087,10 @@ CSS INDEX
 .testimonial-multi-layout-1 .item-content .tquote{
     width: 80px;
     height: 80px;
-    line-height: 70px;
+    line-height: 64px;
     text-align: center;
     border-radius: 50%;
-    background-color: #f7fdff;
+    background-color: #f6f7ff;
     margin-bottom: 15px;
 }
 .testimonial-multi-layout-1 .item-content .item-img img {
@@ -3097,6 +3096,12 @@ body.single-tripfery_team .content-area{
     margin-bottom: 50px;
     min-height: 65px;
 }
+@media(max-width: 767px) {
+    .listing-filter-btns {
+        border-radius: 15px;
+        padding: 20px 14px 15px;
+    }
+}
 .listing-filter-btns .filter-btn {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -3296,10 +3301,20 @@ body.single-tripfery_team .content-area{
     font-size: 14px;
     color: #8d8c8c;
     text-transform: capitalize;
+    font-weight: 400;
+}
+.single-tripfery_guided .listing-card .activity-person{
+    margin-left: -4px;
+    position: relative;
+    top: -1px;
 }
 .listing-card:hover img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+.rt-car-style .listing-card:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 .listing-card .listing-card-title a:hover {
     color: var(--tripfery-primary-color);
@@ -3437,13 +3452,11 @@ body .rtrs-star-empty:before{
     visibility: visible;
 }
 .rt_booking_style5 .wishlist svg {
-    color: #ffffff;
+    color: #e7233a;
     width: 16px;
     height: 15px;
 }
-.rt_booking_style5 .listing-thumb-wrapper .wishlist {
-    background-color: #000000c2;
-}
+.rt_booking_style5 .listing-thumb-wrapper .wishlist,
 .rt_booking_style5 .listing-thumb-wrapper .wishlist.added-wishlist {
     background-color: #ffffff;
 }
@@ -3569,14 +3582,19 @@ body .rtrs-star-empty:before{
 .rt_booking_style5 .price-area {
     padding-top: 15px;
 }
-
 .rt_booking_style4  .listing-card .listing-card-content svg{
-    width: 14px;
-    height: 14px;
     position: relative;
     top:-1px;
 }
-
+.rt_booking_style5 .badge2{
+    margin-top: 5px;
+}
+.rt_booking_style5 .badge2 svg{
+    width: 15px;
+    height: 14px;
+    position: relative;
+    top: -1px;
+}
 /*-------------------------------------
 #. RT Service Search Result
 ---------------------------------------*/
@@ -3935,6 +3953,7 @@ body .rtrs-star-empty:before{
     background-color: #f9f9ff;
     border-radius: 100px 100px 20px 20px;
     padding: 15px 13px 26px;
+    max-width: 200px;
 }
 .top-activity-wrapper::after {
     width: 100%;
@@ -3990,19 +4009,31 @@ body .rtrs-star-empty:before{
     font-weight: 600;
     line-height: 24px;
     color: var(--tripfery-heading-color);
-    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     margin-bottom: 0;
 }
 .top-activity-wrapper .activity-info .activity-place {
     font-size: 15px;
     color: #929292;
-    -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
 .rt-booking-layout-3 .city-wrapper {
     cursor: pointer;
+    background: var(--tripfery-white-color);
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+    padding: 30px 20px 25px;
+}
+.rt-booking-layout-3 .city-wrapper:hover{
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.10);
+}
+.rt-booking-layout-3 .cards-row {
+    gap: 24px;
+}
+@media(max-width: 767px) {
+    .rt-booking-layout-3 .cards-row .mb-4{
+        margin-bottom: 0 !important;
+    }
 }
 .rt-booking-layout-3 .city-wrapper .city-thumb-wrapper {
     margin-bottom: 15px;
@@ -4659,7 +4690,7 @@ body .rtrs-star-empty:before{
     background-color: var(--tripfery-primary-color);
 }
 .room-feature-box-1 .list-feature ul li .list-item a{
-pointer-events: none;
+    pointer-events: none;
 }
 .room-feature-box-1 .list-feature ul li .list-item .list-title {
     display: inline-block;
@@ -4671,14 +4702,12 @@ pointer-events: none;
     position: relative;
     margin-bottom: 50px;
 }
-
 @media (max-width: 575.98px) {
     .room-feature-box-1 .list-feature ul li .list-item .list-title {
         font-size: 20px;
         margin-bottom: 30px;
     }
 }
-
 .room-feature-box-1 .list-feature ul li .list-item .list-title::after {
     width: 50%;
     background-color: #d9d9d9;
@@ -4695,49 +4724,41 @@ pointer-events: none;
     position: relative;
     height: 100%;
 }
-
 @media screen and (min-width: 1441px) {
     .image-column {
         max-width: 33vw;
     }
 }
-
 @media (max-width: 991.98px) {
     .image-column {
         height: 680px;
     }
 }
-
 @media (max-width: 767.98px) {
     .image-column {
         height: 510px;
     }
 }
-
 @media (max-width: 575.98px) {
     .image-column {
         height: 543px;
     }
 }
-
 @media screen and (max-width: 425px) {
     .image-column {
         height: 400px;
     }
 }
-
 @media screen and (max-width: 375px) {
     .image-column {
         height: 350px;
     }
 }
-
 @media screen and (max-width: 320px) {
     .image-column {
         height: 300px;
     }
 }
-
 .image-column .col-img {
     width: 100%;
     position: absolute;
@@ -4749,7 +4770,6 @@ pointer-events: none;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0s ease 0.6s, -webkit-clip-path 0s ease 0.6s;
 }
-
 .image-column .col-img img {
     width: 100%;
     height: auto;
@@ -4758,7 +4778,6 @@ pointer-events: none;
     object-fit: cover;
     display: block;
 }
-
 .image-column .active {
     opacity: 1;
     transition: clip-path 0.6s ease, -webkit-clip-path 0.6s ease;
@@ -4768,7 +4787,6 @@ pointer-events: none;
 /*-------------------------------------
 #. EL: Booking Grid & Slider
 ---------------------------------------*/
-
 .swiper {
     overflow: hidden;
 }
@@ -4959,8 +4977,15 @@ pointer-events: none;
 }
 .rt-booking-layout-3 .cards-row,
 .rt-booking-layout-2  .cards-row{
-    flex-wrap: wrap;
     justify-content: center;
+}
+.rt-booking-layout-2  .cards-row{
+    flex-wrap: wrap;
+}
+@media (max-width: 1199px) {
+    .rt-booking-layout-3 .cards-row{
+        flex-wrap: wrap;
+    }
 }
 .rt-booking-layout-2 .destination-wrapper {
     display: -webkit-box;
@@ -5006,7 +5031,7 @@ pointer-events: none;
     .rt-booking-layout-2 .destination-wrapper {
         gap: 20px;
         max-width: 300px;
-        margin: 0 auto;
+        margin: 0 10px;
     }
 }
 .rt-booking-layout-2 .destination-wrapper .star {

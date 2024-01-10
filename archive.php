@@ -26,6 +26,10 @@ if (is_post_type_archive("to_book") || is_tax("ba_locations")) {
 	get_template_part('template-parts/archive-booking/archive', 'booking');
 	return;
 }
+if (is_post_type_archive("to_book") || is_tax("ba_booking-car")) {
+	get_template_part('template-parts/archive-booking/archive', 'car');
+	return;
+}
 ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">

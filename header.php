@@ -30,7 +30,9 @@ if (TripferyTheme::$options['image_blend'] == 'normal') {
 		if (!empty(TripferyTheme::$options['preloader_image'])) {
 			$pre_bg = wp_get_attachment_image_src(TripferyTheme::$options['preloader_image'], 'full', true);
 			$preloader_img = $pre_bg[0];
-			echo '<div id="preloader" style="background-image:url(' . esc_url($preloader_img) . ');"></div>';
+			echo '<div id="preloader">
+				<div class="rt_preloader_image" style="background-image:url(' . esc_url($preloader_img) . ');"></div>
+			</div>';
 		} else { ?>
 			<div id="preloader" class="loader">
 				<div class="cssload-loader">

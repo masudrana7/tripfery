@@ -16,7 +16,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 add_action('bcn_after_fill', 'tripfery_hseparator_breadcrumb_trail', 1);
 function tripfery_hseparator_breadcrumb_trail($object)
 {
-    $object->opt['hseparator'] = '<span class="dvdr"> / </span>';
+    $object->opt['hseparator'] = '<span class="dvdr"> . </span>';
     return $object;
 }
 /*review comment most count*/
