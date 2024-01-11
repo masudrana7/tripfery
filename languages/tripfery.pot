@@ -284,6 +284,21 @@ msgstr ""
 msgid "Banner Padding Top"
 msgstr ""
 
+#: inc/customizer/settings/banner.php:155
+msgid "Banner Shape"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:168
+msgid "Banner Shape 1"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:193
+msgid "Banner Shape 2"
+msgstr ""
+
+#: inc/customizer/settings/banner.php:221
+msgid "Banner Shape Color"
+msgstr ""
 
 #: inc/helper-functions.php:320 inc/customizer/settings/general.php:509
 msgid "Behance"

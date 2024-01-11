@@ -1,23 +1,25 @@
-.rt-button i:before,
-.btn-common i:before,
-.icon-tripfery-right-arrow:before,
-.icon-tripfery-left-arrow:before,
-.site-header .main-navigation ul li ul.sub-menu li > a:before {
-    transform: rotate(180deg);
+.listing-filter-btns .rt-color-track{
+    right: auto;
+    left: -1px;
 }
-.sidebar-widget-area .widget ul li a:before,
-.footer-content-area ul.menu li a::before {
-    transform: rotate(180deg);
-    padding-right: 10px;
-    padding-left: 0;
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    background-image: none;
 }
-.about-author .pull-right {
-    padding-left: 25px;
-    width: 250px;
+.rt-slide-nav .offscreen-navigation ul li>a::before,
+.footer-top-area .corporate-address li i::before{
+    transform: rotate(-145deg);
 }
-.wp-block-quote {
-    border-left: none;
+.rt-testimonial-default .item-content .tquote svg,
+.rt-service-location-slider .topDestinationNav .swiper-button-next i,
+.rt-service-location-slider .topDestinationNav .swiper-button-prev i{
+    display: inline-block;
+    transform: rotate(-180deg);
 }
-.sidebar-widget-area .sidebar-service.widget_nav_menu ul li a:hover:before {
-    animation: unset;
+.rt-slide-nav .offscreen-navigation ul li>a::before,
+.footer-top-area .corporate-address li i::before {
+    transform: rotate(-177deg);
+    top: 12px;
 }

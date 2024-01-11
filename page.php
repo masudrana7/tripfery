@@ -11,6 +11,7 @@ if ( TripferyTheme::$layout == 'full-width' ) {
 } else {
 	$tripfery_layout_class = TripferyTheme_Helper::has_active_widget();
 }
+
 ?>
 <?php get_header(); ?>
 <div id="primary" class="content-area">

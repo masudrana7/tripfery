@@ -1366,7 +1366,6 @@ a.button-style-5:hover::before {
 	width: 100%;
 	background-color: var(--tripfery-white-color);
 	box-shadow: 0px 0px 90px 0px rgb(0 0 0 / 10%);
-	transition: all 0.4s ease-in-out 0s;
 }
 .header-style-2 .rt-sticky .header-dark {
 	border-top: none;
@@ -8824,21 +8823,17 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 		right: 55px;
 	}
 }
-
 .info-menu-bar a {
 	color: #111111;
 	font-weight: 500;
 }
-
 .info-menu-bar a:hover {
 	color: #111111;
 }
-
 .info-menu-bar .header-search-box {
 	width: 25px;
 	margin-left: 14px;
 }
-
 /*mobile header topbar*/
 .mobile-top-bar .mobile-top {
 	display: flex;
@@ -8852,7 +8847,6 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	font-size: 14px;
 	border-bottom: 1px solid var(--tripfery-border-color);
 }
-
 .mobile-top-bar .mobile-social,
 .mobile-top-bar .mobile-address {
 	display: flex;
@@ -8864,19 +8858,15 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	padding: 0;
 	list-style: none;
 }
-
 .mobile-top-bar .mobile-address a {
 	color: var(--tripfery-body-color);
 }
-
 .mobile-top-bar .mobile-social a {
 	color: var(--tripfery-body-color);
 }
-
 .mobile-top-bar .mobile-social a:hover {
 	color: var(--tripfery-primary-color);
 }
-
 .mobile-top-bar .mobile-address i {
 	color: var(--tripfery-primary-color);
 	padding-right: 8px;

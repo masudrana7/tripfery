@@ -13,13 +13,16 @@ else{
 	$tripfery_layout_class = TripferyTheme_Helper::has_active_widget();
 }
 $tripfery_has_entry_meta  = ( TripferyTheme::$options['post_date'] || TripferyTheme::$options['post_author_name'] || TripferyTheme::$options['post_comment_num'] || ( TripferyTheme::$options['post_length'] && function_exists( 'tripfery_reading_time' ) ) || TripferyTheme::$options['post_published'] && function_exists( 'tripfery_get_time' ) || ( TripferyTheme::$options['post_view'] && function_exists( 'tripfery_views' ) ) ) ? true : false;
+
 $tripfery_comments_number = number_format_i18n( get_comments_number() );
 $tripfery_comments_html = $tripfery_comments_number == 1 ? esc_html__( 'Comment' , 'tripfery' ) : esc_html__( 'Comments' , 'tripfery' );
 $tripfery_comments_html = '<span class="comment-number">'. $tripfery_comments_number .'</span> '. $tripfery_comments_html;
 $tripfery_author_bio = get_the_author_meta( 'description' );
+
 $tripfery_time_html       = sprintf( '<span>%s</span><span>%s</span>', get_the_time( 'd' ), get_the_time( 'M' ), get_the_time( 'Y' ) );
 $tripfery_time_html       = apply_filters( 'tripfery_single_time', $tripfery_time_html );
 $youtube_link = get_post_meta( get_the_ID(), 'tripfery_youtube_link', true );
+
 if ( empty(has_post_thumbnail() ) ) {
 	$img_class ='no-image';
 }else {

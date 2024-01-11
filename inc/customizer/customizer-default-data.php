@@ -158,6 +158,10 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
 			'banner_top_padding'    	=> 100,
             'banner_bottom_padding' 	=> 100,
             'breadcrumb_active' 		=> 0,
+            'banner_shape'              => 0,
+            'banner_shape1'             => '',
+            'banner_shape2'             => '',
+            'banner_shape_color'        => '',
 			
 			// Post Type Slug
 			'team_slug' 				=> 'team',
