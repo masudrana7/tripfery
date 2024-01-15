@@ -160,9 +160,9 @@ if (class_exists('BABE_Functions')) {
                                                         } ?>
                                                     <?php } ?>
                                                 </div>
-                                                <h3 class="listing-card-title">
+                                                <h4 class="listing-card-title">
                                                     <a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-                                                </h3>
+                                                </h4>
 
                                                 <?php if (TripferyTheme::$options['booking_rating']) { ?>
                                                     <div class="d-flex align-item listing-card-review-area">

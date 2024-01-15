@@ -158,10 +158,9 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 															} ?>
 														</div>
 
-														<h3 class="listing-card-title">
+														<h4 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-														</h3>
-
+														</h4>
 
 														<div class="d-flex align-items-center justify-content-between tour-info-middle">
 															<?php if ($nPrice || $discountPrice) { ?>
@@ -251,9 +250,9 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 																echo RTWishlist::wishlist_html($post_id);
 															} ?>
 														</div>
-														<h3 class="listing-card-title">
+														<h4 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-														</h3>
+														</h4>
 														<div class="d-flex align-items-center justify-content-between price-area">
 															<?php if ($price['discount_price_from']) { ?>
 																<span class="price-text item_info_price_new">
@@ -297,9 +296,9 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 													<?php } ?>
 
 													<div class="listing-card-content">
-														<h3 class="listing-card-title">
+														<h4 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-														</h3>
+														</h4>
 														<div class="d-flex justify-content-between mb-3">
 															<?php $address = isset($post['address']) ? $post['address'] : false;
 															if ($address) {
@@ -335,9 +334,9 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 											<div class="card-item rt-car-style col-lg-4 col-md-4 col-sm-6 <?php echo esc_attr($term->slug); ?> mb-4">
 												<div class="listing-card  <?php echo esc_attr($term->name) ?> <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
 													<div class="top-title">
-														<h3 class="listing-card-title">
+														<h4 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-														</h3>
+														</h4>
 														<div class="d-flex justify-content-between">
 															<?php $address = isset($post['address']) ? $post['address'] : false;
 															if ($address) {
@@ -442,9 +441,9 @@ $guided_since       = get_post_meta($post->ID, 'tripfery_guided_since', true); ?
 															} ?>
 														</div>
 
-														<h3 class="listing-card-title">
+														<h4 class="listing-card-title">
 															<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-														</h3>
+														</h4>
 
 														<?php if (!empty(BABE_Rating::post_stars_rendering($post['ID']))) { ?>
 															<div class="d-flex align-item listing-card-review-area">

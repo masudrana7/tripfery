@@ -94,37 +94,18 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    if ($("#search_form_tabs").length){
-        $("#search_form_tabs .search_form_tab[data-tab-slug='activity']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_rentacar");
-            $(".rt-search-customize").removeClass("rt_active_tour");
-            $(".rt-search-customize").addClass("rt_active_activity");
-        });
-
-        $("#search_form_tabs .search_form_tab[data-tab-slug='tour']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity");
-            $(".rt-search-customize").removeClass("rt_active_rentacar");
-            $(".rt-search-customize").addClass("rt_active_tour");
-        });
-        $("#search_form_tabs .search_form_tab[data-tab-slug='car']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity");
-            $(".rt-search-customize").removeClass("rt_active_tour");
-            $(".rt-search-customize").addClass("rt_active_rentacar");
-        });
-
-        $("#search_form_tabs .search_form_tab[data-tab-slug='restaurants']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity");
-            $(".rt-search-customize").removeClass(" rt_active_tour");
-            $(".rt-search-customize").removeClass(" rt_active_rentacar");
-            $(".rt-search-customize").addClass("rt_active_restaurants");
-        });
-
-        $("#search_form_tabs .search_form_tab[data-tab-slug='hotel']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
-        });
-
-        $("#search_form_tabs .search_form_tab[data-tab-slug='rental']").on("click", function(){
-            $(".rt-search-customize").removeClass("rt_active_activity rt_active_tour rt_active_rentacar");
+    if ($(".rt-search-customize").length) {
+        var $searchCustomize = $(".rt-search-customize");
+        function handleTabClick(tabSlug) {
+            $searchCustomize.removeClass(function (index, className) {
+                return (className.match(/\btab-\S+/g) || []).join(' ');
+            });
+            $searchCustomize.addClass("tab-" + tabSlug);
+        }
+        $("#search_form_tabs .search_form_tab").on("click", function () {
+            var tabSlug = $(this).data("tab-slug");
+            console.log({ tabSlug });
+            handleTabClick(tabSlug);
         });
     }
 

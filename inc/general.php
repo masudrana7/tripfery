@@ -132,6 +132,13 @@ if ( !function_exists( 'tripfery_widgets_register' ) ) {
 			'4' => esc_html__( 'Footer (Style 2) 4', 'tripfery' ),
 		);
 
+		$footer_widget_titles3 = array(
+			'1' => esc_html__( 'Footer (Style 3) 1', 'tripfery' ),
+			'2' => esc_html__( 'Footer (Style 3) 2', 'tripfery' ),
+			'3' => esc_html__( 'Footer (Style 3) 3', 'tripfery' ),
+			'4' => esc_html__( 'Footer (Style 3) 4', 'tripfery' ),
+		);
+
 		// Register Widget Areas ( Common )
 		register_sidebar( array(
 			'name'          => esc_html__( 'Sidebar', 'tripfery' ),
@@ -224,6 +231,23 @@ if ( !function_exists( 'tripfery_widgets_register' ) ) {
 			register_sidebar( array(
 				'name'          => $footer_widget_titles2[$i],
 				'id'            => 'footer-style-2-'. $i,
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h4 class="widgettitle has-animation '. TripferyTheme::$footer_style .'">',
+				'after_title'   => '</h4>',
+			) );
+		}
+
+		/*footer 3 register*/
+		if ( !empty(TripferyTheme::$options['footer_column_3']) ){
+			$item_widget = TripferyTheme::$options['footer_column_3'];
+		} else {
+			$item_widget = 4;
+		}		
+		for ( $i = 1; $i <= $item_widget; $i++ ) {
+			register_sidebar( array(
+				'name'          => $footer_widget_titles3[$i],
+				'id'            => 'footer-style-3-'. $i,
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h4 class="widgettitle has-animation '. TripferyTheme::$footer_style .'">',
