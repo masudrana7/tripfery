@@ -474,7 +474,7 @@ $banner_shape_color = TripferyTheme::$options['banner_shape_color'];
 <?php } ?>
 
 .entry-banner.opacity-on:after {
-background-color: rgba(8, 8, 52, <?php echo esc_html(TripferyTheme::$options['banner_bg_opacity']); ?>);
+background-color: rgba(28, 28, 120, <?php echo esc_html(TripferyTheme::$options['banner_bg_opacity']); ?>);
 }
 .entry-banner .entry-banner-content {
 padding-top: <?php echo esc_html(TripferyTheme::$options['banner_top_padding']); ?>px;

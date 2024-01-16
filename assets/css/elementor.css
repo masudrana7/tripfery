@@ -129,12 +129,15 @@ CSS INDEX
     background: var(--tripfery-light-color);
     opacity: 1;
     transition: all 0.4s ease-in-out;
-    margin: 0 3px;
+    margin: 0 5px;
 }
 .rt-swiper-nav .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--tripfery-primary-color);
     width: 15px;
     height: 15px;
+    position: relative;
+    top: 2px;
+    transition: 0.4s;
 }
 .rt-swiper-nav .swiper-navigation > div:after {
     display: none;
@@ -172,6 +175,9 @@ CSS INDEX
 .rt-post-slider-style1 .rt-item .entry-content:after,
 .rt-post-slider-style1 .rt-item .entry-content:before{
     display: none;
+}
+.testimonial-multi-layout-1 .rt-swiper-nav .swiper-pagination-bullets{
+    margin-top: 50px;
 }
 /*top right*/
 .top-right .rt-swiper-slider .swiper-navigation {
@@ -2072,7 +2078,7 @@ CSS INDEX
 }
 .testimonial-multi-layout-1 .item-content::before{    
     position: absolute;
-    left: 0;
+    left: -1px;
     top: 50%;
     transform: translateY(-50%);
     background: var(--tripfery-primary-color);
@@ -2103,7 +2109,9 @@ CSS INDEX
     border: 1px solid #eaeff5;
     text-align: center;
 }
-
+.testimonial-multi-layout-1 .item-content .rt-author-info{
+    text-align: left;
+}
 @media(max-width: 425px) {
     .testimonial-multi-layout-1 .item-content {
         padding: 35px 25px;
@@ -2549,7 +2557,7 @@ CSS INDEX
     font-size: 14px;
 }
 .rt-team-multi-layout-4 .team-social li + li{
-    padding-left: 8px;
+    padding-left: 12px;
     padding-right: 1px;
 }
 .rt-team-multi-layout-4 .team-social li i:hover{
@@ -2623,6 +2631,9 @@ body.single-tripfery_team .content-area{
     position: relative;
     z-index: 2;
 }
+.team-single .team-thumb img{
+    border-radius: 10px;
+}
 .team-single .team-heading {
     margin-bottom: 25px;
     line-height: 1;
@@ -2664,6 +2675,7 @@ body.single-tripfery_team .content-area{
     height: 45px;
     line-height: 45px;
     display: block;
+    border-radius: 5px;
 }
 .team-single .team-contents ul.team-social-social li a:hover {
     background-color: var(--tripfery-primary-color);
@@ -3095,7 +3107,7 @@ body.single-tripfery_team .content-area{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     padding: 8px 14px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     min-height: 65px;
 }
 @media(max-width: 767px) {
@@ -3301,12 +3313,10 @@ body.single-tripfery_team .content-area{
 }
 .listing-card .activity-person {
     font-size: 14px;
-    color: #8d8c8c;
     text-transform: lowercase;
     font-weight: 400;
 }
 .single-tripfery_guided .listing-card .activity-person{
-    margin-left: -4px;
     position: relative;
     top: -1px;
 }
@@ -3957,23 +3967,6 @@ body .rtrs-star-empty:before{
     padding: 15px 13px 26px;
     max-width: 200px;
 }
-.top-activity-wrapper::after {
-    width: 100%;
-    height: 0;
-    background-color: var(--tripfery-primary-color);
-    -webkit-transition: height 0.5s;
-    transition: height 0.5s;
-    border-radius: 100px 100px 20px 20px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
-.top-activity-wrapper:hover::after {
-    height: 100%;
-}
 .top-activity-wrapper:hover .top-activity-thumb-wrapper img {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
@@ -3981,11 +3974,8 @@ body .rtrs-star-empty:before{
 .top-activity-wrapper .activity-info .activity-name{
     color: var(--tripfery-heading-color);
 }
-.top-activity-wrapper:hover .activity-info .activity-name{
-    color: var(--tripfery-white-color);
-}
-.top-activity-wrapper:hover .activity-info .activity-place {
-    color: #f1f1f1;
+.top-activity-wrapper .activity-info .activity-place:hover {
+    color: var(--tripfery-primary-color);
 }
 .top-activity-wrapper .top-activity-thumb-wrapper {
     position: relative;
@@ -4111,7 +4101,6 @@ body .rtrs-star-empty:before{
     transition: all 0.5s;
 }
 .rt-car-categories .single-car-category .car-category-name {
-    font-size: 20px;
     color: var(--tripfery-heading-color);
     font-weight: 600;
     margin-top: 25px;
@@ -4761,16 +4750,19 @@ body .rtrs-star-empty:before{
         height: 300px;
     }
 }
+.elementor-widget-rt-feature-room .rt-featured-room{
+    max-width: 980px;
+    margin: 0 auto;
+}
 .image-column .col-img {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
     overflow: hidden;
-    -webkit-clip-path: inset(0 100% 0 0);
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 0s ease 0.6s, -webkit-clip-path 0s ease 0.6s;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
 }
 .image-column .col-img img {
     width: 100%;
@@ -4779,12 +4771,11 @@ body .rtrs-star-empty:before{
     -o-object-fit: cover;
     object-fit: cover;
     display: block;
+    border-radius: 10px;
 }
 .image-column .active {
     opacity: 1;
-    transition: clip-path 0.6s ease, -webkit-clip-path 0.6s ease;
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
+    visibility: visible;
 }
 /*-------------------------------------
 #. EL: Booking Grid & Slider
@@ -5066,9 +5057,8 @@ body .rtrs-star-empty:before{
     font-weight: 600;
 }
 .rt-booking-layout-2 .destination-wrapper .destination-info .destination-name {
-    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: 4px;
 }
 .rt-booking-layout-2 .destination-wrapper .destination-info .destination-name a{
     color: #232323;
@@ -5924,7 +5914,6 @@ body .rtrs-star-empty:before{
     transition: all 0.31s ease-in-out;
 }
 .rt-post-grid-default .rt-item .entry-title {
-    font-size: 22px;
     line-height: 1.4;
     margin-bottom: 12px;
 }

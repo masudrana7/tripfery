@@ -11,9 +11,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <div class="col-lg-8">
             <div class="details-content-container mb-4 mb-lg-0">
                 <div class="details-content d-flex flex-column flex-sm-row align-items-md-center">
-                    <h3 class="details-title me-3">
-                        <?php the_title(); ?>
-                    </h3>
                     <?php if (class_exists(Review::class) && $avg_rating = Review::getAvgRatings($post_id)) {
                         echo Functions::review_stars($avg_rating);
                     } ?>
@@ -41,8 +38,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </div>
                 <?php } if (!empty($tripfery_per_rate)) { ?>
                     <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
-                    <?php }
-                    ?>
+                    <?php } ?>
                 </div>
                 <div class="d-flex share-btns-link">
                     <div class="rt-share-service">
@@ -119,7 +115,6 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     <?php if (!empty($property_title)) { ?>
                         <h3 class="info-card-title"><?php echo esc_html($property_title); ?></h3>
                     <?php } ?>
-
                     <ul class="highligts d-flex flex-wrap">
                         <?php foreach ($booking_propertys as $booking_property) {
                             $image_id = $booking_property['property_image'];

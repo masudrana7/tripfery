@@ -30,7 +30,7 @@
                             <?php } ?>
                             <div class="fun-fact-content">
                                 <?php if (!empty(TripferyTheme::$options['fff_title_one'])) { ?>
-                                    <h3 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_one']); ?></h3>
+                                    <h4 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_one']); ?></h4>
                                 <?php } ?>
 
                                 <?php if (!empty(TripferyTheme::$options['fff_desc_one'])) { ?>
@@ -51,7 +51,7 @@
                             <?php } ?>
                             <div class="fun-fact-content">
                                 <?php if (!empty(TripferyTheme::$options['fff_title_two'])) { ?>
-                                    <h3 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_two']); ?></h3>
+                                    <h4 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_two']); ?></h4>
                                 <?php } ?>
 
                                 <?php if (!empty(TripferyTheme::$options['fff_desc_two'])) { ?>
@@ -72,7 +72,7 @@
                             <?php } ?>
                             <div class="fun-fact-content">
                                 <?php if (!empty(TripferyTheme::$options['fff_title_three'])) { ?>
-                                    <h3 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_three']); ?></h3>
+                                    <h4 class="fun-fact-title"><?php echo esc_html(TripferyTheme::$options['fff_title_three']); ?></h4>
                                 <?php } ?>
 
                                 <?php if (!empty(TripferyTheme::$options['fff_desc_three'])) { ?>
