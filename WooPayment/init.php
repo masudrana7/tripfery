@@ -330,4 +330,6 @@ class BabeInit {
 	}
 }
 
-BabeInit::instance();
+if ( function_exists( 'WC' ) && function_exists( 'cptwooint' ) ) {
+	BabeInit::instance();
+}
