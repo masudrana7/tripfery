@@ -2,7 +2,7 @@
 
 // Do not allow directly accessing this file.
 use TinySolutions\cptwooint\Traits\SingletonTrait;
-
+use Automattic\WooCommerce\Internal\Admin\Orders\PageController;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
@@ -47,7 +47,58 @@ class BabeInit {
 		add_action( 'babe_order_created', [ $this, 'after_created_order' ], 15, 1 );
 
 		add_action( 'woocommerce_checkout_order_processed', [ $this, 'so_payment_complete' ] );
+		add_action( 'woocommerce_order_status_completed', [ $this, 'wc_payment_for_bb' ], 10, 1 );
+		add_action( 'cmb2_admin_init', [ $this, 'order_metabox' ], 10, 1 );
 	}
+
+	/**
+	 * @return void
+	 */
+	public static function order_metabox() {
+		$page_controller = new PageController();
+		$prefix          = '_';
+		$cmb             = new_cmb2_box(
+			[
+				'id'           => 'order_metabox_extra',
+				'title'        => __( 'WooCommerce Order', 'ba-book-everything' ),
+				'object_types' => [ BABE_Post_types::$order_post_type ],
+				'context'      => 'side',
+				'priority'     => 'high',
+			]
+		);
+		$order_id        = $cmb->object_id();
+		$order_number    = get_post_meta( $order_id, '_wc_payment_id', true );
+		$name            = 'N/A';
+		if ( absint( $order_number ) ) {
+			$name = __( 'WooCommerce Order Id: ', 'ba-book-everything' ) . '<br/><a style="padding:10px 0;display: inline-block;" href="' . esc_url( $page_controller->get_edit_url( absint( $order_number ) ) ) . '"> ' . absint( $order_number ) . ' </a>';
+		}
+		$cmb->add_field(
+			[
+				'name' => $name,
+				'id'   => $prefix . 'connect_to_wc_order',
+				'type' => 'title',
+			]
+		);
+	}
+
+	/**
+	 * @param number $order_id Order Id.
+	 * @return void
+	 */
+	public function wc_payment_for_bb( $order_id ) {
+		$wc_order = wc_get_order( $order_id );
+		$items    = $wc_order->get_items();
+		foreach ( $items as $item ) {
+			$bb_order = get_post( $item['product_id'] );
+			if ( \BABE_Post_types::$order_post_type !== $bb_order->post_type ) {
+				continue;
+			}
+			// \BABE_Order::update_order_status( $item['product_id'], 'payment_received' );
+			\BABE_Order::update_order_status( $item['product_id'], 'completed' );
+			// payment_deferred
+		}
+	}
+
 	/**
 	 * @param number $order_id Order Id.
 	 * @return void
@@ -62,6 +113,8 @@ class BabeInit {
 			}
 			// \BABE_Order::update_order_status( $item['product_id'], 'payment_received' );
 			\BABE_Order::update_order_status( $item['product_id'], 'payment_deferred' );
+
+			update_post_meta( $item['product_id'], '_wc_payment_id', $order_id );
 			// payment_deferred
 		}
 	}
