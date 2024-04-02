@@ -40,8 +40,8 @@ $tripfery_theme_data = wp_get_theme();
 	require_once TRIPFERY_INC_DIR . 'template-vars.php';
 	require_once TRIPFERY_INC_DIR . 'includes.php';
 	require_once TRIPFERY_INC_DIR . 'ajax-wishlist.php';
-	// require_once TRIPFERY_INC_DIR . 'lc-helper.php';
-	// require_once TRIPFERY_INC_DIR . 'lc-utility.php';
+	 require_once TRIPFERY_INC_DIR . 'lc-helper.php';
+	 require_once TRIPFERY_INC_DIR . 'lc-utility.php';
 
 
 	if( is_admin() ) {
@@ -57,9 +57,8 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
-
-add_action( 'init', function (){
-    if ( '1' == TripferyTheme::$options['wc_payment_geteways'] ) {
-        require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
-    }
-} );
+	add_action( 'init', function (){
+	    if ( '1' == TripferyTheme::$options['wc_payment_geteways'] ) {
+	        require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
+	    }
+	} );

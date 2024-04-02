@@ -78,6 +78,11 @@ function tripfery_register_required_plugins() {
 			'slug'     => 'shopbuilder',
 			'required' => false,
 		),
+		array(
+			'name'     => 'Custom Post Type WooCommerce Integration',
+			'slug'     => 'cpt-woo-integration',
+			'required' => false,
+		),
 	);
 
 	$config = array(
