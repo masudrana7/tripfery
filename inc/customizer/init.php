@@ -51,3 +51,4 @@ TripferyTheme_Helper::requires( 'customizer/settings/woo-shop-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-product-layout.php' );
 TripferyTheme_Helper::requires( 'customizer/settings/woo-payment-gateways.php' );
 
+
