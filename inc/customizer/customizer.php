@@ -306,6 +306,15 @@ class TripferyTheme_Customizer {
             )
         );
 
+		// Add woocommerce payment gateways
+		$wp_customize->add_section( 'wc_payment_gateways_settings',
+			array(
+				'title' => __( 'Payment Gateways Settings', 'tripfery' ),
+				'priority' => 12,
+				'panel' => 'rttheme_layouts_defaults',
+			)
+		);
+
         // Add Shop Archive Layout Section
         $wp_customize->add_section( 'wc_shop_layout_section',
             array(
@@ -314,6 +323,8 @@ class TripferyTheme_Customizer {
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
+
+
         
         // Add Shop Single Layout Section
         $wp_customize->add_section( 'wc_product_layout_section',
