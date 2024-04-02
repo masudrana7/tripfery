@@ -57,6 +57,9 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
-	if (TripferyTheme::$options['wc_payment_geteways'] == '1' ) {
-		require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
-	}
+
+add_action( 'init', function (){
+    if ( '1' == TripferyTheme::$options['wc_payment_geteways'] ) {
+        require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
+    }
+} );
