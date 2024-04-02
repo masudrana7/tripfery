@@ -306,31 +306,22 @@ class TripferyTheme_Customizer {
             )
         );
 
-		// Add woocommerce payment gateways
-		$wp_customize->add_section( 'wc_payment_gateways_settings',
-			array(
-				'title' => __( 'Payment Gateways Settings', 'tripfery' ),
-				'priority' => 12,
-				'panel' => 'rttheme_layouts_defaults',
-			)
-		);
+
 
         // Add Shop Archive Layout Section
         $wp_customize->add_section( 'wc_shop_layout_section',
             array(
                 'title' => __( 'Shop Archive Layout', 'tripfery' ),
-                'priority' => 12,
+                'priority' => 13,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
-
-
         
         // Add Shop Single Layout Section
         $wp_customize->add_section( 'wc_product_layout_section',
             array(
                 'title' => __( 'Product Single Layout', 'tripfery' ),
-                'priority' => 13,
+                'priority' => 14,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );   
@@ -339,7 +330,7 @@ class TripferyTheme_Customizer {
         $wp_customize->add_section( 'search_layout_section',
             array(
                 'title' => __( 'Search Layout', 'tripfery' ),
-                'priority' => 14,
+                'priority' => 15,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
@@ -348,7 +339,7 @@ class TripferyTheme_Customizer {
         $wp_customize->add_section( 'error_layout_section',
             array(
                 'title' => __( 'Error Layout', 'tripfery' ),
-                'priority' => 15,
+                'priority' => 16,
                 'panel' => 'rttheme_layouts_defaults',
             )
         );
@@ -413,11 +404,20 @@ class TripferyTheme_Customizer {
                 'priority' => 16,
             )
         );
+
+		// Add woocommerce payment gateways
+		$wp_customize->add_section( 'wc_payment_gateways_settings',
+			array(
+				'title' => __( 'Payment Gateways Settings', 'tripfery' ),
+				'priority' => 1,
+				'panel' => 'woocommerce',
+			)
+		);
         // Add our wooCommerce shop Section
         $wp_customize->add_section('shop_layout_section',
             array(
                'title'    => esc_html__('Shop Archive Layout', 'tripfery'),
-               'priority' => 1,
+               'priority' => 2,
                'panel'    => 'woocommerce',
             )
         );
@@ -426,7 +426,7 @@ class TripferyTheme_Customizer {
         $wp_customize->add_section('product_layout_section',
             array(
                'title'    => esc_html__('Shop Single Layout', 'tripfery'),
-               'priority' => 2,
+               'priority' => 3,
                'panel'    => 'woocommerce',
             )
         );

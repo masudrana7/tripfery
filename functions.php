@@ -22,20 +22,20 @@ $tripfery_theme_data = wp_get_theme();
 	// URL
 	define( 'TRIPFERY_BASE_URL',    get_template_directory_uri(). '/' );
 	define( 'TRIPFERY_ASSETS_URL',  TRIPFERY_BASE_URL . 'assets/' );
-	
+
 	// BA Book Everything
 	if (defined('BABE_VERSION')) {
 		require_once TRIPFERY_INC_DIR . 'account_dashboard.php';
 	}
-	
+
 	// icon trait Plugin Activation
 	require_once TRIPFERY_INC_DIR . 'icon-trait.php';
 	// Includes
 	require_once TRIPFERY_INC_DIR . 'helper-functions.php';
 	require_once TRIPFERY_INC_DIR . 'tripfery.php';
 	require_once TRIPFERY_INC_DIR . 'general.php';
-	require_once TRIPFERY_INC_DIR . 'ajax-tab.php'; 
-	require_once TRIPFERY_INC_DIR . 'ajax-loadmore.php'; 
+	require_once TRIPFERY_INC_DIR . 'ajax-tab.php';
+	require_once TRIPFERY_INC_DIR . 'ajax-loadmore.php';
 	require_once TRIPFERY_INC_DIR . 'scripts.php';
 	require_once TRIPFERY_INC_DIR . 'template-vars.php';
 	require_once TRIPFERY_INC_DIR . 'includes.php';
@@ -43,7 +43,7 @@ $tripfery_theme_data = wp_get_theme();
 	// require_once TRIPFERY_INC_DIR . 'lc-helper.php';
 	// require_once TRIPFERY_INC_DIR . 'lc-utility.php';
 
-	
+
 	if( is_admin() ) {
 		// TGM Plugin Activation
 		require_once TRIPFERY_BASE_DIR . 'lib/class-tgm-plugin-activation.php';
@@ -57,4 +57,8 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
-	require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
+
+	if (!empty(TripferyTheme::$options['wc_payment_geteways'])) {
+		error_log( print_r( TripferyTheme::$options['wc_payment_geteways'], true ), 3, __DIR__.'/log.txt');
+		require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
+	}

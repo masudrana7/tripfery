@@ -296,6 +296,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'error_page_bgcolor' => '',
 			
 			//Shop Archive Layout Setting 
+			'wc_payment_geteways' => 1,
 			'shop_layout' => 'left-sidebar',
             'shop_sidebar'        => '',
 			'shop_padding_top'    => 120,
