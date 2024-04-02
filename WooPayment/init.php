@@ -134,7 +134,8 @@ class BabeInit {
 	 * @return void
 	 */
 	public function after_created_order( $order_id ) {
-		WC()->cart->add_to_cart( $order_id, '1' );
+        WC()->cart->empty_cart();
+        WC()->cart->add_to_cart( $order_id, '1' );
 	}
 
 	/**
