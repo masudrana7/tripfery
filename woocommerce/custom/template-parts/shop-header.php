@@ -19,7 +19,7 @@ if( is_active_sidebar( 'shop-sidebar' )) {
 	<div class="container">
 		<div class="row">		
 			<?php if ( TripferyTheme::$layout == 'left-sidebar' ) { ?>
-				<div class="col-xl-4 <?php echo esc_attr( $fixedbar ); ?>">
+				<div class="col-xl-3 <?php echo esc_attr( $fixedbar ); ?>">
 					<aside class="sidebar-widget-area">
 						<?php if ( is_active_sidebar( 'shop-sidebar' ) ) dynamic_sidebar( 'shop-sidebar' ); ?>
 					</aside>

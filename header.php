@@ -57,14 +57,16 @@ if (TripferyTheme::$options['image_blend'] == 'normal') {
 	} else {
 		$page_class = 'page';
 	}
+	$tripfery_header = get_post_meta(get_the_ID(), 'tripfery_layout_settings', true);
+	$tripfery_style = (!empty($tripfery_header)) ? $tripfery_style = $tripfery_header['tripfery_tr_header']: " ";
+	
 	?>
-
-	<div id="page" class="site <?php echo esc_attr($page_class); ?>">
+	<div id="page" class="site <?php echo esc_attr($page_class); ?> <?php echo esc_attr($tripfery_style); ?>">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'tripfery'); ?></a>
 		<header id="masthead" class="site-header">
 			<div id="header-<?php echo esc_attr(TripferyTheme::$header_style); ?>" class="header-area">
 				<?php if (TripferyTheme::$top_bar == 1 || TripferyTheme::$top_bar === "on") { ?>
-					<?php get_template_part('template-parts/header/header-top', '1'); ?>
+					<?php get_template_part( 'template-parts/header/header-top', TripferyTheme::$top_bar_style ); ?>
 				<?php } ?>
 				<?php if (TripferyTheme::$header_opt == 1 || TripferyTheme::$header_opt === "on") { ?>
 					<?php get_template_part('template-parts/header/header', TripferyTheme::$header_style); ?>

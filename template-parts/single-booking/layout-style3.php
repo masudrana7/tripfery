@@ -91,13 +91,13 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
     </div>
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
             </div>
         <?php } ?>
-        <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
+        <div class="<?php echo esc_attr($tripfery_layout_class); ?> tripfery-column-sticky">
             <?php if (!empty($booking_propertys)) { ?>
                 <div class="info-card">
                     <?php if (!empty($property_title)) { ?>
@@ -109,7 +109,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
                             <li class="highligts-item d-flex align-items-center">
-                                <?php if($image_url){?>
+                                <?php if ($image_url) { ?>
                                     <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
                                 <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
@@ -299,9 +299,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
                     <ul class="highligts d-flex flex-wrap">
                         <?php foreach ($booking_features as $booking_feature) { ?>
                             <li class="highligts-item restaurant-item d-flex align-items-center justify-content-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.8203 2H7.18031C5.05031 2 3.32031 3.74 3.32031 5.86V19.95C3.32031 21.75 4.61031 22.51 6.19031 21.64L11.0703 18.93C11.5903 18.64 12.4303 18.64 12.9403 18.93L17.8203 21.64C19.4003 22.52 20.6903 21.76 20.6903 19.95V5.86C20.6803 3.74 18.9503 2 16.8203 2Z" stroke="#384BFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M9.59375 11L11.0938 12.5L15.0938 8.5" stroke="#384BFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M30 0C13.4316 0 0 13.4316 0 30C0 46.5694 13.4316 60 30 60C46.5694 60 60 46.5694 60 30C60 13.4316 46.5694 0 30 0ZM30 56.3091C15.5259 56.3091 3.75 44.4741 3.75 29.9999C3.75 15.5258 15.5259 3.74988 30 3.74988C44.4741 3.74988 56.25 15.5259 56.25 29.9999C56.25 44.4739 44.4741 56.3091 30 56.3091ZM41.9728 19.0228L24.3712 36.735L16.4446 28.8084C15.7124 28.0763 14.5256 28.0763 13.7924 28.8084C13.0603 29.5406 13.0603 30.7275 13.7924 31.4597L23.0728 40.7409C23.8049 41.4722 24.9918 41.4722 25.7249 40.7409C25.8093 40.6566 25.8816 40.5646 25.9472 40.4691L44.6259 21.6749C45.3572 20.9428 45.3572 19.7559 44.6259 19.0228C43.8928 18.2906 42.7059 18.2906 41.9728 19.0228Z" fill="black" />
                                 </svg>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_feature['features_name'], 'tripfery') ?></h4>
                             </li>
@@ -346,7 +345,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
             </div>
         </div>
         <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
@@ -354,10 +353,15 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array(); ?>
         <?php } ?>
     </div>
     <!-- Related Services  -->
-    <?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
-        <div class="rt-related-style3 related-deals">
-            <?php tripfery_related_booking_two(); ?>
-        </div>
+    <?php 
+    $post_id = get_the_ID();
+        $ba_post = BABE_Post_types::get_post($post_id);
+        if(!empty($ba_post['related_items'])) {  
+            if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
+                <div class="rt-related-style3 related-deals">
+                    <?php tripfery_related_booking_two(); ?>
+                </div>
+        <?php } ?>
     <?php } ?>
 
 </div>

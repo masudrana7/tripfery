@@ -45,8 +45,8 @@ $pro_no =  count($related_products);
 	    <div class="rt-related-title">
 			<h2 class="entry-title has-animation"><?php echo wp_kses( TripferyTheme::$options['related_product_title'] , 'alltext_allow' ); ?></h2>
 			<div class="swiper-button">
-                <div class="swiper-button-prev"><i class="icon-tripfery-left-arrow"></i><?php echo esc_html__( 'Prev' , 'tripfery' ) ?></div>
-                <div class="swiper-button-next"><?php echo esc_html__( 'Next' , 'tripfery' ) ?><i class="icon-tripfery-right-arrow"></i></div>
+                <div class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></div>
             </div>
         </div>
 		<div class="swiper-wrapper">		

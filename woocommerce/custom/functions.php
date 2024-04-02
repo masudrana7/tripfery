@@ -213,7 +213,11 @@ class WC_Functions {
 			}
 		} else {
 			if ( $icon ) {
-				$html .= '<i class="icon-tripfery-cart"></i>';
+				$html .= '<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.875 19.25C8.35825 19.25 8.75 18.8582 8.75 18.375C8.75 17.8918 8.35825 17.5 7.875 17.5C7.39175 17.5 7 17.8918 7 18.375C7 18.8582 7.39175 19.25 7.875 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.5 19.25C17.9832 19.25 18.375 18.8582 18.375 18.375C18.375 17.8918 17.9832 17.5 17.5 17.5C17.0168 17.5 16.625 17.8918 16.625 18.375C16.625 18.8582 17.0168 19.25 17.5 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M0.875 0.875H4.375L6.72 12.5913C6.80001 12.9941 7.01917 13.356 7.3391 13.6135C7.65904 13.8711 8.05936 14.0079 8.47 14H16.975C17.3856 14.0079 17.786 13.8711 18.1059 13.6135C18.4258 13.356 18.645 12.9941 18.725 12.5913L20.125 5.25H5.25" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>';
 			}
 			if ( $text ) {
 				$html .= '<span>' . $product->add_to_cart_text() . '</span>';
@@ -481,7 +485,11 @@ class WC_Functions {
             $cart_link = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : $woocommerce->cart->get_cart_url();
             ?>
             <div class="cart-list-trigger">
-	            <a class="cart-contents cart-trigger-icon" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><i class="icon-tripfery-cart"></i> <?php if ( $count > 0 ) echo '(' . $count . '2' . ')'; ?></a>
+	            <a class="cart-contents cart-trigger-icon" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.875 19.25C8.35825 19.25 8.75 18.8582 8.75 18.375C8.75 17.8918 8.35825 17.5 7.875 17.5C7.39175 17.5 7 17.8918 7 18.375C7 18.8582 7.39175 19.25 7.875 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.5 19.25C17.9832 19.25 18.375 18.8582 18.375 18.375C18.375 17.8918 17.9832 17.5 17.5 17.5C17.0168 17.5 16.625 17.8918 16.625 18.375C16.625 18.8582 17.0168 19.25 17.5 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M0.875 0.875H4.375L6.72 12.5913C6.80001 12.9941 7.01917 13.356 7.3391 13.6135C7.65904 13.8711 8.05936 14.0079 8.47 14H16.975C17.3856 14.0079 17.786 13.8711 18.1059 13.6135C18.4258 13.356 18.645 12.9941 18.725 12.5913L20.125 5.25H5.25" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <?php if ( $count > 0 ) echo '(' . $count . '2' . ')'; ?></a>
                 <div class="cart-wrapper">
                     <ul class="minicart">
 		            	<?php echo wp_kses_stripslashes( $this->tripfery_cart_items() ); ?>
@@ -504,7 +512,11 @@ class WC_Functions {
         ?>
             <div class="header-action-item cart-area mini-cart-items header-shop-cart">
             	<div class="cart-list-trigger">
-	                <a class="cart-contents cart-trigger-icon" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><i class="icon-tripfery-cart"></i> <?php if ( $count >= 0 ) echo '<span>' . $count . '</span>'; ?></a>
+	                <a class="cart-contents cart-trigger-icon" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.875 19.25C8.35825 19.25 8.75 18.8582 8.75 18.375C8.75 17.8918 8.35825 17.5 7.875 17.5C7.39175 17.5 7 17.8918 7 18.375C7 18.8582 7.39175 19.25 7.875 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.5 19.25C17.9832 19.25 18.375 18.8582 18.375 18.375C18.375 17.8918 17.9832 17.5 17.5 17.5C17.0168 17.5 16.625 17.8918 16.625 18.375C16.625 18.8582 17.0168 19.25 17.5 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M0.875 0.875H4.375L6.72 12.5913C6.80001 12.9941 7.01917 13.356 7.3391 13.6135C7.65904 13.8711 8.05936 14.0079 8.47 14H16.975C17.3856 14.0079 17.786 13.8711 18.1059 13.6135C18.4258 13.356 18.645 12.9941 18.725 12.5913L20.125 5.25H5.25" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <?php if ( $count >= 0 ) echo '<span>' . $count . '</span>'; ?></a>
 	                <div class="cart-wrapper">
 		                <ul class="minicart">
 		                <?php echo wp_kses_stripslashes( $this->tripfery_cart_items() ); ?>
@@ -528,7 +540,11 @@ class WC_Functions {
             $cart_link = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : $woocommerce->cart->get_cart_url();
             ob_start();
             ?>
-            <a class="cart-contents" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><i class="icon-tripfery-cart"></i> <?php if ( $count > 0 ) echo '(' . $count . ')'; ?></a>
+            <a class="cart-contents" href="<?php echo esc_url( $cart_link ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'tripfery' ); ?>"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.875 19.25C8.35825 19.25 8.75 18.8582 8.75 18.375C8.75 17.8918 8.35825 17.5 7.875 17.5C7.39175 17.5 7 17.8918 7 18.375C7 18.8582 7.39175 19.25 7.875 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.5 19.25C17.9832 19.25 18.375 18.8582 18.375 18.375C18.375 17.8918 17.9832 17.5 17.5 17.5C17.0168 17.5 16.625 17.8918 16.625 18.375C16.625 18.8582 17.0168 19.25 17.5 19.25Z" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M0.875 0.875H4.375L6.72 12.5913C6.80001 12.9941 7.01917 13.356 7.3391 13.6135C7.65904 13.8711 8.05936 14.0079 8.47 14H16.975C17.3856 14.0079 17.786 13.8711 18.1059 13.6135C18.4258 13.356 18.645 12.9941 18.725 12.5913L20.125 5.25H5.25" stroke="#051F34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <?php if ( $count > 0 ) echo '(' . $count . ')'; ?></a>
             <ul class="minicart">
             <?php
                 echo wp_kses_stripslashes( $this->tripfery_cart_items() );

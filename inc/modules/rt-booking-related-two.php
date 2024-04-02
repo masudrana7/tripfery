@@ -76,9 +76,9 @@ if (!function_exists('tripfery_related_booking_two') && class_exists('BABE_Funct
 										</svg>
 									</div>
 								</div>
-								<h4 class="listing-card-title">
+								<h3 class="listing-card-title">
 									<a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-								</h4>
+								</h3>
 								<?php if (class_exists(Review::class) && $avg_rating = Review::getAvgRatings($post_id)) { ?>
 									<div class="d-flex align-item listing-card-review-area">
 										<div class="listing-card-review-text"><?php echo esc_html('Excellent', 'tripfery') ?></div>

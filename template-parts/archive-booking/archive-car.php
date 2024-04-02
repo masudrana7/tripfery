@@ -65,9 +65,9 @@ if (class_exists('BABE_Functions')) {
                             <div class="card-item rt-car-style col-lg-3 col-md-4 col-sm-6  mb-4">
                                 <div class="listing-card <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
                                     <div class="top-title">
-                                        <h4 class="listing-card-title">
+                                        <h3 class="listing-card-title">
                                             <a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a>
-                                        </h4>
+                                        </h3>
                                         <div class="d-flex justify-content-between">
                                             <?php $address = isset($ba_info['address']) ? $ba_info['address'] : false;
 											if ($address) {

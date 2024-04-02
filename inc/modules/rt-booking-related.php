@@ -39,12 +39,15 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 					<div class="single-available-room-info flex-grow-1 d-flex flex-column">
 						<div class="d-flex justify-content-between">
 							<h4 class="room-name"><a href="<?php echo esc_url($url); ?>"><?php echo apply_filters('translate_text', $post['post_title']); ?></a></h4>
-							<span class="price"><?php echo esc_html('From', 'tripfery') ?></span>
-
 							<?php
 								$discount_price_from = isset($prices['discount_price_from']) ? $prices['discount_price_from'] : false;
 								$price_from = isset($prices['price_from']) ? $prices['price_from'] : false;
-							if ($discount_price_from || $price_from) {
+							if ($discount_price_from || $price_from) { ?>
+							<span class="price"><?php echo esc_html('From', 'tripfery') ?></span>
+
+							<?php
+								
+							
 								echo '<div class="rt-price">';
 								if ($discount_price_from) {
 									echo '<span class="price-text item_info_price_new">' . BABE_Currency::get_currency_price($prices['discount_price_from']) . '</span>';

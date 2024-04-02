@@ -28,17 +28,18 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         <div class="col-lg-4">
             <div class="d-flex share-link-area justify-content-lg-end align-items-center">
                 <div class="d-flex">
-                    <?php echo esc_html('From', 'tripfery') ?><?php if ($price['discount_price_from']) { ?>
-                    <div class="rt-single-price rt-old-price">
-                        <?php echo BABE_Currency::get_currency_price($price['discount_price_from']); ?>
-                    </div>
-                <?php } else { ?>
-                    <div class="rt-single-price rt-new-price">
-                        <?php echo BABE_Currency::get_currency_price($price['price_from']); ?>
-                    </div>
-                <?php } if (!empty($tripfery_per_rate)) { ?>
-                    <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
-                    <?php } ?>
+                    <?php echo esc_html('From', 'tripfery') ?>
+                    <?php if ($discountPrice) { ?>
+                        <div class="rt-single-price rt-old-price">
+                            <?php echo wp_kses_post($discountPrice); ?>
+                        </div>
+                    <?php } else { ?>
+                            <div class="rt-single-price rt-new-price">
+                                <?php echo wp_kses_post($nPrice); ?>
+                            </div>
+                    <?php }  if (!empty($tripfery_per_rate)) { ?>
+                        <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
+                        <?php } ?>
                 </div>
                 <div class="d-flex share-btns-link">
                     <div class="rt-share-service">
@@ -96,14 +97,14 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
 <div class="container">
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-md-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
             </div>
         <?php } ?>
 
-        <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
+        <div class="<?php echo esc_attr($tripfery_layout_class); ?> tripfery-column-sticky">
             <!-- Description Text  -->
             <div class="rt-booking-content info-card">
                 <h3 class="rt-overview-title"><?php echo esc_html('Overview', 'tripfery'); ?></h3>
@@ -121,7 +122,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
                             <li class="highligts-item d-flex align-items-center">
-                                <?php if($image_url){?>
+                                <?php if ($image_url) { ?>
                                     <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
                                 <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_property['property_name']) ?></h4>
@@ -153,13 +154,18 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                     </ul>
                 </div>
             <?php } ?>
+            
 
             <!-- Related Services  -->
-            <?php if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
+            <?php 
+            $post_id = get_the_ID();
+		    $ba_post = BABE_Post_types::get_post($post_id);
+            if(!empty($ba_post['related_items']))    {                        
+            if (TripferyTheme::$options['show_related_booking'] == '1') { ?>
                 <div class="info-card">
                     <?php tripfery_related_booking(); ?>
                 </div>
-            <?php } ?>
+            <?php } } ?>
 
             <!-- Comments  -->
             <div class="info-card">
@@ -173,7 +179,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
         </div>
 
         <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>

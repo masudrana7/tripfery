@@ -15,7 +15,7 @@ function tripfery_register_required_plugins() {
 			'source'       => 'tripfery-core.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '1.3'
+			'version'      => '1.4.2'
 		),
 		array(
 			'name'         => 'RT Framework',
@@ -32,6 +32,14 @@ function tripfery_register_required_plugins() {
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
 			'version'      => '6.0.1'
+		),
+		array(
+			'name'         => 'Review Schema Pro',
+			'slug'         => 'review-schema-pro',
+			'source'       => 'review-schema-pro.zip',
+			'required'     =>  true,
+			'external_url' => 'http://radiustheme.com',
+			'version'      => '1.1.6'
 		),
 
 		// Repository
@@ -51,9 +59,24 @@ function tripfery_register_required_plugins() {
 			'required' => false,
 		),
 		array(
+			'name'     => 'Review Schema',
+			'slug'     => 'review-schema',
+			'required' => false,
+		),
+		array(
 			'name'     => 'BA Book Everything',
 			'slug'     => 'ba-book-everything',
 			'required' => true,
+		),
+		array(
+			'name'     => 'Woocommerce',
+			'slug'     => 'woocommerce',
+			'required' => false,
+		),
+		array(
+			'name'     => 'ShopBuilder - Elementor WooCommerce Builder Addons',
+			'slug'     => 'shopbuilder',
+			'required' => false,
 		),
 	);
 

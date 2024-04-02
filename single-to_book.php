@@ -101,8 +101,18 @@ if (class_exists('BABE_Functions')) {
 	if (is_active_sidebar('booking-form')) {
 		$booking_coloum = "col-md-8";
 	}
-	$discountPrice = BABE_Currency::get_currency_price($price['discount_price_from']);
-	$nPrice = BABE_Currency::get_currency_price($price['price_from']);
+
+	if(!empty($price['discount_price_from'])){
+		$discountPrice = BABE_Currency::get_currency_price($price['discount_price_from']);
+	}else {
+		$discountPrice = 0;
+	}
+	if (!empty($price['price_from'])) {
+		$nPrice = BABE_Currency::get_currency_price($price['price_from']);
+	} else {
+		$nPrice = 0;
+	}
+
 	$languages 		= get_post_meta($post_id, 'tripfery_languages', true);
 
 	

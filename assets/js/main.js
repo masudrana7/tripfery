@@ -279,17 +279,6 @@ jQuery(document).ready(function ($) {
             $(this).removeClass("open");
         }
     });
-
-    $('.currency_amount').each(function () {
-        // Get the text content of the element
-        let originalText = $(this).text();
-
-        // Use slice to remove the last two characters (digits)
-        let newText = originalText.slice(0, -3);
-
-        // Update the content of the element
-        $(this).text(newText);
-    });
     
     /* Mobile menu */
     $(window).on('scroll', function () {
@@ -398,11 +387,20 @@ jQuery(document).ready(function ($) {
             }
         });
     }
-
     $('.mean-bar .sidebarBtn').on('click', function (e) {
         e.preventDefault();
         $('body').toggleClass('slidemenuon');
     });
+
+    /*Sidebar Date Placeholder*/
+    if ($('#booking_date_from').length) {
+        var bookingDateInput = document.getElementById('booking_date_from');
+        bookingDateInput.placeholder = 'dd/mm/yyyy';
+    }
+    if ($('#booking_date_to').length) {
+        var bookingDateInput2 = document.getElementById('booking_date_to');
+        bookingDateInput2.placeholder = 'dd/mm/yyyy';
+    }
 
     /*Header and mobile menu stick*/
     $(window).on('scroll', function () {
@@ -940,7 +938,16 @@ function tripfery_content_load_scripts() {
                 }
             }
         });
-    });    
+    });  
+    
+    // Replace "/
+    if ($(".rt_booking_style7").length) {
+        $('.rt_booking_style7 .activity-person').each(function () {
+            var originalString = $(this).text();
+            var replacedString = originalString.replace('/', '');
+            $(this).text(replacedString);
+        });
+    }
 }
 
 (function ($) {

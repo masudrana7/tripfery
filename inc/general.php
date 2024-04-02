@@ -96,7 +96,7 @@ if ( !function_exists( 'tripfery_setup' ) ) {
 		// Register menus
 		register_nav_menus( array(
 			'primary'  => esc_html__( 'Primary', 'tripfery' ),
-			'topright' => esc_html__( 'Header Right', 'tripfery' ),
+			'currency_menu' => esc_html__('Currency Menu', 'tripfery' ),
 		) );		
 	}
 }

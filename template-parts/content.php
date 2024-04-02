@@ -86,7 +86,7 @@ if( TripferyTheme::$options['display_no_preview_image'] == '1' ) {
 				<?php } ?>
 			</ul>
 			<?php } ?>
-			<h2 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+			<h3 class="entry-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 			<?php if ( TripferyTheme::$options['blog_content'] ) { ?>
 			<div class="entry-text"><p><?php echo wp_kses( $content , 'alltext_allow' ); ?></p></div>
 			<?php } ?>	

@@ -41,7 +41,7 @@ if( !empty($product_bg) ) {
 			<?php endif; ?>
 		</div>	
 		<div class="rt-title-area">
-			<h2 class="rt-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+			<h3 class="rt-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 		</div>
 		<?php if ( TripferyTheme::$options['wc_shop_rating'] == 1 ) { ?>
 		<div class="rating-custom">

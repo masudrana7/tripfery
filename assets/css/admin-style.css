@@ -81,3 +81,16 @@ div.icon-wrapper > span {
 #customize-theme-controls .control-section:hover>.accordion-section-title:after {
     color: #0069ff;
 }
+.view-rate-title.opened,
+.cmb2-before-row-header{
+	background-color: #384bff;
+}
+.cmb-type-address .address_block > div,
+.cmb-type-discount .discount,
+.cmb-type-discount .discount_date {
+	margin-bottom: 15px;
+}
+.cmb2-wrap li,
+.cmb-type-tax-children-multicheck .term_item{
+	margin-bottom: 12px;
+}

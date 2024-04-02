@@ -117,7 +117,7 @@ if( !function_exists( 'tripfery_template_vars' ) ) {
             TripferyTheme::$header_opt      	= TripferyTheme::$options['header_opt'];
             TripferyTheme::$headerbg_color      = TripferyTheme::$options['header_bg_color'];
             TripferyTheme::$tr_header           = TripferyTheme::$options['tr_header'];
-            TripferyTheme::$footer_fun_fact     	= TripferyTheme::$options['footer_fun_fact'];
+            TripferyTheme::$footer_fun_fact     = TripferyTheme::$options['footer_fun_fact'];
             TripferyTheme::$footer_area     	= TripferyTheme::$options['footer_area'];
             TripferyTheme::$copyright_area      = TripferyTheme::$options['copyright_area'];
             TripferyTheme::$top_bar_style  		= TripferyTheme::$options['top_bar_style'];

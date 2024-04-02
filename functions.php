@@ -57,4 +57,4 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
-
+	require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';

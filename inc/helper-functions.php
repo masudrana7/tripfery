@@ -257,7 +257,7 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 					'url'  => TripferyTheme::$options['social_facebook'],
 				),
 				'social_twitter' => array(
-					'icon' => 'fa-twitter',
+					'icon' => 'fa-x-twitter',
 					'url'  => TripferyTheme::$options['social_twitter'],
 				),
 				'social_behance' => array(
@@ -309,7 +309,7 @@ if ( !class_exists( 'TripferyTheme_Helper' ) ) {
 				'twitter' => array(
 					'label' => esc_html__( 'Twitter', 'tripfery' ),
 					'type'  => 'text',
-					'icon'  => 'fa-twitter',
+					'icon'  => 'fa-x-twitter',
 				),
 				'linkedin' => array(
 					'label' => esc_html__( 'Linkedin', 'tripfery' ),

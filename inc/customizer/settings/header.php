@@ -28,7 +28,7 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
     public function register_header_controls( $wp_customize ) {
 		
 		// Top Bar Style
-		$wp_customize->add_setting( 'top_bar',
+	    $wp_customize->add_setting( 'top_bar',
             array(
                 'default' => $this->defaults['top_bar'],
                 'transport' => 'refresh',
@@ -40,7 +40,42 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                 'label' => __( 'Top Bar On/Off', 'tripfery' ),
                 'section' => 'header_top_section',
             )
-        ) );      
+        ) ); 
+        
+        $wp_customize->add_setting( 'top_bar_style',
+            array(
+                'default' => $this->defaults['top_bar_style'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_radio_sanitization',
+
+            )
+        );
+        $wp_customize->add_control( new Customizer_Image_Radio_Control( $wp_customize, 'top_bar_style',
+            array(
+                'label' => __( 'Top Bar Layout', 'faktorie' ),
+                'description' => esc_html__( 'You can override this settings only Mobile', 'faktorie' ),
+                'section' => 'header_top_section',
+                'choices' => array(
+                    '1' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-1.jpg',
+                        'name' => __( 'Layout 1', 'faktorie' )
+                    ), 
+                    '2' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-2.jpg',
+                        'name' => __( 'Layout 2', 'faktorie' )
+                    ),
+                    '3' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-3.jpg',
+                        'name' => __( 'Layout 3', 'faktorie' )
+                    ),
+                    '4' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/top-4.jpg',
+                        'name' => __( 'Layout 4', 'faktorie' )
+                    ),
+                ),
+                'active_callback'   => 'rttheme_is_topbar_enabled',
+            )
+        ) );
 
 		// Topbar one option
 		$wp_customize->add_setting('top_bar_bgcolor', 
@@ -214,6 +249,10 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                         'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-1.jpg',
                         'name' => __( 'Layout 1', 'tripfery' )
                     ),                  
+                    '2' => array(
+                        'image' => trailingslashit( get_template_directory_uri() ) . 'assets/img/header-1.jpg',
+                        'name' => __( 'Layout 2', 'tripfery' )
+                    ),                  
                 )
             )
         ) );
@@ -249,6 +288,20 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                 'section' => 'header_section',
             )
         ) );		
+
+        $wp_customize->add_setting( 'cart_icon',
+            array(
+                'default' => $this->defaults['cart_icon'],
+                'transport' => 'refresh',
+                'sanitize_callback' => 'rttheme_switch_sanitization',
+            )
+        );
+        $wp_customize->add_control( new Customizer_Switch_Control( $wp_customize, 'cart_icon',
+            array(
+                'label' => __( 'Cart Icon', 'faktorie' ),
+                'section' => 'header_section',
+            )
+        ) );
 
         $wp_customize->add_setting( 'user_icon',
             array(
@@ -381,22 +434,6 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                 'active_callback'   => 'rttheme_is_button_enabled',
             )
         );
-        
-        $wp_customize->add_setting( 'online_button_link',
-            array(
-                'default' => $this->defaults['online_button_link'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_url_sanitization',
-            )
-        );
-        $wp_customize->add_control( 'online_button_link',
-            array(
-                'label' => __( 'Button Link', 'tripfery' ),
-                'section' => 'header_section',
-                'type' => 'url',
-                'active_callback'   => 'rttheme_is_button_enabled',
-            )
-        );
 
         /*Header Login*/
         $wp_customize->add_setting( 'login_icon',
@@ -425,22 +462,6 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
                 'label' => __( 'Login Text', 'tripfery' ),
                 'section' => 'header_section',
                 'type' => 'text',
-                'active_callback'   => 'rttheme_is_header_login_enabled',
-            )
-        );
-        
-        $wp_customize->add_setting( 'login_link',
-            array(
-                'default' => $this->defaults['login_link'],
-                'transport' => 'refresh',
-                'sanitize_callback' => 'rttheme_url_sanitization',
-            )
-        );
-        $wp_customize->add_control( 'login_link',
-            array(
-                'label' => __( 'Login Link', 'tripfery' ),
-                'section' => 'header_section',
-                'type' => 'url',
                 'active_callback'   => 'rttheme_is_header_login_enabled',
             )
         );

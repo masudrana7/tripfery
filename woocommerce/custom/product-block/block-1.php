@@ -12,7 +12,6 @@ $product_bgc = "";
 if( !empty($product_bg) ) {
 	$product_bgc = 'style="background-color: ' . $product_bg . '"';
 }
-
 ?>
 <div class="rt-product-block rt-product-grid">
 	<div class="rt-thumb-wrapper" <?php echo wp_specialchars_decode( esc_attr( $product_bgc ), ENT_COMPAT ); ?>>
@@ -41,7 +40,7 @@ if( !empty($product_bg) ) {
 			<?php endif; ?>
 		</div>
 		<div class="rt-title-area">
-			<h2 class="rt-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+			<h3 class="rt-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
 		</div>
 		<?php if ( TripferyTheme::$options['wc_shop_rating'] == 1 ) { ?>
 		<div class="rating-custom">

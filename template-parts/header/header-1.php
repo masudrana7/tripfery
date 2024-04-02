@@ -44,15 +44,24 @@ $class_width = (TripferyTheme::$header_width === "on" || TripferyTheme::$header_
 			</div>
 			<?php if (TripferyTheme::$options['online_button'] || TripferyTheme::$options['search_icon'] || TripferyTheme::$options['user_icon'] || TripferyTheme::$options['vertical_menu_icon']) { ?>
 				<div class="header-icon-area">
+					
 					<?php if (TripferyTheme::$options['search_icon']) { ?>
 						<?php get_template_part('template-parts/header/icon', 'search'); ?>
-					<?php }
+					<?php } if ( TripferyTheme::$options['cart_icon'] ) { ?>
+					<?php get_template_part( 'template-parts/header/icon', 'cart' );?>
+				<?php }
 					if (TripferyTheme::$options['user_icon']) { ?>
 						<?php get_template_part('template-parts/header/icon', 'user'); ?>
 					<?php }
 					if (TripferyTheme::$options['vertical_menu_icon']) { ?>
 						<?php get_template_part('template-parts/header/icon', 'offcanvas'); ?>
-					<?php }
+					<?php } if (has_nav_menu('currency_menu')) {
+						wp_nav_menu(array(
+							'theme_location' => 'currency_menu',
+							'menu_class'     => 'rt_currency_menu',
+							'container'      => 'nav',
+						));
+					} 
 					if (TripferyTheme::$options['online_button']) { ?>
 						<?php get_template_part('template-parts/header/icon', 'button'); ?>
 					<?php } ?>

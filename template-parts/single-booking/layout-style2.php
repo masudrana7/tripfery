@@ -51,7 +51,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                 <?php } ?>
             </div>
         </div>
-        <div class="col-lg-8 col-xl-7 col-xxl-6">
+        <div class="col-lg-8 col-xl-6">
             <ul class="activity-info-container d-flex flex-wrap mb-4 mb-xl-0">
 
                 <?php if (!empty($tripfery_room_square)) {
@@ -166,11 +166,9 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                         </div>
                     <?php } else { ?><div class="rt-single-price rt-new-price"><?php echo wp_kses_post($nPrice); ?>
                         </div>
-                    <?php }
-                                                                                        if (!empty($tripfery_per_rate)) { ?>
+                    <?php } if (!empty($tripfery_per_rate)) { ?>
                         <span class="rt-type"><?php echo esc_html($tripfery_per_rate); ?>
-                        <?php }
-                        ?>
+                    <?php } ?>
                 </div>
                 <?php if (function_exists('tripfery_post_share')) { ?>
                     <div class="rt-share-service">
@@ -187,14 +185,14 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
     </div>
     <div class="row">
         <?php if (TripferyTheme::$layout == 'left-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
             </div>
         <?php } ?>
 
-        <div class="<?php echo esc_attr($tripfery_layout_class); ?>">
+        <div class="<?php echo esc_attr($tripfery_layout_class); ?> tripfery-column-sticky">
 
             <!-- Description Text  -->
             <div class="rt-booking-content info-card">
@@ -254,8 +252,8 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                             $image_url = wp_get_attachment_image_url($image_id, 'full');
                         ?>
                             <li class="highligts-item d-flex align-items-center">
-                                <?php if($image_url){?>
-                                <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
+                                <?php if ($image_url) { ?>
+                                    <img src="<?php echo esc_url($image_url); ?>" class="img-fluid--- grid-img---" alt="" />
                                 <?php } ?>
                                 <h4 class="highligts-name"><?php echo esc_html($booking_suitability['suitability_name']) ?></h4>
                             </li>
@@ -356,7 +354,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
                                     </h2>
                                     <div id="flush-collapseOne-<?php echo esc_attr($uniqid); ?>" class="accordion-collapse collapse <?php echo esc_attr($show); ?>" aria-labelledby="flush-headingOne-<?php echo esc_attr($uniqid); ?>" data-bs-parent="#accordionFlush">
                                         <div class="accordion-body">
-                                            <p class="mb-0"><?php echo esc_html($booking_step['attraction']); ?></p>
+                                            <p class="mb-0"><?php echo wp_kses_post($booking_step['attraction']); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -437,7 +435,7 @@ $images = isset($ba_info['images']) ? $ba_info['images'] : array();
             </div>
         </div>
         <?php if (TripferyTheme::$layout == 'right-sidebar' && is_active_sidebar('booking-sidebar')) { ?>
-            <div class="col-md-4">
+            <div class="col-md-4 tripfery-column-sticky">
                 <div class="info-card rt-booking-form">
                     <?php dynamic_sidebar('booking-sidebar'); ?>
                 </div>
