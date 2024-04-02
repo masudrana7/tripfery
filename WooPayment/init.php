@@ -134,8 +134,8 @@ class BabeInit {
 	 * @return void
 	 */
 	public function after_created_order( $order_id ) {
-        WC()->cart->empty_cart();
-        WC()->cart->add_to_cart( $order_id, '1' );
+		WC()->cart->empty_cart();
+		WC()->cart->add_to_cart( $order_id, '1' );
 	}
 
 	/**
@@ -180,6 +180,12 @@ class BabeInit {
 
 		// is order data valid.
 		$order_id = absint( $args['order_id'] );
+
+		if ( ! WC()->cart->find_product_in_cart( WC()->cart->generate_cart_id( $order_id ) ) ) {
+			// No, it isn't in cart!
+			$this->after_created_order( $order_id );
+		}
+
 		if ( \BABE_Order::is_order_valid( $order_id, $args['order_num'], $args['order_hash'] ) ) {
 			// get order meta.
 			$order_meta = \BABE_Order::get_order_meta( $order_id );
