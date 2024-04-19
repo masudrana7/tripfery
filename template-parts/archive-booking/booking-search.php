@@ -60,7 +60,7 @@ if (class_exists('BABE_Functions')) {
 ?>
     <div id="primary" class="content-area">
         <div class="container">
-            <div class="rt-fillter-inner babe_search_results <?php echo esc_attr($tripfery_archive_class); ?>">
+            <div class="rt-fillter-inner babe_search_results">
                 <div class="d-flex align-items-center justify-content-between view-switch-bar position-relative">
                     <p class="search-result mb-0">
                         <?php echo esc_html($results['posts_count']) . ' ';

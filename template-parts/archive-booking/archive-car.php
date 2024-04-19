@@ -31,9 +31,6 @@ if (class_exists('BABE_Functions')) {
         <div id="primary" class="content-area">
             <?php if (count($posts) > 0) { ?>
                 <div class="container rt-swiper-nav rt-booking-item-inner">
-                    <?php if (!empty(TripferyTheme::$options['booking_arcive_single_title'])) { ?>
-                        <h5 class="rt-car-active-title"><?php echo count($posts); ?><?php echo esc_html(" car found ");?></h5>
-                    <?php } ?>
                     <div class="row  rt-search-services">
                         <?php
                         foreach ($posts as $post) {
@@ -63,6 +60,7 @@ if (class_exists('BABE_Functions')) {
                             } ?>
 
                             <div class="card-item rt-car-style col-lg-3 col-md-4 col-sm-6  mb-4">
+
                                 <div class="listing-card <?php if (!empty($discount)) { echo 'discount_available '; } ?>">
                                     <div class="top-title">
                                         <h3 class="listing-card-title">

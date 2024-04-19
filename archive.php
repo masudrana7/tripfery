@@ -18,7 +18,7 @@ if ( is_post_type_archive( "tripfery_team" ) || is_tax( "tripfery_team_category"
 		get_template_part( 'template-parts/archive', 'team' );
 	return;
 }
-if (is_post_type_archive("to_book") || is_tax("categories")) {
+if (is_post_type_archive("to_book")) {
 	get_template_part('template-parts/archive-booking/booking', 'search');
 	return;
 }
@@ -28,6 +28,18 @@ if (is_post_type_archive("to_book") || is_tax("ba_locations")) {
 }
 if (is_post_type_archive("to_book") || is_tax("ba_booking-car")) {
 	get_template_part('template-parts/archive-booking/archive', 'car');
+	return;
+}
+if (is_post_type_archive("to_book") || is_tax("ba_booking-type")) {
+	get_template_part('template-parts/archive-booking/archive', 'type');
+	return;
+}
+if (is_post_type_archive("to_book") || is_tax("ba_our-activitys")) {
+	get_template_part('template-parts/archive-booking/archive', 'activitys');
+	return;
+}
+if (is_post_type_archive("to_book") || is_tax("categories")) {
+	get_template_part('template-parts/archive-booking/archive', 'categories');
 	return;
 }
 ?>

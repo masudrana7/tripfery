@@ -14,16 +14,20 @@ if (get_query_var('paged')) {
 ?>
 <?php get_header();
 if (class_exists('BABE_Functions')) {
+
+
     $loc_tex = 'ba_locations';
+
+
     $get_id = get_the_ID();
     $loc_cats = get_the_terms($get_id, $loc_tex);
     $term_ids = [];
     $ba_info    = BABE_Post_types::get_post($get_id);
     $booking_map = BABE_html::block_address_map_with_direction($ba_info);
+	if (!is_wp_error($loc_cats) && is_array($loc_cats)) {
     foreach ($loc_cats as $loc_cat) {
         $term_ids[] = $loc_cat->term_id;
     }
-    if (!is_wp_error($loc_cats && $loc_cat)) {
         $args = array(
             'post_type' => 'to_book',
             'posts_per_page' => -1,
@@ -40,30 +44,35 @@ if (class_exists('BABE_Functions')) {
         $gallerys = explode(',', $gallery_images);
 ?>
         <div id="primary" class="content-area">
+
+            <?php if (!is_wp_error($gallerys) && is_array($gallerys)) { ?>
             <div class="rt-gallery-inner hero-img-grid image-gallery">
                 <?php
                 $i = 1;
                 foreach ($gallerys as $gallery) :
                     $image_data = wp_get_attachment_image_src($gallery, 'full');
-                    $numbers = count($gallerys);
                 ?>
-                    <?php if ($i <= 3) { ?>
-                        <a href="<?php echo esc_url($image_data[0]) ?>" class="img-grid-item">
-                            <img src="<?php echo esc_url($image_data[0]) ?>" class="img-fluid grid-img" alt="">
-                        </a>
-                    <?php } ?>
-                    <?php if (4 == $i) { ?>
-                        <a href="<?php echo esc_url($image_data[0]) ?>" class=" img-grid-item">
-                            <img src="<?php echo esc_url($image_data[0]) ?>" class="img-fluid grid-img" alt="">
-                            <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
-                        </a>
-                    <?php } ?>
-                    <?php if (4 <= $i) { ?>
-                        <a href="<?php echo esc_url($image_data[0]) ?>" class="img-grid-item hide_image"></a>
+                    <?php if(!empty($image_data)) { ?>
+                        <?php if ($i <= 3) { ?>
+                            <a href="<?php echo esc_url($image_data[0]) ?>" class="img-grid-item">
+                                <img src="<?php echo esc_url($image_data[0]) ?>" class="img-fluid grid-img" alt="">
+                            </a>
+                        <?php } ?>
+                        <?php if (4 == $i) { ?>
+                            <a href="<?php echo esc_url($image_data[0]) ?>" class=" img-grid-item">
+                                <img src="<?php echo esc_url($image_data[0]) ?>" class="img-fluid grid-img" alt="">
+                                <span class="rt-sinlge-btn"><?php echo esc_html('See All Photos', 'tripfery') ?></span>
+                            </a>
+                        <?php } ?>
+                        <?php if (4 <= $i) { ?>
+                            <a href="<?php echo esc_url($image_data[0]) ?>" class="img-grid-item hide_image"></a>
+                        <?php } ?>
                     <?php } ?>
                 <?php $i++;
                 endforeach; ?>
             </div>
+            <?php } ?>
+
             <div class="container">
                 <div class="row align-items-center rt-map-inner">
                     <?php if (!empty($lat_code || $long_code)) { ?>

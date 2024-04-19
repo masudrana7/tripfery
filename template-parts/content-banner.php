@@ -39,10 +39,10 @@ if (class_exists('BABE_Functions')) {
 	if (is_singular('to_book')) {
 		$tripfery_title  = apply_filters('theme_blog_title', esc_html($title, false));
 	} elseif (is_archive('ba_locations-car')) {
-		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Car', 'tripfery'));
+		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('All Booking', 'tripfery'));
 	}
 	elseif (is_archive('to_book')) {
-		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('Booking Location', 'tripfery'));
+		$tripfery_title  = apply_filters('theme_blog_title', esc_html__('All Booking', 'tripfery'));
 	} else {
 		$tripfery_title = $tripfery_title;
 	}

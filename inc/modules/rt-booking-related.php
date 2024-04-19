@@ -29,8 +29,14 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 				}
 				$tripfery_room_square = get_post_meta($post_id, 'tripfery_room_square', true);
 				$tripfery_bed_room = get_post_meta($post_id, 'tripfery_bed_room', true);
-				$group_peoples = ($ba_post['guests'] == '1') ? "Guest" : "Guests";
-				$group_max_size = $ba_post['guests'] . ' ' . $group_peoples;
+
+				if (isset($ba_post['guests'])) {
+					$group_peoples = ($ba_post['guests'] == '1') ? "Guest" : "Guests";
+					$group_max_size = $ba_post['guests'] . ' ' . $group_peoples;
+				} else {
+					$group_max_size = "";
+				}
+
 			?>
 				<div class="d-md-flex single-available-room">
 					<div class="room-thumb-wrapper">
@@ -87,7 +93,9 @@ if (!function_exists('tripfery_related_booking') && class_exists('BABE_Functions
 									<path d="M17.7766 9.1C18.7707 9.1 19.5766 8.29411 19.5766 7.3C19.5766 6.30589 18.7707 5.5 17.7766 5.5C16.7824 5.5 15.9766 6.30589 15.9766 7.3C15.9766 8.29411 16.7824 9.1 17.7766 9.1Z" stroke="black" />
 									<path d="M3.37532 11.8H3.09992C2.67383 11.7999 2.26153 11.951 1.93638 12.2264C1.61123 12.5018 1.39431 12.8836 1.32422 13.3039L1.02452 15.1039C0.981512 15.3618 0.9952 15.6259 1.06463 15.878C1.13407 16.1301 1.25758 16.364 1.42658 16.5635C1.59557 16.763 1.806 16.9233 2.04323 17.0332C2.28045 17.1431 2.53877 17.2 2.80022 17.2H6.07532M17.7753 11.8H18.0507C18.4768 11.7999 18.8891 11.951 19.2143 12.2264C19.5394 12.5018 19.7563 12.8836 19.8264 13.3039L20.1261 15.1039C20.1691 15.3618 20.1554 15.6259 20.086 15.878C20.0166 16.1301 19.8931 16.364 19.7241 16.5635C19.5551 16.763 19.3446 16.9233 19.1074 17.0332C18.8702 17.1431 18.6119 17.2 18.3504 17.2H15.0753" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
-								<span class="info-text"><?php echo esc_attr($group_max_size); ?></span>
+                                <?php if (isset($ba_post['guests'])) { ?>
+								    <span class="info-text"><?php echo esc_attr($group_max_size); ?></span>
+                                <?php } ?>
 							</li>
 						</ul>
 						<div class="d-flex">
