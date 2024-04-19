@@ -11,10 +11,9 @@ if ( TripferyTheme::$layout == 'full-width' ) {
 } else {
 	$tripfery_layout_class = TripferyTheme_Helper::has_active_widget();
 }
-$payment = ( '1' == TripferyTheme::$options['wc_payment_geteways'] ) ? "rt-woo-payment" : "ba-booking-payment";
 ?>
 <?php get_header(); ?>
-<div id="primary" class="content-area <?php echo esc_attr($payment); ?>">
+<div id="primary" class="content-area">
 	<div class="container">
 		<div class="row">
 			<?php

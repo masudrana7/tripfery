@@ -13369,15 +13369,17 @@ table td.order_items_row_total {
 .woocommerce .woocommerce-order-details__title{
 	font-size: 30px;
 }
-.rt-woo-payment #checkout_form_block {
+
+
+.cpt-woo-integration #checkout_form_block {
 	flex-wrap: wrap;
 }
-.rt-woo-payment #checkout_form_block .rt-checkout-content,
-.rt-woo-payment #checkout_form_block .rt-checkout-form {
+.cpt-woo-integration #checkout_form_block .rt-checkout-content,
+.cpt-woo-integration #checkout_form_block .rt-checkout-form {
 	flex: 0 0 100%;
 	max-width: 100%;
 }
-.rt-woo-payment #checkout_form_block .rt-checkout-form {
+.cpt-woo-integration #checkout_form_block .rt-checkout-form {
 	padding-right: 0;
 }
 
