@@ -15,7 +15,7 @@ function tripfery_register_required_plugins() {
 			'source'       => 'tripfery-core.zip',
 			'required'     =>  true,
 			'external_url' => 'http://radiustheme.com',
-			'version'      => '1.4.3'
+			'version'      => '1.4.4'
 		),
 		array(
 			'name'         => 'RT Framework',

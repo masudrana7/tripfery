@@ -82,9 +82,7 @@ class BabeInit {
 			if ( \BABE_Post_types::$order_post_type !== $bb_order->post_type ) {
 				continue;
 			}
-			// \BABE_Order::update_order_status( $item['product_id'], 'payment_received' );
 			\BABE_Order::update_order_status( $item['product_id'], 'completed' );
-			// payment_deferred
 		}
 	}
 
