@@ -56,3 +56,40 @@ $tripfery_theme_data = wp_get_theme();
 		require_once TRIPFERY_INC_DIR . 'modules/rt-breadcrumbs.php';
 	}
 	add_editor_style( 'style-editor.css' );
+
+	//user rol
+if ( class_exists('BABE_Functions')) {
+	function validate_role( $user_info ) {
+		$check_role = in_array( 'customer', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'customer' : '';
+		$check_role = in_array( 'manager', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'manager' : $check_role;
+		$check_role = apply_filters( 'babe_myaccount_validate_role', $check_role, $user_info );
+		return $check_role;
+	}
+	function rt_customer_myorder( $orders, $user_info ) {
+		$check_role = validate_role( $user_info );
+		if ( $check_role == 'customer' ) {
+			$orders = BABE_Order::get_all_orders();
+		}
+		return $orders;
+	}
+	add_filter( 'babe_myaccount_my_bookings_all_orders', 'rt_customer_myorder', 15, 2 );
+}
+
+if ( function_exists( 'WC' ) && function_exists( 'cptwooint' ) ) {
+	add_filter( 'cptwooint_post_types', 'cptwooint_default_settings', 15 );
+	/**
+	 * @return false|string
+	 */
+	function cptwooint_default_settings( $post_type_array ) {
+		$post_type_array[] = [
+			'value' => 'order',
+			'label' => 'Order ( BA Book Everything )',
+		];
+		return $post_type_array;
+	}
+
+	add_action( 'init', function (){
+	require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
+}, 15 );
+
+}

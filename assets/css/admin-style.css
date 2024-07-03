@@ -94,3 +94,6 @@ div.icon-wrapper > span {
 .cmb-type-tax-children-multicheck .term_item{
 	margin-bottom: 12px;
 }
+body .ui-widget.ui-datepicker {
+	z-index: 999999999 !important;
+}

@@ -14,11 +14,7 @@ if (get_query_var('paged')) {
 ?>
 <?php get_header();
 if (class_exists('BABE_Functions')) {
-
-
     $loc_tex = 'ba_locations';
-
-
     $get_id = get_the_ID();
     $loc_cats = get_the_terms($get_id, $loc_tex);
     $term_ids = [];

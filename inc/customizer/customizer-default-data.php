@@ -104,6 +104,7 @@ if ( ! function_exists( 'rttheme_generate_defaults' ) ) {
             'offer_icon'                => 0,
             'offer_text'                => esc_html__('Special Offer !', 'tripfery'),
             'offer_link'                => '#',
+            'dashboard_link'            => '',
 
             //footer Fun Fact
             'footer_fun_fact'           => 1,

@@ -459,7 +459,24 @@ class TripferyTheme_Header_Settings extends TripferyTheme_Customizer {
         );
         $wp_customize->add_control( 'login_text',
             array(
-                'label' => __( 'Login Text', 'tripfery' ),
+                'label' => __( 'Dashboard Text', 'tripfery' ),
+                'section' => 'header_section',
+                'type' => 'text',
+                'active_callback'   => 'rttheme_is_header_login_enabled',
+            )
+        );
+
+	    $wp_customize->add_setting( 'dashboard_link',
+		    array(
+			    'default' => $this->defaults['dashboard_link'],
+			    'transport' => 'refresh',
+			    'sanitize_callback' => 'rttheme_text_sanitization',
+		    )
+	    );
+
+        $wp_customize->add_control( 'dashboard_link',
+            array(
+                'label' => __( 'Dashboard Link', 'tripfery' ),
                 'section' => 'header_section',
                 'type' => 'text',
                 'active_callback'   => 'rttheme_is_header_login_enabled',

@@ -8843,6 +8843,8 @@ ul.wp-block-rss li.wp-block-rss__item .wp-block-rss__item-title {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
+	position: relative;
+
 }
 
 .view-mode ul li a {
@@ -12360,10 +12362,12 @@ p.return-to-shop {
 .rt-filter-terms .term_item+.term_item {
 	margin-top: 10px;
 }
-.rt-filter-terms .term_item.term_item_level_0,
+
+.rt-filter-terms #filter_ba_locations .term_item.term_item_level_0,
 .rt-booking-single .rt-search-customize #search_form_tabs {
 	display: none;
 }
+
 .rt-booking-single .rt-search-customize .babe-search-form {
 	background: transparent;
 	border-radius: 0;

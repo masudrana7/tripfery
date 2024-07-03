@@ -37,7 +37,14 @@ class BabeInit {
 	 * Class Constructor
 	 */
 	private function __construct() {
-		add_filter( 'cptwooint_default_settings', [ $this, 'cptwooint_default_settings' ], 15 );
+		// add_filter( 'cptwooint_default_settings', [ $this, 'cptwooint_default_settings' ], 15 );
+		//remove_filter( 'babe_checkout_content', [ \BABE_Order::class, 'checkout_page_prepare' ], 10 );
+		add_filter( 'babe_checkout_content', [$this, 'checkout_page_prepare'], 15 );
+		add_filter( 'cptwoo_product_get_price', [$this, 'bb_cptwoo_product_get_price'], 20, 3 );
+		add_action( 'babe_order_created',[ $this, 'after_created_order'], 15, 1 );
+		add_action( 'woocommerce_checkout_order_processed', [$this, 'so_payment_complete'] );
+		add_action( 'woocommerce_order_status_completed', [$this, 'wc_payment_for_bb'], 10, 1 );
+		add_action( 'cmb2_admin_init',[ $this, 'order_metabox'], 10, 1 );
 	}
 
 	/**
@@ -324,6 +331,5 @@ class BabeInit {
 	}
 }
 
-if ( function_exists( 'WC' ) && function_exists( 'cptwooint' ) ) {
-	BabeInit::instance();
-}
+BabeInit::instance();
+
