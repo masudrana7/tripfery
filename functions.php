@@ -58,22 +58,49 @@ $tripfery_theme_data = wp_get_theme();
 	add_editor_style( 'style-editor.css' );
 
 	//user rol
-if ( class_exists('BABE_Functions')) {
-	function validate_role( $user_info ) {
-		$check_role = in_array( 'customer', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'customer' : '';
-		$check_role = in_array( 'manager', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'manager' : $check_role;
-		$check_role = apply_filters( 'babe_myaccount_validate_role', $check_role, $user_info );
-		return $check_role;
-	}
-	function rt_customer_myorder( $orders, $user_info ) {
-		$check_role = validate_role( $user_info );
-		if ( $check_role == 'customer' ) {
-			$orders = BABE_Order::get_all_orders();
+	if ( class_exists('BABE_Functions')) {
+//		function rt_customer_myorder( $orders, $user_info ) {
+//			if ( ! $user_info instanceof WP_User ) {
+//				return $orders;
+//			}
+//
+//			if ( in_array( 'customer', $user_info->roles ) ) {
+//				$current_user_id = $user_info->ID;
+//				$customer_orders = wc_get_orders( array(
+//					'customer' => $current_user_id,
+//					'status'   => array_keys( wc_get_order_statuses() ),
+//				) );
+//				$order_details = array();
+//				foreach ( $customer_orders as $order ) {
+//					$order_total = $order->get_total();
+//					$order_details[] = $order;
+//				}
+//				// $orders = $order_details;
+//			}
+//			return $orders;
+//			error_log( print_r( $orders, true ) . "\n\n", 3, __DIR__.'/log.txt');
+//		}
+//
+//		add_filter( 'babe_myaccount_my_bookings_all_orders', 'rt_customer_myorder', 15, 2 );
+
+
+		function validate_role( $user_info ) {
+			$check_role = in_array( 'customer', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'customer' : '';
+			$check_role = in_array( 'manager', $user_info->roles ) || in_array( 'administrator', $user_info->roles ) ? 'manager' : $check_role;
+			$check_role = apply_filters( 'babe_myaccount_validate_role', $check_role, $user_info );
+			return $check_role;
 		}
-		return $orders;
+		function rt_customer_myorder( $orders, $user_info ) {
+			$check_role = validate_role( $user_info );
+			if ( $check_role == 'customer' ) {
+				error_log( print_r( $orders, true ) . "\n\n", 3, __DIR__.'/log.txt');
+				$orders = BABE_Order::get_customer_orders($user_info->ID);
+			}
+			return $orders;
+		}
+		add_filter( 'babe_myaccount_my_bookings_all_orders', 'rt_customer_myorder', 15, 2 );
+
 	}
-	add_filter( 'babe_myaccount_my_bookings_all_orders', 'rt_customer_myorder', 15, 2 );
-}
 
 if ( function_exists( 'WC' ) && function_exists( 'cptwooint' ) ) {
 	add_filter( 'cptwooint_post_types', 'cptwooint_default_settings', 15 );
@@ -87,7 +114,6 @@ if ( function_exists( 'WC' ) && function_exists( 'cptwooint' ) ) {
 		];
 		return $post_type_array;
 	}
-
 	add_action( 'init', function (){
 	require_once TRIPFERY_BASE_DIR . 'WooPayment/init.php';
 }, 15 );

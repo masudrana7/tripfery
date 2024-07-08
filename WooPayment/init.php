@@ -161,7 +161,7 @@ class BabeInit {
 		return $defaults;
 	}
 
-	public function checkout_page_prepare( $content ) {
+	public function  checkout_page_prepare( $content ) {
 		$output = $content;
 		$args   = (array) wp_parse_args(
 			$_GET,
@@ -174,7 +174,6 @@ class BabeInit {
 
 		// is order data valid.
 		$order_id = absint( $args['order_id'] );
-
 		if ( ! WC()->cart->find_product_in_cart( WC()->cart->generate_cart_id( $order_id ) ) ) {
 			// No, it isn't in cart!
 			$this->after_created_order( $order_id );
@@ -220,6 +219,9 @@ class BabeInit {
 				}
 				$output .= $this->checkout_form( $args );
 			} //// end if payment_expected or draft
+		}
+		if( empty( $output ) ){
+			$output = 'Invalid Order. Please Order Again';
 		}
 
 		return $output;
